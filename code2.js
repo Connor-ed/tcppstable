@@ -66,6 +66,9 @@ gdjs.LoadCode.GDBackgroundObjects3= [];
 gdjs.LoadCode.GDfadeObjects1= [];
 gdjs.LoadCode.GDfadeObjects2= [];
 gdjs.LoadCode.GDfadeObjects3= [];
+gdjs.LoadCode.GDSquareWhiteSliderObjects1= [];
+gdjs.LoadCode.GDSquareWhiteSliderObjects2= [];
+gdjs.LoadCode.GDSquareWhiteSliderObjects3= [];
 
 
 gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595HomeObjects2Objects = Hashtable.newFrom({"Global_Home": gdjs.LoadCode.GDGlobal_9595HomeObjects2});
@@ -270,7 +273,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "E Keys4.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "E Keys4.wav", 10, false, 100, 1);
 }}
 
 }
@@ -291,7 +294,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 100, 1);
 }}
 
 }
@@ -312,7 +315,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Ow - Ahh1.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Ow - Ahh1.wav", 10, false, 100, 1);
 }}
 
 }
@@ -333,7 +336,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 100, 1);
 }}
 
 }
@@ -751,6 +754,9 @@ gdjs.LoadCode.GDBackgroundObjects3.length = 0;
 gdjs.LoadCode.GDfadeObjects1.length = 0;
 gdjs.LoadCode.GDfadeObjects2.length = 0;
 gdjs.LoadCode.GDfadeObjects3.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects3.length = 0;
 
 gdjs.LoadCode.eventsList12(runtimeScene);
 gdjs.LoadCode.GDKnobObjects1.length = 0;
@@ -819,6 +825,9 @@ gdjs.LoadCode.GDBackgroundObjects3.length = 0;
 gdjs.LoadCode.GDfadeObjects1.length = 0;
 gdjs.LoadCode.GDfadeObjects2.length = 0;
 gdjs.LoadCode.GDfadeObjects3.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.LoadCode.GDSquareWhiteSliderObjects3.length = 0;
 
 
 return;

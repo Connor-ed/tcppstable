@@ -60,14 +60,14 @@ gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects1= [];
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects2= [];
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects3= [];
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects4= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects1= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects2= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects3= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects4= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects1= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects2= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects3= [];
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects4= [];
+gdjs.Synth_32SelectorCode.GDblank2Objects1= [];
+gdjs.Synth_32SelectorCode.GDblank2Objects2= [];
+gdjs.Synth_32SelectorCode.GDblank2Objects3= [];
+gdjs.Synth_32SelectorCode.GDblank2Objects4= [];
+gdjs.Synth_32SelectorCode.GDblank1Objects1= [];
+gdjs.Synth_32SelectorCode.GDblank1Objects2= [];
+gdjs.Synth_32SelectorCode.GDblank1Objects3= [];
+gdjs.Synth_32SelectorCode.GDblank1Objects4= [];
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects1= [];
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects2= [];
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects3= [];
@@ -76,6 +76,14 @@ gdjs.Synth_32SelectorCode.GDblackoutObjects1= [];
 gdjs.Synth_32SelectorCode.GDblackoutObjects2= [];
 gdjs.Synth_32SelectorCode.GDblackoutObjects3= [];
 gdjs.Synth_32SelectorCode.GDblackoutObjects4= [];
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects1= [];
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects2= [];
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects3= [];
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects4= [];
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects1= [];
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects2= [];
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects3= [];
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects4= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3= [];
@@ -128,6 +136,10 @@ gdjs.Synth_32SelectorCode.GDfadeObjects1= [];
 gdjs.Synth_32SelectorCode.GDfadeObjects2= [];
 gdjs.Synth_32SelectorCode.GDfadeObjects3= [];
 gdjs.Synth_32SelectorCode.GDfadeObjects4= [];
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1= [];
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2= [];
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3= [];
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects4= [];
 
 
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDTri_95959595Blank_95959595Objects1Objects = Hashtable.newFrom({"Tri_Blank_": gdjs.Synth_32SelectorCode.GDTri_9595Blank_9595Objects1});
@@ -317,7 +329,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDE_95959595KeysObjects2Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "E Keys4.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "E Keys4.wav", 10, false, 100, 1);
 }}
 
 }
@@ -361,7 +373,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDSimple_95959595Pluck2Objects2Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 100, 1);
 }}
 
 }
@@ -405,7 +417,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDOw_95959595AhhObjects2Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 100, 1);
 }}
 
 }
@@ -449,7 +461,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDBoom_95959595KickObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 100, 1);
 }}
 
 }
@@ -831,14 +843,14 @@ gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects4.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects4.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects3.length = 0;
@@ -847,6 +859,14 @@ gdjs.Synth_32SelectorCode.GDblackoutObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects4.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -899,6 +919,10 @@ gdjs.Synth_32SelectorCode.GDfadeObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects4.length = 0;
 
 gdjs.Synth_32SelectorCode.eventsList8(runtimeScene);
 gdjs.Synth_32SelectorCode.GDblankObjects1.length = 0;
@@ -961,14 +985,14 @@ gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595textObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595AboutObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDblank2Objects4.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDblank1Objects4.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDNewSpriteObjects3.length = 0;
@@ -977,6 +1001,14 @@ gdjs.Synth_32SelectorCode.GDblackoutObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDblackoutObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDBoom_9595Kick_9595About2Objects4.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects1.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects2.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects3.length = 0;
+gdjs.Synth_32SelectorCode.GDboom_9595kick_9595text2Objects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -1029,6 +1061,10 @@ gdjs.Synth_32SelectorCode.GDfadeObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDfadeObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects4.length = 0;
 
 
 return;

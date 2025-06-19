@@ -32,6 +32,8 @@ gdjs.Quick_95CheckCode.GDBackgroundObjects1= [];
 gdjs.Quick_95CheckCode.GDBackgroundObjects2= [];
 gdjs.Quick_95CheckCode.GDfadeObjects1= [];
 gdjs.Quick_95CheckCode.GDfadeObjects2= [];
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1= [];
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2= [];
 
 
 gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
@@ -191,6 +193,8 @@ gdjs.Quick_95CheckCode.GDBackgroundObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 
 gdjs.Quick_95CheckCode.eventsList0(runtimeScene);
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length = 0;
@@ -225,6 +229,8 @@ gdjs.Quick_95CheckCode.GDBackgroundObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 
 
 return;

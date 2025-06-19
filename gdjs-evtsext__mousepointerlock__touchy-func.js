@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__TouchY !== "undefined") {
 gdjs.evtsExt__MousePointerLock__TouchY = {};
 
 
-gdjs.evtsExt__MousePointerLock__TouchY.userFunc0x11ec930 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__TouchY.userFunc0x1d53df0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const touchId = eventsFunctionContext.getArgument("NewTouchId");
 eventsFunctionContext.returnValue = runtimeScene.getGame().getInputManager().getTouchY(touchId);
@@ -19,7 +19,7 @@ gdjs.evtsExt__MousePointerLock__TouchY.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__MousePointerLock__TouchY.userFunc0x11ec930(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__MousePointerLock__TouchY.userFunc0x1d53df0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

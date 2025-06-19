@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.GDSourceObjectObjects1= 
 gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.GDTargetObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x1c6a900 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x9499e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // This JS event use private scope from the API, this can be borken at anytime.
 
@@ -33,7 +33,7 @@ gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.eventsList0 = function(r
 {
 
 
-gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x1c6a900(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x9499e0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

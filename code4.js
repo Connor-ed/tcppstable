@@ -36,6 +36,8 @@ gdjs.PreCode.GDBackgroundObjects1= [];
 gdjs.PreCode.GDBackgroundObjects2= [];
 gdjs.PreCode.GDfadeObjects1= [];
 gdjs.PreCode.GDfadeObjects2= [];
+gdjs.PreCode.GDSquareWhiteSliderObjects1= [];
+gdjs.PreCode.GDSquareWhiteSliderObjects2= [];
 
 
 gdjs.PreCode.eventsList0 = function(runtimeScene) {
@@ -53,6 +55,12 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.PreCode.GDLoading_
     gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "ABC");
+}{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+    gdjs.PreCode.GDLoading_9595alertObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+    gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
+}
 }}
 
 }
@@ -112,6 +120,8 @@ gdjs.PreCode.GDBackgroundObjects1.length = 0;
 gdjs.PreCode.GDBackgroundObjects2.length = 0;
 gdjs.PreCode.GDfadeObjects1.length = 0;
 gdjs.PreCode.GDfadeObjects2.length = 0;
+gdjs.PreCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.PreCode.GDSquareWhiteSliderObjects2.length = 0;
 
 gdjs.PreCode.eventsList0(runtimeScene);
 gdjs.PreCode.GDNewSpriteObjects1.length = 0;
@@ -150,6 +160,8 @@ gdjs.PreCode.GDBackgroundObjects1.length = 0;
 gdjs.PreCode.GDBackgroundObjects2.length = 0;
 gdjs.PreCode.GDfadeObjects1.length = 0;
 gdjs.PreCode.GDfadeObjects2.length = 0;
+gdjs.PreCode.GDSquareWhiteSliderObjects1.length = 0;
+gdjs.PreCode.GDSquareWhiteSliderObjects2.length = 0;
 
 
 return;

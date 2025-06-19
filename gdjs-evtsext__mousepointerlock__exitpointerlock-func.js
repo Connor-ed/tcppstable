@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__ExitPointerLock !== "undefined") {
 gdjs.evtsExt__MousePointerLock__ExitPointerLock = {};
 
 
-gdjs.evtsExt__MousePointerLock__ExitPointerLock.userFunc0x121d260 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__ExitPointerLock.userFunc0x16db848 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const { handler } = gdjs._MousePointerLockExtension;
@@ -32,7 +32,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__MousePointerLock__ExitPointerLock.userFunc0x121d260(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__MousePointerLock__ExitPointerLock.userFunc0x16db848(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

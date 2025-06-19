@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__ModifySceneVariable !== "undefined")
 gdjs.evtsExt__ExtendedVariables__ModifySceneVariable = {};
 
 
-gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.userFunc0x1c5cfe8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.userFunc0x1521d90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const variable = runtimeScene.getVariables().get(eventsFunctionContext.getArgument("SceneVariableName"));
 variable.setNumber(eventsFunctionContext.getArgument("SceneVariableValue"));
@@ -18,7 +18,7 @@ gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.eventsList0 = function(runt
 {
 
 
-gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.userFunc0x1c5cfe8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.userFunc0x1521d90(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

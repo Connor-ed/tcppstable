@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__onScenePostEvents !== "undefined") {
 gdjs.evtsExt__MousePointerLock__onScenePostEvents = {};
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x121d260 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x154d510 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { handler } = gdjs._MousePointerLockExtension;
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__MousePointerLock__onScenePostEvents.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x121d260(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x154d510(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

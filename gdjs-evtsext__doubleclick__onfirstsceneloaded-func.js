@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__DoubleClick__onFirstSceneLoaded !== "undefined") {
 gdjs.evtsExt__DoubleClick__onFirstSceneLoaded = {};
 
 
-gdjs.evtsExt__DoubleClick__onFirstSceneLoaded.userFunc0x1c40e50 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__DoubleClick__onFirstSceneLoaded.userFunc0x1035b18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 class ClickCounter {
     // Multiple clicks
@@ -107,7 +107,7 @@ gdjs.evtsExt__DoubleClick__onFirstSceneLoaded.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__DoubleClick__onFirstSceneLoaded.userFunc0x1c40e50(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__DoubleClick__onFirstSceneLoaded.userFunc0x1035b18(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
