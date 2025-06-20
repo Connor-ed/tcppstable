@@ -9,7 +9,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable = {};
 gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0x1ef6d90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0xfcd928 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const object = eventsFunctionContext.getObjects("Object")[0];
 const objectVariables = object.getVariables();
@@ -21,7 +21,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0x1ef6d90(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0xfcd928(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

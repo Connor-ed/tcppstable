@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__StartClientCode !== "undefined") {
 gdjs.evtsExt__THNK__StartClientCode = {};
 
 
-gdjs.evtsExt__THNK__StartClientCode.userFunc0xa5a738 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StartClientCode.userFunc0xd877b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = !THNK.settings.DEDICATED;
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__THNK__StartClientCode.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__THNK__StartClientCode.userFunc0xa5a738(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__StartClientCode.userFunc0xd877b0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

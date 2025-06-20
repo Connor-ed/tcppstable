@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS !== "undefined") {
 gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS.userFunc0x2021c08 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS.userFunc0x11a4b48 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.maxFPS;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS.userFunc0x2021c08(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnMaxFPS.userFunc0x11a4b48(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

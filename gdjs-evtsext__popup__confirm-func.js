@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__PopUp__Confirm !== "undefined") {
 gdjs.evtsExt__PopUp__Confirm = {};
 
 
-gdjs.evtsExt__PopUp__Confirm.userFunc0x1faa150 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__Confirm.userFunc0x297a508 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const isConfirmed = confirm(eventsFunctionContext.getArgument("Message"));
 runtimeScene
@@ -23,7 +23,7 @@ gdjs.evtsExt__PopUp__Confirm.eventsList0 = function(runtimeScene, eventsFunction
 {
 
 
-gdjs.evtsExt__PopUp__Confirm.userFunc0x1faa150(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PopUp__Confirm.userFunc0x297a508(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

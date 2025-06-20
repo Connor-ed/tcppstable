@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__CreatePathFromSvg !== "undefined") {
 gdjs.evtsExt__CurvedMovement__CreatePathFromSvg = {};
 
 
-gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x1156fa0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x14a8ca0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -25,7 +25,7 @@ gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.eventsList0 = function(runtimeSc
 {
 
 
-gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x1156fa0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x14a8ca0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
