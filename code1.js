@@ -27,6 +27,18 @@ gdjs.EditorCode.GDTextToImgObjects3= [];
 gdjs.EditorCode.GDsnap_9595shotObjects1= [];
 gdjs.EditorCode.GDsnap_9595shotObjects2= [];
 gdjs.EditorCode.GDsnap_9595shotObjects3= [];
+gdjs.EditorCode.GDPatchObjects1= [];
+gdjs.EditorCode.GDPatchObjects2= [];
+gdjs.EditorCode.GDPatchObjects3= [];
+gdjs.EditorCode.GDNewShapePainterObjects1= [];
+gdjs.EditorCode.GDNewShapePainterObjects2= [];
+gdjs.EditorCode.GDNewShapePainterObjects3= [];
+gdjs.EditorCode.GDOSC_9595CVObjects1= [];
+gdjs.EditorCode.GDOSC_9595CVObjects2= [];
+gdjs.EditorCode.GDOSC_9595CVObjects3= [];
+gdjs.EditorCode.GDOSC_9595FMObjects1= [];
+gdjs.EditorCode.GDOSC_9595FMObjects2= [];
+gdjs.EditorCode.GDOSC_9595FMObjects3= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects3= [];
@@ -74,6 +86,9 @@ gdjs.EditorCode.GDSquareWhiteSliderObjects3= [];
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
+gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
+gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
+gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595EditorObjects1Objects = Hashtable.newFrom({"Global_Editor": gdjs.EditorCode.GDGlobal_9595EditorObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Objects = Hashtable.newFrom({"Global_Home": gdjs.EditorCode.GDGlobal_9595HomeObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Objects = Hashtable.newFrom({"Global_Home": gdjs.EditorCode.GDGlobal_9595HomeObjects1});
@@ -81,18 +96,6 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Obje
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595PlayObjects1Objects = Hashtable.newFrom({"Global_Play": gdjs.EditorCode.GDGlobal_9595PlayObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595EditorObjects1Objects = Hashtable.newFrom({"Global_Editor": gdjs.EditorCode.GDGlobal_9595EditorObjects1});
 gdjs.EditorCode.eventsList0 = function(runtimeScene) {
-
-{
-
-
-let isConditionTrue_0 = false;
-{
-}
-
-}
-
-
-};gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -132,16 +135,19 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene));
 if (isConditionTrue_0) {
-{gdjs.evtsExt__PopUp__Alert.func(runtimeScene, "downloading is not available in the web app", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
+{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNameObjects1[i].getBehavior("Flash").Flash(0.5, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-{ //Subevents
-gdjs.EditorCode.eventsList0(runtimeScene);} //End of subevents
+}{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNameObjects1[i].setPlaceholder("Error, saving is not supported on the web");
 }
+}}
 
 }
 
 
-};gdjs.EditorCode.eventsList2 = function(runtimeScene) {
+};gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -197,6 +203,27 @@ gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Right");
+}
+if (isConditionTrue_0) {
+/* Reuse gdjs.EditorCode.GDKnobObjects1 */
+{for(var i = 0, len = gdjs.EditorCode.GDKnobObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDKnobObjects1[i].rotate(30, runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Right");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -221,7 +248,49 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Left");
+}
+if (isConditionTrue_0) {
+/* Reuse gdjs.EditorCode.GDKnobObjects1 */
+{for(var i = 0, len = gdjs.EditorCode.GDKnobObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDKnobObjects1[i].rotate(-(30), runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasDoubleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}
+if (isConditionTrue_0) {
+/* Reuse gdjs.EditorCode.GDKnobObjects1 */
+{for(var i = 0, len = gdjs.EditorCode.GDKnobObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDKnobObjects1[i].rotateTowardAngle(0, 0, runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasDoubleClicked.func(runtimeScene, "Right", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDKnobObjects1 */
@@ -468,8 +537,79 @@ isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
+gdjs.EditorCode.eventsList0(runtimeScene);} //End of subevents
 }
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Blank_Knob"), gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length;i<l;++i) {
+    if ( gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[k] = gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[i];
+        ++k;
+    }
+}
+gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1);
+{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNameObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDPatchObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNewShapePainterObjects1[i].hide(false);
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Blank_Knob"), gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length;i<l;++i) {
+    if ( !(gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
+        isConditionTrue_0 = true;
+        gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[k] = gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1[i];
+        ++k;
+    }
+}
+gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1);
+{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNameObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDPatchObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNewShapePainterObjects1[i].hide();
+}
+}}
 
 }
 
@@ -479,29 +619,8 @@ gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "LSystem");
+isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LShift");
 if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "s");
-}
-if (isConditionTrue_0) {
-}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-{
 }
 
 }
@@ -539,6 +658,18 @@ gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
+gdjs.EditorCode.GDPatchObjects1.length = 0;
+gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDPatchObjects3.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects1.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects2.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects3.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects1.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects2.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -582,7 +713,7 @@ gdjs.EditorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
 
-gdjs.EditorCode.eventsList2(runtimeScene);
+gdjs.EditorCode.eventsList1(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
 gdjs.EditorCode.GDKnobObjects3.length = 0;
@@ -610,6 +741,18 @@ gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
+gdjs.EditorCode.GDPatchObjects1.length = 0;
+gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDPatchObjects3.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
+gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects1.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects2.length = 0;
+gdjs.EditorCode.GDOSC_9595CVObjects3.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects1.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects2.length = 0;
+gdjs.EditorCode.GDOSC_9595FMObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;
