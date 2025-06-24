@@ -38,6 +38,8 @@ gdjs.PreCode.GDfadeObjects1= [];
 gdjs.PreCode.GDfadeObjects2= [];
 gdjs.PreCode.GDSquareWhiteSliderObjects1= [];
 gdjs.PreCode.GDSquareWhiteSliderObjects2= [];
+gdjs.PreCode.GDtop_9595titleObjects1= [];
+gdjs.PreCode.GDtop_9595titleObjects2= [];
 
 
 gdjs.PreCode.eventsList0 = function(runtimeScene) {
@@ -122,6 +124,8 @@ gdjs.PreCode.GDfadeObjects1.length = 0;
 gdjs.PreCode.GDfadeObjects2.length = 0;
 gdjs.PreCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.PreCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.PreCode.GDtop_9595titleObjects1.length = 0;
+gdjs.PreCode.GDtop_9595titleObjects2.length = 0;
 
 gdjs.PreCode.eventsList0(runtimeScene);
 gdjs.PreCode.GDNewSpriteObjects1.length = 0;
@@ -162,6 +166,8 @@ gdjs.PreCode.GDfadeObjects1.length = 0;
 gdjs.PreCode.GDfadeObjects2.length = 0;
 gdjs.PreCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.PreCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.PreCode.GDtop_9595titleObjects1.length = 0;
+gdjs.PreCode.GDtop_9595titleObjects2.length = 0;
 
 
 return;

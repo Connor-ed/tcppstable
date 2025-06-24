@@ -88,6 +88,8 @@ gdjs.BootCode.GDfadeObjects1= [];
 gdjs.BootCode.GDfadeObjects2= [];
 gdjs.BootCode.GDSquareWhiteSliderObjects1= [];
 gdjs.BootCode.GDSquareWhiteSliderObjects2= [];
+gdjs.BootCode.GDtop_9595titleObjects1= [];
+gdjs.BootCode.GDtop_9595titleObjects2= [];
 
 
 gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDGlobal_95959595EditorObjects1Objects = Hashtable.newFrom({"Global_Editor": gdjs.BootCode.GDGlobal_9595EditorObjects1});
@@ -990,6 +992,7 @@ gdjs.copyArray(runtimeScene.getObjects("updates"), gdjs.BootCode.GDupdatesObject
 }{for(var i = 0, len = gdjs.BootCode.GDDissmissObjects1.length ;i < len;++i) {
     gdjs.BootCode.GDDissmissObjects1[i].getBehavior("Sticker").Stick(gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDWelcomeObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
+}{gdjs.evtTools.camera.setLayerDefaultZOrder(runtimeScene, "welcome", 0);
 }}
 
 }
@@ -1015,6 +1018,7 @@ gdjs.copyArray(runtimeScene.getObjects("title"), gdjs.BootCode.GDtitleObjects1);
 }{for(var i = 0, len = gdjs.BootCode.GDDissmiss2Objects1.length ;i < len;++i) {
     gdjs.BootCode.GDDissmiss2Objects1[i].getBehavior("Sticker").Stick(gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDbox_95959595helpObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
+}{gdjs.evtTools.camera.setLayerDefaultZOrder(runtimeScene, "Help", 0);
 }}
 
 }
@@ -1090,15 +1094,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDACObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("AD"), gdjs.BootCode.GDADObjects1);
-gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerObjects1);
-{for(var i = 0, len = gdjs.BootCode.GDADObjects1.length ;i < len;++i) {
-    gdjs.BootCode.GDADObjects1[i].hide();
-}
-}{for(var i = 0, len = gdjs.BootCode.GDdisclamerObjects1.length ;i < len;++i) {
-    gdjs.BootCode.GDdisclamerObjects1[i].hide();
-}
-}{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(1);
+{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(1);
+}{runtimeScene.getGame().getVariables().getFromIndex(4).setNumber(1);
 }}
 
 }
@@ -1125,6 +1122,7 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
     gdjs.BootCode.GDdisclamerObjects1[i].hide();
 }
 }{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(1);
+}{runtimeScene.getGame().getVariables().getFromIndex(4).setNumber(0);
 }}
 
 }
@@ -1135,7 +1133,7 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(3).getAsNumber() == 1);
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(4).getAsNumber() == 1);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("AD"), gdjs.BootCode.GDADObjects1);
@@ -1146,17 +1144,10 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
 }{for(var i = 0, len = gdjs.BootCode.GDADObjects1.length ;i < len;++i) {
     gdjs.BootCode.GDADObjects1[i].hide();
 }
+}{gdjs.evtTools.firebaseTools.auth.anonymSignIn(runtimeScene.getScene().getVariables().getFromIndex(0));
+}{firebase.analytics();
+}{gdjs.evtTools.firebaseTools.analytics.log("time", gdjs.evtTools.common.toString(gdjs.evtTools.runtimeScene.getTime(runtimeScene, "timestamp")));
 }}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-{
-}
 
 }
 
@@ -1254,6 +1245,8 @@ gdjs.BootCode.GDfadeObjects1.length = 0;
 gdjs.BootCode.GDfadeObjects2.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.BootCode.GDtop_9595titleObjects1.length = 0;
+gdjs.BootCode.GDtop_9595titleObjects2.length = 0;
 
 gdjs.BootCode.eventsList3(runtimeScene);
 gdjs.BootCode.GDVersion_9595detailsObjects1.length = 0;
@@ -1344,6 +1337,8 @@ gdjs.BootCode.GDfadeObjects1.length = 0;
 gdjs.BootCode.GDfadeObjects2.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.BootCode.GDtop_9595titleObjects1.length = 0;
+gdjs.BootCode.GDtop_9595titleObjects2.length = 0;
 
 
 return;

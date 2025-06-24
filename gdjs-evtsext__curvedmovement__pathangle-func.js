@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__PathAngle !== "undefined") {
 gdjs.evtsExt__CurvedMovement__PathAngle = {};
 
 
-gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0xba6780 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x1854c98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -25,7 +25,7 @@ gdjs.evtsExt__CurvedMovement__PathAngle.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0xba6780(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x1854c98(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

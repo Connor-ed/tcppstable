@@ -81,6 +81,9 @@ gdjs.EditorCode.GDfadeObjects3= [];
 gdjs.EditorCode.GDSquareWhiteSliderObjects1= [];
 gdjs.EditorCode.GDSquareWhiteSliderObjects2= [];
 gdjs.EditorCode.GDSquareWhiteSliderObjects3= [];
+gdjs.EditorCode.GDtop_9595titleObjects1= [];
+gdjs.EditorCode.GDtop_9595titleObjects2= [];
+gdjs.EditorCode.GDtop_9595titleObjects3= [];
 
 
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
@@ -618,9 +621,7 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1
 
 
 let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LShift");
-if (isConditionTrue_0) {
+{
 }
 
 }
@@ -712,6 +713,9 @@ gdjs.EditorCode.GDfadeObjects3.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
 
 gdjs.EditorCode.eventsList1(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
@@ -795,6 +799,9 @@ gdjs.EditorCode.GDfadeObjects3.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
+gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
 
 
 return;

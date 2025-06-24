@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__PopUp__Alert !== "undefined") {
 gdjs.evtsExt__PopUp__Alert = {};
 
 
-gdjs.evtsExt__PopUp__Alert.userFunc0x297a508 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__Alert.userFunc0x1e571d0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 alert(eventsFunctionContext.getArgument("Message"));
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__PopUp__Alert.eventsList0 = function(runtimeScene, eventsFunctionCo
 {
 
 
-gdjs.evtsExt__PopUp__Alert.userFunc0x297a508(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PopUp__Alert.userFunc0x1e571d0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

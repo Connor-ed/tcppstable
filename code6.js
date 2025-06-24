@@ -28,6 +28,8 @@ gdjs.SaveCode.GDfadeObjects1= [];
 gdjs.SaveCode.GDfadeObjects2= [];
 gdjs.SaveCode.GDSquareWhiteSliderObjects1= [];
 gdjs.SaveCode.GDSquareWhiteSliderObjects2= [];
+gdjs.SaveCode.GDtop_9595titleObjects1= [];
+gdjs.SaveCode.GDtop_9595titleObjects2= [];
 
 
 gdjs.SaveCode.eventsList0 = function(runtimeScene) {
@@ -75,6 +77,8 @@ gdjs.SaveCode.GDfadeObjects1.length = 0;
 gdjs.SaveCode.GDfadeObjects2.length = 0;
 gdjs.SaveCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.SaveCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.SaveCode.GDtop_9595titleObjects1.length = 0;
+gdjs.SaveCode.GDtop_9595titleObjects2.length = 0;
 
 gdjs.SaveCode.eventsList0(runtimeScene);
 gdjs.SaveCode.GDGlobal_9595PlayObjects1.length = 0;
@@ -105,6 +109,8 @@ gdjs.SaveCode.GDfadeObjects1.length = 0;
 gdjs.SaveCode.GDfadeObjects2.length = 0;
 gdjs.SaveCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.SaveCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.SaveCode.GDtop_9595titleObjects1.length = 0;
+gdjs.SaveCode.GDtop_9595titleObjects2.length = 0;
 
 
 return;

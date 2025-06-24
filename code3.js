@@ -34,9 +34,26 @@ gdjs.Quick_95CheckCode.GDfadeObjects1= [];
 gdjs.Quick_95CheckCode.GDfadeObjects2= [];
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1= [];
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2= [];
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects1= [];
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects2= [];
 
 
 gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
+{firebase.performance();
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("recording", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.getTracer("buttonsynth");
+}}
+
+}
+
 
 {
 
@@ -195,6 +212,8 @@ gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 
 gdjs.Quick_95CheckCode.eventsList0(runtimeScene);
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length = 0;
@@ -231,6 +250,8 @@ gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 
 
 return;
