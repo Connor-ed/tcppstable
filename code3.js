@@ -48,7 +48,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {firebase.performance();
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("recording", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("recording", 0, 60000000000);
 }{gdjs.evtTools.firebaseTools.performance.getTracer("buttonsynth");
 }}
 

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync !== "undefined") 
 gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0x1f18848 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0x1f1b488 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.verticalSync;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0x1f18848(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0x1f1b488(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

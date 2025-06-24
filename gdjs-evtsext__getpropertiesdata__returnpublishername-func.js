@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnPublisherName !== "undefined")
 gdjs.evtsExt__GetPropertiesData__ReturnPublisherName = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnPublisherName.userFunc0x1efbfd8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnPublisherName.userFunc0x1f09cf0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.author;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnPublisherName.eventsList0 = function(runt
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnPublisherName.userFunc0x1efbfd8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnPublisherName.userFunc0x1f09cf0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

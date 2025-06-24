@@ -329,7 +329,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(1);
 }{gdjs.evtTools.firebaseTools.analytics.log("synthlog_EKEYS", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 60000000000);
 }}
 
 }
@@ -375,7 +375,7 @@ if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(2);
 }{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{gdjs.evtTools.firebaseTools.analytics.log("synthlog_SIMPLEPLUCK", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 60000000000);
 }}
 
 }
@@ -421,7 +421,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(3);
 }{gdjs.evtTools.firebaseTools.analytics.log("synthlog_OWAHH", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 60000000000);
 }}
 
 }
@@ -467,7 +467,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(4);
 }{gdjs.evtTools.firebaseTools.analytics.log("BOOMKICK", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 60000000000);
 }}
 
 }
@@ -691,7 +691,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(5);
 }{gdjs.evtTools.firebaseTools.analytics.log("synthlog_CONCEPTBASS", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 6000);
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 0, 60000000000);
 }}
 
 }

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart !== "undefined") {
 gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart.userFunc0x1f13768 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart.userFunc0x1f1a870 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.sizeOnStartupMode;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart.userFunc0x1f13768(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnSizeOnStart.userFunc0x1f1a870(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

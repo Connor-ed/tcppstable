@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CursorType__DoChangeCursorType !== "undefined") {
 gdjs.evtsExt__CursorType__DoChangeCursorType = {};
 
 
-gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1765a10 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1578ba0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const cursorType = eventsFunctionContext.getArgument("CursorType");
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__CursorType__DoChangeCursorType.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1765a10(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1578ba0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

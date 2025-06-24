@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__IsServer !== "undefined") {
 gdjs.evtsExt__THNK__IsServer = {};
 
 
-gdjs.evtsExt__THNK__IsServer.userFunc0x10e9e30 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__IsServer.userFunc0x14e1d40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = !!runtimeScene.thnkServer;
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__THNK__IsServer.eventsList0 = function(runtimeScene, eventsFunction
 {
 
 
-gdjs.evtsExt__THNK__IsServer.userFunc0x10e9e30(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__IsServer.userFunc0x14e1d40(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
