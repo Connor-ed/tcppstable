@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__SetServerTickRate !== "undefined") {
 gdjs.evtsExt__THNK__SetServerTickRate = {};
 
 
-gdjs.evtsExt__THNK__SetServerTickRate.userFunc0x13decd8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__SetServerTickRate.userFunc0x17f8160 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 THNK.settings.setTickRate(eventsFunctionContext.getArgument("TargetTPS"));
 
@@ -28,7 +28,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__THNK__SetServerTickRate.userFunc0x13decd8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__SetServerTickRate.userFunc0x17f8160(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

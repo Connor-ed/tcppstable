@@ -96,6 +96,14 @@ gdjs.Synth_32SelectorCode.GDBig_9595bassObjects1= [];
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects2= [];
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects3= [];
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects4= [];
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects1= [];
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects2= [];
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects3= [];
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects4= [];
+gdjs.Synth_32SelectorCode.GDCraveObjects1= [];
+gdjs.Synth_32SelectorCode.GDCraveObjects2= [];
+gdjs.Synth_32SelectorCode.GDCraveObjects3= [];
+gdjs.Synth_32SelectorCode.GDCraveObjects4= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3= [];
@@ -328,8 +336,6 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(1);
-}{gdjs.evtTools.firebaseTools.analytics.log("synthlog_EKEYS", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 60000000000, 0);
 }}
 
 }
@@ -374,8 +380,6 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(2);
 }{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
-}{gdjs.evtTools.firebaseTools.analytics.log("synthlog_SIMPLEPLUCK", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 60000000000, 0);
 }}
 
 }
@@ -420,8 +424,6 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(3);
-}{gdjs.evtTools.firebaseTools.analytics.log("synthlog_OWAHH", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 60000000000, 0);
 }}
 
 }
@@ -466,8 +468,6 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(4);
-}{gdjs.evtTools.firebaseTools.analytics.log("BOOMKICK", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 60000000000, 0);
 }}
 
 }
@@ -690,8 +690,6 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Load");
 }{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(5);
-}{gdjs.evtTools.firebaseTools.analytics.log("synthlog_CONCEPTBASS", "");
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("buttonsynth", 60000000000, 0);
 }}
 
 }
@@ -724,7 +722,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Crave Patch Project");
+{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
 }}
 
 }
@@ -885,9 +883,20 @@ gdjs.Synth_32SelectorCode.eventsList8(runtimeScene);} //End of subevents
 {
 
 
-let isConditionTrue_0 = false;
-{
+
 }
+
+
+{
+
+
+
+}
+
+
+{
+
+
 
 }
 
@@ -993,6 +1002,14 @@ gdjs.Synth_32SelectorCode.GDBig_9595bassObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -1151,6 +1168,14 @@ gdjs.Synth_32SelectorCode.GDBig_9595bassObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBig_9595bassObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDMiniBruteObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDCraveObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;

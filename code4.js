@@ -52,7 +52,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.PreCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Crave Patch Project");
+{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Editor");
 }{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }

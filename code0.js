@@ -196,7 +196,7 @@ gdjs.copyArray(runtimeScene.getObjects("version_info"), gdjs.BootCode.GDversion_
 }{for(var i = 0, len = gdjs.BootCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.BootCode.GDLoading_9595alertObjects1[i].getBehavior("Opacity").setOpacity(0);
 }
-}{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Crave Patch Project");
+}{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
 }{gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution.func(runtimeScene, "gd.games", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "b");
 }{for(var i = 0, len = gdjs.BootCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
@@ -223,6 +223,7 @@ gdjs.copyArray(runtimeScene.getObjects("version_info"), gdjs.BootCode.GDversion_
 }{for(var i = 0, len = gdjs.BootCode.GDversion_9595infoObjects1.length ;i < len;++i) {
     gdjs.BootCode.GDversion_9595infoObjects1[i].getBehavior("Text").setText(gdjs.BootCode.GDversion_9595infoObjects1[i].getBehavior("Text").getText() + (gdjs.evtsExt__Language__Language.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
 }
+}{gdjs.evtTools.firebaseTools.remoteConfig.setDefaultConfig(runtimeScene.getScene().getVariables().getFromIndex(1));
 }}
 
 }
@@ -1148,6 +1149,20 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
 }{firebase.analytics();
 }{gdjs.evtTools.firebaseTools.analytics.log("time", gdjs.evtTools.common.toString(gdjs.evtTools.runtimeScene.getTime(runtimeScene, "timestamp")));
 }}
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
 
 }
 

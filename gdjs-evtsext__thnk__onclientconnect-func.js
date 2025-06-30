@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__OnClientConnect !== "undefined") {
 gdjs.evtsExt__THNK__OnClientConnect = {};
 
 
-gdjs.evtsExt__THNK__OnClientConnect.userFunc0x13decd8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__OnClientConnect.userFunc0x1a7ccf0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkServer) eventsFunctionContext.returnValue = THNK.server.events.popConnection(runtimeScene);
 
@@ -41,7 +41,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.evtsExt__THNK__OnClientConnect.userFunc0x13decd8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__OnClientConnect.userFunc0x1a7ccf0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

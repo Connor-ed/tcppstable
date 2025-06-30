@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.GDSourceObjectObjects1= [];
 gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.GDTargetObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x1f02ae8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x2274898 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const sourceObject = eventsFunctionContext.getObjects("SourceObject")[0];
 const targetObject = eventsFunctionContext.getObjects("TargetObject")[0];
@@ -36,7 +36,7 @@ gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x1f02ae8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x2274898(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

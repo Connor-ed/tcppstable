@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding !== "undefined")
 gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding.userFunc0x1f196f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding.userFunc0x228c098 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.pixelsRounding;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding.eventsList0 = function(runt
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding.userFunc0x1f196f8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnPixelRounding.userFunc0x228c098(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

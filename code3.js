@@ -48,8 +48,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {firebase.performance();
-}{gdjs.evtTools.firebaseTools.performance.recordPerformance("recording", 60000000000, 0);
-}{gdjs.evtTools.firebaseTools.performance.getTracer("buttonsynth");
+}{gdjs.evtTools.firebaseTools.performance.getTracer("loadtime");
+}{gdjs.evtTools.firebaseTools.performance.recordPerformance("loadtime", 0, 60000);
 }}
 
 }
@@ -63,10 +63,6 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
-}{gdjs.evtTools.sound.preloadMusic(runtimeScene, "E Keys4.wav");
-}{gdjs.evtTools.sound.preloadMusic(runtimeScene, "Simple Pluck -2.wav");
-}{gdjs.evtTools.sound.preloadMusic(runtimeScene, "Ow - Ahh1.wav");
-}{gdjs.evtTools.sound.preloadMusic(runtimeScene, "Boom Kick.wav");
 }}
 
 }
@@ -80,16 +76,11 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Crave Patch Project");
+{gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
 }{for(var i = 0, len = gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
 }{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Boot");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Editor");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Load");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Pre");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Synth Selector");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Save");
 }}
 
 }
