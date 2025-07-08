@@ -9,7 +9,7 @@ gdjs.evtsExt__ExtendedVariables__ObjectVariableExist = {};
 gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x22549a0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x22b4fc8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let returnValue = true;
 if (!objects.length) {
@@ -35,7 +35,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ObjectToCheck"), gdjs.evtsExt__
 
 var objects = [];
 objects.push.apply(objects,gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1);
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x22549a0(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x22b4fc8(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

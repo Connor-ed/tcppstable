@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ArrayTools__LastIndexOf !== "undefined") {
 gdjs.evtsExt__ArrayTools__LastIndexOf = {};
 
 
-gdjs.evtsExt__ArrayTools__LastIndexOf.userFunc0x268f528 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__LastIndexOf.userFunc0x2710b18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -23,7 +23,7 @@ gdjs.evtsExt__ArrayTools__LastIndexOf.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__ArrayTools__LastIndexOf.userFunc0x268f528(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ArrayTools__LastIndexOf.userFunc0x2710b18(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

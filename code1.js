@@ -27,9 +27,6 @@ gdjs.EditorCode.GDTextToImgObjects3= [];
 gdjs.EditorCode.GDsnap_9595shotObjects1= [];
 gdjs.EditorCode.GDsnap_9595shotObjects2= [];
 gdjs.EditorCode.GDsnap_9595shotObjects3= [];
-gdjs.EditorCode.GDPatchObjects1= [];
-gdjs.EditorCode.GDPatchObjects2= [];
-gdjs.EditorCode.GDPatchObjects3= [];
 gdjs.EditorCode.GDNewShapePainterObjects1= [];
 gdjs.EditorCode.GDNewShapePainterObjects2= [];
 gdjs.EditorCode.GDNewShapePainterObjects3= [];
@@ -135,6 +132,9 @@ gdjs.EditorCode.GDGATEOObjects3= [];
 gdjs.EditorCode.GDVCFOObjects1= [];
 gdjs.EditorCode.GDVCFOObjects2= [];
 gdjs.EditorCode.GDVCFOObjects3= [];
+gdjs.EditorCode.GDPatchObjects1= [];
+gdjs.EditorCode.GDPatchObjects2= [];
+gdjs.EditorCode.GDPatchObjects3= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects3= [];
@@ -790,14 +790,14 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDPatchObjects1 */
-{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNameObjects1[i].hide(false);
-}
-}{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
+{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDPatchObjects1[i].hide();
 }
 }{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDNewShapePainterObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNameObjects1[i].hide(false);
 }
 }}
 
@@ -1979,9 +1979,6 @@ gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
-gdjs.EditorCode.GDPatchObjects1.length = 0;
-gdjs.EditorCode.GDPatchObjects2.length = 0;
-gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
@@ -2087,6 +2084,9 @@ gdjs.EditorCode.GDGATEOObjects3.length = 0;
 gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
 gdjs.EditorCode.GDVCFOObjects3.length = 0;
+gdjs.EditorCode.GDPatchObjects1.length = 0;
+gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -2161,9 +2161,6 @@ gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
-gdjs.EditorCode.GDPatchObjects1.length = 0;
-gdjs.EditorCode.GDPatchObjects2.length = 0;
-gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
@@ -2269,6 +2266,9 @@ gdjs.EditorCode.GDGATEOObjects3.length = 0;
 gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
 gdjs.EditorCode.GDVCFOObjects3.length = 0;
+gdjs.EditorCode.GDPatchObjects1.length = 0;
+gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;

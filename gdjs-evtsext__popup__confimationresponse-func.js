@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__PopUp__ConfimationResponse !== "undefined") {
 gdjs.evtsExt__PopUp__ConfimationResponse = {};
 
 
-gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x21d4508 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x227b998 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getVariables().get("__PopUp").getChild("Confirm").getAsBoolean();
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__PopUp__ConfimationResponse.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x21d4508(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x227b998(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

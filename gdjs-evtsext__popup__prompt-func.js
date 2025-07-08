@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__PopUp__Prompt !== "undefined") {
 gdjs.evtsExt__PopUp__Prompt = {};
 
 
-gdjs.evtsExt__PopUp__Prompt.userFunc0x21e3840 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__Prompt.userFunc0x227abb0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const message = eventsFunctionContext.getArgument("Message");
 const defaultText = eventsFunctionContext.getArgument("DefaultText");
@@ -26,7 +26,7 @@ gdjs.evtsExt__PopUp__Prompt.eventsList0 = function(runtimeScene, eventsFunctionC
 {
 
 
-gdjs.evtsExt__PopUp__Prompt.userFunc0x21e3840(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PopUp__Prompt.userFunc0x227abb0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

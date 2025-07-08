@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__PopUp__PromptResponse !== "undefined") {
 gdjs.evtsExt__PopUp__PromptResponse = {};
 
 
-gdjs.evtsExt__PopUp__PromptResponse.userFunc0x21de538 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__PromptResponse.userFunc0x227a388 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getVariables().get("__PopUp").getChild("Prompt").getAsString();
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__PopUp__PromptResponse.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__PopUp__PromptResponse.userFunc0x21de538(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PopUp__PromptResponse.userFunc0x227a388(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

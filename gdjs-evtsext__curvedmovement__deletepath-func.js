@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__DeletePath !== "undefined") {
 gdjs.evtsExt__CurvedMovement__DeletePath = {};
 
 
-gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x1adf638 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x1a1d6d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 
@@ -23,7 +23,7 @@ gdjs.evtsExt__CurvedMovement__DeletePath.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x1adf638(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x1a1d6d8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
