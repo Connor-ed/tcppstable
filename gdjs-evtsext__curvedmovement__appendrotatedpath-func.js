@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__AppendRotatedPath !== "undefined") {
 gdjs.evtsExt__CurvedMovement__AppendRotatedPath = {};
 
 
-gdjs.evtsExt__CurvedMovement__AppendRotatedPath.userFunc0x19adb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__AppendRotatedPath.userFunc0x15a5a38 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const modifiedPathName = eventsFunctionContext.getArgument("ModifiedPathName");
 const addedPathName = eventsFunctionContext.getArgument("AddedPathName");
@@ -31,7 +31,7 @@ gdjs.evtsExt__CurvedMovement__AppendRotatedPath.eventsList0 = function(runtimeSc
 {
 
 
-gdjs.evtsExt__CurvedMovement__AppendRotatedPath.userFunc0x19adb18(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__AppendRotatedPath.userFunc0x15a5a38(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

@@ -47,7 +47,16 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-}
+{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Boot");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Editor");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Load");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Quick_Check");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Pre");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Synth Selector");
+}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Save");
+}{runtimeScene.getGame().getVariables().getFromIndex(4).setNumber(0);
+}{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(0);
+}}
 
 }
 
@@ -141,6 +150,9 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Load");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Quick_Check");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Pre");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -148,6 +160,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Save");
+}
 }
 }
 }

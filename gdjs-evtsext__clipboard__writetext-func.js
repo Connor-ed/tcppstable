@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Clipboard__WriteText !== "undefined") {
 gdjs.evtsExt__Clipboard__WriteText = {};
 
 
-gdjs.evtsExt__Clipboard__WriteText.userFunc0x2269f80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Clipboard__WriteText.userFunc0x22a5368 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const electron = runtimeScene.getGame().getRenderer().getElectron();
 const text = eventsFunctionContext.getArgument("text");
@@ -35,7 +35,7 @@ gdjs.evtsExt__Clipboard__WriteText.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__Clipboard__WriteText.userFunc0x2269f80(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Clipboard__WriteText.userFunc0x22a5368(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

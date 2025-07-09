@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Language__Language !== "undefined") {
 gdjs.evtsExt__Language__Language = {};
 
 
-gdjs.evtsExt__Language__Language.userFunc0x2322958 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Language__Language.userFunc0x232b288 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = navigator.language || "";
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__Language__Language.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Language__Language.userFunc0x2322958(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Language__Language.userFunc0x232b288(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

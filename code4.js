@@ -64,6 +64,13 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.PreCode.GDLoading_
 }{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Simple Pluck -2.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh2.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh1.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "E Keys4.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "conceptbass3.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Boom Kick.wav");
+}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Electric Pulse2.wav");
 }}
 
 }
