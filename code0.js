@@ -425,11 +425,11 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDExitObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene);
+isConditionTrue_0 = !(gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene));
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__URLTools__Redirect.func(runtimeScene, "https://connor.edgingtondesmet.com", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__URLTools__Redirect.func(runtimeScene, "about:blank", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -447,7 +447,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.BootCode.mapOfGDgdjs_9546BootCode_9546GDShareObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__Clipboard__WriteText.func(runtimeScene, "https://github.com/Connor-ed/The-Crave-Patch-Project", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__Clipboard__WriteText.func(runtimeScene, "https://github.com/Connor-ed/The-Patch-Project", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }{gdjs.evtsExt__PopUp__Alert.func(runtimeScene, "Copied to Clipboard", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
@@ -1265,6 +1265,20 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
 {
 
 
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(4).getAsNumber() == 0);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("AD"), gdjs.BootCode.GDADObjects1);
+gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerObjects1);
+{for(var i = 0, len = gdjs.BootCode.GDdisclamerObjects1.length ;i < len;++i) {
+    gdjs.BootCode.GDdisclamerObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.BootCode.GDADObjects1.length ;i < len;++i) {
+    gdjs.BootCode.GDADObjects1[i].hide();
+}
+}}
 
 }
 
@@ -1272,6 +1286,26 @@ gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerOb
 {
 
 
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isPreview(runtimeScene);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("AD"), gdjs.BootCode.GDADObjects1);
+gdjs.copyArray(runtimeScene.getObjects("disclamer"), gdjs.BootCode.GDdisclamerObjects1);
+{for(var i = 0, len = gdjs.BootCode.GDdisclamerObjects1.length ;i < len;++i) {
+    gdjs.BootCode.GDdisclamerObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.BootCode.GDADObjects1.length ;i < len;++i) {
+    gdjs.BootCode.GDADObjects1[i].hide();
+}
+}}
 
 }
 

@@ -9,7 +9,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxX = {};
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.GDobjectsObjects1= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.userFunc0x28fe4d0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.userFunc0x29120f0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -35,7 +35,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__Values
 
 var objects = [];
 objects.push.apply(objects,gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.GDobjectsObjects1);
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.userFunc0x28fe4d0(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxX.userFunc0x29120f0(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

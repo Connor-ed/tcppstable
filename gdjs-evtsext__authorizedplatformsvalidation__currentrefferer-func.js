@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer !== "und
 gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer = {};
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x8ca588 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x8e0928 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // If the document referrer is not empty, return the hostname (the domain name) else, return an empty string.
 eventsFunctionContext.returnValue = document.referrer ? new URL(document.referrer).hostname : "" ;
@@ -19,7 +19,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.eventsList0 = funct
 {
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x8ca588(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x8e0928(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

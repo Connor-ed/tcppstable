@@ -9,7 +9,7 @@ gdjs.evtsExt__UploadDownloadImageFile__DownloadImage = {};
 gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x2359b38 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x2369fe0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const renderer = runtimeScene.getGame().getRenderer().getPIXIRenderer();
 const sprite = objects[0].getRendererObject();
@@ -34,7 +34,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadD
 
 var objects = [];
 objects.push.apply(objects,gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1);
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x2359b38(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x2369fe0(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
