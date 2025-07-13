@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation !== "undef
 gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation = {};
 
 
-gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.userFunc0x19f5dc0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.userFunc0x1b97c48 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.orientation;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.eventsList0 = functio
 {
 
 
-gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.userFunc0x19f5dc0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.userFunc0x1b97c48(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

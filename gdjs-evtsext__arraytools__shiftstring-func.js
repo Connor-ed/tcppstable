@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ArrayTools__ShiftString !== "undefined") {
 gdjs.evtsExt__ArrayTools__ShiftString = {};
 
 
-gdjs.evtsExt__ArrayTools__ShiftString.userFunc0x274d0f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__ShiftString.userFunc0x27b07b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -24,7 +24,7 @@ gdjs.evtsExt__ArrayTools__ShiftString.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__ArrayTools__ShiftString.userFunc0x274d0f8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ArrayTools__ShiftString.userFunc0x27b07b0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
