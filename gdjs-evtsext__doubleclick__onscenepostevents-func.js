@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__DoubleClick__onScenePostEvents !== "undefined") {
 gdjs.evtsExt__DoubleClick__onScenePostEvents = {};
 
 
-gdjs.evtsExt__DoubleClick__onScenePostEvents.userFunc0x2313360 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__DoubleClick__onScenePostEvents.userFunc0x2313378 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { clickCounter } = gdjs._DoubleClickExtension;
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__DoubleClick__onScenePostEvents.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__DoubleClick__onScenePostEvents.userFunc0x2313360(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__DoubleClick__onScenePostEvents.userFunc0x2313378(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

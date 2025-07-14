@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__DefineHelperClasses !== "undefined") {
 gdjs.evtsExt__CurvedMovement__DefineHelperClasses = {};
 
 
-gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x19c35e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x196e488 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /**
  * @param {number[]} array 
@@ -929,7 +929,7 @@ gdjs.evtsExt__CurvedMovement__DefineHelperClasses.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x19c35e8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x196e488(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

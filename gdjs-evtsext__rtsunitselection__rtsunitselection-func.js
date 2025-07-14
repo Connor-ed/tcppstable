@@ -531,7 +531,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects3Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(33036108);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(33048772);
 }
 }
 if (isConditionTrue_0) {

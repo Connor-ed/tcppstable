@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Gamepads__A_Set_deadzone !== "undefined") {
 gdjs.evtsExt__Gamepads__A_Set_deadzone = {};
 
 
-gdjs.evtsExt__Gamepads__A_Set_deadzone.userFunc0x1651530 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Gamepads__A_Set_deadzone.userFunc0x139a520 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 //Get function parameter
 const playerId = eventsFunctionContext.getArgument("player_ID") - 1;
@@ -29,7 +29,7 @@ gdjs.evtsExt__Gamepads__A_Set_deadzone.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__Gamepads__A_Set_deadzone.userFunc0x1651530(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Gamepads__A_Set_deadzone.userFunc0x139a520(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

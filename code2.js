@@ -1304,7 +1304,7 @@ gdjs.copyArray(runtimeScene.getObjects("MIXCV"), gdjs.LoadCode.GDMIXCVObjects2);
 gdjs.copyArray(runtimeScene.getObjects("MULTI1O"), gdjs.LoadCode.GDMULTI1OObjects2);
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
 {for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineOpacity(150);
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setFillOpacity(150);
 }
 }{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
     gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("117;21;30");
@@ -1800,541 +1800,14 @@ gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewSh
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCCV"), gdjs.LoadCode.GDOSCCVObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDOSCCVObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDOSCCVObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDOSCCVObjects1[k] = gdjs.LoadCode.GDOSCCVObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDOSCCVObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDOSCCVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-gdjs.copyArray(runtimeScene.getObjects("ytext"), gdjs.LoadCode.GDytextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDOSCCVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCCVObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDOSCCVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCCVObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDytextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDytextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCFM"), gdjs.LoadCode.GDOSCFMObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDOSCFMObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDOSCFMObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDOSCFMObjects1[k] = gdjs.LoadCode.GDOSCFMObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDOSCFMObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDOSCFMObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDOSCFMObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCFMObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDOSCFMObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCFMObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("OSCMOD"), gdjs.LoadCode.GDOSCMODObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDOSCMODObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDOSCMODObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDOSCMODObjects1[k] = gdjs.LoadCode.GDOSCMODObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDOSCMODObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDOSCMODObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDOSCMODObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCMODObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDOSCMODObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCMODObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCFCUTOFF"), gdjs.LoadCode.GDVCFCUTOFFObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCFCUTOFFObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCFCUTOFFObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCFCUTOFFObjects1[k] = gdjs.LoadCode.GDVCFCUTOFFObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCFCUTOFFObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDVCFCUTOFFObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDVCFCUTOFFObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFCUTOFFObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDVCFCUTOFFObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFCUTOFFObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCSRES"), gdjs.LoadCode.GDVCSRESObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCSRESObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCSRESObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCSRESObjects1[k] = gdjs.LoadCode.GDVCSRESObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCSRESObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDVCSRESObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDVCSRESObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCSRESObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDVCSRESObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCSRESObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIX1"), gdjs.LoadCode.GDMIX1Objects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMIX1Objects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMIX1Objects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMIX1Objects1[k] = gdjs.LoadCode.GDMIX1Objects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMIX1Objects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMIX1Objects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDMIX1Objects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX1Objects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDMIX1Objects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX1Objects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIX2"), gdjs.LoadCode.GDMIX2Objects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMIX2Objects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMIX2Objects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMIX2Objects1[k] = gdjs.LoadCode.GDMIX2Objects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMIX2Objects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMIX2Objects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDMIX2Objects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX2Objects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDMIX2Objects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX2Objects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCMIX"), gdjs.LoadCode.GDVCMIXObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCMIXObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCMIXObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCMIXObjects1[k] = gdjs.LoadCode.GDVCMIXObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCMIXObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDVCMIXObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDVCMIXObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDVCMIXObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MULTI"), gdjs.LoadCode.GDMULTIObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMULTIObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMULTIObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMULTIObjects1[k] = gdjs.LoadCode.GDMULTIObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMULTIObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMULTIObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTIObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTIObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("LFORATE"), gdjs.LoadCode.GDLFORATEObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDLFORATEObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDLFORATEObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDLFORATEObjects1[k] = gdjs.LoadCode.GDLFORATEObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDLFORATEObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDLFORATEObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDLFORATEObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFORATEObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDLFORATEObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFORATEObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCACV"), gdjs.LoadCode.GDVCACVObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCACVObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCACVObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCACVObjects1[k] = gdjs.LoadCode.GDVCACVObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCACVObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDVCACVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDVCACVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCACVObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDVCACVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCACVObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("ENVGATE"), gdjs.LoadCode.GDENVGATEObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDENVGATEObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDENVGATEObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDENVGATEObjects1[k] = gdjs.LoadCode.GDENVGATEObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDENVGATEObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDENVGATEObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDENVGATEObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVGATEObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDENVGATEObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVGATEObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("HOLD"), gdjs.LoadCode.GDHOLDObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDHOLDObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDHOLDObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDHOLDObjects1[k] = gdjs.LoadCode.GDHOLDObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDHOLDObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDHOLDObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDHOLDObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDHOLDObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDHOLDObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDHOLDObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("RESET"), gdjs.LoadCode.GDRESETObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDRESETObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDRESETObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDRESETObjects1[k] = gdjs.LoadCode.GDRESETObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDRESETObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDRESETObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDRESETObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDRESETObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDRESETObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDRESETObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("PLAYSTOP"), gdjs.LoadCode.GDPLAYSTOPObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDPLAYSTOPObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDPLAYSTOPObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDPLAYSTOPObjects1[k] = gdjs.LoadCode.GDPLAYSTOPObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDPLAYSTOPObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDPLAYSTOPObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDPLAYSTOPObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDPLAYSTOPObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDPLAYSTOPObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDPLAYSTOPObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("TEMPO"), gdjs.LoadCode.GDTEMPOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDTEMPOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDTEMPOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDTEMPOObjects1[k] = gdjs.LoadCode.GDTEMPOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDTEMPOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDTEMPOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDTEMPOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDTEMPOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDTEMPOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDTEMPOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("EXTAUX"), gdjs.LoadCode.GDEXTAUXObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDEXTAUXObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDEXTAUXObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDEXTAUXObjects1[k] = gdjs.LoadCode.GDEXTAUXObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDEXTAUXObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDEXTAUXObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDEXTAUXObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDEXTAUXObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDEXTAUXObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDEXTAUXObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIXCV"), gdjs.LoadCode.GDMIXCVObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMIXCVObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMIXCVObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMIXCVObjects1[k] = gdjs.LoadCode.GDMIXCVObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMIXCVObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMIXCVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.LoadCode.GDMIXCVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIXCVObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.LoadCode.GDMIXCVObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMIXCVObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.LoadCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)))));
-}
-}}
 
 }
 
@@ -2348,588 +1821,210 @@ gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.LoadCode.GDtesttextObje
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("MULTI1O"), gdjs.LoadCode.GDMULTI1OObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMULTI1OObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMULTI1OObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMULTI1OObjects1[k] = gdjs.LoadCode.GDMULTI1OObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMULTI1OObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMULTI1OObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("208;2;27");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("208;2;27");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("MULTI2O"), gdjs.LoadCode.GDMULTI2OObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDMULTI2OObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDMULTI2OObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDMULTI2OObjects1[k] = gdjs.LoadCode.GDMULTI2OObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDMULTI2OObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDMULTI2OObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("245;166;35");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("245;166;35");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI2OObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCPULSEO"), gdjs.LoadCode.GDOSCPULSEOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDOSCPULSEOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDOSCPULSEOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDOSCPULSEOObjects1[k] = gdjs.LoadCode.GDOSCPULSEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDOSCPULSEOObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.LoadCode.GDOSCPULSEOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("52;62;64");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("52;62;64");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCSAWO"), gdjs.LoadCode.GDOSCSAWOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDOSCSAWOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDOSCSAWOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDOSCSAWOObjects1[k] = gdjs.LoadCode.GDOSCSAWOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDOSCSAWOObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.LoadCode.GDOSCSAWOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("146;43;62");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("146;43;62");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCSAWOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("ENVO"), gdjs.LoadCode.GDENVOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDENVOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDENVOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDENVOObjects1[k] = gdjs.LoadCode.GDENVOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDENVOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDENVOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("244;70;17");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("244;70;17");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("NOISEO"), gdjs.LoadCode.GDNOISEOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDNOISEOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDNOISEOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDNOISEOObjects1[k] = gdjs.LoadCode.GDNOISEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDNOISEOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDNOISEOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("30;36;96");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("30;36;96");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDNOISEOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("VCALINEO"), gdjs.LoadCode.GDVCALINEOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCALINEOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCALINEOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCALINEOObjects1[k] = gdjs.LoadCode.GDVCALINEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCALINEOObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.LoadCode.GDVCALINEOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("189;16;224");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("189;16;224");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCALINEOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("LFOTRIO"), gdjs.LoadCode.GDLFOTRIOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDLFOTRIOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDLFOTRIOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDLFOTRIOObjects1[k] = gdjs.LoadCode.GDLFOTRIOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDLFOTRIOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDLFOTRIOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("61;100;45");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("61;100;45");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("LFOSQUO"), gdjs.LoadCode.GDLFOSQUOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDLFOSQUOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDLFOSQUOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDLFOSQUOObjects1[k] = gdjs.LoadCode.GDLFOSQUOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDLFOSQUOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDLFOSQUOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("96;110;140");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("96;110;140");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOSQUOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("VCMIXO"), gdjs.LoadCode.GDVCMIXOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCMIXOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCMIXOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCMIXOObjects1[k] = gdjs.LoadCode.GDVCMIXOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDVCMIXOObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.LoadCode.GDVCMIXOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("80;227;194");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("80;227;194");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("ASSIGNO"), gdjs.LoadCode.GDASSIGNOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDASSIGNOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDASSIGNOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDASSIGNOObjects1[k] = gdjs.LoadCode.GDASSIGNOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDASSIGNOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDASSIGNOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("143;139;102");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("143;139;102");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDASSIGNOObjects1[0].getCenterYInScene()), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("KBCVO"), gdjs.LoadCode.GDKBCVOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDKBCVOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDKBCVOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDKBCVOObjects1[k] = gdjs.LoadCode.GDKBCVOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDKBCVOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDKBCVOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("117;21;30");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("117;21;30");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("GATEO"), gdjs.LoadCode.GDGATEOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDGATEOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDGATEOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDGATEOObjects1[k] = gdjs.LoadCode.GDGATEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.LoadCode.GDGATEOObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.LoadCode.GDGATEOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("0;187;45");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterYInScene()), 10);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("0;187;45");
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
-}
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDGATEOObjects1[0].getCenterYInScene()), 18);
-}
-}}
 
 }
 
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("VCFO"), gdjs.LoadCode.GDVCFOObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.LoadCode.GDVCFOObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDVCFOObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.LoadCode.GDVCFOObjects1[k] = gdjs.LoadCode.GDVCFOObjects1[i];
-        ++k;
-    }
+
 }
-gdjs.LoadCode.GDVCFOObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.LoadCode.GDVCFOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterXInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(4).getAsString(), (( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterYInScene()), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
+
+
+{
+
+
+
 }
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("222;76;138");
+
+
+{
+
+
+
 }
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterYInScene()), 10);
+
+
+{
+
+
+
 }
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].setFillColor("222;76;138");
+
+
+{
+
+
+
 }
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), 18);
+
+
+{
+
+
+
 }
-}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFOObjects1[0].getCenterYInScene()), 18);
+
+
+{
+
+
+
 }
-}}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
 
 }
 
