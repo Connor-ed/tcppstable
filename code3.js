@@ -36,6 +36,8 @@ gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1= [];
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2= [];
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1= [];
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2= [];
+gdjs.Quick_95CheckCode.GDShadowObjects1= [];
+gdjs.Quick_95CheckCode.GDShadowObjects2= [];
 
 
 gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
@@ -54,8 +56,6 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Pre");
 }{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Synth Selector");
 }{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Save");
-}{runtimeScene.getGame().getVariables().getFromIndex(4).setNumber(0);
-}{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(0);
 }}
 
 }
@@ -95,6 +95,22 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Quick_95CheckCode.
 {
 
 
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNewSpriteObjects1);
+{for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
+    gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("no");
+}
+}}
+
+}
+
+
+{
+
+
 
 }
 
@@ -105,6 +121,10 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Quick_95CheckCode.
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__UpdateChecker__UpdateAvailable.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNewSpriteObjects1);
 {for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
@@ -169,6 +189,10 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Save");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}
 }
 }
 }
@@ -225,6 +249,8 @@ gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
 
 gdjs.Quick_95CheckCode.eventsList0(runtimeScene);
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length = 0;
@@ -263,6 +289,8 @@ gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
 
 
 return;

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnMinFPS !== "undefined") {
 gdjs.evtsExt__GetPropertiesData__ReturnMinFPS = {};
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x234f9e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x235b9f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.minFPS;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x234f9e0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x235b9f8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

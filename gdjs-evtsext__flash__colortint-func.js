@@ -9,7 +9,7 @@ gdjs.evtsExt__Flash__ColorTint = {};
 gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Flash__ColorTint.userFunc0x1c81d18 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Flash__ColorTint.userFunc0x1bdeb20 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.SpriteRuntimeObject} */
 const tintedObject = objects[0];
@@ -31,7 +31,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__
 
 var objects = [];
 objects.push.apply(objects,gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1);
-gdjs.evtsExt__Flash__ColorTint.userFunc0x1c81d18(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Flash__ColorTint.userFunc0x1bdeb20(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

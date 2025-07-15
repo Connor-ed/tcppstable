@@ -240,6 +240,10 @@ gdjs.LoadCode.GDtop_9595titleObjects1= [];
 gdjs.LoadCode.GDtop_9595titleObjects2= [];
 gdjs.LoadCode.GDtop_9595titleObjects3= [];
 gdjs.LoadCode.GDtop_9595titleObjects4= [];
+gdjs.LoadCode.GDShadowObjects1= [];
+gdjs.LoadCode.GDShadowObjects2= [];
+gdjs.LoadCode.GDShadowObjects3= [];
+gdjs.LoadCode.GDShadowObjects4= [];
 
 
 gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595HomeObjects2Objects = Hashtable.newFrom({"Global_Home": gdjs.LoadCode.GDGlobal_9595HomeObjects2});
@@ -2284,6 +2288,10 @@ gdjs.LoadCode.GDtop_9595titleObjects1.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects2.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects3.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects4.length = 0;
+gdjs.LoadCode.GDShadowObjects1.length = 0;
+gdjs.LoadCode.GDShadowObjects2.length = 0;
+gdjs.LoadCode.GDShadowObjects3.length = 0;
+gdjs.LoadCode.GDShadowObjects4.length = 0;
 
 gdjs.LoadCode.eventsList14(runtimeScene);
 gdjs.LoadCode.GDKnobObjects1.length = 0;
@@ -2526,6 +2534,10 @@ gdjs.LoadCode.GDtop_9595titleObjects1.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects2.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects3.length = 0;
 gdjs.LoadCode.GDtop_9595titleObjects4.length = 0;
+gdjs.LoadCode.GDShadowObjects1.length = 0;
+gdjs.LoadCode.GDShadowObjects2.length = 0;
+gdjs.LoadCode.GDShadowObjects3.length = 0;
+gdjs.LoadCode.GDShadowObjects4.length = 0;
 
 
 return;

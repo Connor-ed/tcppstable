@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray = {};
 gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.userFunc0x28d0df8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.userFunc0x28d2db8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -25,7 +25,7 @@ gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.userFunc0x28d0df8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ArrayTools__ObjectRandomStringInArray.userFunc0x28d2db8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

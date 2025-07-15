@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__OnMessage !== "undefined") {
 gdjs.evtsExt__THNK__OnMessage = {};
 
 
-gdjs.evtsExt__THNK__OnMessage.userFunc0x1aa40e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__OnMessage.userFunc0x1d58d60 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (!runtimeScene.thnkClient) eventsFunctionContext.returnValue = THNK.server.events.popMessage(
     eventsFunctionContext.getArgument("message"),
@@ -21,7 +21,7 @@ gdjs.evtsExt__THNK__OnMessage.eventsList0 = function(runtimeScene, eventsFunctio
 {
 
 
-gdjs.evtsExt__THNK__OnMessage.userFunc0x1aa40e8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__OnMessage.userFunc0x1d58d60(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

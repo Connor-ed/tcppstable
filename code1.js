@@ -180,6 +180,9 @@ gdjs.EditorCode.GDSquareWhiteSliderObjects3= [];
 gdjs.EditorCode.GDtop_9595titleObjects1= [];
 gdjs.EditorCode.GDtop_9595titleObjects2= [];
 gdjs.EditorCode.GDtop_9595titleObjects3= [];
+gdjs.EditorCode.GDShadowObjects1= [];
+gdjs.EditorCode.GDShadowObjects2= [];
+gdjs.EditorCode.GDShadowObjects3= [];
 
 
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
@@ -2132,6 +2135,9 @@ gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
+gdjs.EditorCode.GDShadowObjects1.length = 0;
+gdjs.EditorCode.GDShadowObjects2.length = 0;
+gdjs.EditorCode.GDShadowObjects3.length = 0;
 
 gdjs.EditorCode.eventsList1(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
@@ -2314,6 +2320,9 @@ gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
+gdjs.EditorCode.GDShadowObjects1.length = 0;
+gdjs.EditorCode.GDShadowObjects2.length = 0;
+gdjs.EditorCode.GDShadowObjects3.length = 0;
 
 
 return;

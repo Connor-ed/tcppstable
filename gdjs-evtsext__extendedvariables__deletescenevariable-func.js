@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable !== "undefined")
 gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable = {};
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.userFunc0x233c1a8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.userFunc0x233e450 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 runtimeScene.getVariables().remove(eventsFunctionContext.getArgument("SceneVariableName"));
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.eventsList0 = function(runt
 {
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.userFunc0x233c1a8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.userFunc0x233e450(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
