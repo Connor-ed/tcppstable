@@ -221,7 +221,8 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects2);
 /* Reuse gdjs.EditorCode.GDNameObjects2 */
 gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImgObjects2);
-{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects2.length ;i < len;++i) {
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "screenshot");
+}{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects2.length ;i < len;++i) {
     gdjs.EditorCode.GDTextToImgObjects2[i].getBehavior("Text").setText((( gdjs.EditorCode.GDInstuctionsObjects2.length === 0 ) ? "" :gdjs.EditorCode.GDInstuctionsObjects2[0].getBehavior("Text").getText()));
 }
 }{gdjs.screenshot.takeScreenshot(runtimeScene, gdjs.fileSystem.getDesktopPath(runtimeScene) + gdjs.fileSystem.getPathDelimiter() + (( gdjs.EditorCode.GDNameObjects2.length === 0 ) ? "" :gdjs.EditorCode.GDNameObjects2[0].getBehavior("Text").getText()) + ".Patch.png");
@@ -249,8 +250,88 @@ gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
 }
 
 
+};gdjs.EditorCode.eventsList1 = function(runtimeScene) {
+
+{
+
+/* Reuse gdjs.EditorCode.GDPatchObjects1 */
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "screenshot") >= 5;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.EditorCode.GDPatchObjects1.length;i<l;++i) {
+    if ( gdjs.EditorCode.GDPatchObjects1[i].getBehavior("Animation").getAnimationIndex() == 1 ) {
+        isConditionTrue_0 = true;
+        gdjs.EditorCode.GDPatchObjects1[k] = gdjs.EditorCode.GDPatchObjects1[i];
+        ++k;
+    }
+}
+gdjs.EditorCode.GDPatchObjects1.length = k;
+}
+if (isConditionTrue_0) {
+/* Reuse gdjs.EditorCode.GDNameObjects1 */
+{gdjs.screenshot.takeScreenshot(runtimeScene, gdjs.fileSystem.getDesktopPath(runtimeScene) + gdjs.fileSystem.getPathDelimiter() + (( gdjs.EditorCode.GDNameObjects1.length === 0 ) ? "" :gdjs.EditorCode.GDNameObjects1[0].getBehavior("Text").getText()) + ".Patch.png");
+}}
+
+}
+
+
+};gdjs.EditorCode.eventsList2 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "screenshot") >= 2;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.EditorCode.GDNameObjects1.length;i<l;++i) {
+    if ( gdjs.EditorCode.GDNameObjects1[i].getBehavior("Text").getText() != "" ) {
+        isConditionTrue_0 = true;
+        gdjs.EditorCode.GDNameObjects1[k] = gdjs.EditorCode.GDNameObjects1[i];
+        ++k;
+    }
+}
+gdjs.EditorCode.GDNameObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene);
+}
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects1);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1);
+gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImgObjects1);
+{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").setText((( gdjs.EditorCode.GDInstuctionsObjects1.length === 0 ) ? "" :gdjs.EditorCode.GDInstuctionsObjects1[0].getBehavior("Text").getText()));
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").getText() + (".bay"));
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDNewShapePainterObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDPatchObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDPatchObjects1[i].getBehavior("Animation").setAnimationIndex(1);
+}
+}
+{ //Subevents
+gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
+}
+
+}
+
+
 };gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.EditorCode.eventsList1 = function(runtimeScene) {
+gdjs.EditorCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -648,6 +729,25 @@ if (isConditionTrue_0) {
 
 { //Subevents
 gdjs.EditorCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LSystem");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
+}
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.EditorCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 }
@@ -2139,7 +2239,7 @@ gdjs.EditorCode.GDShadowObjects1.length = 0;
 gdjs.EditorCode.GDShadowObjects2.length = 0;
 gdjs.EditorCode.GDShadowObjects3.length = 0;
 
-gdjs.EditorCode.eventsList1(runtimeScene);
+gdjs.EditorCode.eventsList3(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
 gdjs.EditorCode.GDKnobObjects3.length = 0;
