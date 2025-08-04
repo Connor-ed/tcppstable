@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__ConnectingToServer !== "undefined") {
 gdjs.evtsExt__THNK__ConnectingToServer = {};
 
 
-gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1b20350 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x189cd30 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = THNK.client.getConnectionState() === "connecting";
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__THNK__ConnectingToServer.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1b20350(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x189cd30(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

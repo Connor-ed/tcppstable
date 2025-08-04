@@ -34,6 +34,12 @@ gdjs.SaveCode.GDShadowObjects1= [];
 gdjs.SaveCode.GDShadowObjects2= [];
 
 
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595PlayObjects1Objects = Hashtable.newFrom({"Global_Play": gdjs.SaveCode.GDGlobal_9595PlayObjects1});
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595EditorObjects1Objects = Hashtable.newFrom({"Global_Editor": gdjs.SaveCode.GDGlobal_9595EditorObjects1});
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595HomeObjects1Objects = Hashtable.newFrom({"Global_Home": gdjs.SaveCode.GDGlobal_9595HomeObjects1});
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.SaveCode.GDGlobal_9595Blank_9595KnobObjects1});
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDAutoPlayObjects1Objects = Hashtable.newFrom({"AutoPlay": gdjs.SaveCode.GDAutoPlayObjects1});
+gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDSquareWhiteSliderObjects1Objects = Hashtable.newFrom({"SquareWhiteSlider": gdjs.SaveCode.GDSquareWhiteSliderObjects1});
 gdjs.SaveCode.eventsList0 = function(runtimeScene) {
 
 {
@@ -42,6 +48,156 @@ gdjs.SaveCode.eventsList0 = function(runtimeScene) {
 let isConditionTrue_0 = false;
 {
 }
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Text-to-speech enabled", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Play"), gdjs.SaveCode.GDGlobal_9595PlayObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595PlayObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Editor"), gdjs.SaveCode.GDGlobal_9595EditorObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595EditorObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Home"), gdjs.SaveCode.GDGlobal_9595HomeObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595HomeObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Blank_Knob"), gdjs.SaveCode.GDGlobal_9595Blank_9595KnobObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank knob", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("AutoPlay"), gdjs.SaveCode.GDAutoPlayObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDAutoPlayObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Autoplay switch", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("SquareWhiteSlider"), gdjs.SaveCode.GDSquareWhiteSliderObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDSquareWhiteSliderObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Square white slider", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(5).getAsBoolean();
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+}
+if (isConditionTrue_0) {
+{gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
 
 }
 

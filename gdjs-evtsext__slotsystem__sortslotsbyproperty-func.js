@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__SlotSystem__SortSlotsByProperty !== "undefined") {
 gdjs.evtsExt__SlotSystem__SortSlotsByProperty = {};
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x268e9c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x26a4750 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const system = runtimeScene.getVariables().get("__SlotSystem");
 const mainSpace = system.getChild(eventsFunctionContext.getArgument("SpaceName"));
@@ -79,7 +79,7 @@ gdjs.evtsExt__SlotSystem__SortSlotsByProperty.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x268e9c0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x26a4750(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

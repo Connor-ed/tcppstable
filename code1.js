@@ -2050,6 +2050,13 @@ gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNew
 }
 
 
+{
+
+
+
+}
+
+
 };
 
 gdjs.EditorCode.func = function(runtimeScene) {

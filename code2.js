@@ -2043,6 +2043,41 @@ let isConditionTrue_0 = false;
 }
 
 
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
 };
 
 gdjs.LoadCode.func = function(runtimeScene) {
