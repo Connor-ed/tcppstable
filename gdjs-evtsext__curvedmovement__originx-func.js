@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__OriginX !== "undefined") {
 gdjs.evtsExt__CurvedMovement__OriginX = {};
 
 
-gdjs.evtsExt__CurvedMovement__OriginX.userFunc0x1f1f218 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__OriginX.userFunc0x1cbf870 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -30,7 +30,7 @@ gdjs.evtsExt__CurvedMovement__OriginX.eventsList0 = function(runtimeScene, event
 
 
 var objects = [];
-gdjs.evtsExt__CurvedMovement__OriginX.userFunc0x1f1f218(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__OriginX.userFunc0x1cbf870(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

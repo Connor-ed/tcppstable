@@ -345,6 +345,23 @@ gdjs.EditorCode.eventsList3 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(6).getAsNumber() == 1);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Global_Base"), gdjs.EditorCode.GDGlobal_9595BaseObjects1);
+{for(var i = 0, len = gdjs.EditorCode.GDGlobal_9595BaseObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDGlobal_9595BaseObjects1[i].getBehavior("Animation").setAnimationIndex(3);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1);

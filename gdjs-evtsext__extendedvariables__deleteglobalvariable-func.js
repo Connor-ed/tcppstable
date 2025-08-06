@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable !== "undefined"
 gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable = {};
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.userFunc0x19e0f98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.userFunc0x13d9d00 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 runtimeScene.getGame().getVariables().remove(eventsFunctionContext.getArgument("GlobalVariableName"));
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.userFunc0x19e0f98(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.userFunc0x13d9d00(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

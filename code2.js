@@ -1590,6 +1590,23 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.LoadCode.GDPatchObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(6).getAsNumber() == 1);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Global_Base"), gdjs.LoadCode.GDGlobal_9595BaseObjects1);
+{for(var i = 0, len = gdjs.LoadCode.GDGlobal_9595BaseObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDGlobal_9595BaseObjects1[i].getBehavior("Animation").setAnimationIndex(3);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 }
