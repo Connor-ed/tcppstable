@@ -15,13 +15,13 @@ gdjs.evtsExt__UpdateChecker__UpdateAvailable.eventsList0 = function(runtimeScene
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion")) != gdjs.evtsExt__UpdateChecker__CurrentGameVersion.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion")) != gdjs.evtsExt__UpdateChecker__CurrentGameVersion.func(runtimeScene, eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion")) != "0";
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

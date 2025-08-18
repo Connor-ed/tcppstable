@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__TextOfGridSlotProperty.eventsList0 = function(runtimeS
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtsExt__SlotSystem__TextOfSlotProperty.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Column"), eventsFunctionContext.getArgument("Row"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), eventsFunctionContext.getArgument("Property"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)); }}}
+{eventsFunctionContext.returnValue = gdjs.evtsExt__SlotSystem__TextOfSlotProperty.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Column"), eventsFunctionContext.getArgument("Row"), eventsFunctionContext), eventsFunctionContext.getArgument("Property"), eventsFunctionContext);}}
 
 }
 

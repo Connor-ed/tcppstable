@@ -15,14 +15,14 @@ gdjs.evtsExt__MousePointerLock__isEmulatingPointerLock.eventsList0 = function(ru
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+isConditionTrue_0 = !(gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.func(runtimeScene, eventsFunctionContext));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber() >= 0);
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__FirstEmptySlot.eventsList0 = function(runtimeScene, ev
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__SlotSystem__IsSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpIt")), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+isConditionTrue_0 = !(gdjs.evtsExt__SlotSystem__IsSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpIt")), eventsFunctionContext));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -(1);
@@ -53,7 +53,7 @@ let isConditionTrue_0 = false;
 {
 
 
-const repeatCount2 = gdjs.evtsExt__SlotSystem__SpaceSlotSize.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+const repeatCount2 = gdjs.evtsExt__SlotSystem__SpaceSlotSize.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 for (let repeatIndex2 = 0;repeatIndex2 < repeatCount2;++repeatIndex2) {
 
 let isConditionTrue_0 = false;
@@ -87,7 +87,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 
 { //Subevents
@@ -102,7 +102,7 @@ gdjs.evtsExt__SlotSystem__FirstEmptySlot.eventsList1(runtimeScene, eventsFunctio
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal"));}}
 
 }
 

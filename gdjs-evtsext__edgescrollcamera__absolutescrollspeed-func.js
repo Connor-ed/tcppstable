@@ -25,7 +25,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).getAsString() == "Progressive speed");
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = (1 - Math.abs(eventsFunctionContext.getArgument("BorderDistance")) / eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber(); }}}
+{eventsFunctionContext.returnValue = (1 - Math.abs(eventsFunctionContext.getArgument("BorderDistance")) / eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}}
 
 }
 
@@ -62,7 +62,7 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber(); }}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}}
 
 }
 

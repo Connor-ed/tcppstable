@@ -15,7 +15,7 @@ gdjs.evtsExt__CurvedMovement__onFirstSceneLoaded.eventsList0 = function(runtimeS
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__CurvedMovement__DefineHelperClasses.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__CurvedMovement__DefineHelperClasses.func(runtimeScene, eventsFunctionContext);
 }}
 
 }

@@ -25,7 +25,7 @@ isConditionTrue_0 = false;
 {let isConditionTrue_1 = false;
 isConditionTrue_0 = false;
 {
-isConditionTrue_1 = gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.func(runtimeScene, gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_1 = gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.func(runtimeScene, gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.func(runtimeScene, eventsFunctionContext), eventsFunctionContext);
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
 }
@@ -52,7 +52,7 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

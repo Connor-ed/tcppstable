@@ -15,7 +15,7 @@ gdjs.evtsExt__ExtendedVariables__A_Modify_global_variable_string.eventsList0 = f
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__ExtendedVariables__ModifyGlobalVariableString.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), eventsFunctionContext.getArgument("SceneVariableValue"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__ExtendedVariables__ModifyGlobalVariableString.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), eventsFunctionContext.getArgument("SceneVariableValue"), eventsFunctionContext);
 }}
 
 }

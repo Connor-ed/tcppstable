@@ -15,7 +15,7 @@ gdjs.evtsExt__EdgeScrollCamera__SpeedY.eventsList0 = function(runtimeScene, even
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).getAsNumber(); }}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).getAsNumber();}}
 
 }
 

@@ -10,7 +10,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinX.GDobjectsObjects1= [];
 gdjs.evtsExt__ValuesOfMultipleObjects__MinX.GDobjectsObjects2= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MinX.userFunc0x2a321f8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MinX.userFunc0x2c7a0e0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -34,9 +34,8 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinX.eventsList0 = function(runtimeScene,
 
 gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__ValuesOfMultipleObjects__MinX.GDobjectsObjects1);
 
-var objects = [];
-objects.push.apply(objects,gdjs.evtsExt__ValuesOfMultipleObjects__MinX.GDobjectsObjects1);
-gdjs.evtsExt__ValuesOfMultipleObjects__MinX.userFunc0x2a321f8(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+const objects = gdjs.evtsExt__ValuesOfMultipleObjects__MinX.GDobjectsObjects1;
+gdjs.evtsExt__ValuesOfMultipleObjects__MinX.userFunc0x2c7a0e0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

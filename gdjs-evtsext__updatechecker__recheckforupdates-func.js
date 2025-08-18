@@ -15,9 +15,9 @@ gdjs.evtsExt__UpdateChecker__RecheckForUpdates.eventsList0 = function(runtimeSce
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("Error"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtTools.network.sendAsyncRequest("https://updates.arthuro555.com/?game-id=" + gdjs.evtsExt__UpdateChecker__CurrentGameID.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), "", "GET", "text/plain-text", runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"));
+{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion"), eventsFunctionContext);
+}{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("Error"), eventsFunctionContext);
+}{gdjs.evtTools.network.sendAsyncRequest("https://updates.arthuro555.com/?game-id=" + gdjs.evtsExt__UpdateChecker__CurrentGameID.func(runtimeScene, eventsFunctionContext), "", "GET", "text/plain-text", runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"));
 }}
 
 }

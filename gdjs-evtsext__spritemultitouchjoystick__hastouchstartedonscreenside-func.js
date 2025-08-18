@@ -26,7 +26,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getTouchX(runtimeScene, gdjs.evtTools.input.getStartedTouchOrMouseIdentifier(runtimeScene, 0), (( gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects2.length === 0 ) ? "" :gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects2[0].getLayer()), 0) < gdjs.evtTools.camera.getCameraX(runtimeScene, (( gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects2.length === 0 ) ? "" :gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects2[0].getLayer()), 0);
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -44,7 +44,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getTouchX(runtimeScene, gdjs.evtTools.input.getStartedTouchOrMouseIdentifier(runtimeScene, 0), (( gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects1.length === 0 ) ? "" :gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects1[0].getLayer()), 0) >= gdjs.evtTools.camera.getCameraX(runtimeScene, (( gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects1.length === 0 ) ? "" :gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects1[0].getLayer()), 0);
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

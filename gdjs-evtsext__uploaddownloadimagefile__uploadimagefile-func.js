@@ -9,7 +9,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile = {};
 gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x248e590 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x26d6670 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 //Create a place to store the images somewhere, because we need to know if the user wants to upload the same image, or a new one.
 if (!gdjs._ExtensionUploadedImages) {
@@ -109,9 +109,8 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.eventsList0 = function(ru
 
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1);
 
-var objects = [];
-objects.push.apply(objects,gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1);
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x248e590(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+const objects = gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1;
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x26d6670(runtimeScene, objects, eventsFunctionContext);
 
 }
 

@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__ToJSON.eventsList0 = function(runtimeScene, eventsFunc
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = ""; }}}
+{eventsFunctionContext.returnValue = "";}}
 
 }
 
@@ -25,12 +25,12 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 {gdjs.evtTools.network.jsonToVariableStructure(gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Config").getChild(eventsFunctionContext.getArgument("SpaceName"))), runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_JSON").getChild("Config"));
 }{gdjs.evtTools.network.jsonToVariableStructure(gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName"))), runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_JSON").getChild("Slots"));
 }{gdjs.evtTools.network.jsonToVariableStructure(gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_NamedSlots").getChild(eventsFunctionContext.getArgument("SpaceName"))), runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_JSON").getChild("Names"));
-}{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_JSON")); }}{gdjs.evtTools.variable.variableRemoveChild(runtimeScene.getScene().getVariables().get("__SlotSystem"), "_JSON");
+}{eventsFunctionContext.returnValue = gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_JSON"));}{gdjs.evtTools.variable.variableRemoveChild(runtimeScene.getScene().getVariables().get("__SlotSystem"), "_JSON");
 }}
 
 }

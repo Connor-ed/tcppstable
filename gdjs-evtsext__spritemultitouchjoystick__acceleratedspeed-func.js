@@ -219,7 +219,7 @@ gdjs.evtsExt__SpriteMultitouchJoystick__AcceleratedSpeed.eventsList2(runtimeScen
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.common.clamp(eventsFunctionContext.localVariables[0].getFromIndex(0).getAsNumber(), -(eventsFunctionContext.getArgument("SpeedMax")), eventsFunctionContext.getArgument("SpeedMax")); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.common.clamp(eventsFunctionContext.localVariables[0].getFromIndex(0).getAsNumber(), -(eventsFunctionContext.getArgument("SpeedMax")), eventsFunctionContext.getArgument("SpeedMax"));}}
 
 }
 

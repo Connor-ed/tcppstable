@@ -18,7 +18,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getArgument("Exchange");
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__MoveSlotToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("FromColumn"), eventsFunctionContext.getArgument("FromRow"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("ToColumn"), eventsFunctionContext.getArgument("ToRow"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), true, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__MoveSlotToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("FromColumn"), eventsFunctionContext.getArgument("FromRow"), eventsFunctionContext), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("ToColumn"), eventsFunctionContext.getArgument("ToRow"), eventsFunctionContext), true, eventsFunctionContext);
 }}
 
 }
@@ -32,7 +32,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = !eventsFunctionContext.getArgument("Exchange");
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__MoveSlotToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("FromColumn"), eventsFunctionContext.getArgument("FromRow"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("ToColumn"), eventsFunctionContext.getArgument("ToRow"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), false, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__MoveSlotToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("FromColumn"), eventsFunctionContext.getArgument("FromRow"), eventsFunctionContext), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("ToColumn"), eventsFunctionContext.getArgument("ToRow"), eventsFunctionContext), false, eventsFunctionContext);
 }}
 
 }
@@ -45,7 +45,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSpaceGrid.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSpaceGrid.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 
 { //Subevents

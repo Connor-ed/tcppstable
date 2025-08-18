@@ -18,7 +18,7 @@ gdjs.evtsExt__RTSUnitSelection__ControlGroupID.eventsList0 = function(runtimeSce
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__RTSUnitSelection__ControlGroupID.GDObjectObjects1);
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = (gdjs.RuntimeObject.getVariableNumber(((gdjs.evtsExt__RTSUnitSelection__ControlGroupID.GDObjectObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__RTSUnitSelection__ControlGroupID.GDObjectObjects1[0].getVariables()).get("__RTSUnitSelection").getChild("ControlGroupID"))); }}}
+{eventsFunctionContext.returnValue = (gdjs.RuntimeObject.getVariableNumber(((gdjs.evtsExt__RTSUnitSelection__ControlGroupID.GDObjectObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__RTSUnitSelection__ControlGroupID.GDObjectObjects1[0].getVariables()).get("__RTSUnitSelection").getChild("ControlGroupID")));}}
 
 }
 

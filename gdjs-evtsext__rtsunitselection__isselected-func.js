@@ -27,7 +27,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__RTSUnitSelection__IsSelected.GDObjectOb
 }
 gdjs.evtsExt__RTSUnitSelection__IsSelected.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 
@@ -47,7 +47,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__RTSUnitSelection__IsSelected.GDObjectOb
 }
 gdjs.evtsExt__RTSUnitSelection__IsSelected.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

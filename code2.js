@@ -258,7 +258,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595HomeObjects2Objects, runtimeScene, true, false);
@@ -280,7 +280,7 @@ gdjs.LoadCode.eventsList1 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasDoubleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasDoubleClicked.func(runtimeScene, "Left", null);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595HomeObjects2Objects, runtimeScene, true, false);
@@ -302,7 +302,7 @@ gdjs.LoadCode.eventsList2 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595EditorObjects1Objects, runtimeScene, true, false);
@@ -445,7 +445,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "E Keys4.wav", 10, false, 100, 1);
@@ -466,7 +466,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 100, 1);
@@ -801,7 +801,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Ow - Ahh1.wav", 10, false, 100, 1);
@@ -822,7 +822,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 100, 1);
@@ -893,7 +893,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "conceptbass3.wav", 10, false, 100, 1);
@@ -1123,7 +1123,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Electric Pulse2.wav", 10, false, 20, 1);
@@ -1512,7 +1512,7 @@ gdjs.copyArray(runtimeScene.getObjects("Detail_mode"), gdjs.LoadCode.GDDetail_95
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.LoadCode.GDDetail_9595modeObjects2.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDDetail_9595modeObjects2[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+    if ( gdjs.LoadCode.GDDetail_9595modeObjects2[i].IsChecked(null) ) {
         isConditionTrue_0 = true;
         gdjs.LoadCode.GDDetail_9595modeObjects2[k] = gdjs.LoadCode.GDDetail_9595modeObjects2[i];
         ++k;
@@ -1536,7 +1536,7 @@ gdjs.copyArray(runtimeScene.getObjects("Detail_mode"), gdjs.LoadCode.GDDetail_95
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.LoadCode.GDDetail_9595modeObjects1.length;i<l;++i) {
-    if ( !(gdjs.LoadCode.GDDetail_9595modeObjects1[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
+    if ( !(gdjs.LoadCode.GDDetail_9595modeObjects1[i].IsChecked(null)) ) {
         isConditionTrue_0 = true;
         gdjs.LoadCode.GDDetail_9595modeObjects1[k] = gdjs.LoadCode.GDDetail_9595modeObjects1[i];
         ++k;
@@ -1680,7 +1680,7 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Blank_Knob"), gdjs.LoadCode.GDGlo
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1.length;i<l;++i) {
-    if ( gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+    if ( gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked(null) ) {
         isConditionTrue_0 = true;
         gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[k] = gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i];
         ++k;
@@ -1752,7 +1752,7 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Blank_Knob"), gdjs.LoadCode.GDGlo
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1.length;i<l;++i) {
-    if ( !(gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) ) {
+    if ( !(gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i].IsChecked(null)) ) {
         isConditionTrue_0 = true;
         gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[k] = gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1[i];
         ++k;

@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__SetNamedSlotTextContent.eventsList0 = function(runtime
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("Parent") : "") == "");
+{isConditionTrue_0 = (("" + eventsFunctionContext.getArgument("Parent")) == "");
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_NamedSlots").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("NamedSlot")).getChild(eventsFunctionContext.getArgument("Tag")).setString(eventsFunctionContext.getArgument("Value"));
@@ -29,7 +29,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("Parent") : "") != "");
+{isConditionTrue_0 = (("" + eventsFunctionContext.getArgument("Parent")) != "");
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_NamedSlots").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("NamedSlot")).getChild(eventsFunctionContext.getArgument("Parent")).getChild(eventsFunctionContext.getArgument("Tag")).setString(eventsFunctionContext.getArgument("Value"));

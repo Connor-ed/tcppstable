@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__LinkObjectToPlayer = {};
 gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x1a18788 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x1e09e60 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 for (const obj of objects) THNK.players.markObjectAsOwned(obj);
 
@@ -20,9 +20,8 @@ gdjs.evtsExt__THNK__LinkObjectToPlayer.eventsList0 = function(runtimeScene, even
 
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1);
 
-var objects = [];
-objects.push.apply(objects,gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1);
-gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x1a18788(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+const objects = gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1;
+gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x1e09e60(runtimeScene, objects, eventsFunctionContext);
 
 }
 

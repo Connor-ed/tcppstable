@@ -31,7 +31,7 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.GDObjectObject
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__RTSUnitSelection__IsSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595TotalSelectedUnits_9546GDObjectObjects4Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__RTSUnitSelection__IsSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595TotalSelectedUnits_9546GDObjectObjects4Objects, eventsFunctionContext);
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits").add(1);
 }}
@@ -92,7 +92,7 @@ gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.eventsList0(runtimeScene, eve
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits")); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits"));}}
 
 }
 

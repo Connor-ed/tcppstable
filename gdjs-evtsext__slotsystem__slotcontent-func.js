@@ -15,10 +15,10 @@ gdjs.evtsExt__SlotSystem__SlotContent.eventsList0 = function(runtimeScene, event
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("Parent") : "") == "");
+{isConditionTrue_0 = (("" + eventsFunctionContext.getArgument("Parent")) == "");
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("Slot")).getChild(eventsFunctionContext.getArgument("Tag"))); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("Slot")).getChild(eventsFunctionContext.getArgument("Tag")));}}
 
 }
 
@@ -28,10 +28,10 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("Parent") : "") != "");
+{isConditionTrue_0 = (("" + eventsFunctionContext.getArgument("Parent")) != "");
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("Slot")).getChild(eventsFunctionContext.getArgument("Parent")).getChild(eventsFunctionContext.getArgument("Tag"))); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("Slot")).getChild(eventsFunctionContext.getArgument("Parent")).getChild(eventsFunctionContext.getArgument("Tag")));}}
 
 }
 

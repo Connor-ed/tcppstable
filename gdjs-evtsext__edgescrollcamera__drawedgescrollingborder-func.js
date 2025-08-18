@@ -20,11 +20,11 @@ gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.eventsList0 = function(r
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.object.getSceneInstancesCount((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.mapOfEmptyGDShapePainterObjects) < 1;
+isConditionTrue_0 = gdjs.evtTools.object.getSceneInstancesCount(eventsFunctionContext, gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.mapOfEmptyGDShapePainterObjects) < 1;
 if (isConditionTrue_0) {
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.mapOfGDgdjs_9546evtsExt_9595_9595EdgeScrollCamera_9595_9595DrawEdgeScrollingBorder_9546GDShapePainterObjects2Objects, 0, 0, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString());
+{gdjs.evtTools.object.createObjectOnScene(eventsFunctionContext, gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.mapOfGDgdjs_9546evtsExt_9595_9595EdgeScrollCamera_9595_9595DrawEdgeScrollingBorder_9546GDShapePainterObjects2Objects, 0, 0, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString());
 }}
 
 }

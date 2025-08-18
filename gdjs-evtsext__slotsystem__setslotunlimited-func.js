@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__SetSlotUnlimited.eventsList0 = function(runtimeScene, 
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, 0, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, 0, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext);
 }}
 
 }

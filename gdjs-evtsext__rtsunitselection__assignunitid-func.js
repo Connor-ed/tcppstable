@@ -59,7 +59,7 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__AssignUnitID.GDObjectObjects2, gd
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__RTSUnitSelection__IsSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__AssignUnitID.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595AssignUnitID_9546GDObjectObjects3Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__RTSUnitSelection__IsSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__AssignUnitID.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595AssignUnitID_9546GDObjectObjects3Objects, eventsFunctionContext);
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__RTSUnitSelection__AssignUnitID.GDObjectObjects3 */
 {runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits").add(1);

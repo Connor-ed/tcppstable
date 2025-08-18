@@ -15,9 +15,7 @@ gdjs.evtsExt__ArrayTools__HasNumber.eventsList0 = function(runtimeScene, eventsF
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') {
-gdjs.Variable.copy(eventsFunctionContext.getArgument("Array"), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), false);
-}
+{gdjs.Variable.copy(eventsFunctionContext.getArgument("Array"), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), false);
 }}
 
 }
@@ -28,10 +26,10 @@ gdjs.Variable.copy(eventsFunctionContext.getArgument("Array"), eventsFunctionCon
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (gdjs.evtsExt__ArrayTools__IndexOf.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), eventsFunctionContext.getArgument("Value"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) != -(1));
+{isConditionTrue_0 = (gdjs.evtsExt__ArrayTools__IndexOf.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), eventsFunctionContext.getArgument("Value"), eventsFunctionContext) != -(1));
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

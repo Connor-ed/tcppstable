@@ -15,7 +15,7 @@ gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.eventsList0 = function(runti
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtTools.common.mod(Math.round(eventsFunctionContext.getArgument("Angle") * 8 / 360), 8); }}}
+{eventsFunctionContext.returnValue = gdjs.evtTools.common.mod(Math.round(eventsFunctionContext.getArgument("Angle") * 8 / 360), 8);}}
 
 }
 

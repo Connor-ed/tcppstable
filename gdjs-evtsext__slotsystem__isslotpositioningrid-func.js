@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid.eventsList0 = function(runtimeSce
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 
@@ -29,7 +29,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (eventsFunctionContext.getArgument("Column") < gdjs.evtsExt__SlotSystem__SpaceGridWidth.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+{isConditionTrue_0 = (eventsFunctionContext.getArgument("Column") < gdjs.evtsExt__SlotSystem__SpaceGridWidth.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext));
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -37,13 +37,13 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (eventsFunctionContext.getArgument("Row") < gdjs.evtsExt__SlotSystem__SpaceGridHeight.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+{isConditionTrue_0 = (eventsFunctionContext.getArgument("Row") < gdjs.evtsExt__SlotSystem__SpaceGridHeight.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext));
 }
 }
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

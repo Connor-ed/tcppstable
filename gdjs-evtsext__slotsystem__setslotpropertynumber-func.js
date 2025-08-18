@@ -15,9 +15,9 @@ gdjs.evtsExt__SlotSystem__SetSlotPropertyNumber.eventsList0 = function(runtimeSc
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetSlotContent.func(runtimeScene, eventsFunctionContext.getArgument("Value"), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext.getArgument("Property"), "Properties", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetSlotContent.func(runtimeScene, eventsFunctionContext.getArgument("Value"), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext.getArgument("Property"), "Properties", eventsFunctionContext);
 }}
 
 }

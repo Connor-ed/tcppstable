@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ArrayTools__GlobalInsertAt !== "undefined") {
 gdjs.evtsExt__ArrayTools__GlobalInsertAt = {};
 
 
-gdjs.evtsExt__ArrayTools__GlobalInsertAt.userFunc0x295eab0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__GlobalInsertAt.userFunc0x2ba8a28 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -28,7 +28,7 @@ gdjs.evtsExt__ArrayTools__GlobalInsertAt.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__ArrayTools__GlobalInsertAt.userFunc0x295eab0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ArrayTools__GlobalInsertAt.userFunc0x2ba8a28(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -15,7 +15,7 @@ gdjs.evtsExt__EdgeScrollCamera__IsCameraScrolling.eventsList0 = function(runtime
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -33,7 +33,7 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 

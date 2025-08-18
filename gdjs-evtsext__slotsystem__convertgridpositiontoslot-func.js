@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.eventsList0 = function(runti
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = -(1); }}}
+{eventsFunctionContext.returnValue = -(1);}}
 
 }
 
@@ -25,9 +25,9 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Column"), eventsFunctionContext.getArgument("Row"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Column"), eventsFunctionContext.getArgument("Row"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.getArgument("Column") + eventsFunctionContext.getArgument("Row") * gdjs.evtsExt__SlotSystem__SpaceGridWidth.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)); }}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.getArgument("Column") + eventsFunctionContext.getArgument("Row") * gdjs.evtsExt__SlotSystem__SpaceGridWidth.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);}}
 
 }
 

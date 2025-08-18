@@ -23,7 +23,7 @@ gdjs.evtsExt__CursorType__ChangeCursorType.eventsList0 = function(runtimeScene, 
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).setString(eventsFunctionContext.getArgument("CursorType"));
-}{gdjs.evtsExt__CursorType__DoChangeCursorType.func(runtimeScene, eventsFunctionContext.getArgument("CursorType"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{gdjs.evtsExt__CursorType__DoChangeCursorType.func(runtimeScene, eventsFunctionContext.getArgument("CursorType"), eventsFunctionContext);
 }}
 
 }

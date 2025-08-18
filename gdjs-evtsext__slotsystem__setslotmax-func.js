@@ -15,9 +15,9 @@ gdjs.evtsExt__SlotSystem__SetSlotMax.eventsList0 = function(runtimeScene, events
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetSlotContent.func(runtimeScene, Math.max(0, eventsFunctionContext.getArgument("Value")), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), "Max", "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetSlotContent.func(runtimeScene, Math.max(0, eventsFunctionContext.getArgument("Value")), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), "Max", "", eventsFunctionContext);
 }}
 
 }

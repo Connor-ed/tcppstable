@@ -15,7 +15,7 @@ gdjs.evtsExt__ExtendedVariables__A_Delete_global_variable.eventsList0 = function
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.func(runtimeScene, eventsFunctionContext.getArgument("GlobalVariableName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__ExtendedVariables__DeleteGlobalVariable.func(runtimeScene, eventsFunctionContext.getArgument("GlobalVariableName"), eventsFunctionContext);
 }}
 
 }

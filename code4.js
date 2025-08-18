@@ -81,7 +81,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play", "", 100, 100, 100, null);
 }}
 
 }
@@ -95,7 +95,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595EditorObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor", "", 100, 100, 100, null);
 }}
 
 }
@@ -109,7 +109,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595HomeObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home", "", 100, 100, 100, null);
 }}
 
 }
@@ -123,7 +123,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595Blank_95959595KnobObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank Knob", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank Knob", "", 100, 100, 100, null);
 }}
 
 }
@@ -137,7 +137,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDAutoPlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Auto Play", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Auto Play", "", 100, 100, 100, null);
 }}
 
 }
@@ -151,7 +151,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDSquareWhiteSliderObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Slider", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Slider", "", 100, 100, 100, null);
 }}
 
 }
@@ -164,7 +164,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, null);
 }}
 
 }

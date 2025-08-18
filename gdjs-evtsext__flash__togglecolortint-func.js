@@ -37,7 +37,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__Flash__ColorTint.func(runtimeScene, gdjs.evtsExt__Flash__ToggleColorTint.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595ToggleColorTint_9546GDObjectObjects2Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == (gdjs.RuntimeObject.getVariableString(((gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2[0].getVariables()).get("__FlashColor_StartingTint")));
+isConditionTrue_0 = gdjs.evtsExt__Flash__ColorTint.func(runtimeScene, gdjs.evtsExt__Flash__ToggleColorTint.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595ToggleColorTint_9546GDObjectObjects2Objects, eventsFunctionContext) == (gdjs.RuntimeObject.getVariableString(((gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2[0].getVariables()).get("__FlashColor_StartingTint")));
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2 */
 {for(var i = 0, len = gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects2.length ;i < len;++i) {
@@ -67,7 +67,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1
 gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__Flash__ColorTint.func(runtimeScene, gdjs.evtsExt__Flash__ToggleColorTint.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595ToggleColorTint_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == (gdjs.RuntimeObject.getVariableString(((gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1[0].getVariables()).get("__FlashColor_StartingTint"))));
+isConditionTrue_0 = !(gdjs.evtsExt__Flash__ColorTint.func(runtimeScene, gdjs.evtsExt__Flash__ToggleColorTint.mapOfGDgdjs_9546evtsExt_9595_9595Flash_9595_9595ToggleColorTint_9546GDObjectObjects1Objects, eventsFunctionContext) == (gdjs.RuntimeObject.getVariableString(((gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1[0].getVariables()).get("__FlashColor_StartingTint"))));
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__Flash__ToggleColorTint.GDObjectObjects1 */

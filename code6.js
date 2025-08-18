@@ -64,7 +64,7 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Text-to-speech enabled", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Text-to-speech enabled", "", 100, 100, 100, null);
 }}
 
 }
@@ -83,7 +83,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595PlayObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play button", "", 100, 100, 100, null);
 }}
 
 }
@@ -102,7 +102,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595EditorObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor button", "", 100, 100, 100, null);
 }}
 
 }
@@ -121,7 +121,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595HomeObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home button", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home button", "", 100, 100, 100, null);
 }}
 
 }
@@ -140,7 +140,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank knob", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank knob", "", 100, 100, 100, null);
 }}
 
 }
@@ -159,7 +159,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDAutoPlayObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Autoplay switch", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Autoplay switch", "", 100, 100, 100, null);
 }}
 
 }
@@ -178,7 +178,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDSquareWhiteSliderObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Square white slider", "", 100, 100, 100, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Square white slider", "", 100, 100, 100, null);
 }}
 
 }
@@ -196,7 +196,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, null);
 }}
 
 }

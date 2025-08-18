@@ -15,7 +15,7 @@ gdjs.evtsExt__ExtendedVariables__A_Delete_scene_variable.eventsList0 = function(
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__ExtendedVariables__DeleteSceneVariable.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), eventsFunctionContext);
 }}
 
 }

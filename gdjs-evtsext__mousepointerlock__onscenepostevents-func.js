@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__onScenePostEvents !== "undefined") {
 gdjs.evtsExt__MousePointerLock__onScenePostEvents = {};
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x1e007b8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x1e07be0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { handler } = gdjs._MousePointerLockExtension;
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__MousePointerLock__onScenePostEvents.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x1e007b8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x1e07be0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -30,12 +30,12 @@ gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x1e007b8(runtimeScene
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__MousePointerLock__isEmulatingPointerLock.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__MousePointerLock__isEmulatingPointerLock.func(runtimeScene, eventsFunctionContext);
 if (isConditionTrue_0) {
-{gdjs.evtsExt__MousePointerLock__SetMovementX.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__MousePointerLock__SetMovementY.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).setNumber(gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
-}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).setNumber(gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+{gdjs.evtsExt__MousePointerLock__SetMovementX.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), eventsFunctionContext);
+}{gdjs.evtsExt__MousePointerLock__SetMovementY.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), eventsFunctionContext);
+}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).setNumber(gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
+}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).setNumber(gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
 }}
 
 }

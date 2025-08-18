@@ -27,7 +27,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.eventsList0 = fu
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects1);
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = (gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) + gdjs.evtsExt__ValuesOfMultipleObjects__MinY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))) / 2; }}}
+{eventsFunctionContext.returnValue = (gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext) + gdjs.evtsExt__ValuesOfMultipleObjects__MinY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext)) / 2;}}
 
 }
 

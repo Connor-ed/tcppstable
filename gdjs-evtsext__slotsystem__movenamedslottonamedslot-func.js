@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__MoveNamedSlotToNamedSlot.eventsList0 = function(runtim
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsNamedSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("ToSpaceName"), eventsFunctionContext.getArgument("ToSlot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsNamedSlotFilled.func(runtimeScene, eventsFunctionContext.getArgument("ToSpaceName"), eventsFunctionContext.getArgument("ToSlot"), eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 {isConditionTrue_0 = eventsFunctionContext.getArgument("Exchange");
@@ -46,7 +46,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.variable.variableChildExists(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Config").getChild(eventsFunctionContext.getArgument("ToSpaceName")), "_Tmp"));
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetNamedSlotEmpty.func(runtimeScene, eventsFunctionContext.getArgument("FromSpaceName"), eventsFunctionContext.getArgument("FromSlot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetNamedSlotEmpty.func(runtimeScene, eventsFunctionContext.getArgument("FromSpaceName"), eventsFunctionContext.getArgument("FromSlot"), eventsFunctionContext);
 }}
 
 }
@@ -73,23 +73,23 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("FromSpaceName"), eventsFunctionContext.getArgument("FromSlot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("FromSpaceName"), eventsFunctionContext.getArgument("FromSlot"), eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("ToSpaceName"), eventsFunctionContext.getArgument("ToSlot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("ToSpaceName"), eventsFunctionContext.getArgument("ToSlot"), eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 {let isConditionTrue_1 = false;
 isConditionTrue_0 = false;
 {
-{isConditionTrue_1 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("ToSlot") : "") != eventsFunctionContext.getArgument("FromSlot"));
+{isConditionTrue_1 = (("" + eventsFunctionContext.getArgument("ToSlot")) != eventsFunctionContext.getArgument("FromSlot"));
 }
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
 }
 }
 {
-{isConditionTrue_1 = ((typeof eventsFunctionContext !== 'undefined' ? "" + eventsFunctionContext.getArgument("FromSpaceName") : "") != eventsFunctionContext.getArgument("ToSpaceName"));
+{isConditionTrue_1 = (("" + eventsFunctionContext.getArgument("FromSpaceName")) != eventsFunctionContext.getArgument("ToSpaceName"));
 }
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;

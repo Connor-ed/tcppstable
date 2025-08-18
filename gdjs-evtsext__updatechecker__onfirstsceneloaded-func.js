@@ -15,7 +15,7 @@ gdjs.evtsExt__UpdateChecker__onFirstSceneLoaded.eventsList0 = function(runtimeSc
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__UpdateChecker__RecheckForUpdates.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__UpdateChecker__RecheckForUpdates.func(runtimeScene, eventsFunctionContext);
 }}
 
 }

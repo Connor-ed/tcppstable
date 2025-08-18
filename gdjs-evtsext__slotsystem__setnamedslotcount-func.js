@@ -15,9 +15,9 @@ gdjs.evtsExt__SlotSystem__SetNamedSlotCount.eventsList0 = function(runtimeScene,
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 0;
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), eventsFunctionContext) == 0;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetNamedSlotContent.func(runtimeScene, Math.max(0, eventsFunctionContext.getArgument("Value")), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), "Count", "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetNamedSlotContent.func(runtimeScene, Math.max(0, eventsFunctionContext.getArgument("Value")), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), "Count", "", eventsFunctionContext);
 }}
 
 }
@@ -28,9 +28,9 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) > 0;
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), eventsFunctionContext) > 0;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetNamedSlotContent.func(runtimeScene, gdjs.evtTools.common.clamp(eventsFunctionContext.getArgument("Value"), 0, gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), "Count", "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetNamedSlotContent.func(runtimeScene, gdjs.evtTools.common.clamp(eventsFunctionContext.getArgument("Value"), 0, gdjs.evtsExt__SlotSystem__NamedSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), eventsFunctionContext)), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), "Count", "", eventsFunctionContext);
 }}
 
 }
@@ -43,10 +43,10 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesNamedSlotExist.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("SlotName"), eventsFunctionContext);
 }
 if (isConditionTrue_0) {
 

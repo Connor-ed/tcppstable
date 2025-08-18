@@ -15,7 +15,7 @@ gdjs.evtsExt__ExtendedVariables__C_global_variable_exist.eventsList0 = function(
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 
@@ -25,9 +25,9 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__ExtendedVariables__GlobalVariableExist.func(runtimeScene, eventsFunctionContext.getArgument("GlobalVariableName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__ExtendedVariables__GlobalVariableExist.func(runtimeScene, eventsFunctionContext.getArgument("GlobalVariableName"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

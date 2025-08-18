@@ -15,7 +15,7 @@ gdjs.evtsExt__CameraZoom__ZoomWithSpeedAndAnchor.eventsList0 = function(runtimeS
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__CameraZoom__ZoomWithAnchor.func(runtimeScene, gdjs.evtTools.camera.getCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) * Math.pow(eventsFunctionContext.getArgument("ZoomSpeed"), gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)), eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera"), eventsFunctionContext.getArgument("AnchorX"), eventsFunctionContext.getArgument("AnchorY"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__CameraZoom__ZoomWithAnchor.func(runtimeScene, gdjs.evtTools.camera.getCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) * Math.pow(eventsFunctionContext.getArgument("ZoomSpeed"), gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)), eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera"), eventsFunctionContext.getArgument("AnchorX"), eventsFunctionContext.getArgument("AnchorY"), eventsFunctionContext);
 }}
 
 }

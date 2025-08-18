@@ -17,9 +17,7 @@ gdjs.evtsExt__ArrayTools__ObjectHasNumber.eventsList0 = function(runtimeScene, e
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') {
-gdjs.Variable.copy(eventsFunctionContext.getArgument("Array"), runtimeScene.getScene().getVariables().get("__ArrayTools").getChild("Temp"), false);
-}
+{gdjs.Variable.copy(eventsFunctionContext.getArgument("Array"), runtimeScene.getScene().getVariables().get("__ArrayTools").getChild("Temp"), false);
 }}
 
 }
@@ -33,7 +31,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (0 != -(1));
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

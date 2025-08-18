@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__TextToSpeech__StopSpeaking !== "undefined") {
 gdjs.evtsExt__TextToSpeech__StopSpeaking = {};
 
 
-gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x1335bc0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x26ae970 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 window.speechSynthesis.cancel();
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__TextToSpeech__StopSpeaking.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x1335bc0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x26ae970(runtimeScene, eventsFunctionContext);
 
 }
 

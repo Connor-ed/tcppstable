@@ -15,9 +15,9 @@ gdjs.evtsExt__DoubleClick__HasDoubleClicked.eventsList0 = function(runtimeScene,
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasClicked.func(runtimeScene, eventsFunctionContext.getArgument("MouseButton"), 2, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasClicked.func(runtimeScene, eventsFunctionContext.getArgument("MouseButton"), 2, eventsFunctionContext);
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

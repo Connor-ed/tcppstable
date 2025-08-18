@@ -15,14 +15,14 @@ gdjs.evtsExt__SlotSystem__SetSlotItem.eventsList0 = function(runtimeScene, event
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotInBoundaries.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__IsSlotInBoundaries.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext);
 }
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetSlotTextContent.func(runtimeScene, eventsFunctionContext.getArgument("Item"), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), "Item", "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, 1, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetSlotTextContent.func(runtimeScene, eventsFunctionContext.getArgument("Item"), eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), "Item", "", eventsFunctionContext);
+}{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, 1, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext);
 }}
 
 }

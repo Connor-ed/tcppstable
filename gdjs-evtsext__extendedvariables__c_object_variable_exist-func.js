@@ -18,7 +18,7 @@ gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.eventsList0 = function(
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 
@@ -29,9 +29,9 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ObjectToCheck"), gdjs.evtsExt__
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.func(runtimeScene, gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.mapOfGDgdjs_9546evtsExt_9595_9595ExtendedVariables_9595_9595C_9595object_9595variable_9595exist_9546GDObjectToCheckObjects1Objects, eventsFunctionContext.getArgument("ObjectVariableName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.func(runtimeScene, gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.mapOfGDgdjs_9546evtsExt_9595_9595ExtendedVariables_9595_9595C_9595object_9595variable_9595exist_9546GDObjectToCheckObjects1Objects, eventsFunctionContext.getArgument("ObjectVariableName"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

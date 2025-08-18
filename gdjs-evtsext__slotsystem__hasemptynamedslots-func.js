@@ -15,7 +15,7 @@ gdjs.evtsExt__SlotSystem__HasEmptyNamedSlots.eventsList0 = function(runtimeScene
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 
@@ -25,9 +25,9 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SlotSystem__RemainingNamedSlots.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) > 0;
+isConditionTrue_0 = gdjs.evtsExt__SlotSystem__RemainingNamedSlots.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext) > 0;
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

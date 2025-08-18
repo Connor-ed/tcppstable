@@ -19,10 +19,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 0;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 0;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -36,10 +36,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 1;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 1;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -53,10 +53,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 2;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 2;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -70,10 +70,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 3;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 3;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -87,10 +87,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 4;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 4;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -104,10 +104,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 5;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 5;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -121,10 +121,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 6;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 6;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -138,10 +138,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == 7;
+isConditionTrue_0 = gdjs.evtsExt__SpriteMultitouchJoystick__AngleTo8Way.func(runtimeScene, eventsFunctionContext.getArgument("Angle"), eventsFunctionContext) == 7;
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

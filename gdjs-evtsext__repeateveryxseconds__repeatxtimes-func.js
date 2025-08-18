@@ -25,7 +25,7 @@ if(isConditionTrue_1) {
 }
 }
 {
-isConditionTrue_1 = gdjs.evtsExt__RepeatEveryXSeconds__Repetition.func(runtimeScene, eventsFunctionContext.getArgument("TimerName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) < eventsFunctionContext.getArgument("MaxLoop");
+isConditionTrue_1 = gdjs.evtsExt__RepeatEveryXSeconds__Repetition.func(runtimeScene, eventsFunctionContext.getArgument("TimerName"), eventsFunctionContext) < eventsFunctionContext.getArgument("MaxLoop");
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
 }
@@ -35,10 +35,10 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__RepeatEveryXSeconds__Repeat.func(runtimeScene, eventsFunctionContext.getArgument("TimerName"), eventsFunctionContext.getArgument("LoopDuration"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+isConditionTrue_0 = gdjs.evtsExt__RepeatEveryXSeconds__Repeat.func(runtimeScene, eventsFunctionContext.getArgument("TimerName"), eventsFunctionContext.getArgument("LoopDuration"), eventsFunctionContext);
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

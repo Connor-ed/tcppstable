@@ -15,9 +15,9 @@ gdjs.evtsExt__SlotSystem__AddNamedSlot.eventsList0 = function(runtimeScene, even
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+isConditionTrue_0 = !(gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext));
 if (isConditionTrue_0) {
-{gdjs.evtsExt__SlotSystem__SetSpaceSize.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), 0, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__SlotSystem__SetSpaceSize.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), 0, eventsFunctionContext);
 }}
 
 }

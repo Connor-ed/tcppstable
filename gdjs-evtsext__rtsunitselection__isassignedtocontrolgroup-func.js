@@ -20,10 +20,10 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__RTSUnit
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (gdjs.evtsExt__RTSUnitSelection__ControlGroupID.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595IsAssignedToControlGroup_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) == eventsFunctionContext.getArgument("ControlGroupID"));
+{isConditionTrue_0 = (gdjs.evtsExt__RTSUnitSelection__ControlGroupID.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595IsAssignedToControlGroup_9546GDObjectObjects1Objects, eventsFunctionContext) == eventsFunctionContext.getArgument("ControlGroupID"));
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -34,10 +34,10 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__RTSUnit
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (gdjs.evtsExt__RTSUnitSelection__ControlGroupID.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595IsAssignedToControlGroup_9546GDObjectObjects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) != eventsFunctionContext.getArgument("ControlGroupID"));
+{isConditionTrue_0 = (gdjs.evtsExt__RTSUnitSelection__ControlGroupID.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595IsAssignedToControlGroup_9546GDObjectObjects1Objects, eventsFunctionContext) != eventsFunctionContext.getArgument("ControlGroupID"));
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = false; }}}
+{eventsFunctionContext.returnValue = false;}}
 
 }
 

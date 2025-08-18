@@ -18,13 +18,13 @@ isConditionTrue_0 = false;
 {let isConditionTrue_1 = false;
 isConditionTrue_0 = false;
 {
-isConditionTrue_1 = gdjs.evtsExt__MousePointerLock__MovementX.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) != 0;
+isConditionTrue_1 = gdjs.evtsExt__MousePointerLock__MovementX.func(runtimeScene, eventsFunctionContext) != 0;
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
 }
 }
 {
-isConditionTrue_1 = gdjs.evtsExt__MousePointerLock__MovementY.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) != 0;
+isConditionTrue_1 = gdjs.evtsExt__MousePointerLock__MovementY.func(runtimeScene, eventsFunctionContext) != 0;
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
 }
@@ -33,7 +33,7 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

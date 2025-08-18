@@ -146,7 +146,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36867540);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38569612);
 }
 }
 if (isConditionTrue_0) {
@@ -172,7 +172,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Cancell
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length;i<l;++i) {
-    if ( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).DraggingIsCancelled((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+    if ( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).DraggingIsCancelled(eventsFunctionContext) ) {
         isConditionTrue_0 = true;
         gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[k] = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[i];
         ++k;
@@ -282,7 +282,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1);
 {for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1.length ;i < len;++i) {
-    gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).CancelLastDraggingS(eventsFunctionContext.getArgument("Duration") / 1000, eventsFunctionContext.getArgument("Easing"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+    gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).CancelLastDraggingS(eventsFunctionContext.getArgument("Duration") / 1000, eventsFunctionContext.getArgument("Easing"), eventsFunctionContext);
 }
 }}
 
@@ -508,7 +508,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 }
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+{eventsFunctionContext.returnValue = true;}}
 
 }
 

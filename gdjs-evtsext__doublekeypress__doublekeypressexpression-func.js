@@ -46,7 +46,7 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getSc
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "__DoublePress_" + eventsFunctionContext.getArgument("key"));
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "__DoublePress_" + eventsFunctionContext.getArgument("key"));
-}{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
+}{eventsFunctionContext.returnValue = true;}}
 
 }
 
@@ -89,7 +89,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, eventsFunctionContext.getArgument("key"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(34400028);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36102100);
 }
 }
 if (isConditionTrue_0) {

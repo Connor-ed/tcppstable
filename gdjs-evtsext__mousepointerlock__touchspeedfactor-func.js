@@ -15,7 +15,7 @@ gdjs.evtsExt__MousePointerLock__TouchSpeedFactor.eventsList0 = function(runtimeS
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(); }}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber();}}
 
 }
 

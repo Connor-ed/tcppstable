@@ -22,7 +22,7 @@ gdjs.evtsExt__EdgeScrollCamera__onSceneLoaded.eventsList0 = function(runtimeScen
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__EdgeScrollCamera__ConfigureEdgeScrollCamera.func(runtimeScene, 32, 300, "", 0, "Progressive speed", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__EdgeScrollCamera__ConfigureEdgeScrollCamera.func(runtimeScene, 32, 300, "", 0, "Progressive speed", eventsFunctionContext);
 }}
 
 }

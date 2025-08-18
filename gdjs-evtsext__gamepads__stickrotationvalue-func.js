@@ -15,7 +15,7 @@ gdjs.evtsExt__Gamepads__StickRotationValue.eventsList0 = function(runtimeScene, 
 
 let isConditionTrue_0 = false;
 {
-{if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = gdjs.evtsExt__Gamepads__StickAngle.func(runtimeScene, eventsFunctionContext.getArgument("player_ID"), eventsFunctionContext.getArgument("stick"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)); }}}
+{eventsFunctionContext.returnValue = gdjs.evtsExt__Gamepads__StickAngle.func(runtimeScene, eventsFunctionContext.getArgument("player_ID"), eventsFunctionContext.getArgument("stick"), eventsFunctionContext);}}
 
 }
 

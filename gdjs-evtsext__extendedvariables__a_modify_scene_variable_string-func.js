@@ -15,7 +15,7 @@ gdjs.evtsExt__ExtendedVariables__A_Modify_scene_variable_string.eventsList0 = fu
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariableString.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), eventsFunctionContext.getArgument("SceneVariableValue"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__ExtendedVariables__ModifySceneVariableString.func(runtimeScene, eventsFunctionContext.getArgument("SceneVariableName"), eventsFunctionContext.getArgument("SceneVariableValue"), eventsFunctionContext);
 }}
 
 }

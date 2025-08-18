@@ -26,7 +26,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.eventsList0 = function(runti
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.GDObjectObjects1);
-{gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.func(runtimeScene, gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.mapOfGDgdjs_9546evtsExt_9595_9595HexagonalGrid_9595_9595SnapObjectToBubbleGrid_9546GDObjectObjects1Objects, eventsFunctionContext.getArgument("CellWidth"), eventsFunctionContext.getArgument("CellHeight") * 7 / 6, eventsFunctionContext.getArgument("OffsetX"), eventsFunctionContext.getArgument("OffsetY"), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.func(runtimeScene, gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.mapOfGDgdjs_9546evtsExt_9595_9595HexagonalGrid_9595_9595SnapObjectToBubbleGrid_9546GDObjectObjects1Objects, eventsFunctionContext.getArgument("CellWidth"), eventsFunctionContext.getArgument("CellHeight") * 7 / 6, eventsFunctionContext.getArgument("OffsetX"), eventsFunctionContext.getArgument("OffsetY"), eventsFunctionContext);
 }}
 
 }

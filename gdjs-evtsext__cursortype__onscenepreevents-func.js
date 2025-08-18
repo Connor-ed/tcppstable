@@ -23,7 +23,7 @@ gdjs.evtsExt__CursorType__onScenePreEvents.eventsList0 = function(runtimeScene, 
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.globalVariablesForExtension.getFromIndex(0).setNumber(0);
-}{gdjs.evtsExt__CursorType__DoChangeCursorType.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsString(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{gdjs.evtsExt__CursorType__DoChangeCursorType.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsString(), eventsFunctionContext);
 }}
 
 }
