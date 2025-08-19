@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__ObjectShuffle = {};
 gdjs.evtsExt__ArrayTools__ObjectShuffle.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__ArrayTools__ObjectShuffle.userFunc0x2c33c28 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__ObjectShuffle.userFunc0x2c2fb78 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -25,7 +25,7 @@ gdjs.evtsExt__ArrayTools__ObjectShuffle.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__ArrayTools__ObjectShuffle.userFunc0x2c33c28(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__ObjectShuffle.userFunc0x2c2fb78(runtimeScene, eventsFunctionContext);
 
 }
 

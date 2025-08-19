@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked !== "undefine
 gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked = {};
 
 
-gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1d4e200 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1df1a68 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const { handler } = gdjs._MousePointerLockExtension;
@@ -21,7 +21,7 @@ gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.eventsList0 = function(r
 {
 
 
-gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1d4e200(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1df1a68(runtimeScene, eventsFunctionContext);
 
 }
 

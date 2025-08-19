@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__PickedPlayer !== "undefined") {
 gdjs.evtsExt__THNK__PickedPlayer = {};
 
 
-gdjs.evtsExt__THNK__PickedPlayer.userFunc0x1e090d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__PickedPlayer.userFunc0x10552f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = THNK.players.getCurrentPlayerID();
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__THNK__PickedPlayer.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__THNK__PickedPlayer.userFunc0x1e090d8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__PickedPlayer.userFunc0x10552f8(runtimeScene, eventsFunctionContext);
 
 }
 

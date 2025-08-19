@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__AuthorizedPlatformsValidation__Includes !== "undefined"
 gdjs.evtsExt__AuthorizedPlatformsValidation__Includes = {};
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x1cb3320 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x1a6aa38 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const authorizedPlatformsVariableReference = runtimeScene.getGame()
     .getVariables()
@@ -29,7 +29,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x1cb3320(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x1a6aa38(runtimeScene, eventsFunctionContext);
 
 }
 
