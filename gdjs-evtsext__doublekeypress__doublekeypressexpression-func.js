@@ -89,7 +89,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, eventsFunctionContext.getArgument("key"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36096612);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36152772);
 }
 }
 if (isConditionTrue_0) {

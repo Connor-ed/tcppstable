@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__SendMessage !== "undefined") {
 gdjs.evtsExt__THNK__SendMessage = {};
 
 
-gdjs.evtsExt__THNK__SendMessage.userFunc0x1ec4b18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__SendMessage.userFunc0x2006fb0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkClient) {
     THNK.client.messages.sendClientMessage(
@@ -30,7 +30,7 @@ gdjs.evtsExt__THNK__SendMessage.eventsList0 = function(runtimeScene, eventsFunct
 {
 
 
-gdjs.evtsExt__THNK__SendMessage.userFunc0x1ec4b18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__SendMessage.userFunc0x2006fb0(runtimeScene, eventsFunctionContext);
 
 }
 

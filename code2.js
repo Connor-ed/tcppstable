@@ -1446,7 +1446,192 @@ gdjs.copyArray(runtimeScene.getObjects("VCMIXO"), gdjs.LoadCode.GDVCMIXOObjects1
 }
 
 
-};gdjs.LoadCode.eventsList12 = function(runtimeScene) {
+};gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects2Objects = Hashtable.newFrom({"Global_Play": gdjs.LoadCode.GDGlobal_9595PlayObjects2});
+gdjs.LoadCode.eventsList12 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Global_Play"), gdjs.LoadCode.GDGlobal_9595PlayObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
+}}
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("MIXCV"), gdjs.LoadCode.GDMIXCVObjects2);
+gdjs.copyArray(runtimeScene.getObjects("MULTI1O"), gdjs.LoadCode.GDMULTI1OObjects2);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setFillOpacity(150);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("117;21;30");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2((( gdjs.LoadCode.GDMIXCVObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMIXCVObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDMIXCVObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMIXCVObjects2[0].getCenterYInScene()), (( gdjs.LoadCode.GDMULTI1OObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTI1OObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTI1OObjects2[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("EXTAUX"), gdjs.LoadCode.GDEXTAUXObjects2);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
+gdjs.copyArray(runtimeScene.getObjects("OSCPULSEO"), gdjs.LoadCode.GDOSCPULSEOObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineOpacity(150);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("28;204;204");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2((( gdjs.LoadCode.GDEXTAUXObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDEXTAUXObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDEXTAUXObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDEXTAUXObjects2[0].getCenterYInScene()), (( gdjs.LoadCode.GDOSCPULSEOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDOSCPULSEOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDOSCPULSEOObjects2[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("KBCVO"), gdjs.LoadCode.GDKBCVOObjects2);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
+gdjs.copyArray(runtimeScene.getObjects("VCFCUTOFF"), gdjs.LoadCode.GDVCFCUTOFFObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineOpacity(150);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("91;204;28");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2((( gdjs.LoadCode.GDVCFCUTOFFObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFCUTOFFObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCFCUTOFFObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDVCFCUTOFFObjects2[0].getCenterYInScene()), (( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("LFOTRIO"), gdjs.LoadCode.GDLFOTRIOObjects2);
+gdjs.copyArray(runtimeScene.getObjects("MIX2"), gdjs.LoadCode.GDMIX2Objects2);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineOpacity(150);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("204;28;157");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2((( gdjs.LoadCode.GDMIX2Objects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX2Objects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDMIX2Objects2.length === 0 ) ? 0 :gdjs.LoadCode.GDMIX2Objects2[0].getCenterYInScene()), (( gdjs.LoadCode.GDLFOTRIOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDLFOTRIOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDLFOTRIOObjects2[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("ENVO"), gdjs.LoadCode.GDENVOObjects2);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
+gdjs.copyArray(runtimeScene.getObjects("VCMIX"), gdjs.LoadCode.GDVCMIXObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineOpacity(150);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("235;255;15");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2((( gdjs.LoadCode.GDVCMIXObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCMIXObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXObjects2[0].getCenterYInScene()), (( gdjs.LoadCode.GDENVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDENVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDENVOObjects2[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 6);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("MULTI"), gdjs.LoadCode.GDMULTIObjects1);
+gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects1);
+gdjs.copyArray(runtimeScene.getObjects("VCMIXO"), gdjs.LoadCode.GDVCMIXOObjects1);
+{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineOpacity(80);
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects1[i].setOutlineColor("135;190;255");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDNewShapePainterObjects1[i].drawLineV2((( gdjs.LoadCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTIObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDMULTIObjects1[0].getCenterYInScene()), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterXInScene()), (( gdjs.LoadCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.LoadCode.GDVCMIXOObjects1[0].getCenterYInScene()), 10);
+}
+}}
+
+}
+
+
+};gdjs.LoadCode.eventsList13 = function(runtimeScene) {
 
 {
 
@@ -1486,7 +1671,7 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.LoadCode.GDLoading
 }
 
 
-};gdjs.LoadCode.eventsList13 = function(runtimeScene) {
+};gdjs.LoadCode.eventsList14 = function(runtimeScene) {
 
 {
 
@@ -1554,7 +1739,7 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Top_Lite"), gdjs.LoadCode.GDGloba
 
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.LoadCode.eventsList14 = function(runtimeScene) {
+gdjs.LoadCode.eventsList15 = function(runtimeScene) {
 
 {
 
@@ -1649,7 +1834,7 @@ gdjs.copyArray(runtimeScene.getObjects("Knob_overlay"), gdjs.LoadCode.GDKnob_959
     gdjs.LoadCode.GDKnob_9595overlayObjects1[i].getBehavior("Animation").setAnimationName("electric pulse");
 }
 }{for(var i = 0, len = gdjs.LoadCode.GDINSTObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDINSTObjects1[i].getBehavior("Text").setText("Electric Pulse\n\nMIX CV >> MULT-1, EXT AUX >> OSC PULSE, VCF CUTOFF >> KB CV, MIX 2 >> LFO TRI, VC MIX >> ENV, MULTI >> VC MIX");
+    gdjs.LoadCode.GDINSTObjects1[i].getBehavior("Text").setText("Electric Pulse\n\nMIX CV >> MULT-1, EXT AUX >> OSC PULSE, VCF CUTOFF >> KB CV, MIX 2 >> LFO TRI, VC MIX >> ENV, MULTI >> VC MIX\n");
 }
 }
 { //Subevents
@@ -1662,7 +1847,31 @@ gdjs.LoadCode.eventsList11(runtimeScene);} //End of subevents
 {
 
 
-gdjs.LoadCode.eventsList12(runtimeScene);
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 7);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Knob_overlay"), gdjs.LoadCode.GDKnob_9595overlayObjects1);
+{for(var i = 0, len = gdjs.LoadCode.GDKnob_9595overlayObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDKnob_9595overlayObjects1[i].getBehavior("Animation").setAnimationName("bit synth");
+}
+}{for(var i = 0, len = gdjs.LoadCode.GDINSTObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDINSTObjects1[i].getBehavior("Text").setText("Bit Synth\n\nNo patch details given.");
+}
+}
+{ //Subevents
+gdjs.LoadCode.eventsList12(runtimeScene);} //End of subevents
+}
+
 }
 
 
@@ -1670,6 +1879,13 @@ gdjs.LoadCode.eventsList12(runtimeScene);
 
 
 gdjs.LoadCode.eventsList13(runtimeScene);
+}
+
+
+{
+
+
+gdjs.LoadCode.eventsList14(runtimeScene);
 }
 
 
@@ -2345,7 +2561,7 @@ gdjs.LoadCode.GDShadowObjects2.length = 0;
 gdjs.LoadCode.GDShadowObjects3.length = 0;
 gdjs.LoadCode.GDShadowObjects4.length = 0;
 
-gdjs.LoadCode.eventsList14(runtimeScene);
+gdjs.LoadCode.eventsList15(runtimeScene);
 gdjs.LoadCode.GDKnobObjects1.length = 0;
 gdjs.LoadCode.GDKnobObjects2.length = 0;
 gdjs.LoadCode.GDKnobObjects3.length = 0;

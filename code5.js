@@ -48,10 +48,6 @@ gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects1= [];
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects2= [];
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects3= [];
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects4= [];
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1= [];
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects2= [];
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects3= [];
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects4= [];
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects1= [];
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects2= [];
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects3= [];
@@ -60,10 +56,10 @@ gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1= [];
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects2= [];
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects3= [];
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects4= [];
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1= [];
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects2= [];
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects3= [];
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects4= [];
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1= [];
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects2= [];
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects3= [];
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects4= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3= [];
@@ -352,15 +348,15 @@ gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDOw_9595
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDBoom_95959595KickObjects1Objects = Hashtable.newFrom({"Boom_Kick": gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDConcept_95959595BassObjects1Objects = Hashtable.newFrom({"Concept_Bass": gdjs.Synth_32SelectorCode.GDConcept_9595BassObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDElectric_95959595PulseObjects1Objects = Hashtable.newFrom({"Electric_Pulse": gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects1});
-gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects = Hashtable.newFrom({"Woah_Synth": gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1});
-gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects = Hashtable.newFrom({"Woah_Synth": gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1});
+gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects = Hashtable.newFrom({"bit_synth": gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1});
+gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects = Hashtable.newFrom({"bit_synth": gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDE_95959595KeysObjects1Objects = Hashtable.newFrom({"E_Keys": gdjs.Synth_32SelectorCode.GDE_9595KeysObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDSimple_95959595PluckObjects1Objects = Hashtable.newFrom({"Simple_Pluck": gdjs.Synth_32SelectorCode.GDSimple_9595PluckObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDOw_95959595AhhObjects1Objects = Hashtable.newFrom({"Ow_Ahh": gdjs.Synth_32SelectorCode.GDOw_9595AhhObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDBoom_95959595KickObjects1Objects = Hashtable.newFrom({"Boom_Kick": gdjs.Synth_32SelectorCode.GDBoom_9595KickObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDConcept_95959595BassObjects1Objects = Hashtable.newFrom({"Concept_Bass": gdjs.Synth_32SelectorCode.GDConcept_9595BassObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDElectric_95959595PulseObjects1Objects = Hashtable.newFrom({"Electric_Pulse": gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects1});
-gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects = Hashtable.newFrom({"Woah_Synth": gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1});
+gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects = Hashtable.newFrom({"bit_synth": gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1});
 gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDE_95959595KeysObjects1Objects = Hashtable.newFrom({"E_Keys": gdjs.Synth_32SelectorCode.GDE_9595KeysObjects1});
 gdjs.Synth_32SelectorCode.eventsList8 = function(runtimeScene) {
 
@@ -445,7 +441,7 @@ let isConditionTrue_0 = false;
 }
 
 
-};gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects = Hashtable.newFrom({"Woah_Synth": gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1});
+};gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects = Hashtable.newFrom({"bit_synth": gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1});
 gdjs.Synth_32SelectorCode.eventsList14 = function(runtimeScene) {
 
 {
@@ -477,15 +473,11 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Global_Top_Menu"), gdjs.Synth_32SelectorCode.GDGlobal_9595Top_9595MenuObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-gdjs.copyArray(runtimeScene.getObjects("New_overlay"), gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1);
 {gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
 }{for(var i = 0, len = gdjs.Synth_32SelectorCode.GDGlobal_9595Top_9595MenuObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDGlobal_9595Top_9595MenuObjects1[i].getBehavior("Opacity").setOpacity(255);
 }
-}{for(var i = 0, len = gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1.length ;i < len;++i) {
-    gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1[i].getBehavior("FlashOpacity").Flash("Tween", 3600, 200, null);
-}
-}{for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+}{/* Unknown object - skipped. */}{for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].hide();
 }
 }}
@@ -769,11 +761,11 @@ gdjs.copyArray(runtimeScene.getObjects("Icon_overlay_1"), gdjs.Synth_32SelectorC
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Woah_Synth"), gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1);
+gdjs.copyArray(runtimeScene.getObjects("bit_synth"), gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects, runtimeScene, true, true);
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects, runtimeScene, true, true);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Icon_overlay_2"), gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1);
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1.length ;i < len;++i) {
@@ -786,11 +778,11 @@ gdjs.copyArray(runtimeScene.getObjects("Icon_overlay_2"), gdjs.Synth_32SelectorC
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Woah_Synth"), gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1);
+gdjs.copyArray(runtimeScene.getObjects("bit_synth"), gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects, runtimeScene, true, false);
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Icon_overlay_2"), gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1);
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1.length ;i < len;++i) {
@@ -924,11 +916,11 @@ if (isConditionTrue_0) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Woah_Synth"), gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1);
+gdjs.copyArray(runtimeScene.getObjects("bit_synth"), gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects, runtimeScene, true, false);
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
@@ -1118,18 +1110,18 @@ gdjs.Synth_32SelectorCode.eventsList13(runtimeScene);} //End of subevents
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Woah_Synth"), gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1);
+gdjs.copyArray(runtimeScene.getObjects("bit_synth"), gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDWoah_95959595SynthObjects1Objects, runtimeScene, true, false);
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.Synth_32SelectorCode.mapOfGDgdjs_9546Synth_959532SelectorCode_9546GDbit_95959595synthObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Right", null);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Woah Synth.wav", 10, false, 20, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
 }{for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
@@ -1559,10 +1551,6 @@ gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects3.length = 0;
@@ -1571,10 +1559,10 @@ gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects2.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects3.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects4.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;
@@ -1689,10 +1677,6 @@ gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDElectric_9595PulseObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDNew_9595overlayObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDwoodsidesObjects3.length = 0;
@@ -1701,10 +1685,10 @@ gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects1.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects2.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects3.length = 0;
 gdjs.Synth_32SelectorCode.GDIcon_9595overlay_95952Objects4.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDWoah_9595SynthObjects4.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects1.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects2.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects3.length = 0;
+gdjs.Synth_32SelectorCode.GDbit_9595synthObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDGlobal_9595PlayObjects3.length = 0;

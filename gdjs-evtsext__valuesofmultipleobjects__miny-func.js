@@ -9,7 +9,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinY = {};
 gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2c7c858 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2c7df20 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -34,7 +34,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinY.eventsList0 = function(runtimeScene,
 gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1);
 
 const objects = gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1;
-gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2c7c858(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2c7df20(runtimeScene, objects, eventsFunctionContext);
 
 }
 
