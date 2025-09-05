@@ -211,7 +211,10 @@ gdjs.EditorCode.eventsList0 = function(runtimeScene) {
 
 
 let isConditionTrue_0 = false;
-{
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(37120204);
+}
+if (isConditionTrue_0) {
 gdjs.copyArray(gdjs.EditorCode.GDSSRAObjects1, gdjs.EditorCode.GDSSRAObjects2);
 
 {gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.func(runtimeScene, gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDSSRAObjects2Objects, null);
@@ -606,32 +609,7 @@ let isConditionTrue_0 = false;
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LSystem");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDNameObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDNameObjects1[i].getBehavior("Text").getText() == "" ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDNameObjects1[k] = gdjs.EditorCode.GDNameObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDNameObjects1.length = k;
-}
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDNameObjects1 */
-{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNameObjects1[i].getBehavior("Flash").Flash(0.5, null);
-}
-}}
 
 }
 
