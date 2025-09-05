@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__StartServerCode !== "undefined") {
 gdjs.evtsExt__THNK__StartServerCode = {};
 
 
-gdjs.evtsExt__THNK__StartServerCode.userFunc0x1e44710 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StartServerCode.userFunc0x10f6348 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.thnkServer 
     // The server is active, only run server code if it is time to.
@@ -22,7 +22,7 @@ gdjs.evtsExt__THNK__StartServerCode.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__THNK__StartServerCode.userFunc0x1e44710(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__StartServerCode.userFunc0x10f6348(runtimeScene, eventsFunctionContext);
 
 }
 

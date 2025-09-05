@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__UpdateChecker__CurrentGameID !== "undefined") {
 gdjs.evtsExt__UpdateChecker__CurrentGameID = {};
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0x1a6fb08 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0xe3df30 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.projectUuid;
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__UpdateChecker__CurrentGameID.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0x1a6fb08(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0xe3df30(runtimeScene, eventsFunctionContext);
 
 }
 

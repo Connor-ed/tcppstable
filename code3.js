@@ -38,6 +38,8 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1= [];
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2= [];
 gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
+gdjs.Quick_95CheckCode.GDko_9595fiObjects1= [];
+gdjs.Quick_95CheckCode.GDko_9595fiObjects2= [];
 
 
 gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
@@ -233,6 +235,8 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDko_9595fiObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDko_9595fiObjects2.length = 0;
 
 gdjs.Quick_95CheckCode.eventsList0(runtimeScene);
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length = 0;
@@ -273,6 +277,8 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
+gdjs.Quick_95CheckCode.GDko_9595fiObjects1.length = 0;
+gdjs.Quick_95CheckCode.GDko_9595fiObjects2.length = 0;
 
 
 return;

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__URLTools__ChangeURLAttribute !== "undefined") {
 gdjs.evtsExt__URLTools__ChangeURLAttribute = {};
 
 
-gdjs.evtsExt__URLTools__ChangeURLAttribute.userFunc0x26c6ac0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__URLTools__ChangeURLAttribute.userFunc0x26b4c18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const url = new URL(eventsFunctionContext.getArgument("URL"));
 url[eventsFunctionContext.getArgument("part")] = eventsFunctionContext.getArgument("val");
@@ -20,7 +20,7 @@ gdjs.evtsExt__URLTools__ChangeURLAttribute.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__URLTools__ChangeURLAttribute.userFunc0x26c6ac0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__URLTools__ChangeURLAttribute.userFunc0x26b4c18(runtimeScene, eventsFunctionContext);
 
 }
 

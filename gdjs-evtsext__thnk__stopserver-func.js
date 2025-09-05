@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__THNK__StopServer !== "undefined") {
 gdjs.evtsExt__THNK__StopServer = {};
 
 
-gdjs.evtsExt__THNK__StopServer.userFunc0x1e43d40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StopServer.userFunc0x10f5848 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkServer) {
     runtimeScene.thnkServer.adapter.close();
@@ -21,7 +21,7 @@ gdjs.evtsExt__THNK__StopServer.eventsList0 = function(runtimeScene, eventsFuncti
 {
 
 
-gdjs.evtsExt__THNK__StopServer.userFunc0x1e43d40(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__StopServer.userFunc0x10f5848(runtimeScene, eventsFunctionContext);
 
 }
 

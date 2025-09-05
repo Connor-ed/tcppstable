@@ -63,6 +63,9 @@ gdjs.PreCode.GDtop_9595titleObjects3= [];
 gdjs.PreCode.GDShadowObjects1= [];
 gdjs.PreCode.GDShadowObjects2= [];
 gdjs.PreCode.GDShadowObjects3= [];
+gdjs.PreCode.GDko_9595fiObjects1= [];
+gdjs.PreCode.GDko_9595fiObjects2= [];
+gdjs.PreCode.GDko_9595fiObjects3= [];
 
 
 gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595PlayObjects2Objects = Hashtable.newFrom({"Global_Play": gdjs.PreCode.GDGlobal_9595PlayObjects2});
@@ -305,6 +308,9 @@ gdjs.PreCode.GDtop_9595titleObjects3.length = 0;
 gdjs.PreCode.GDShadowObjects1.length = 0;
 gdjs.PreCode.GDShadowObjects2.length = 0;
 gdjs.PreCode.GDShadowObjects3.length = 0;
+gdjs.PreCode.GDko_9595fiObjects1.length = 0;
+gdjs.PreCode.GDko_9595fiObjects2.length = 0;
+gdjs.PreCode.GDko_9595fiObjects3.length = 0;
 
 gdjs.PreCode.eventsList1(runtimeScene);
 gdjs.PreCode.GDNewSpriteObjects1.length = 0;
@@ -370,6 +376,9 @@ gdjs.PreCode.GDtop_9595titleObjects3.length = 0;
 gdjs.PreCode.GDShadowObjects1.length = 0;
 gdjs.PreCode.GDShadowObjects2.length = 0;
 gdjs.PreCode.GDShadowObjects3.length = 0;
+gdjs.PreCode.GDko_9595fiObjects1.length = 0;
+gdjs.PreCode.GDko_9595fiObjects2.length = 0;
+gdjs.PreCode.GDko_9595fiObjects3.length = 0;
 
 
 return;

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__IsClosed !== "undefined") {
 gdjs.evtsExt__CurvedMovement__IsClosed = {};
 
 
-gdjs.evtsExt__CurvedMovement__IsClosed.userFunc0x1fe3d88 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__IsClosed.userFunc0x1f91030 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -23,7 +23,7 @@ gdjs.evtsExt__CurvedMovement__IsClosed.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__CurvedMovement__IsClosed.userFunc0x1fe3d88(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__IsClosed.userFunc0x1f91030(runtimeScene, eventsFunctionContext);
 
 }
 

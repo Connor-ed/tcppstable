@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__URLTools__CurrentURL !== "undefined") {
 gdjs.evtsExt__URLTools__CurrentURL = {};
 
 
-gdjs.evtsExt__URLTools__CurrentURL.userFunc0x26c81b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__URLTools__CurrentURL.userFunc0x26d09e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = location.toString();
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__URLTools__CurrentURL.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__URLTools__CurrentURL.userFunc0x26c81b0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__URLTools__CurrentURL.userFunc0x26d09e0(runtimeScene, eventsFunctionContext);
 
 }
 

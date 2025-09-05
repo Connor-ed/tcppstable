@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__UpdateChecker__CreateGlobalReference !== "undefined") {
 gdjs.evtsExt__UpdateChecker__CreateGlobalReference = {};
 
 
-gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x1ccc028 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0xe3f130 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const reference = eventsFunctionContext.getArgument("reference");
 const source = eventsFunctionContext.getArgument("source");
@@ -23,7 +23,7 @@ gdjs.evtsExt__UpdateChecker__CreateGlobalReference.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x1ccc028(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0xe3f130(runtimeScene, eventsFunctionContext);
 
 }
 
