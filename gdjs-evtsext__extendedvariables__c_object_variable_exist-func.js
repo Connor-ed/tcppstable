@@ -18,7 +18,8 @@ gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.eventsList0 = function(
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = false;}}
+{eventsFunctionContext.returnValue = false;}
+}
 
 }
 
@@ -31,7 +32,8 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.func(runtimeScene, gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.mapOfGDgdjs_9546evtsExt_9595_9595ExtendedVariables_9595_9595C_9595object_9595variable_9595exist_9546GDObjectToCheckObjects1Objects, eventsFunctionContext.getArgument("ObjectVariableName"), eventsFunctionContext);
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{eventsFunctionContext.returnValue = true;}
+}
 
 }
 
@@ -39,6 +41,7 @@ if (isConditionTrue_0) {
 };
 
 gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.func = function(runtimeScene, ObjectToCheck, ObjectVariableName, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "ObjectToCheck": ObjectToCheck
@@ -63,14 +66,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -78,7 +82,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

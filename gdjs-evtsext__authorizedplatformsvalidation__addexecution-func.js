@@ -16,7 +16,8 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution.eventsList0 = function
 let isConditionTrue_0 = false;
 {
 {gdjs.evtTools.variable.valuePush(runtimeScene.getGame().getVariables().get("__AuthorizedPlatformsValidation").getChild("AuthorizedPlatforms"), eventsFunctionContext.getArgument("Domain"));
-}}
+}
+}
 
 }
 
@@ -24,6 +25,7 @@ let isConditionTrue_0 = false;
 };
 
 gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution.func = function(runtimeScene, Domain, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -46,14 +48,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -61,7 +64,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

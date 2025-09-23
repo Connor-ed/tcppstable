@@ -19,8 +19,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty")), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(0);
-}}
+}
+{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(0);
+}
+}
 
 }
 
@@ -34,9 +36,12 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.debuggerTools.log("found " + gdjs.evtTools.common.toString(Math.min(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty")), eventsFunctionContext.getArgument("Maximum"))) + "/" + gdjs.evtTools.variable.getVariableString(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), "", "");
-}{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, Math.min(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty")), eventsFunctionContext.getArgument("Maximum")), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(eventsFunctionContext.getArgument("Maximum"));
-}}
+}
+{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, Math.min(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty")), eventsFunctionContext.getArgument("Maximum")), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(eventsFunctionContext.getArgument("Maximum"));
+}
+}
 
 }
 
@@ -47,7 +52,8 @@ if (isConditionTrue_0) {
 let isConditionTrue_0 = false;
 {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(-(1));
-}}
+}
+}
 
 }
 
@@ -62,7 +68,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -(1);
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(0);
-}}
+}
+}
 
 }
 
@@ -75,8 +82,10 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) > -(1);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__SlotSystem__SetSlotItem.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext.getArgument("Item"), eventsFunctionContext);
-}{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
 }
+{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+
 { //Subevents
 gdjs.evtsExt__SlotSystem__AddItemAuto.eventsList0(runtimeScene, eventsFunctionContext);} //End of subevents
 }
@@ -111,9 +120,12 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(0);
-}{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, eventsFunctionContext.getArgument("Quantity"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}}
+}
+{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, eventsFunctionContext.getArgument("Quantity"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+}
 
 }
 
@@ -126,10 +138,14 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtsExt__SlotSystem__IsSlotUnlimited.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext));
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Diff").setNumber(Math.min(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty")), gdjs.evtsExt__SlotSystem__SlotMax.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext) - gdjs.evtsExt__SlotSystem__SlotCount.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext)));
-}{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, gdjs.evtsExt__SlotSystem__SlotCount.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext) + (gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Diff"))), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
-}{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Diff")));
-}}
+}
+{gdjs.evtsExt__SlotSystem__SetSlotCount.func(runtimeScene, gdjs.evtsExt__SlotSystem__SlotCount.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext) + (gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Diff"))), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+{gdjs.evtsExt__SlotSystem__SetSlotMax.func(runtimeScene, eventsFunctionContext.getArgument("Maximum"), eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext);
+}
+{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").sub(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_Diff")));
+}
+}
 
 }
 
@@ -145,7 +161,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(gdjs.evtsExt__SlotSystem__FirstItemSlotAvailable.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Item"), eventsFunctionContext));
-}}
+}
+}
 
 }
 
@@ -159,7 +176,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(0);
-}}
+}
+}
 
 }
 
@@ -175,6 +193,7 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getSce
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(gdjs.evtsExt__SlotSystem__FirstEmptySlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext));
 }
+
 { //Subevents
 gdjs.evtsExt__SlotSystem__AddItemAuto.eventsList1(runtimeScene, eventsFunctionContext);} //End of subevents
 }
@@ -245,8 +264,10 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__SlotSystem__DoesSpaceExists.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext);
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(gdjs.evtsExt__SlotSystem__FirstItemSlotAvailable.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Item"), eventsFunctionContext));
-}{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(eventsFunctionContext.getArgument("Quantity"));
 }
+{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(eventsFunctionContext.getArgument("Quantity"));
+}
+
 { //Subevents
 gdjs.evtsExt__SlotSystem__AddItemAuto.eventsList5(runtimeScene, eventsFunctionContext);} //End of subevents
 }
@@ -257,6 +278,7 @@ gdjs.evtsExt__SlotSystem__AddItemAuto.eventsList5(runtimeScene, eventsFunctionCo
 };
 
 gdjs.evtsExt__SlotSystem__AddItemAuto.func = function(runtimeScene, SpaceName, Item, Quantity, Maximum, FloodAuto, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -279,14 +301,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -294,7 +317,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__URLTools__Redirect !== "undefined") {
 gdjs.evtsExt__URLTools__Redirect = {};
 
 
-gdjs.evtsExt__URLTools__Redirect.userFunc0x1ba9558 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__URLTools__Redirect.userFunc0x120feb0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 location.replace(eventsFunctionContext.getArgument("to"));
 
@@ -18,7 +18,7 @@ gdjs.evtsExt__URLTools__Redirect.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__URLTools__Redirect.userFunc0x1ba9558(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__URLTools__Redirect.userFunc0x120feb0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -26,6 +26,7 @@ gdjs.evtsExt__URLTools__Redirect.userFunc0x1ba9558(runtimeScene, eventsFunctionC
 };
 
 gdjs.evtsExt__URLTools__Redirect.func = function(runtimeScene, to, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -48,14 +49,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -63,7 +65,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

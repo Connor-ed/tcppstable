@@ -25,7 +25,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).getAsString() == "Progressive speed");
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = (1 - Math.abs(eventsFunctionContext.getArgument("BorderDistance")) / eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}}
+{eventsFunctionContext.returnValue = (1 - Math.abs(eventsFunctionContext.getArgument("BorderDistance")) / eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}
+}
 
 }
 
@@ -62,7 +63,8 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}}
+{eventsFunctionContext.returnValue = eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}
+}
 
 }
 
@@ -70,6 +72,7 @@ if (isConditionTrue_0) {
 };
 
 gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func = function(runtimeScene, BorderDistance, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -92,14 +95,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -107,7 +111,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

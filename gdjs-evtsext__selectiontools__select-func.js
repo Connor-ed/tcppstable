@@ -11,7 +11,7 @@ gdjs.evtsExt__SelectionTools__Select.GDTargetsObjects2= [];
 gdjs.evtsExt__SelectionTools__Select.GDTargetsObjects3= [];
 
 
-gdjs.evtsExt__SelectionTools__Select.userFunc0xa12918 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__SelectionTools__Select.userFunc0x1d8e570 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const targets = eventsFunctionContext.getObjectsLists("Targets").items;
 const invertSelection = eventsFunctionContext.getArgument("InvertSelection");
@@ -52,7 +52,7 @@ gdjs.evtsExt__SelectionTools__Select.eventsList0 = function(runtimeScene, events
 {
 
 
-gdjs.evtsExt__SelectionTools__Select.userFunc0xa12918(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SelectionTools__Select.userFunc0x1d8e570(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -62,12 +62,13 @@ gdjs.evtsExt__SelectionTools__Select.userFunc0xa12918(runtimeScene, eventsFuncti
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = true;}}
+{eventsFunctionContext.returnValue = true;}
+}
 
 }
 
 
-};gdjs.evtsExt__SelectionTools__Select.userFunc0x1c62840 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+};gdjs.evtsExt__SelectionTools__Select.userFunc0x34b4850 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const targets = eventsFunctionContext.getObjectsLists("Targets").items;
 const invertSelection = eventsFunctionContext.getArgument("InvertSelection");
@@ -139,11 +140,16 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getSc
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.variable.variableClearChildren(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"));
-}{gdjs.evtTools.variable.valuePush(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"), Math.round(gdjs.evtTools.input.getCursorX(runtimeScene, "", 0)));
-}{gdjs.evtTools.variable.valuePush(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"), Math.round(gdjs.evtTools.input.getCursorY(runtimeScene, "", 0)));
-}{gdjs.evtTools.variable.variablePushCopy(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("Vertices"), runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"));
-}{gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("PopVertex"), true);
-}}
+}
+{gdjs.evtTools.variable.valuePush(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"), Math.round(gdjs.evtTools.input.getCursorX(runtimeScene, "", 0)));
+}
+{gdjs.evtTools.variable.valuePush(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"), Math.round(gdjs.evtTools.input.getCursorY(runtimeScene, "", 0)));
+}
+{gdjs.evtTools.variable.variablePushCopy(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("Vertices"), runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("ChildVertex"));
+}
+{gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("PopVertex"), true);
+}
+}
 
 }
 
@@ -158,7 +164,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.evtsExt__SelectionTools__Select.userFunc0x1c62840(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SelectionTools__Select.userFunc0x34b4850(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -178,8 +184,10 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("PopVertex"), true);
 if (isConditionTrue_0) {
 {gdjs.evtTools.variable.variableRemoveAt(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("Vertices"), gdjs.evtTools.variable.getVariableChildCount(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("Vertices")) - 1);
-}{gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("PopVertex"), false);
-}}
+}
+{gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("PopVertex"), false);
+}
+}
 
 }
 
@@ -189,7 +197,8 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = true;}}
+{eventsFunctionContext.returnValue = true;}
+}
 
 }
 
@@ -316,6 +325,7 @@ gdjs.evtsExt__SelectionTools__Select.eventsList2(runtimeScene, eventsFunctionCon
 };
 
 gdjs.evtsExt__SelectionTools__Select.func = function(runtimeScene, Targets, InvertSelection, PreSelect, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "Targets": Targets
@@ -340,14 +350,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -355,7 +366,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

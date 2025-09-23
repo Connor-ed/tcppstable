@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform !== "unde
 gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform = {};
 
 
-gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1d5c630 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x3f05e80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const electron = runtimeScene.getGame().getRenderer().getElectron();
 const callback = eventsFunctionContext.getArgument("callback");
@@ -58,7 +58,7 @@ gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.eventsList0 = functi
 {
 
 
-gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1d5c630(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x3f05e80(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -66,6 +66,7 @@ gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1d5c630(ru
 };
 
 gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.func = function(runtimeScene, callback, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   task: new gdjs.ManuallyResolvableTask(),
   _objectsMap: {
@@ -89,14 +90,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -104,7 +106,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__onScenePostEvents !== "undefined") {
 gdjs.evtsExt__MousePointerLock__onScenePostEvents = {};
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x7d6848 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x331ccb8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { handler } = gdjs._MousePointerLockExtension;
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__MousePointerLock__onScenePostEvents.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x7d6848(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MousePointerLock__onScenePostEvents.userFunc0x331ccb8(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -33,10 +33,14 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__MousePointerLock__isEmulatingPointerLock.func(runtimeScene, eventsFunctionContext);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__MousePointerLock__SetMovementX.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), eventsFunctionContext);
-}{gdjs.evtsExt__MousePointerLock__SetMovementY.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), eventsFunctionContext);
-}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).setNumber(gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
-}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).setNumber(gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
-}}
+}
+{gdjs.evtsExt__MousePointerLock__SetMovementY.func(runtimeScene, (gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber(), eventsFunctionContext);
+}
+{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(1).setNumber(gdjs.evtsExt__MousePointerLock__TouchX.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
+}
+{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).setNumber(gdjs.evtsExt__MousePointerLock__TouchY.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber(), eventsFunctionContext));
+}
+}
 
 }
 
@@ -49,7 +53,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.hasTouchEnded(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber());
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).setNumber(-(1));
-}}
+}
+}
 
 }
 
@@ -57,6 +62,7 @@ if (isConditionTrue_0) {
 };
 
 gdjs.evtsExt__MousePointerLock__onScenePostEvents.func = function(runtimeScene, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -79,14 +85,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -94,7 +101,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

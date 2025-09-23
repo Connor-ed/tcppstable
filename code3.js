@@ -52,7 +52,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Boot");
-}}
+}
+}
 
 }
 
@@ -65,7 +66,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
-}}
+}
+}
 
 }
 
@@ -79,10 +81,12 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1);
 {gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
-}{for(var i = 0, len = gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Quick_95CheckCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
-}}
+}
+}
 
 }
 
@@ -98,7 +102,8 @@ gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNe
 {for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
     gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("no");
 }
-}}
+}
+}
 
 }
 
@@ -125,7 +130,8 @@ gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNe
 {for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
     gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("updating");
 }
-}}
+}
+}
 
 }
 
@@ -142,7 +148,8 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN
 }
 if (isConditionTrue_0) {
 {gdjs.evtsExt__URLTools__Reload.func(runtimeScene, null);
-}}
+}
+}
 
 }
 
@@ -174,7 +181,8 @@ isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runt
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Boot", false);
-}}
+}
+}
 
 }
 
@@ -187,7 +195,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Return");
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Boot", false);
-}}
+}
+}
 
 }
 

@@ -15,7 +15,8 @@ gdjs.evtsExt__SlotSystem__NumberOfSlotProperty.eventsList0 = function(runtimeSce
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = 0;}}
+{eventsFunctionContext.returnValue = 0;}
+}
 
 }
 
@@ -31,7 +32,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.variableChildExists(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild(eventsFunctionContext.getArgument("SpaceName")).getChild(eventsFunctionContext.getArgument("Slot")).getChild("Properties"), eventsFunctionContext.getArgument("Property"));
 }
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = gdjs.evtsExt__SlotSystem__SlotContent.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext.getArgument("Property"), "Properties", eventsFunctionContext);}}
+{eventsFunctionContext.returnValue = gdjs.evtsExt__SlotSystem__SlotContent.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext.getArgument("Slot"), eventsFunctionContext.getArgument("Property"), "Properties", eventsFunctionContext);}
+}
 
 }
 
@@ -39,6 +41,7 @@ if (isConditionTrue_0) {
 };
 
 gdjs.evtsExt__SlotSystem__NumberOfSlotProperty.func = function(runtimeScene, SpaceName, Slot, Property, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -61,14 +64,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -76,7 +80,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

@@ -85,7 +85,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595PlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Play", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -99,7 +100,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595EditorObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Editor", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -113,7 +115,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595HomeObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Home", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -127,7 +130,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDGlobal_95959595Blank_95959595KnobObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Blank Knob", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -141,7 +145,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDAutoPlayObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Auto Play", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -155,7 +160,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.PreCode.mapOfGDgdjs_9546PreCode_9546GDSquareWhiteSliderObjects2Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__Speak.func(runtimeScene, "Slider", "", 100, 100, 100, null);
-}}
+}
+}
 
 }
 
@@ -168,7 +174,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
 {gdjs.evtsExt__TextToSpeech__StopSpeaking.func(runtimeScene, null);
-}}
+}
+}
 
 }
 
@@ -184,25 +191,38 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.PreCode.GDLoading_9595alertObjects1);
 {gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
-}{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Editor");
-}{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+}
+{gdjs.evtTools.runtimeScene.prioritizeLoadingOfScene(runtimeScene, "Editor");
+}
+{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
-}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "ABC");
-}{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+}
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "ABC");
+}
+{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.PreCode.GDLoading_9595alertObjects1[i].hide(false);
 }
-}{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.PreCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.PreCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
 }
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Simple Pluck -2.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh2.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh1.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "E Keys4.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "conceptbass3.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Boom Kick.wav");
-}{gdjs.evtTools.sound.preloadSound(runtimeScene, "Electric Pulse2.wav");
-}}
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "Simple Pluck -2.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh2.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "Ow - Ahh1.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "E Keys4.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "conceptbass3.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "Boom Kick.wav");
+}
+{gdjs.evtTools.sound.preloadSound(runtimeScene, "Electric Pulse2.wav");
+}
+}
 
 }
 
@@ -215,7 +235,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "ABC") >= 0.5;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Synth Selector");
-}}
+}
+}
 
 }
 

@@ -141,7 +141,8 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainterObject"), gdjs.evts
 {for(var i = 0, len = gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects3.length ;i < len;++i) {
     gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects3[i].drawCircle((( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeX(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex())), (( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeY(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex())), 3);
 }
-}}
+}
+}
 
 }
 
@@ -168,7 +169,8 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainterObject"), gdjs.evts
 {for(var i = 0, len = gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects3.length ;i < len;++i) {
     gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects3[i].drawLineV2((( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeX(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex())), (( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeY(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex())), (( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeX(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex() + 1)), (( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3[0].getBehavior(eventsFunctionContext.getBehaviorName("PathfindingBehavior")).getNodeY(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex() + 1)), 3);
 }
-}}
+}
+}
 
 }
 
@@ -179,7 +181,8 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainterObject"), gdjs.evts
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setLoopIndex(eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getLoopIndex()+1)
-}}
+}
+}
 
 }
 
@@ -204,10 +207,12 @@ if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1);
 /* Reuse gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1 */
 {gdjs.evtTools.object.createObjectOnScene(eventsFunctionContext, gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.mapOfGDgdjs_9546evtsExt_9595_9595DrawPathfinding_9595_9595DrawPathfinding_9546DrawPathfinding_9546prototype_9546DrawPathfindingContext_9546GDShapePainterObjectObjects1Objects, 0, 0, (( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1.length === 0 ) ? "" :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1[0].getLayer()));
-}{for(var i = 0, len = gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1[i].setZOrder((( gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1[0].getZOrder()) - 1);
 }
-}}
+}
+}
 
 }
 
@@ -238,7 +243,8 @@ if (isConditionTrue_0) {
 {for(var i = 0, len = gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1[i].setCoordinatesRelative(false);
 }
-}}
+}
+}
 
 }
 
@@ -256,7 +262,8 @@ if (isConditionTrue_0) {
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setLoopIndex(0)
-}}
+}
+}
 
 }
 
@@ -293,6 +300,7 @@ gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPat
 
 var that = this;
 var runtimeScene = this._runtimeScene;
+let scopeInstanceContainer = null;
 var thisObjectList = [this.owner];
 var Object = Hashtable.newFrom({Object: thisObjectList});
 var Behavior = this.name;
@@ -324,14 +332,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -339,7 +348,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

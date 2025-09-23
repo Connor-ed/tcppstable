@@ -25,7 +25,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getCursorY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) <= gdjs.evtTools.camera.getCameraBorderTop(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) + eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber();
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).setNumber(-(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderTop(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext)));
-}}
+}
+}
 
 }
 
@@ -45,7 +46,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getCursorY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) >= gdjs.evtTools.camera.getCameraBorderBottom(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber();
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).setNumber(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderBottom(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext));
-}}
+}
+}
 
 }
 
@@ -65,7 +67,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getCursorX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) <= gdjs.evtTools.camera.getCameraBorderLeft(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) + eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber();
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(7).setNumber(-(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderLeft(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext)));
-}}
+}
+}
 
 }
 
@@ -85,7 +88,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getCursorX(runtimeScene, gdjs.evtTools.variable.getVariableString(eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2)), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) >= gdjs.evtTools.camera.getCameraBorderRight(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber();
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(7).setNumber(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderRight(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext));
-}}
+}
+}
 
 }
 
@@ -125,7 +129,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.camera.setCameraX(runtimeScene, gdjs.evtTools.camera.getCameraX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) + (eventsFunctionContext.sceneVariablesForExtension.getFromIndex(7).getAsNumber() * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber());
-}}
+}
+}
 
 }
 
@@ -139,7 +144,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) + (eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).getAsNumber() * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber());
-}}
+}
+}
 
 }
 
@@ -193,7 +199,8 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(6).setBoolean(true);
-}}
+}
+}
 
 }
 
@@ -207,8 +214,10 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(7).setNumber(0);
-}{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).setNumber(0);
 }
+{eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).setNumber(0);
+}
+
 { //Subevents
 gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList3(runtimeScene, eventsFunctionContext);} //End of subevents
 }
@@ -246,6 +255,7 @@ gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList5(runtimeScene, event
 };
 
 gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.func = function(runtimeScene, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -268,14 +278,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -283,7 +294,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

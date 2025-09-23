@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__InternetConnectivity__IsDeviceOnline !== "undefined") {
 gdjs.evtsExt__InternetConnectivity__IsDeviceOnline = {};
 
 
-gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1d23b68 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1b87a38 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = typeof navigator !== "undefined" && navigator.onLine;
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1d23b68(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1b87a38(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -27,6 +27,7 @@ gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1d23b68(runtimeScen
 };
 
 gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func = function(runtimeScene, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -49,14 +50,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -64,7 +66,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

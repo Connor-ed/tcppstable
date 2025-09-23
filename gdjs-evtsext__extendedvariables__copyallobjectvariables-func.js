@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.GDSourceObjectObjects1= 
 gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.GDTargetObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x1b911d0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0xad50a8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // This JS event use private scope from the API, this can be borken at anytime.
 
@@ -33,7 +33,7 @@ gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.eventsList0 = function(r
 {
 
 
-gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x1b911d0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0xad50a8(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -41,6 +41,7 @@ gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.userFunc0x1b911d0(runtim
 };
 
 gdjs.evtsExt__ExtendedVariables__CopyAllObjectVariables.func = function(runtimeScene, SourceObject, TargetObject, isExactCopy, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "SourceObject": SourceObject
@@ -67,14 +68,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -82,7 +84,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

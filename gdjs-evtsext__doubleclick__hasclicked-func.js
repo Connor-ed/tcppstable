@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__DoubleClick__HasClicked !== "undefined") {
 gdjs.evtsExt__DoubleClick__HasClicked = {};
 
 
-gdjs.evtsExt__DoubleClick__HasClicked.userFunc0x1b18ce8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__DoubleClick__HasClicked.userFunc0x45cc880 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { clickCounter } = gdjs._DoubleClickExtension;
 
@@ -22,7 +22,7 @@ gdjs.evtsExt__DoubleClick__HasClicked.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__DoubleClick__HasClicked.userFunc0x1b18ce8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__DoubleClick__HasClicked.userFunc0x45cc880(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -30,6 +30,7 @@ gdjs.evtsExt__DoubleClick__HasClicked.userFunc0x1b18ce8(runtimeScene, eventsFunc
 };
 
 gdjs.evtsExt__DoubleClick__HasClicked.func = function(runtimeScene, MouseButton, ClickCount, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -52,14 +53,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -67,7 +69,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

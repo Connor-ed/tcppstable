@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__AppendPath !== "undefined") {
 gdjs.evtsExt__CurvedMovement__AppendPath = {};
 
 
-gdjs.evtsExt__CurvedMovement__AppendPath.userFunc0x1f39720 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__AppendPath.userFunc0x2114148 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const modifiedPathName = eventsFunctionContext.getArgument("ModifiedPathName");
 const addedPathName = eventsFunctionContext.getArgument("AddedPathName");
@@ -30,7 +30,7 @@ gdjs.evtsExt__CurvedMovement__AppendPath.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__CurvedMovement__AppendPath.userFunc0x1f39720(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__AppendPath.userFunc0x2114148(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -38,6 +38,7 @@ gdjs.evtsExt__CurvedMovement__AppendPath.userFunc0x1f39720(runtimeScene, eventsF
 };
 
 gdjs.evtsExt__CurvedMovement__AppendPath.func = function(runtimeScene, ModifiedPathName, AddedPathName, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -60,14 +61,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -75,7 +77,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

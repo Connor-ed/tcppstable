@@ -146,14 +146,16 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38758748);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(39369204);
 }
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1 */
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setOriginalX((( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[0].getX()))
-}{eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setOriginalY((( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[0].getY()))
-}}
+}
+{eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setOriginalY((( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[0].getY()))
+}
+}
 
 }
 
@@ -184,10 +186,12 @@ if (isConditionTrue_0) {
 {for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[i].activateBehavior(eventsFunctionContext.getBehaviorName("DraggableBehavior"), true);
 }
-}{for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("TweenBehavior")).removeTween("__CancellableDraggable");
 }
-}}
+}
+}
 
 }
 
@@ -198,6 +202,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 
 var that = this;
 var runtimeScene = this._runtimeScene;
+let scopeInstanceContainer = null;
 var thisObjectList = [this.owner];
 var Object = Hashtable.newFrom({Object: thisObjectList});
 var Behavior = this.name;
@@ -228,14 +233,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -243,7 +249,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }
@@ -284,7 +290,8 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Cancell
 {for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior")).CancelLastDraggingS(eventsFunctionContext.getArgument("Duration") / 1000, eventsFunctionContext.getArgument("Easing"), eventsFunctionContext);
 }
-}}
+}
+}
 
 }
 
@@ -295,6 +302,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 
 var that = this;
 var runtimeScene = this._runtimeScene;
+let scopeInstanceContainer = null;
 var thisObjectList = [this.owner];
 var Object = Hashtable.newFrom({Object: thisObjectList});
 var Behavior = this.name;
@@ -325,14 +333,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -340,7 +349,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }
@@ -400,10 +409,12 @@ if (isConditionTrue_0) {
 {for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1[i].getBehavior(eventsFunctionContext.getBehaviorName("TweenBehavior")).addObjectPositionTween2("__CancellableDraggable", eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getOriginalX(), eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getOriginalY(), eventsFunctionContext.getArgument("Easing"), eventsFunctionContext.getArgument("Duration"), false);
 }
-}{for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1.length ;i < len;++i) {
     gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1[i].activateBehavior(eventsFunctionContext.getBehaviorName("DraggableBehavior"), false);
 }
-}}
+}
+}
 
 }
 
@@ -414,6 +425,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 
 var that = this;
 var runtimeScene = this._runtimeScene;
+let scopeInstanceContainer = null;
 var thisObjectList = [this.owner];
 var Object = Hashtable.newFrom({Object: thisObjectList});
 var Behavior = this.name;
@@ -444,14 +456,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -459,7 +472,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }
@@ -508,7 +521,8 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 }
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
-{eventsFunctionContext.returnValue = true;}}
+{eventsFunctionContext.returnValue = true;}
+}
 
 }
 
@@ -519,6 +533,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 
 var that = this;
 var runtimeScene = this._runtimeScene;
+let scopeInstanceContainer = null;
 var thisObjectList = [this.owner];
 var Object = Hashtable.newFrom({Object: thisObjectList});
 var Behavior = this.name;
@@ -549,14 +564,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -564,7 +580,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

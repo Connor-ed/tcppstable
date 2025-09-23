@@ -16,11 +16,16 @@ gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection.eventsList0 = function(
 let isConditionTrue_0 = false;
 {
 {runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("SelectionType").setString("Polygonal");
-}{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("SideLength").setNumber(eventsFunctionContext.getArgument("SideLength"));
-}{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MaximumVertexCount").setNumber(eventsFunctionContext.getArgument("MaximumVertexCount"));
-}{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MergeProximity").setNumber(eventsFunctionContext.getArgument("MergeProximity"));
-}{gdjs.evtsExt__SelectionTools__ClearSelection.func(runtimeScene, eventsFunctionContext);
-}}
+}
+{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("SideLength").setNumber(eventsFunctionContext.getArgument("SideLength"));
+}
+{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MaximumVertexCount").setNumber(eventsFunctionContext.getArgument("MaximumVertexCount"));
+}
+{runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MergeProximity").setNumber(eventsFunctionContext.getArgument("MergeProximity"));
+}
+{gdjs.evtsExt__SelectionTools__ClearSelection.func(runtimeScene, eventsFunctionContext);
+}
+}
 
 }
 
@@ -34,7 +39,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("TruePolygon"), true);
-}}
+}
+}
 
 }
 
@@ -48,7 +54,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.variable.setVariableBoolean(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("TruePolygon"), false);
-}}
+}
+}
 
 }
 
@@ -62,7 +69,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MaximumVertexCount").setNumber(3);
-}}
+}
+}
 
 }
 
@@ -76,7 +84,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("SideLength").setNumber(1);
-}}
+}
+}
 
 }
 
@@ -90,7 +99,8 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("MergeProximity").setNumber(1);
-}}
+}
+}
 
 }
 
@@ -98,6 +108,7 @@ if (isConditionTrue_0) {
 };
 
 gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection.func = function(runtimeScene, SideLength, MaximumVertexCount, MergeProximity, TruePolygon, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -120,14 +131,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -135,7 +147,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

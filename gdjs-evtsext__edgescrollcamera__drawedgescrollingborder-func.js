@@ -25,7 +25,8 @@ if (isConditionTrue_0) {
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene(eventsFunctionContext, gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.mapOfGDgdjs_9546evtsExt_9595_9595EdgeScrollCamera_9595_9595DrawEdgeScrollingBorder_9546GDShapePainterObjects2Objects, 0, 0, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString());
-}}
+}
+}
 
 }
 
@@ -39,16 +40,20 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainter"), gdjs.evtsExt__E
 {for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
     gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].setFillOpacity(0);
 }
-}{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
     gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].setCoordinatesRelative(false);
 }
-}{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
     gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].setClearBetweenFrames(true);
 }
-}{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
+}
+{for(var i = 0, len = gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1.length ;i < len;++i) {
     gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].drawRectangle(gdjs.evtTools.camera.getCameraBorderLeft(runtimeScene, (gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].getLayer()), 0) + eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber(), gdjs.evtTools.camera.getCameraBorderTop(runtimeScene, (gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].getLayer()), 0) + eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber(), gdjs.evtTools.camera.getCameraBorderRight(runtimeScene, (gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].getLayer()), 0) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber(), gdjs.evtTools.camera.getCameraBorderBottom(runtimeScene, (gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1[i].getLayer()), 0) - eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber());
 }
-}}
+}
+}
 
 }
 
@@ -74,6 +79,7 @@ gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.eventsList0(runtimeScene
 };
 
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.func = function(runtimeScene, ShapePainter, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "ShapePainter": ShapePainter
@@ -98,14 +104,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -113,7 +120,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

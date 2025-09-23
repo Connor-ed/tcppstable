@@ -23,9 +23,12 @@ gdjs.evtsExt__CameraZoom__ZoomWithAnchor.eventsList0 = function(runtimeScene, ev
 let isConditionTrue_0 = false;
 {
 {gdjs.evtTools.camera.setCameraX(runtimeScene, eventsFunctionContext.getArgument("AnchorX") + (gdjs.evtTools.camera.getCameraX(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) - eventsFunctionContext.getArgument("AnchorX")) * gdjs.evtTools.camera.getCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) / eventsFunctionContext.getArgument("Zoom"), "", 0);
-}{gdjs.evtTools.camera.setCameraY(runtimeScene, eventsFunctionContext.getArgument("AnchorY") + (gdjs.evtTools.camera.getCameraY(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) - eventsFunctionContext.getArgument("AnchorY")) * gdjs.evtTools.camera.getCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) / eventsFunctionContext.getArgument("Zoom"), "", 0);
-}{gdjs.evtTools.camera.setCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Zoom"), eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera"));
-}}
+}
+{gdjs.evtTools.camera.setCameraY(runtimeScene, eventsFunctionContext.getArgument("AnchorY") + (gdjs.evtTools.camera.getCameraY(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) - eventsFunctionContext.getArgument("AnchorY")) * gdjs.evtTools.camera.getCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera")) / eventsFunctionContext.getArgument("Zoom"), "", 0);
+}
+{gdjs.evtTools.camera.setCameraZoom(runtimeScene, eventsFunctionContext.getArgument("Zoom"), eventsFunctionContext.getArgument("Layer"), eventsFunctionContext.getArgument("Camera"));
+}
+}
 
 }
 
@@ -33,6 +36,7 @@ let isConditionTrue_0 = false;
 };
 
 gdjs.evtsExt__CameraZoom__ZoomWithAnchor.func = function(runtimeScene, Zoom, Layer, Camera, AnchorX, AnchorY, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -55,14 +59,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -70,7 +75,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

@@ -9,7 +9,7 @@ gdjs.evtsExt__RenderToSprite__RenderScene = {};
 gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x1d2a1e0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0xa2f830 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const source = runtimeScene.getRenderer().getPIXIContainer();
 const height = runtimeScene.getLayer("").getCameraHeight();
@@ -64,7 +64,7 @@ gdjs.evtsExt__RenderToSprite__RenderScene.eventsList0 = function(runtimeScene, e
 gdjs.copyArray(eventsFunctionContext.getObjects("renderTarget"), gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1);
 
 const objects = gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1;
-gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x1d2a1e0(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0xa2f830(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -72,6 +72,7 @@ gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x1d2a1e0(runtimeScene, object
 };
 
 gdjs.evtsExt__RenderToSprite__RenderScene.func = function(runtimeScene, renderTarget, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "renderTarget": renderTarget
@@ -96,14 +97,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -111,7 +113,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

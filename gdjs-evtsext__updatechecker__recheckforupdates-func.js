@@ -16,9 +16,12 @@ gdjs.evtsExt__UpdateChecker__RecheckForUpdates.eventsList0 = function(runtimeSce
 let isConditionTrue_0 = false;
 {
 {gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("LatestVersion"), eventsFunctionContext);
-}{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("Error"), eventsFunctionContext);
-}{gdjs.evtTools.network.sendAsyncRequest("https://updates.arthuro555.com/?game-id=" + gdjs.evtsExt__UpdateChecker__CurrentGameID.func(runtimeScene, eventsFunctionContext), "", "GET", "text/plain-text", runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"));
-}}
+}
+{gdjs.evtsExt__UpdateChecker__CreateGlobalReference.func(runtimeScene, runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"), runtimeScene.getGame().getVariables().get("__UpdateChecker").getChild("Error"), eventsFunctionContext);
+}
+{gdjs.evtTools.network.sendAsyncRequest("https://updates.arthuro555.com/?game-id=" + gdjs.evtsExt__UpdateChecker__CurrentGameID.func(runtimeScene, eventsFunctionContext), "", "GET", "text/plain-text", runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("LatestVersion"), runtimeScene.getScene().getVariables().get("__UpdateChecker").getChild("Error"));
+}
+}
 
 }
 
@@ -26,6 +29,7 @@ let isConditionTrue_0 = false;
 };
 
 gdjs.evtsExt__UpdateChecker__RecheckForUpdates.func = function(runtimeScene, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -48,14 +52,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -63,7 +68,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

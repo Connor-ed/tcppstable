@@ -9,7 +9,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid = {};
 gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x29eda50 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0xfc2108 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // Insired from: https://www.redblobgames.com/grids/hexagons
 
@@ -82,7 +82,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.eventsList0 =
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1;
-gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x29eda50(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0xfc2108(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -90,6 +90,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x29e
 };
 
 gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.func = function(runtimeScene, Object, CellWidth, CellHeight, OffsetX, OffsetY, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "Object": Object
@@ -114,14 +115,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -129,7 +131,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

@@ -27,7 +27,8 @@ gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.eventsList0 = fu
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects1);
-{eventsFunctionContext.returnValue = (gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext) + gdjs.evtsExt__ValuesOfMultipleObjects__MinY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext)) / 2;}}
+{eventsFunctionContext.returnValue = (gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext) + gdjs.evtsExt__ValuesOfMultipleObjects__MinY.func(runtimeScene, gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects, eventsFunctionContext)) / 2;}
+}
 
 }
 
@@ -35,6 +36,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ValuesO
 };
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.func = function(runtimeScene, Object, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "Object": Object
@@ -59,14 +61,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -74,7 +77,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }

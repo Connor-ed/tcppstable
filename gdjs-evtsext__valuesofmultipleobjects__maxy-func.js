@@ -9,7 +9,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxY = {};
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2c85c68 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x4666d38 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -34,7 +34,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.eventsList0 = function(runtimeScene,
 gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1);
 
 const objects = gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1;
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2c85c68(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x4666d38(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -42,6 +42,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2c85c68(runtimeScene, obje
 };
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.func = function(runtimeScene, objects, parentEventsFunctionContext) {
+let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
 "objects": objects
@@ -66,14 +67,15 @@ var eventsFunctionContext = {
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
     if (objectsList) {
-      const object = parentEventsFunctionContext ?
+      const object = parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
         parentEventsFunctionContext.createObject(objectsList.firstKey()) :
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
         eventsFunctionContext._objectArraysMap[objectName].push(object);
       }
-      return object;    }
+      return object;
+    }
     return null;
   },
   getInstancesCountOnScene: function(objectName) {
@@ -81,7 +83,7 @@ var eventsFunctionContext = {
     let count = 0;
     if (objectsList) {
       for(const objectName in objectsList.items)
-        count += parentEventsFunctionContext ?
+        count += parentEventsFunctionContext && !(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName)) ?
 parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
         runtimeScene.getInstancesCountOnScene(objectName);
     }
