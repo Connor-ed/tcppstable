@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ScreenOrientationChecker__onFirstSceneLoaded !== "undef
 }
 
 gdjs.evtsExt__ScreenOrientationChecker__onFirstSceneLoaded = {};
+gdjs.evtsExt__ScreenOrientationChecker__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__ScreenOrientationChecker__onFirstSceneLoaded.eventsList0 = function(runtimeScene, eventsFunctionContext) {

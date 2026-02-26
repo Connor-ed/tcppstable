@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ArrayTools__ObjectHasString !== "undefined") {
 }
 
 gdjs.evtsExt__ArrayTools__ObjectHasString = {};
+gdjs.evtsExt__ArrayTools__ObjectHasString.idToCallbackMap = new Map();
 gdjs.evtsExt__ArrayTools__ObjectHasString.GDObjectObjects1= [];
 gdjs.evtsExt__ArrayTools__ObjectHasString.GDObjectObjects2= [];
 

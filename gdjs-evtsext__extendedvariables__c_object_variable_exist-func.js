@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__C_object_variable_exist !== "undefin
 }
 
 gdjs.evtsExt__ExtendedVariables__C_object_variable_exist = {};
+gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.idToCallbackMap = new Map();
 gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.GDObjectToCheckObjects1= [];
 gdjs.evtsExt__ExtendedVariables__C_object_variable_exist.GDObjectToCheckObjects2= [];
 

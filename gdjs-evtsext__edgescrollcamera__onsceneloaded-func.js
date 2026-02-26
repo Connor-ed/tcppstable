@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__onSceneLoaded !== "undefined") {
 }
 
 gdjs.evtsExt__EdgeScrollCamera__onSceneLoaded = {};
+gdjs.evtsExt__EdgeScrollCamera__onSceneLoaded.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__EdgeScrollCamera__onSceneLoaded.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

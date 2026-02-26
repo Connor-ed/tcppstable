@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MinWidth !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinWidth = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MinWidth.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MinWidth.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinWidth.forEachObjects3 = [];

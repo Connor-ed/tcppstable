@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__TouchSpeedFactor !== "undefined") {
 }
 
 gdjs.evtsExt__MousePointerLock__TouchSpeedFactor = {};
+gdjs.evtsExt__MousePointerLock__TouchSpeedFactor.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__MousePointerLock__TouchSpeedFactor.eventsList0 = function(runtimeScene, eventsFunctionContext) {

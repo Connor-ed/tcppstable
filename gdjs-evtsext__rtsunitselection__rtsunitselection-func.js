@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection !== "undefined") {
 }
 
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection = {};
+gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.idToCallbackMap = new Map();
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects3_1final = [];
 
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3_1final = [];
@@ -36,13 +37,6 @@ gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList0 = function(runtimeS
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("SelectionBox"), gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3);
 
 let isConditionTrue_0 = false;
@@ -53,13 +47,6 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.object.createObjectOnScene(eventsFunctionContext, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDSelectionBoxObjects3Objects, 0, 0, eventsFunctionContext.getArgument("Layer"));
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -138,13 +125,6 @@ gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList1 = function(runtimeS
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects4);
@@ -165,13 +145,6 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxOb
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.input.isKeyPressed(runtimeScene, eventsFunctionContext.getArgument("AdditiveSelectKey")));
@@ -184,13 +157,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Objects"), gdjs.evtsExt__RTSUni
 {gdjs.evtsExt__RTSUnitSelection__SetSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects4Objects, false, eventsFunctionContext);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -220,13 +186,6 @@ gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList2 = function(runtimeS
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects2, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3);
@@ -240,13 +199,6 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxOb
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -282,13 +234,6 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxOb
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects2, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3);
@@ -298,13 +243,6 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxOb
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -438,13 +376,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Objects"), gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects2);
 /* Reuse gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects2 */
 
@@ -504,13 +435,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("SelectionBox"), gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDSelectionBoxObjects3);
 
 let isConditionTrue_0 = false;
@@ -534,13 +458,6 @@ gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList1(runtimeScene, event
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Objects"), gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects3);
 
 let isConditionTrue_0 = false;
@@ -548,7 +465,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects3Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36904044);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37325380);
 }
 }
 if (isConditionTrue_0) {
@@ -556,13 +473,6 @@ if (isConditionTrue_0) {
 {gdjs.evtsExt__RTSUnitSelection__SetPreSelected.func(runtimeScene, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects3Objects, true, eventsFunctionContext);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -585,13 +495,6 @@ if (isConditionTrue_0) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -630,13 +533,6 @@ gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_95
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects4Objects = Hashtable.newFrom({"Objects": gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects4});
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.mapOfGDgdjs_9546evtsExt_9595_9595RTSUnitSelection_9595_9595RTSUnitSelection_9546GDObjectsObjects4Objects = Hashtable.newFrom({"Objects": gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects4});
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList4 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -690,13 +586,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects3, gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects4);
 
 
@@ -718,13 +607,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Objects"), gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects2);
 
 for (gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.forEachIndex3 = 0;gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.forEachIndex3 < gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.GDObjectsObjects2.length;++gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.forEachIndex3) {
@@ -740,13 +622,6 @@ if (true) {
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList4(runtimeScene, eventsFunctionContext);} //Subevents end.
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -813,13 +688,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("SelectionBox"), gdjs.evtsExt__R
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {let isConditionTrue_1 = false;
@@ -877,13 +745,6 @@ if (isConditionTrue_0) {
 { //Subevents
 gdjs.evtsExt__RTSUnitSelection__RTSUnitSelection.eventsList3(runtimeScene, eventsFunctionContext);} //End of subevents
 }
-
-}
-
-
-{
-
-
 
 }
 

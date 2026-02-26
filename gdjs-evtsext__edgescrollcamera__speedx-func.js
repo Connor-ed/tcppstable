@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__SpeedX !== "undefined") {
 }
 
 gdjs.evtsExt__EdgeScrollCamera__SpeedX = {};
+gdjs.evtsExt__EdgeScrollCamera__SpeedX.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__EdgeScrollCamera__SpeedX.eventsList0 = function(runtimeScene, eventsFunctionContext) {

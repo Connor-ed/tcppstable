@@ -6,10 +6,11 @@ if (typeof gdjs.evtsExt__THNK__LinkObjectToPlayer !== "undefined") {
 }
 
 gdjs.evtsExt__THNK__LinkObjectToPlayer = {};
+gdjs.evtsExt__THNK__LinkObjectToPlayer.idToCallbackMap = new Map();
 gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x9f6ce0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x20e0f58 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 for (const obj of objects) THNK.players.markObjectAsOwned(obj);
 
@@ -21,7 +22,7 @@ gdjs.evtsExt__THNK__LinkObjectToPlayer.eventsList0 = function(runtimeScene, even
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__THNK__LinkObjectToPlayer.GDObjectObjects1;
-gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x9f6ce0(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__THNK__LinkObjectToPlayer.userFunc0x20e0f58(runtimeScene, objects, eventsFunctionContext);
 
 }
 

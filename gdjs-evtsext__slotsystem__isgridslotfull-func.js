@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__IsGridSlotFull !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__IsGridSlotFull = {};
+gdjs.evtsExt__SlotSystem__IsGridSlotFull.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__IsGridSlotFull.eventsList0 = function(runtimeScene, eventsFunctionContext) {

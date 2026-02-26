@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MaxWidth !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxWidth = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxWidth.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxWidth.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxWidth.forEachObjects3 = [];

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__A_Modify_scene_variable !== "undefin
 }
 
 gdjs.evtsExt__ExtendedVariables__A_Modify_scene_variable = {};
+gdjs.evtsExt__ExtendedVariables__A_Modify_scene_variable.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__ExtendedVariables__A_Modify_scene_variable.eventsList0 = function(runtimeScene, eventsFunctionContext) {

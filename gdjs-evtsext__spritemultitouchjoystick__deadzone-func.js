@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SpriteMultitouchJoystick__DeadZone !== "undefined") {
 }
 
 gdjs.evtsExt__SpriteMultitouchJoystick__DeadZone = {};
+gdjs.evtsExt__SpriteMultitouchJoystick__DeadZone.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__DeadZone.eventsList0 = function(runtimeScene, eventsFunctionContext) {

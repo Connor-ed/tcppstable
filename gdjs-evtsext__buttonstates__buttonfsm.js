@@ -25,28 +25,28 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM = class ButtonFSM extends gdjs.R
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.ShouldCheckHovering !== newBehaviorData.ShouldCheckHovering)
-      this._behaviorData.ShouldCheckHovering = newBehaviorData.ShouldCheckHovering;
-    if (oldBehaviorData.State !== newBehaviorData.State)
-      this._behaviorData.State = newBehaviorData.State;
-    if (oldBehaviorData.TouchId !== newBehaviorData.TouchId)
-      this._behaviorData.TouchId = newBehaviorData.TouchId;
-    if (oldBehaviorData.TouchIsInside !== newBehaviorData.TouchIsInside)
-      this._behaviorData.TouchIsInside = newBehaviorData.TouchIsInside;
-    if (oldBehaviorData.MouseIsInside !== newBehaviorData.MouseIsInside)
-      this._behaviorData.MouseIsInside = newBehaviorData.MouseIsInside;
-    if (oldBehaviorData.Index !== newBehaviorData.Index)
-      this._behaviorData.Index = newBehaviorData.Index;
+    if (behaviorOverriding.ShouldCheckHovering !== undefined)
+      this._behaviorData.ShouldCheckHovering = behaviorOverriding.ShouldCheckHovering;
+    if (behaviorOverriding.State !== undefined)
+      this._behaviorData.State = behaviorOverriding.State;
+    if (behaviorOverriding.TouchId !== undefined)
+      this._behaviorData.TouchId = behaviorOverriding.TouchId;
+    if (behaviorOverriding.TouchIsInside !== undefined)
+      this._behaviorData.TouchIsInside = behaviorOverriding.TouchIsInside;
+    if (behaviorOverriding.MouseIsInside !== undefined)
+      this._behaviorData.MouseIsInside = behaviorOverriding.MouseIsInside;
+    if (behaviorOverriding.Index !== undefined)
+      this._behaviorData.Index = behaviorOverriding.Index;
 
     return true;
   }
 
   // Network sync:
-  getNetworkSyncData() {
+  getNetworkSyncData(syncOptions) {
     return {
-      ...super.getNetworkSyncData(),
+      ...super.getNetworkSyncData(syncOptions),
       props: {
         
     ShouldCheckHovering: this._behaviorData.ShouldCheckHovering,
@@ -58,8 +58,8 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM = class ButtonFSM extends gdjs.R
       }
     };
   }
-  updateFromNetworkSyncData(networkSyncData) {
-    super.updateFromNetworkSyncData(networkSyncData);
+  updateFromNetworkSyncData(networkSyncData, options) {
+    super.updateFromNetworkSyncData(networkSyncData, options);
     
     if (networkSyncData.props.ShouldCheckHovering !== undefined)
       this._behaviorData.ShouldCheckHovering = networkSyncData.props.ShouldCheckHovering;
@@ -150,8 +150,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.getSharedData = function(instanc
 
 // Methods:
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext = {};
-gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final = [];
-
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects2= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects3= [];
@@ -160,13 +159,6 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext
 
 
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -203,13 +195,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setMouseIsInside(true)
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -257,53 +242,26 @@ if (isConditionTrue_0) {
 
 {
 
-/* Reuse gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4 */
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final.length = 0;
-let isConditionTrue_1 = false;
+{let isConditionTrue_1 = false;
 isConditionTrue_0 = false;
 {
-gdjs.copyArray(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4, gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5);
-
-for (var i = 0, k = 0, l = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length;i<l;++i) {
-    if ( gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getState() == "Hovered" ) {
-        isConditionTrue_1 = true;
-        gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[k] = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[i];
-        ++k;
-    }
+{isConditionTrue_1 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getState() == "Hovered");
 }
-gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length = k;
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
-    for (let j = 0, jLen = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length; j < jLen ; ++j) {
-        if ( gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final.indexOf(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[j]) === -1 )
-            gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final.push(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[j]);
-    }
 }
 }
 {
-gdjs.copyArray(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4, gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5);
-
-for (var i = 0, k = 0, l = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length;i<l;++i) {
-    if ( gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[i].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getState() == "Idle" ) {
-        isConditionTrue_1 = true;
-        gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[k] = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[i];
-        ++k;
-    }
+{isConditionTrue_1 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getState() == "Idle");
 }
-gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length = k;
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
-    for (let j = 0, jLen = gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5.length; j < jLen ; ++j) {
-        if ( gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final.indexOf(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[j]) === -1 )
-            gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final.push(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects5[j]);
-    }
 }
 }
 {
-gdjs.copyArray(gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4_1final, gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext.GDObjectObjects4);
 }
 }
 if (isConditionTrue_0) {
@@ -537,13 +495,6 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 {isConditionTrue_0 = (eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._getState() == "Validated");
@@ -676,6 +627,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.doStepPreEventsContext
 return;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.onDeActivateContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.onDeActivateContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.onDeActivateContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.onDeActivateContext.GDObjectObjects2= [];
 
@@ -774,6 +726,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.onDeActivateContext.GD
 return;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.ResetStateContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.ResetStateContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.ResetStateContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.ResetStateContext.GDObjectObjects2= [];
 
@@ -871,6 +824,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.ResetStateContext.GDOb
 return;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsIdleContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsIdleContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsIdleContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsIdleContext.GDObjectObjects2= [];
 
@@ -968,6 +922,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsIdleContext.GDObject
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsClickedContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsClickedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsClickedContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsClickedContext.GDObjectObjects2= [];
 
@@ -1065,6 +1020,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsClickedContext.GDObj
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsHoveredContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsHoveredContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsHoveredContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsHoveredContext.GDObjectObjects2= [];
 
@@ -1162,6 +1118,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsHoveredContext.GDObj
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsFocusedContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsFocusedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsFocusedContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsFocusedContext.GDObjectObjects2= [];
 
@@ -1273,6 +1230,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsFocusedContext.GDObj
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedContext.GDObjectObjects2= [];
 
@@ -1370,6 +1328,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedContext.GDObj
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedOutsideContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedOutsideContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedOutsideContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedOutsideContext.GDObjectObjects2= [];
 
@@ -1467,6 +1426,7 @@ gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.IsPressedOutsideContex
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.TouchIdContext = {};
+gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.TouchIdContext.idToCallbackMap = new Map();
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.TouchIdContext.GDObjectObjects1= [];
 gdjs.evtsExt__ButtonStates__ButtonFSM.ButtonFSM.prototype.TouchIdContext.GDObjectObjects2= [];
 

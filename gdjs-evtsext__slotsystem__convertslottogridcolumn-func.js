@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__ConvertSlotToGridColumn !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__ConvertSlotToGridColumn = {};
+gdjs.evtsExt__SlotSystem__ConvertSlotToGridColumn.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__ConvertSlotToGridColumn.eventsList0 = function(runtimeScene, eventsFunctionContext) {

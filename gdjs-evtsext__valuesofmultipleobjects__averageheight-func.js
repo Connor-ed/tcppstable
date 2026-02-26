@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageHeight !== "undefined")
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageHeight = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageHeight.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageHeight.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageHeight.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

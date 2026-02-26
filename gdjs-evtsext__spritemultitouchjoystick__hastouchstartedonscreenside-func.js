@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide !
 }
 
 gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide = {};
+gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteMultitouchJoystick__HasTouchStartedOnScreenSide.GDObjectObjects3= [];

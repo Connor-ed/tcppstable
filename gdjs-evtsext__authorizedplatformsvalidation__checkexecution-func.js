@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__AuthorizedPlatformsValidation__CheckExecution !== "unde
 }
 
 gdjs.evtsExt__AuthorizedPlatformsValidation__CheckExecution = {};
+gdjs.evtsExt__AuthorizedPlatformsValidation__CheckExecution.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__AuthorizedPlatformsValidation__CheckExecution.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

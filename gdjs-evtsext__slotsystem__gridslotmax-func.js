@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__GridSlotMax !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__GridSlotMax = {};
+gdjs.evtsExt__SlotSystem__GridSlotMax.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__GridSlotMax.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__onFirstSceneLoaded !== "undefined") {
 }
 
 gdjs.evtsExt__CurvedMovement__onFirstSceneLoaded = {};
+gdjs.evtsExt__CurvedMovement__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CurvedMovement__onFirstSceneLoaded.eventsList0 = function(runtimeScene, eventsFunctionContext) {

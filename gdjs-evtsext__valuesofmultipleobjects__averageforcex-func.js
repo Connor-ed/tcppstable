@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageForceX !== "undefined")
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageForceX = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageForceX.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageForceX.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageForceX.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

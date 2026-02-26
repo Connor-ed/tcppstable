@@ -6,10 +6,11 @@ if (typeof gdjs.evtsExt__ArrayTools__ObjectFlatten !== "undefined") {
 }
 
 gdjs.evtsExt__ArrayTools__ObjectFlatten = {};
+gdjs.evtsExt__ArrayTools__ObjectFlatten.idToCallbackMap = new Map();
 gdjs.evtsExt__ArrayTools__ObjectFlatten.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__ArrayTools__ObjectFlatten.userFunc0xf84d08 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__ObjectFlatten.userFunc0x2d95f50 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -41,7 +42,7 @@ gdjs.evtsExt__ArrayTools__ObjectFlatten.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__ArrayTools__ObjectFlatten.userFunc0xf84d08(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__ObjectFlatten.userFunc0x2d95f50(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__CameraZoom__ZoomWithAnchor !== "undefined") {
 }
 
 gdjs.evtsExt__CameraZoom__ZoomWithAnchor = {};
+gdjs.evtsExt__CameraZoom__ZoomWithAnchor.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CameraZoom__ZoomWithAnchor.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

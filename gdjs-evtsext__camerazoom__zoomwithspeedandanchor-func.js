@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__CameraZoom__ZoomWithSpeedAndAnchor !== "undefined") {
 }
 
 gdjs.evtsExt__CameraZoom__ZoomWithSpeedAndAnchor = {};
+gdjs.evtsExt__CameraZoom__ZoomWithSpeedAndAnchor.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CameraZoom__ZoomWithSpeedAndAnchor.eventsList0 = function(runtimeScene, eventsFunctionContext) {

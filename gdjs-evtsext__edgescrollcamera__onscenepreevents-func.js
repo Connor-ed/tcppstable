@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents !== "undefined") {
 }
 
 gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents = {};
+gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -27,13 +21,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(8).setNumber(-(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderTop(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorY(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext)));
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -55,13 +42,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.getCursorX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) <= gdjs.evtTools.camera.getCameraBorderLeft(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) + eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber();
@@ -69,13 +49,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.sceneVariablesForExtension.getFromIndex(7).setNumber(-(gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.func(runtimeScene, gdjs.evtTools.camera.getCameraBorderLeft(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()) - gdjs.evtTools.input.getCursorX(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(2).getAsString(), eventsFunctionContext.sceneVariablesForExtension.getFromIndex(3).getAsNumber()), eventsFunctionContext)));
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -95,13 +68,6 @@ if (isConditionTrue_0) {
 
 
 };gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList1 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -167,13 +133,6 @@ gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList2(runtimeScene, event
 
 
 };gdjs.evtsExt__EdgeScrollCamera__onScenePreEvents.eventsList4 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__PopUp__ConfimationResponse !== "undefined") {
 }
 
 gdjs.evtsExt__PopUp__ConfimationResponse = {};
+gdjs.evtsExt__PopUp__ConfimationResponse.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0xffbfa0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x8a6da8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getVariables().get("__PopUp").getChild("Confirm").getAsBoolean();
 
@@ -18,7 +19,7 @@ gdjs.evtsExt__PopUp__ConfimationResponse.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0xffbfa0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PopUp__ConfimationResponse.userFunc0x8a6da8(runtimeScene, eventsFunctionContext);
 
 }
 

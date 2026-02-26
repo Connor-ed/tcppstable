@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__IsMoving !== "undefined") {
 }
 
 gdjs.evtsExt__MousePointerLock__IsMoving = {};
+gdjs.evtsExt__MousePointerLock__IsMoving.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__MousePointerLock__IsMoving.eventsList0 = function(runtimeScene, eventsFunctionContext) {

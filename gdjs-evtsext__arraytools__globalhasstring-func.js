@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ArrayTools__GlobalHasString !== "undefined") {
 }
 
 gdjs.evtsExt__ArrayTools__GlobalHasString = {};
+gdjs.evtsExt__ArrayTools__GlobalHasString.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__ArrayTools__GlobalHasString.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased !== "undefin
 }
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased = {};
+gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MinHeight !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinHeight = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MinHeight.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MinHeight.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinHeight.forEachObjects3 = [];

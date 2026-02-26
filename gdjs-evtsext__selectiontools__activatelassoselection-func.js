@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SelectionTools__ActivateLassoSelection !== "undefined")
 }
 
 gdjs.evtsExt__SelectionTools__ActivateLassoSelection = {};
+gdjs.evtsExt__SelectionTools__ActivateLassoSelection.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SelectionTools__ActivateLassoSelection.eventsList0 = function(runtimeScene, eventsFunctionContext) {

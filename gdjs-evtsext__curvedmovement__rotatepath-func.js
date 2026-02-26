@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__CurvedMovement__RotatePath !== "undefined") {
 }
 
 gdjs.evtsExt__CurvedMovement__RotatePath = {};
+gdjs.evtsExt__CurvedMovement__RotatePath.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__RotatePath.userFunc0x2e45708 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__RotatePath.userFunc0xaf0700 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -25,7 +26,7 @@ gdjs.evtsExt__CurvedMovement__RotatePath.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__CurvedMovement__RotatePath.userFunc0x2e45708(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__RotatePath.userFunc0xaf0700(runtimeScene, eventsFunctionContext);
 
 }
 

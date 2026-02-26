@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageWidth !== "undefined") 
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageWidth = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageWidth.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageWidth.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageWidth.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight !== "undefined") 
 }
 
 gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight = {};
+gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.userFunc0xa24ed8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.userFunc0x1d2d228 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.windowHeight;
 };
@@ -17,7 +18,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.userFunc0xa24ed8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__GetPropertiesData__ReturnWindowHeight.userFunc0x1d2d228(runtimeScene, eventsFunctionContext);
 
 }
 

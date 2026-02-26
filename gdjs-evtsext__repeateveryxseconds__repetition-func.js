@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RepeatEveryXSeconds__Repetition !== "undefined") {
 }
 
 gdjs.evtsExt__RepeatEveryXSeconds__Repetition = {};
+gdjs.evtsExt__RepeatEveryXSeconds__Repetition.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__RepeatEveryXSeconds__Repetition.eventsList0 = function(runtimeScene, eventsFunctionContext) {

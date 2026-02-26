@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__SetSlotMax !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__SetSlotMax = {};
+gdjs.evtsExt__SlotSystem__SetSlotMax.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__SetSlotMax.eventsList0 = function(runtimeScene, eventsFunctionContext) {

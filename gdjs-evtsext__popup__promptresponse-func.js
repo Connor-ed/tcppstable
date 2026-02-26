@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__PopUp__PromptResponse !== "undefined") {
 }
 
 gdjs.evtsExt__PopUp__PromptResponse = {};
+gdjs.evtsExt__PopUp__PromptResponse.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__PopUp__PromptResponse.userFunc0xffa968 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__PromptResponse.userFunc0x9e92c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getVariables().get("__PopUp").getChild("Prompt").getAsString();
 
@@ -18,7 +19,7 @@ gdjs.evtsExt__PopUp__PromptResponse.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__PopUp__PromptResponse.userFunc0xffa968(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PopUp__PromptResponse.userFunc0x9e92c8(runtimeScene, eventsFunctionContext);
 
 }
 

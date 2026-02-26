@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__A_Delete_global_variable !== "undefi
 }
 
 gdjs.evtsExt__ExtendedVariables__A_Delete_global_variable = {};
+gdjs.evtsExt__ExtendedVariables__A_Delete_global_variable.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__ExtendedVariables__A_Delete_global_variable.eventsList0 = function(runtimeScene, eventsFunctionContext) {

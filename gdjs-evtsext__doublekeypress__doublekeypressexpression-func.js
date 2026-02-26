@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__DoubleKeyPress__DoubleKeyPressExpression !== "undefined
 }
 
 gdjs.evtsExt__DoubleKeyPress__DoubleKeyPressExpression = {};
+gdjs.evtsExt__DoubleKeyPress__DoubleKeyPressExpression.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__DoubleKeyPress__DoubleKeyPressExpression.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -27,13 +21,6 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.unpauseTimer(runtimeScene, "__DoublePress_" + eventsFunctionContext.getArgument("key"));
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -60,13 +47,6 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
@@ -83,19 +63,12 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, eventsFunctionContext.getArgument("key"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(36886604);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37307916);
 }
 }
 if (isConditionTrue_0) {
@@ -105,13 +78,6 @@ if (isConditionTrue_0) {
 { //Subevents
 gdjs.evtsExt__DoubleKeyPress__DoubleKeyPressExpression.eventsList0(runtimeScene, eventsFunctionContext);} //End of subevents
 }
-
-}
-
-
-{
-
-
 
 }
 

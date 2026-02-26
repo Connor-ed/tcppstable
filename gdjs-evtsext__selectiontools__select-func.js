@@ -6,12 +6,13 @@ if (typeof gdjs.evtsExt__SelectionTools__Select !== "undefined") {
 }
 
 gdjs.evtsExt__SelectionTools__Select = {};
+gdjs.evtsExt__SelectionTools__Select.idToCallbackMap = new Map();
 gdjs.evtsExt__SelectionTools__Select.GDTargetsObjects1= [];
 gdjs.evtsExt__SelectionTools__Select.GDTargetsObjects2= [];
 gdjs.evtsExt__SelectionTools__Select.GDTargetsObjects3= [];
 
 
-gdjs.evtsExt__SelectionTools__Select.userFunc0x1d8e570 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__SelectionTools__Select.userFunc0x12af4a0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const targets = eventsFunctionContext.getObjectsLists("Targets").items;
 const invertSelection = eventsFunctionContext.getArgument("InvertSelection");
@@ -52,7 +53,7 @@ gdjs.evtsExt__SelectionTools__Select.eventsList0 = function(runtimeScene, events
 {
 
 
-gdjs.evtsExt__SelectionTools__Select.userFunc0x1d8e570(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SelectionTools__Select.userFunc0x12af4a0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -68,7 +69,7 @@ let isConditionTrue_0 = false;
 }
 
 
-};gdjs.evtsExt__SelectionTools__Select.userFunc0x34b4850 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+};gdjs.evtsExt__SelectionTools__Select.userFunc0xf6e470 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const targets = eventsFunctionContext.getObjectsLists("Targets").items;
 const invertSelection = eventsFunctionContext.getArgument("InvertSelection");
@@ -115,13 +116,6 @@ gdjs.evtsExt__SelectionTools__Select.eventsList1 = function(runtimeScene, events
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getScene().getVariables().get("__SelectionTools").getChild("SelectionType")) == "Polygonal";
@@ -157,21 +151,7 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
-gdjs.evtsExt__SelectionTools__Select.userFunc0x34b4850(runtimeScene, eventsFunctionContext);
-
-}
-
-
-{
-
-
+gdjs.evtsExt__SelectionTools__Select.userFunc0xf6e470(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -22,22 +22,22 @@ gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding = class DrawPathf
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.LoopIndex !== newBehaviorData.LoopIndex)
-      this._behaviorData.LoopIndex = newBehaviorData.LoopIndex;
-    if (oldBehaviorData.CorrectionX !== newBehaviorData.CorrectionX)
-      this._behaviorData.CorrectionX = newBehaviorData.CorrectionX;
-    if (oldBehaviorData.CorrectionY !== newBehaviorData.CorrectionY)
-      this._behaviorData.CorrectionY = newBehaviorData.CorrectionY;
+    if (behaviorOverriding.LoopIndex !== undefined)
+      this._behaviorData.LoopIndex = behaviorOverriding.LoopIndex;
+    if (behaviorOverriding.CorrectionX !== undefined)
+      this._behaviorData.CorrectionX = behaviorOverriding.CorrectionX;
+    if (behaviorOverriding.CorrectionY !== undefined)
+      this._behaviorData.CorrectionY = behaviorOverriding.CorrectionY;
 
     return true;
   }
 
   // Network sync:
-  getNetworkSyncData() {
+  getNetworkSyncData(syncOptions) {
     return {
-      ...super.getNetworkSyncData(),
+      ...super.getNetworkSyncData(syncOptions),
       props: {
         
     LoopIndex: this._behaviorData.LoopIndex,
@@ -46,8 +46,8 @@ gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding = class DrawPathf
       }
     };
   }
-  updateFromNetworkSyncData(networkSyncData) {
-    super.updateFromNetworkSyncData(networkSyncData);
+  updateFromNetworkSyncData(networkSyncData, options) {
+    super.updateFromNetworkSyncData(networkSyncData, options);
     
     if (networkSyncData.props.LoopIndex !== undefined)
       this._behaviorData.LoopIndex = networkSyncData.props.LoopIndex;
@@ -105,6 +105,7 @@ gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.getSharedData = f
 
 // Methods:
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext = {};
+gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.idToCallbackMap = new Map();
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects1= [];
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects2= [];
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDObjectObjects3= [];
@@ -118,13 +119,6 @@ gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPat
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.mapOfGDgdjs_9546evtsExt_9595_9595DrawPathfinding_9595_9595DrawPathfinding_9546DrawPathfinding_9546prototype_9546DrawPathfindingContext_9546GDShapePainterObjectObjects1Objects = Hashtable.newFrom({"ShapePainterObject": gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1});
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.mapOfGDgdjs_9546evtsExt_9595_9595DrawPathfinding_9595_9595DrawPathfinding_9546DrawPathfinding_9546prototype_9546DrawPathfindingContext_9546GDShapePainterObjectObjects1Objects = Hashtable.newFrom({"ShapePainterObject": gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1});
 gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -143,13 +137,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainterObject"), gdjs.evts
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -191,13 +178,6 @@ let isConditionTrue_0 = false;
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("ShapePainterObject"), gdjs.evtsExt__DrawPathfinding__DrawPathfinding.DrawPathfinding.prototype.DrawPathfindingContext.GDShapePainterObjectObjects1);
 
 let isConditionTrue_0 = false;
@@ -213,13 +193,6 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__DrawPat
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -252,25 +225,11 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setLoopIndex(0)
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

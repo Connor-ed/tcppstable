@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SelectionTools__ActivateRectangularSelection !== "undef
 }
 
 gdjs.evtsExt__SelectionTools__ActivateRectangularSelection = {};
+gdjs.evtsExt__SelectionTools__ActivateRectangularSelection.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SelectionTools__ActivateRectangularSelection.eventsList0 = function(runtimeScene, eventsFunctionContext) {

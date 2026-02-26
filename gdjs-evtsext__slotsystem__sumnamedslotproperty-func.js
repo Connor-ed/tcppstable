@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__SumNamedSlotProperty !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__SumNamedSlotProperty = {};
+gdjs.evtsExt__SlotSystem__SumNamedSlotProperty.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__SumNamedSlotProperty.eventsList0 = function(runtimeScene, eventsFunctionContext) {

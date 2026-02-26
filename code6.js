@@ -1,5 +1,6 @@
 gdjs.SaveCode = {};
 gdjs.SaveCode.localVariables = [];
+gdjs.SaveCode.idToCallbackMap = new Map();
 gdjs.SaveCode.GDGlobal_9595PlayObjects1= [];
 gdjs.SaveCode.GDGlobal_9595PlayObjects2= [];
 gdjs.SaveCode.GDGlobal_9595EditorObjects1= [];
@@ -32,8 +33,6 @@ gdjs.SaveCode.GDtop_9595titleObjects1= [];
 gdjs.SaveCode.GDtop_9595titleObjects2= [];
 gdjs.SaveCode.GDShadowObjects1= [];
 gdjs.SaveCode.GDShadowObjects2= [];
-gdjs.SaveCode.GDko_9595fiObjects1= [];
-gdjs.SaveCode.GDko_9595fiObjects2= [];
 
 
 gdjs.SaveCode.mapOfGDgdjs_9546SaveCode_9546GDGlobal_95959595PlayObjects1Objects = Hashtable.newFrom({"Global_Play": gdjs.SaveCode.GDGlobal_9595PlayObjects1});
@@ -249,8 +248,6 @@ gdjs.SaveCode.GDtop_9595titleObjects1.length = 0;
 gdjs.SaveCode.GDtop_9595titleObjects2.length = 0;
 gdjs.SaveCode.GDShadowObjects1.length = 0;
 gdjs.SaveCode.GDShadowObjects2.length = 0;
-gdjs.SaveCode.GDko_9595fiObjects1.length = 0;
-gdjs.SaveCode.GDko_9595fiObjects2.length = 0;
 
 gdjs.SaveCode.eventsList0(runtimeScene);
 gdjs.SaveCode.GDGlobal_9595PlayObjects1.length = 0;
@@ -285,8 +282,6 @@ gdjs.SaveCode.GDtop_9595titleObjects1.length = 0;
 gdjs.SaveCode.GDtop_9595titleObjects2.length = 0;
 gdjs.SaveCode.GDShadowObjects1.length = 0;
 gdjs.SaveCode.GDShadowObjects2.length = 0;
-gdjs.SaveCode.GDko_9595fiObjects1.length = 0;
-gdjs.SaveCode.GDko_9595fiObjects2.length = 0;
 
 
 return;

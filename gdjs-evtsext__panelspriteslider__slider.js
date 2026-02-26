@@ -23,24 +23,24 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider = class Slider extends gdjs.Runti
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.CurrentValue !== newBehaviorData.CurrentValue)
-      this._behaviorData.CurrentValue = newBehaviorData.CurrentValue;
-    if (oldBehaviorData.MinValue !== newBehaviorData.MinValue)
-      this._behaviorData.MinValue = newBehaviorData.MinValue;
-    if (oldBehaviorData.MaxValue !== newBehaviorData.MaxValue)
-      this._behaviorData.MaxValue = newBehaviorData.MaxValue;
-    if (oldBehaviorData.StepSize !== newBehaviorData.StepSize)
-      this._behaviorData.StepSize = newBehaviorData.StepSize;
+    if (behaviorOverriding.CurrentValue !== undefined)
+      this._behaviorData.CurrentValue = behaviorOverriding.CurrentValue;
+    if (behaviorOverriding.MinValue !== undefined)
+      this._behaviorData.MinValue = behaviorOverriding.MinValue;
+    if (behaviorOverriding.MaxValue !== undefined)
+      this._behaviorData.MaxValue = behaviorOverriding.MaxValue;
+    if (behaviorOverriding.StepSize !== undefined)
+      this._behaviorData.StepSize = behaviorOverriding.StepSize;
 
     return true;
   }
 
   // Network sync:
-  getNetworkSyncData() {
+  getNetworkSyncData(syncOptions) {
     return {
-      ...super.getNetworkSyncData(),
+      ...super.getNetworkSyncData(syncOptions),
       props: {
         
     CurrentValue: this._behaviorData.CurrentValue,
@@ -50,8 +50,8 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider = class Slider extends gdjs.Runti
       }
     };
   }
-  updateFromNetworkSyncData(networkSyncData) {
-    super.updateFromNetworkSyncData(networkSyncData);
+  updateFromNetworkSyncData(networkSyncData, options) {
+    super.updateFromNetworkSyncData(networkSyncData, options);
     
     if (networkSyncData.props.CurrentValue !== undefined)
       this._behaviorData.CurrentValue = networkSyncData.props.CurrentValue;
@@ -117,6 +117,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.getSharedData = function(instance
 
 // Methods:
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.ValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.ValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.ValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.ValueContext.GDObjectObjects2= [];
 
@@ -211,6 +212,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.ValueContext.GDObjectOb
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetValueContext.GDObjectObjects2= [];
 
@@ -325,6 +327,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetValueContext.GDObjec
 return;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MinValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MinValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MinValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MinValueContext.GDObjectObjects2= [];
 
@@ -419,6 +422,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MinValueContext.GDObjec
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMinValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMinValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMinValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMinValueContext.GDObjectObjects2= [];
 
@@ -520,6 +524,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMinValueContext.GDOb
 return;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MaxValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MaxValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MaxValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MaxValueContext.GDObjectObjects2= [];
 
@@ -614,6 +619,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.MaxValueContext.GDObjec
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMaxValueContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMaxValueContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMaxValueContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMaxValueContext.GDObjectObjects2= [];
 
@@ -715,6 +721,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetMaxValueContext.GDOb
 return;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SizeContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SizeContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SizeContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SizeContext.GDObjectObjects2= [];
 
@@ -810,6 +817,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SizeContext.GDObjectObj
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.StepSizeContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.StepSizeContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.StepSizeContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.StepSizeContext.GDObjectObjects2= [];
 
@@ -904,6 +912,7 @@ gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.StepSizeContext.GDObjec
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetStepSizeContext = {};
+gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetStepSizeContext.idToCallbackMap = new Map();
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetStepSizeContext.GDObjectObjects1= [];
 gdjs.evtsExt__PanelSpriteSlider__Slider.Slider.prototype.SetStepSizeContext.GDObjectObjects2= [];
 

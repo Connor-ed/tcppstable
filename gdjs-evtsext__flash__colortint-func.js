@@ -6,10 +6,11 @@ if (typeof gdjs.evtsExt__Flash__ColorTint !== "undefined") {
 }
 
 gdjs.evtsExt__Flash__ColorTint = {};
+gdjs.evtsExt__Flash__ColorTint.idToCallbackMap = new Map();
 gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Flash__ColorTint.userFunc0x1e021b8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Flash__ColorTint.userFunc0xed0d48 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.SpriteRuntimeObject} */
 const tintedObject = objects[0];
@@ -20,17 +21,10 @@ gdjs.evtsExt__Flash__ColorTint.eventsList0 = function(runtimeScene, eventsFuncti
 
 {
 
-
-
-}
-
-
-{
-
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1;
-gdjs.evtsExt__Flash__ColorTint.userFunc0x1e021b8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Flash__ColorTint.userFunc0xed0d48(runtimeScene, objects, eventsFunctionContext);
 
 }
 

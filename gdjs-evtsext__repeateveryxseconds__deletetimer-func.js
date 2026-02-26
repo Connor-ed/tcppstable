@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RepeatEveryXSeconds__DeleteTimer !== "undefined") {
 }
 
 gdjs.evtsExt__RepeatEveryXSeconds__DeleteTimer = {};
+gdjs.evtsExt__RepeatEveryXSeconds__DeleteTimer.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__RepeatEveryXSeconds__DeleteTimer.eventsList0 = function(runtimeScene, eventsFunctionContext) {

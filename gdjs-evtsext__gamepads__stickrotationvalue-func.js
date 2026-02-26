@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__Gamepads__StickRotationValue !== "undefined") {
 }
 
 gdjs.evtsExt__Gamepads__StickRotationValue = {};
+gdjs.evtsExt__Gamepads__StickRotationValue.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__Gamepads__StickRotationValue.eventsList0 = function(runtimeScene, eventsFunctionContext) {

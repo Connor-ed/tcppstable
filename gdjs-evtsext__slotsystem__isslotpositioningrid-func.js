@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid = {};
+gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__IsSlotPositionInGrid.eventsList0 = function(runtimeScene, eventsFunctionContext) {

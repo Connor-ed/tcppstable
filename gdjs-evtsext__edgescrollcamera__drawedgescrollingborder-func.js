@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder !== "undefine
 }
 
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder = {};
+gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.idToCallbackMap = new Map();
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects1= [];
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects2= [];
 gdjs.evtsExt__EdgeScrollCamera__DrawEdgeScrollingBorder.GDShapePainterObjects3= [];

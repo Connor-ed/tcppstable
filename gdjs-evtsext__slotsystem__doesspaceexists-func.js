@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__DoesSpaceExists !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__DoesSpaceExists = {};
+gdjs.evtsExt__SlotSystem__DoesSpaceExists.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__DoesSpaceExists.eventsList0 = function(runtimeScene, eventsFunctionContext) {

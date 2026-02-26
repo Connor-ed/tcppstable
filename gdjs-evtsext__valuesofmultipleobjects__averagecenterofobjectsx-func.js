@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageCenterOfObjectsX !== "u
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageCenterOfObjectsX = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageCenterOfObjectsX.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageCenterOfObjectsX.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageCenterOfObjectsX.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

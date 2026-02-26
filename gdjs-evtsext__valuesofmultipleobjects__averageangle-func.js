@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageAngle !== "undefined") 
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageAngle = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageAngle.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageAngle.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageAngle.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

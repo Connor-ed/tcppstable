@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__C_global_variable_exist !== "undefin
 }
 
 gdjs.evtsExt__ExtendedVariables__C_global_variable_exist = {};
+gdjs.evtsExt__ExtendedVariables__C_global_variable_exist.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__ExtendedVariables__C_global_variable_exist.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup !== "undefin
 }
 
 gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup = {};
+gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.idToCallbackMap = new Map();
 gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.GDObjectObjects1= [];
 gdjs.evtsExt__RTSUnitSelection__IsAssignedToControlGroup.GDObjectObjects2= [];
 

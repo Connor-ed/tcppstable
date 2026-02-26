@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__MousePointerLock__isPointerLocked !== "undefined") {
 }
 
 gdjs.evtsExt__MousePointerLock__isPointerLocked = {};
+gdjs.evtsExt__MousePointerLock__isPointerLocked.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__MousePointerLock__isPointerLocked.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SelectionTools__De_ActivateSelectionTools !== "undefine
 }
 
 gdjs.evtsExt__SelectionTools__De_ActivateSelectionTools = {};
+gdjs.evtsExt__SelectionTools__De_ActivateSelectionTools.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SelectionTools__De_ActivateSelectionTools.eventsList0 = function(runtimeScene, eventsFunctionContext) {

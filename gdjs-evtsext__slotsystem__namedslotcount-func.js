@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__NamedSlotCount !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__NamedSlotCount = {};
+gdjs.evtsExt__SlotSystem__NamedSlotCount.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__NamedSlotCount.eventsList0 = function(runtimeScene, eventsFunctionContext) {

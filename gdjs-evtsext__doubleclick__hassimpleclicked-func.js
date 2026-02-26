@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__DoubleClick__HasSimpleClicked !== "undefined") {
 }
 
 gdjs.evtsExt__DoubleClick__HasSimpleClicked = {};
+gdjs.evtsExt__DoubleClick__HasSimpleClicked.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__DoubleClick__HasSimpleClicked.eventsList0 = function(runtimeScene, eventsFunctionContext) {

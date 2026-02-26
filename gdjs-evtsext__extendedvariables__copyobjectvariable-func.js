@@ -6,11 +6,12 @@ if (typeof gdjs.evtsExt__ExtendedVariables__CopyObjectVariable !== "undefined") 
 }
 
 gdjs.evtsExt__ExtendedVariables__CopyObjectVariable = {};
+gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.idToCallbackMap = new Map();
 gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.GDSourceObjectObjects1= [];
 gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.GDTargetObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x39aaaa8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x1d67c80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const sourceObject = eventsFunctionContext.getObjects("SourceObject")[0];
 const targetObject = eventsFunctionContext.getObjects("TargetObject")[0];
@@ -36,7 +37,7 @@ gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x39aaaa8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__CopyObjectVariable.userFunc0x1d67c80(runtimeScene, eventsFunctionContext);
 
 }
 

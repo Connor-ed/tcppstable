@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MaxHeight !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxHeight = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxHeight.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxHeight.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxHeight.forEachObjects3 = [];

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits !== "undefined") {
 }
 
 gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits = {};
+gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.idToCallbackMap = new Map();
 gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.forEachIndex3 = 0;
 
 gdjs.evtsExt__RTSUnitSelection__TotalSelectedUnits.forEachObjects3 = [];
@@ -45,25 +46,11 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 {runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits").setNumber(0);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

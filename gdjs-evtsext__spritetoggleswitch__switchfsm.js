@@ -23,24 +23,24 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM = class SwitchFSM extends 
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.ButtonFSM !== newBehaviorData.ButtonFSM)
-      this._behaviorData.ButtonFSM = newBehaviorData.ButtonFSM;
-    if (oldBehaviorData.IsChecked !== newBehaviorData.IsChecked)
-      this._behaviorData.IsChecked = newBehaviorData.IsChecked;
-    if (oldBehaviorData.PreviousIsChecked !== newBehaviorData.PreviousIsChecked)
-      this._behaviorData.PreviousIsChecked = newBehaviorData.PreviousIsChecked;
-    if (oldBehaviorData.WasChecked !== newBehaviorData.WasChecked)
-      this._behaviorData.WasChecked = newBehaviorData.WasChecked;
+    if (behaviorOverriding.ButtonFSM !== undefined)
+      this._behaviorData.ButtonFSM = behaviorOverriding.ButtonFSM;
+    if (behaviorOverriding.IsChecked !== undefined)
+      this._behaviorData.IsChecked = behaviorOverriding.IsChecked;
+    if (behaviorOverriding.PreviousIsChecked !== undefined)
+      this._behaviorData.PreviousIsChecked = behaviorOverriding.PreviousIsChecked;
+    if (behaviorOverriding.WasChecked !== undefined)
+      this._behaviorData.WasChecked = behaviorOverriding.WasChecked;
 
     return true;
   }
 
   // Network sync:
-  getNetworkSyncData() {
+  getNetworkSyncData(syncOptions) {
     return {
-      ...super.getNetworkSyncData(),
+      ...super.getNetworkSyncData(syncOptions),
       props: {
         
     ButtonFSM: this._behaviorData.ButtonFSM,
@@ -50,8 +50,8 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM = class SwitchFSM extends 
       }
     };
   }
-  updateFromNetworkSyncData(networkSyncData) {
-    super.updateFromNetworkSyncData(networkSyncData);
+  updateFromNetworkSyncData(networkSyncData, options) {
+    super.updateFromNetworkSyncData(networkSyncData, options);
     
     if (networkSyncData.props.ButtonFSM !== undefined)
       this._behaviorData.ButtonFSM = networkSyncData.props.ButtonFSM;
@@ -126,6 +126,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.getSharedData = function(i
 
 // Methods:
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.doStepPreEventsContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.doStepPreEventsContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.doStepPreEventsContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.doStepPreEventsContext.GDObjectObjects2= [];
 
@@ -266,6 +267,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.doStepPreEventsC
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.IsCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.IsCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.IsCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.IsCheckedContext.GDObjectObjects2= [];
 
@@ -364,6 +366,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.IsCheckedContext
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenCheckedContext.GDObjectObjects2= [];
 
@@ -467,6 +470,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenCheck
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenUncheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenUncheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenUncheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenUncheckedContext.GDObjectObjects2= [];
 
@@ -570,6 +574,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenUnche
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenToggledContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenToggledContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenToggledContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenToggledContext.GDObjectObjects2= [];
 
@@ -696,6 +701,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.HasJustBeenToggl
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContext.GDObjectObjects1_1final = [];
 
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContext.GDObjectObjects1= [];
@@ -703,13 +709,6 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContex
 
 
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -899,6 +898,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.SetCheckedContex
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.ToggleCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.ToggleCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.ToggleCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SwitchFSM.SwitchFSM.prototype.ToggleCheckedContext.GDObjectObjects2= [];
 

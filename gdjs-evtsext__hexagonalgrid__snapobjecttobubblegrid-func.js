@@ -6,19 +6,13 @@ if (typeof gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid !== "undefined") 
 }
 
 gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid = {};
+gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.idToCallbackMap = new Map();
 gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.GDObjectObjects1= [];
 gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.GDObjectObjects2= [];
 
 
 gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.mapOfGDgdjs_9546evtsExt_9595_9595HexagonalGrid_9595_9595SnapObjectToBubbleGrid_9546GDObjectObjects1Objects = Hashtable.newFrom({"Object": gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.GDObjectObjects1});
 gdjs.evtsExt__HexagonalGrid__SnapObjectToBubbleGrid.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

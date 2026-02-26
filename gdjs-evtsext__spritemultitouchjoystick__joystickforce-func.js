@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce !== "undefined"
 }
 
 gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce = {};
+gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.eventsList0 = function(runtimeScene, eventsFunctionContext) {

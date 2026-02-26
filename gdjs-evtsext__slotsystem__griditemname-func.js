@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__GridItemName !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__GridItemName = {};
+gdjs.evtsExt__SlotSystem__GridItemName.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__GridItemName.eventsList0 = function(runtimeScene, eventsFunctionContext) {

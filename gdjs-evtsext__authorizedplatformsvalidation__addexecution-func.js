@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution !== "undefi
 }
 
 gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution = {};
+gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__AuthorizedPlatformsValidation__AddExecution.eventsList0 = function(runtimeScene, eventsFunctionContext) {

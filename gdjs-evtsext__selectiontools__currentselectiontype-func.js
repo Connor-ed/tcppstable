@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SelectionTools__CurrentSelectionType !== "undefined") {
 }
 
 gdjs.evtsExt__SelectionTools__CurrentSelectionType = {};
+gdjs.evtsExt__SelectionTools__CurrentSelectionType.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SelectionTools__CurrentSelectionType.eventsList0 = function(runtimeScene, eventsFunctionContext) {

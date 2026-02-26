@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__DeleteSlot !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__DeleteSlot = {};
+gdjs.evtsExt__SlotSystem__DeleteSlot.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__DeleteSlot.eventsList0 = function(runtimeScene, eventsFunctionContext) {

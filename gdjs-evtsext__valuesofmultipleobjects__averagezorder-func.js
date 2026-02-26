@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AverageZOrder !== "undefined")
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageZOrder = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AverageZOrder.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageZOrder.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AverageZOrder.forEachObjects3 = [];
@@ -41,13 +42,6 @@ if (true) {
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

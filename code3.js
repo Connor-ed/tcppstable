@@ -1,5 +1,6 @@
 gdjs.Quick_95CheckCode = {};
 gdjs.Quick_95CheckCode.localVariables = [];
+gdjs.Quick_95CheckCode.idToCallbackMap = new Map();
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1= [];
 gdjs.Quick_95CheckCode.GDNewSpriteObjects2= [];
 gdjs.Quick_95CheckCode.GDNewSprite2Objects1= [];
@@ -38,8 +39,6 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1= [];
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2= [];
 gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
-gdjs.Quick_95CheckCode.GDko_9595fiObjects1= [];
-gdjs.Quick_95CheckCode.GDko_9595fiObjects2= [];
 
 
 gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
@@ -111,13 +110,6 @@ gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNe
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__UpdateChecker__UpdateAvailable.func(runtimeScene, null);
@@ -150,13 +142,6 @@ if (isConditionTrue_0) {
 {gdjs.evtsExt__URLTools__Reload.func(runtimeScene, null);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -244,8 +229,6 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
-gdjs.Quick_95CheckCode.GDko_9595fiObjects1.length = 0;
-gdjs.Quick_95CheckCode.GDko_9595fiObjects2.length = 0;
 
 gdjs.Quick_95CheckCode.eventsList0(runtimeScene);
 gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length = 0;
@@ -286,8 +269,6 @@ gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDShadowObjects2.length = 0;
-gdjs.Quick_95CheckCode.GDko_9595fiObjects1.length = 0;
-gdjs.Quick_95CheckCode.GDko_9595fiObjects2.length = 0;
 
 
 return;

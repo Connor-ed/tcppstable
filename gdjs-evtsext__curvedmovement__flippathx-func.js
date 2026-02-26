@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__FlipPathX !== "undefined") {
 }
 
 gdjs.evtsExt__CurvedMovement__FlipPathX = {};
+gdjs.evtsExt__CurvedMovement__FlipPathX.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CurvedMovement__FlipPathX.eventsList0 = function(runtimeScene, eventsFunctionContext) {

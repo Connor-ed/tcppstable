@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__CursorMovement__CursorIsMoving !== "undefined") {
 }
 
 gdjs.evtsExt__CursorMovement__CursorIsMoving = {};
+gdjs.evtsExt__CursorMovement__CursorIsMoving.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CursorMovement__CursorIsMoving.eventsList0 = function(runtimeScene, eventsFunctionContext) {

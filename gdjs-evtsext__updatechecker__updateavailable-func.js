@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__UpdateChecker__UpdateAvailable !== "undefined") {
 }
 
 gdjs.evtsExt__UpdateChecker__UpdateAvailable = {};
+gdjs.evtsExt__UpdateChecker__UpdateAvailable.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__UpdateChecker__UpdateAvailable.eventsList0 = function(runtimeScene, eventsFunctionContext) {

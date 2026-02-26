@@ -23,24 +23,24 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable = 
   }
 
   // Hot-reload:
-  updateFromBehaviorData(oldBehaviorData, newBehaviorData) {
+  applyBehaviorOverriding(behaviorOverriding) {
     
-    if (oldBehaviorData.DraggableBehavior !== newBehaviorData.DraggableBehavior)
-      this._behaviorData.DraggableBehavior = newBehaviorData.DraggableBehavior;
-    if (oldBehaviorData.TweenBehavior !== newBehaviorData.TweenBehavior)
-      this._behaviorData.TweenBehavior = newBehaviorData.TweenBehavior;
-    if (oldBehaviorData.OriginalX !== newBehaviorData.OriginalX)
-      this._behaviorData.OriginalX = newBehaviorData.OriginalX;
-    if (oldBehaviorData.OriginalY !== newBehaviorData.OriginalY)
-      this._behaviorData.OriginalY = newBehaviorData.OriginalY;
+    if (behaviorOverriding.DraggableBehavior !== undefined)
+      this._behaviorData.DraggableBehavior = behaviorOverriding.DraggableBehavior;
+    if (behaviorOverriding.TweenBehavior !== undefined)
+      this._behaviorData.TweenBehavior = behaviorOverriding.TweenBehavior;
+    if (behaviorOverriding.OriginalX !== undefined)
+      this._behaviorData.OriginalX = behaviorOverriding.OriginalX;
+    if (behaviorOverriding.OriginalY !== undefined)
+      this._behaviorData.OriginalY = behaviorOverriding.OriginalY;
 
     return true;
   }
 
   // Network sync:
-  getNetworkSyncData() {
+  getNetworkSyncData(syncOptions) {
     return {
-      ...super.getNetworkSyncData(),
+      ...super.getNetworkSyncData(syncOptions),
       props: {
         
     DraggableBehavior: this._behaviorData.DraggableBehavior,
@@ -50,8 +50,8 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable = 
       }
     };
   }
-  updateFromNetworkSyncData(networkSyncData) {
-    super.updateFromNetworkSyncData(networkSyncData);
+  updateFromNetworkSyncData(networkSyncData, options) {
+    super.updateFromNetworkSyncData(networkSyncData, options);
     
     if (networkSyncData.props.DraggableBehavior !== undefined)
       this._behaviorData.DraggableBehavior = networkSyncData.props.DraggableBehavior;
@@ -117,18 +117,12 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.ge
 
 // Methods:
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext = {};
+gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.idToCallbackMap = new Map();
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1= [];
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects2= [];
 
 
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -146,7 +140,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(39369204);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(39787700);
 }
 }
 if (isConditionTrue_0) {
@@ -156,13 +150,6 @@ if (isConditionTrue_0) {
 {eventsFunctionContext.getObjects("Object")[0].getBehavior(eventsFunctionContext.getBehaviorName("Behavior"))._setOriginalY((( gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length === 0 ) ? 0 :gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1[0].getY()))
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -275,6 +262,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 return;
 }
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext = {};
+gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.idToCallbackMap = new Map();
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects1= [];
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingContext.GDObjectObjects2= [];
 
@@ -377,18 +365,12 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 return;
 }
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext = {};
+gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.idToCallbackMap = new Map();
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects1= [];
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.GDObjectObjects2= [];
 
 
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.CancelLastDraggingSContext.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -500,6 +482,7 @@ gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.pr
 return;
 }
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext = {};
+gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext.idToCallbackMap = new Map();
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext.GDObjectObjects1= [];
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.DraggingIsCancelledContext.GDObjectObjects2= [];
 

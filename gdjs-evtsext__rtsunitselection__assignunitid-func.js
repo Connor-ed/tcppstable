@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RTSUnitSelection__AssignUnitID !== "undefined") {
 }
 
 gdjs.evtsExt__RTSUnitSelection__AssignUnitID = {};
+gdjs.evtsExt__RTSUnitSelection__AssignUnitID.idToCallbackMap = new Map();
 gdjs.evtsExt__RTSUnitSelection__AssignUnitID.forEachIndex2 = 0;
 
 gdjs.evtsExt__RTSUnitSelection__AssignUnitID.forEachObjects2 = [];
@@ -26,13 +27,6 @@ gdjs.evtsExt__RTSUnitSelection__AssignUnitID.eventsList0 = function(runtimeScene
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__AssignUnitID.GDObjectObjects2, gdjs.evtsExt__RTSUnitSelection__AssignUnitID.GDObjectObjects3);
@@ -42,13 +36,6 @@ gdjs.copyArray(gdjs.evtsExt__RTSUnitSelection__AssignUnitID.GDObjectObjects2, gd
 }
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -79,25 +66,11 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 {runtimeScene.getScene().getVariables().get("__RTSUnitSelection").getChild("TotalSelectedUnits").setNumber(0);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SpriteMultitouchJoystick__SetJoystickAngle !== "undefin
 }
 
 gdjs.evtsExt__SpriteMultitouchJoystick__SetJoystickAngle = {};
+gdjs.evtsExt__SpriteMultitouchJoystick__SetJoystickAngle.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__SetJoystickAngle.eventsList0 = function(runtimeScene, eventsFunctionContext) {

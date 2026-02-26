@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__RemoveNamedSlotProperty !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__RemoveNamedSlotProperty = {};
+gdjs.evtsExt__SlotSystem__RemoveNamedSlotProperty.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__RemoveNamedSlotProperty.eventsList0 = function(runtimeScene, eventsFunctionContext) {

@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY !== "
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects1= [];
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects2= [];
 
@@ -13,13 +14,6 @@ gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects2
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects = Hashtable.newFrom({"Object": gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects1});
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.mapOfGDgdjs_9546evtsExt_9595_9595ValuesOfMultipleObjects_9595_9595AbsoluteCenterOfObjectsY_9546GDObjectObjects1Objects = Hashtable.newFrom({"Object": gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.GDObjectObjects1});
 gdjs.evtsExt__ValuesOfMultipleObjects__AbsoluteCenterOfObjectsY.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

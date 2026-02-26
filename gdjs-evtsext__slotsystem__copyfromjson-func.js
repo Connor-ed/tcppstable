@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__CopyFromJSON !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__CopyFromJSON = {};
+gdjs.evtsExt__SlotSystem__CopyFromJSON.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__CopyFromJSON.eventsList0 = function(runtimeScene, eventsFunctionContext) {

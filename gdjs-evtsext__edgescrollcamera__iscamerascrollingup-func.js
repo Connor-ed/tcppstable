@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__IsCameraScrollingUp !== "undefined") 
 }
 
 gdjs.evtsExt__EdgeScrollCamera__IsCameraScrollingUp = {};
+gdjs.evtsExt__EdgeScrollCamera__IsCameraScrollingUp.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__EdgeScrollCamera__IsCameraScrollingUp.eventsList0 = function(runtimeScene, eventsFunctionContext) {

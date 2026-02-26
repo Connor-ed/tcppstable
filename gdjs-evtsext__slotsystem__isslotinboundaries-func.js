@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SlotSystem__IsSlotInBoundaries !== "undefined") {
 }
 
 gdjs.evtsExt__SlotSystem__IsSlotInBoundaries = {};
+gdjs.evtsExt__SlotSystem__IsSlotInBoundaries.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SlotSystem__IsSlotInBoundaries.eventsList0 = function(runtimeScene, eventsFunctionContext) {

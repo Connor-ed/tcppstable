@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__CursorType__ChangeCursorType !== "undefined") {
 }
 
 gdjs.evtsExt__CursorType__ChangeCursorType = {};
+gdjs.evtsExt__CursorType__ChangeCursorType.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__CursorType__ChangeCursorType.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 

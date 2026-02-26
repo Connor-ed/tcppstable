@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MinZOrder !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinZOrder = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MinZOrder.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MinZOrder.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MinZOrder.forEachObjects3 = [];

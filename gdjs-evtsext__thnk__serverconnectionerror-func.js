@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__THNK__ServerConnectionError !== "undefined") {
 }
 
 gdjs.evtsExt__THNK__ServerConnectionError = {};
+gdjs.evtsExt__THNK__ServerConnectionError.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__THNK__ServerConnectionError.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 };
 

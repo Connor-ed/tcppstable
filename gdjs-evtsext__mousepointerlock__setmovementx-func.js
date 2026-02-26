@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__MousePointerLock__SetMovementX !== "undefined") {
 }
 
 gdjs.evtsExt__MousePointerLock__SetMovementX = {};
+gdjs.evtsExt__MousePointerLock__SetMovementX.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MousePointerLock__SetMovementX.userFunc0x1e6e080 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__SetMovementX.userFunc0x1f818f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const value = eventsFunctionContext.getArgument("Value");
@@ -20,7 +21,7 @@ gdjs.evtsExt__MousePointerLock__SetMovementX.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__MousePointerLock__SetMovementX.userFunc0x1e6e080(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MousePointerLock__SetMovementX.userFunc0x1f818f8(runtimeScene, eventsFunctionContext);
 
 }
 

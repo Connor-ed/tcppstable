@@ -5,8 +5,8 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch = gdjs.evtsExt__SpriteToggl
  * Object generated from Toggle switch
  */
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch = class SpriteToggleSwitch extends gdjs.CustomRuntimeObject2D {
-  constructor(parentInstanceContainer, objectData) {
-    super(parentInstanceContainer, objectData);
+  constructor(parentInstanceContainer, objectData, instanceData) {
+    super(parentInstanceContainer, objectData, instanceData);
     this._parentInstanceContainer = parentInstanceContainer;
 
     this._onceTriggers = new gdjs.OnceTriggers();
@@ -60,6 +60,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch = class 
 
 // Methods:
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.GDStateObjects1= [];
@@ -72,13 +73,6 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 {
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.GDStateObjects1.length = 0;
@@ -86,13 +80,6 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 {gdjs.evtTools.object.createObjectOnScene(eventsFunctionContext, gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.mapOfGDgdjs_9546evtsExt_9595_9595SpriteToggleSwitch_9595_9595SpriteToggleSwitch_9546SpriteToggleSwitch_9546prototype_9546onCreatedContext_9546GDStateObjects1Objects, 0, 0, "");
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
@@ -241,6 +228,7 @@ gdjs.CustomRuntimeObject.prototype.onCreated.call(this);
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext.GDStateObjects1= [];
@@ -382,6 +370,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext.GDStateObjects1= [];
@@ -488,6 +477,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext.GDStateObjects1= [];
@@ -600,6 +590,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext.GDStateObjects1= [];
@@ -712,6 +703,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext.GDStateObjects1= [];
@@ -824,6 +816,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext.GDStateObjects1= [];
@@ -936,6 +929,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext.GDStateObjects1= [];
@@ -1064,6 +1058,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext.GDStateObjects1= [];
@@ -1170,6 +1165,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext.GDStateObjects1= [];
@@ -1282,6 +1278,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext.GDStateObjects1= [];
@@ -1394,6 +1391,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext.GDStateObjects1= [];
@@ -1506,6 +1504,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext.GDStateObjects1= [];
@@ -1618,6 +1617,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext.GDStateObjects1= [];
@@ -1730,6 +1730,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext.GDStateObjects1= [];
@@ -1903,6 +1904,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext.GDStateObjects1= [];
@@ -2031,6 +2033,7 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototyp
 return;
 }
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext = {};
+gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext.idToCallbackMap = new Map();
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext.GDObjectObjects1= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext.GDObjectObjects2= [];
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext.GDStateObjects1= [];

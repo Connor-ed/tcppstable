@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ValuesOfMultipleObjects__MaxZOrder !== "undefined") {
 }
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxZOrder = {};
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxZOrder.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxZOrder.forEachIndex3 = 0;
 
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxZOrder.forEachObjects3 = [];

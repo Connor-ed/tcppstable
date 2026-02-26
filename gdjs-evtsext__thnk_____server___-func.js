@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__THNK_____Server___ !== "undefined") {
 }
 
 gdjs.evtsExt__THNK_____Server___ = {};
+gdjs.evtsExt__THNK_____Server___.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__THNK_____Server___.eventsList0 = function(runtimeScene, eventsFunctionContext) {

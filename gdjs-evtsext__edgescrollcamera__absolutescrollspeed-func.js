@@ -6,16 +6,10 @@ if (typeof gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed !== "undefined") 
 }
 
 gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed = {};
+gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__EdgeScrollCamera__AbsoluteScrollSpeed.eventsList0 = function(runtimeScene, eventsFunctionContext) {
-
-{
-
-
-
-}
-
 
 {
 
@@ -27,13 +21,6 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 {eventsFunctionContext.returnValue = (1 - Math.abs(eventsFunctionContext.getArgument("BorderDistance")) / eventsFunctionContext.sceneVariablesForExtension.getFromIndex(5).getAsNumber()) * eventsFunctionContext.sceneVariablesForExtension.getFromIndex(4).getAsNumber();}
 }
-
-}
-
-
-{
-
-
 
 }
 

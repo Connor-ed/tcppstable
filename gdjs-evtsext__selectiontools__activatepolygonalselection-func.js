@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection !== "undefin
 }
 
 gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection = {};
+gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__SelectionTools__ActivatePolygonalSelection.eventsList0 = function(runtimeScene, eventsFunctionContext) {

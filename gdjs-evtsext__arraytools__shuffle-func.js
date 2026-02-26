@@ -6,9 +6,10 @@ if (typeof gdjs.evtsExt__ArrayTools__Shuffle !== "undefined") {
 }
 
 gdjs.evtsExt__ArrayTools__Shuffle = {};
+gdjs.evtsExt__ArrayTools__Shuffle.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ArrayTools__Shuffle.userFunc0x35fb890 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__Shuffle.userFunc0x2c415a8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -24,7 +25,7 @@ gdjs.evtsExt__ArrayTools__Shuffle.eventsList0 = function(runtimeScene, eventsFun
 {
 
 
-gdjs.evtsExt__ArrayTools__Shuffle.userFunc0x35fb890(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__Shuffle.userFunc0x2c415a8(runtimeScene, eventsFunctionContext);
 
 }
 

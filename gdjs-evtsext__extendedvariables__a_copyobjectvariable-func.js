@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable !== "undefined"
 }
 
 gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable = {};
+gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable.idToCallbackMap = new Map();
 gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable.GDSourceObjectObjects1= [];
 gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable.GDSourceObjectObjects2= [];
 gdjs.evtsExt__ExtendedVariables__A_CopyObjectVariable.GDTargetObjectObjects1= [];

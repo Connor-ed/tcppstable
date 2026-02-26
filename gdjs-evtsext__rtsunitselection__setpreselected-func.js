@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RTSUnitSelection__SetPreSelected !== "undefined") {
 }
 
 gdjs.evtsExt__RTSUnitSelection__SetPreSelected = {};
+gdjs.evtsExt__RTSUnitSelection__SetPreSelected.idToCallbackMap = new Map();
 gdjs.evtsExt__RTSUnitSelection__SetPreSelected.GDObjectObjects1= [];
 gdjs.evtsExt__RTSUnitSelection__SetPreSelected.GDObjectObjects2= [];
 

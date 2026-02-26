@@ -6,6 +6,7 @@ if (typeof gdjs.evtsExt__RepeatEveryXSeconds__Repeat !== "undefined") {
 }
 
 gdjs.evtsExt__RepeatEveryXSeconds__Repeat = {};
+gdjs.evtsExt__RepeatEveryXSeconds__Repeat.idToCallbackMap = new Map();
 
 
 gdjs.evtsExt__RepeatEveryXSeconds__Repeat.eventsList0 = function(runtimeScene, eventsFunctionContext) {
@@ -22,13 +23,6 @@ if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__RepeatEveryXSeconds").getChild("Repetitions").getChild(eventsFunctionContext.getArgument("TimerName")).setNumber(0);
 }
 }
-
-}
-
-
-{
-
-
 
 }
 
