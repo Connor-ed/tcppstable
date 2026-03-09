@@ -10,7 +10,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2dcf8a8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2dba6a0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -35,7 +35,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.eventsList0 = function(runtimeScene,
 gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1);
 
 const objects = gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.GDobjectsObjects1;
-gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2dcf8a8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ValuesOfMultipleObjects__MaxY.userFunc0x2dba6a0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

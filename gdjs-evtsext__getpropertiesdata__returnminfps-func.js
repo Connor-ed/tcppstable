@@ -9,7 +9,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnMinFPS = {};
 gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x1d2d228 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x27b1628 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.minFPS;
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x1d2d228(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__GetPropertiesData__ReturnMinFPS.userFunc0x27b1628(runtimeScene, eventsFunctionContext);
 
 }
 

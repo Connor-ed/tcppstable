@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.idToCallbackMap = new Map()
 gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x1d17698 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x1b38498 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let returnValue = true;
 if (!objects.length) {
@@ -35,7 +35,7 @@ gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.eventsList0 = function(runt
 gdjs.copyArray(eventsFunctionContext.getObjects("ObjectToCheck"), gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1);
 
 const objects = gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1;
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x1d17698(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0x1b38498(runtimeScene, objects, eventsFunctionContext);
 
 }
 

@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__onSceneLoaded = {};
 gdjs.evtsExt__CurvedMovement__onSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__onSceneLoaded.userFunc0x2253ac8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__onSceneLoaded.userFunc0x1dda058 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
 runtimeScene.__curvedMovementExtension = { curvedPaths: new Map() };
@@ -19,7 +19,7 @@ gdjs.evtsExt__CurvedMovement__onSceneLoaded.eventsList0 = function(runtimeScene,
 {
 
 
-gdjs.evtsExt__CurvedMovement__onSceneLoaded.userFunc0x2253ac8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__onSceneLoaded.userFunc0x1dda058(runtimeScene, eventsFunctionContext);
 
 }
 

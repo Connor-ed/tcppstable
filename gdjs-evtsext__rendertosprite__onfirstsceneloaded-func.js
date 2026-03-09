@@ -1,36 +1,34 @@
 
-if (typeof gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource !== "undefined") {
-  gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded !== "undefined") {
+  gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource = {};
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.idToCallbackMap = new Map();
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded = {};
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.userFunc0x9e6e80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1ba4a00 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-runtimeScene
-    .getGame()
-    .getImageManager()
-    .getPIXITexture(eventsFunctionContext.getArgument("Resource"))
-    .baseTexture = PIXI.BaseTexture.from(eventsFunctionContext.getArgument("URL"));
+gdjs._renderToSprite = {};
+gdjs._renderToSprite.rt = PIXI.RenderTexture.create({ width: 100, height: 100 });
+gdjs._renderToSprite.sprite = PIXI.Sprite.from(gdjs._renderToSprite.rt);
 
 };
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.userFunc0x9e6e80(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1ba4a00(runtimeScene, eventsFunctionContext);
 
 }
 
 
 };
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.func = function(runtimeScene, URL, Resource, parentEventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.func = function(runtimeScene, parentEventsFunctionContext) {
 let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
@@ -39,8 +37,8 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("LoadImageFromURL"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("LoadImageFromURL"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("RenderToSprite"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("RenderToSprite"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -80,18 +78,20 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
-if (argName === "URL") return URL;
-if (argName === "Resource") return Resource;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.eventsList0(runtimeScene, eventsFunctionContext);
 
 
 return;
 }
 
-gdjs.evtsExt__LoadImageFromURL__LoadURLIntoImageResource.registeredGdjsCallbacks = [];
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.registeredGdjsCallbacks = [];
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.registeredGdjsCallbacks.push((runtimeScene) => {
+    gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.func(runtimeScene, runtimeScene);
+})
+gdjs.registerFirstRuntimeSceneLoadedCallback(gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.registeredGdjsCallbacks[gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.registeredGdjsCallbacks.length - 1]);

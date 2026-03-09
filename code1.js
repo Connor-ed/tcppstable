@@ -3,187 +3,126 @@ gdjs.EditorCode.localVariables = [];
 gdjs.EditorCode.idToCallbackMap = new Map();
 gdjs.EditorCode.GDKnobObjects1= [];
 gdjs.EditorCode.GDKnobObjects2= [];
-gdjs.EditorCode.GDKnobObjects3= [];
 gdjs.EditorCode.GDEdit_9595ToggleObjects1= [];
 gdjs.EditorCode.GDEdit_9595ToggleObjects2= [];
-gdjs.EditorCode.GDEdit_9595ToggleObjects3= [];
 gdjs.EditorCode.GDInstuctionsObjects1= [];
 gdjs.EditorCode.GDInstuctionsObjects2= [];
-gdjs.EditorCode.GDInstuctionsObjects3= [];
 gdjs.EditorCode.GDDetail_9595modeObjects1= [];
 gdjs.EditorCode.GDDetail_9595modeObjects2= [];
-gdjs.EditorCode.GDDetail_9595modeObjects3= [];
 gdjs.EditorCode.GDSnapShot_9595textObjects1= [];
 gdjs.EditorCode.GDSnapShot_9595textObjects2= [];
-gdjs.EditorCode.GDSnapShot_9595textObjects3= [];
 gdjs.EditorCode.GDDetail_9595overlayObjects1= [];
 gdjs.EditorCode.GDDetail_9595overlayObjects2= [];
-gdjs.EditorCode.GDDetail_9595overlayObjects3= [];
 gdjs.EditorCode.GDNameObjects1= [];
 gdjs.EditorCode.GDNameObjects2= [];
-gdjs.EditorCode.GDNameObjects3= [];
 gdjs.EditorCode.GDTextToImgObjects1= [];
 gdjs.EditorCode.GDTextToImgObjects2= [];
-gdjs.EditorCode.GDTextToImgObjects3= [];
 gdjs.EditorCode.GDsnap_9595shotObjects1= [];
 gdjs.EditorCode.GDsnap_9595shotObjects2= [];
-gdjs.EditorCode.GDsnap_9595shotObjects3= [];
 gdjs.EditorCode.GDNewShapePainterObjects1= [];
 gdjs.EditorCode.GDNewShapePainterObjects2= [];
-gdjs.EditorCode.GDNewShapePainterObjects3= [];
 gdjs.EditorCode.GDOSCCVObjects1= [];
 gdjs.EditorCode.GDOSCCVObjects2= [];
-gdjs.EditorCode.GDOSCCVObjects3= [];
 gdjs.EditorCode.GDOSCFMObjects1= [];
 gdjs.EditorCode.GDOSCFMObjects2= [];
-gdjs.EditorCode.GDOSCFMObjects3= [];
 gdjs.EditorCode.GDOSCMODObjects1= [];
 gdjs.EditorCode.GDOSCMODObjects2= [];
-gdjs.EditorCode.GDOSCMODObjects3= [];
 gdjs.EditorCode.GDVCFCUTOFFObjects1= [];
 gdjs.EditorCode.GDVCFCUTOFFObjects2= [];
-gdjs.EditorCode.GDVCFCUTOFFObjects3= [];
 gdjs.EditorCode.GDVCSRESObjects1= [];
 gdjs.EditorCode.GDVCSRESObjects2= [];
-gdjs.EditorCode.GDVCSRESObjects3= [];
 gdjs.EditorCode.GDMIX1Objects1= [];
 gdjs.EditorCode.GDMIX1Objects2= [];
-gdjs.EditorCode.GDMIX1Objects3= [];
 gdjs.EditorCode.GDMIX2Objects1= [];
 gdjs.EditorCode.GDMIX2Objects2= [];
-gdjs.EditorCode.GDMIX2Objects3= [];
 gdjs.EditorCode.GDVCMIXObjects1= [];
 gdjs.EditorCode.GDVCMIXObjects2= [];
-gdjs.EditorCode.GDVCMIXObjects3= [];
 gdjs.EditorCode.GDMULTIObjects1= [];
 gdjs.EditorCode.GDMULTIObjects2= [];
-gdjs.EditorCode.GDMULTIObjects3= [];
 gdjs.EditorCode.GDLFORATEObjects1= [];
 gdjs.EditorCode.GDLFORATEObjects2= [];
-gdjs.EditorCode.GDLFORATEObjects3= [];
 gdjs.EditorCode.GDVCACVObjects1= [];
 gdjs.EditorCode.GDVCACVObjects2= [];
-gdjs.EditorCode.GDVCACVObjects3= [];
 gdjs.EditorCode.GDENVGATEObjects1= [];
 gdjs.EditorCode.GDENVGATEObjects2= [];
-gdjs.EditorCode.GDENVGATEObjects3= [];
 gdjs.EditorCode.GDHOLDObjects1= [];
 gdjs.EditorCode.GDHOLDObjects2= [];
-gdjs.EditorCode.GDHOLDObjects3= [];
 gdjs.EditorCode.GDRESETObjects1= [];
 gdjs.EditorCode.GDRESETObjects2= [];
-gdjs.EditorCode.GDRESETObjects3= [];
 gdjs.EditorCode.GDPLAYSTOPObjects1= [];
 gdjs.EditorCode.GDPLAYSTOPObjects2= [];
-gdjs.EditorCode.GDPLAYSTOPObjects3= [];
 gdjs.EditorCode.GDTEMPOObjects1= [];
 gdjs.EditorCode.GDTEMPOObjects2= [];
-gdjs.EditorCode.GDTEMPOObjects3= [];
 gdjs.EditorCode.GDEXTAUXObjects1= [];
 gdjs.EditorCode.GDEXTAUXObjects2= [];
-gdjs.EditorCode.GDEXTAUXObjects3= [];
 gdjs.EditorCode.GDMIXCVObjects1= [];
 gdjs.EditorCode.GDMIXCVObjects2= [];
-gdjs.EditorCode.GDMIXCVObjects3= [];
 gdjs.EditorCode.GDtesttextObjects1= [];
 gdjs.EditorCode.GDtesttextObjects2= [];
-gdjs.EditorCode.GDtesttextObjects3= [];
 gdjs.EditorCode.GDytextObjects1= [];
 gdjs.EditorCode.GDytextObjects2= [];
-gdjs.EditorCode.GDytextObjects3= [];
 gdjs.EditorCode.GDMULTI1OObjects1= [];
 gdjs.EditorCode.GDMULTI1OObjects2= [];
-gdjs.EditorCode.GDMULTI1OObjects3= [];
 gdjs.EditorCode.GDMULTI2OObjects1= [];
 gdjs.EditorCode.GDMULTI2OObjects2= [];
-gdjs.EditorCode.GDMULTI2OObjects3= [];
 gdjs.EditorCode.GDOSCPULSEOObjects1= [];
 gdjs.EditorCode.GDOSCPULSEOObjects2= [];
-gdjs.EditorCode.GDOSCPULSEOObjects3= [];
 gdjs.EditorCode.GDOSCSAWOObjects1= [];
 gdjs.EditorCode.GDOSCSAWOObjects2= [];
-gdjs.EditorCode.GDOSCSAWOObjects3= [];
 gdjs.EditorCode.GDENVOObjects1= [];
 gdjs.EditorCode.GDENVOObjects2= [];
-gdjs.EditorCode.GDENVOObjects3= [];
 gdjs.EditorCode.GDNOISEOObjects1= [];
 gdjs.EditorCode.GDNOISEOObjects2= [];
-gdjs.EditorCode.GDNOISEOObjects3= [];
 gdjs.EditorCode.GDVCALINEOObjects1= [];
 gdjs.EditorCode.GDVCALINEOObjects2= [];
-gdjs.EditorCode.GDVCALINEOObjects3= [];
 gdjs.EditorCode.GDLFOTRIOObjects1= [];
 gdjs.EditorCode.GDLFOTRIOObjects2= [];
-gdjs.EditorCode.GDLFOTRIOObjects3= [];
 gdjs.EditorCode.GDLFOSQUOObjects1= [];
 gdjs.EditorCode.GDLFOSQUOObjects2= [];
-gdjs.EditorCode.GDLFOSQUOObjects3= [];
 gdjs.EditorCode.GDVCMIXOObjects1= [];
 gdjs.EditorCode.GDVCMIXOObjects2= [];
-gdjs.EditorCode.GDVCMIXOObjects3= [];
 gdjs.EditorCode.GDASSIGNOObjects1= [];
 gdjs.EditorCode.GDASSIGNOObjects2= [];
-gdjs.EditorCode.GDASSIGNOObjects3= [];
 gdjs.EditorCode.GDKBCVOObjects1= [];
 gdjs.EditorCode.GDKBCVOObjects2= [];
-gdjs.EditorCode.GDKBCVOObjects3= [];
 gdjs.EditorCode.GDGATEOObjects1= [];
 gdjs.EditorCode.GDGATEOObjects2= [];
-gdjs.EditorCode.GDGATEOObjects3= [];
 gdjs.EditorCode.GDVCFOObjects1= [];
 gdjs.EditorCode.GDVCFOObjects2= [];
-gdjs.EditorCode.GDVCFOObjects3= [];
 gdjs.EditorCode.GDPatchObjects1= [];
 gdjs.EditorCode.GDPatchObjects2= [];
-gdjs.EditorCode.GDPatchObjects3= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects2= [];
-gdjs.EditorCode.GDGlobal_9595PlayObjects3= [];
 gdjs.EditorCode.GDGlobal_9595EditorObjects1= [];
 gdjs.EditorCode.GDGlobal_9595EditorObjects2= [];
-gdjs.EditorCode.GDGlobal_9595EditorObjects3= [];
 gdjs.EditorCode.GDGlobal_9595HomeObjects1= [];
 gdjs.EditorCode.GDGlobal_9595HomeObjects2= [];
-gdjs.EditorCode.GDGlobal_9595HomeObjects3= [];
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects1= [];
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects2= [];
-gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects3= [];
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1= [];
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects2= [];
-gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects3= [];
 gdjs.EditorCode.GDGlobal_9595BaseObjects1= [];
 gdjs.EditorCode.GDGlobal_9595BaseObjects2= [];
-gdjs.EditorCode.GDGlobal_9595BaseObjects3= [];
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects1= [];
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects2= [];
-gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects3= [];
 gdjs.EditorCode.GDAutoPlayObjects1= [];
 gdjs.EditorCode.GDAutoPlayObjects2= [];
-gdjs.EditorCode.GDAutoPlayObjects3= [];
 gdjs.EditorCode.GDLoading_9595alertObjects1= [];
 gdjs.EditorCode.GDLoading_9595alertObjects2= [];
-gdjs.EditorCode.GDLoading_9595alertObjects3= [];
 gdjs.EditorCode.GDTri_9595Blank_9595Objects1= [];
 gdjs.EditorCode.GDTri_9595Blank_9595Objects2= [];
-gdjs.EditorCode.GDTri_9595Blank_9595Objects3= [];
 gdjs.EditorCode.GDSnapShotObjects1= [];
 gdjs.EditorCode.GDSnapShotObjects2= [];
-gdjs.EditorCode.GDSnapShotObjects3= [];
 gdjs.EditorCode.GDBackgroundObjects1= [];
 gdjs.EditorCode.GDBackgroundObjects2= [];
-gdjs.EditorCode.GDBackgroundObjects3= [];
 gdjs.EditorCode.GDfadeObjects1= [];
 gdjs.EditorCode.GDfadeObjects2= [];
-gdjs.EditorCode.GDfadeObjects3= [];
 gdjs.EditorCode.GDSquareWhiteSliderObjects1= [];
 gdjs.EditorCode.GDSquareWhiteSliderObjects2= [];
-gdjs.EditorCode.GDSquareWhiteSliderObjects3= [];
 gdjs.EditorCode.GDtop_9595titleObjects1= [];
 gdjs.EditorCode.GDtop_9595titleObjects2= [];
-gdjs.EditorCode.GDtop_9595titleObjects3= [];
 gdjs.EditorCode.GDShadowObjects1= [];
 gdjs.EditorCode.GDShadowObjects2= [];
-gdjs.EditorCode.GDShadowObjects3= [];
 
 
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDKnobObjects1Objects = Hashtable.newFrom({"Knob": gdjs.EditorCode.GDKnobObjects1});
@@ -198,58 +137,48 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Obje
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Objects = Hashtable.newFrom({"Global_Home": gdjs.EditorCode.GDGlobal_9595HomeObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595PlayObjects1Objects = Hashtable.newFrom({"Global_Play": gdjs.EditorCode.GDGlobal_9595PlayObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595EditorObjects1Objects = Hashtable.newFrom({"Global_Editor": gdjs.EditorCode.GDGlobal_9595EditorObjects1});
+gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDSnapShotObjects1Objects = Hashtable.newFrom({"SnapShot": gdjs.EditorCode.GDSnapShotObjects1});
+gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDSnapShotObjects1Objects = Hashtable.newFrom({"SnapShot": gdjs.EditorCode.GDSnapShotObjects1});
 gdjs.EditorCode.eventsList0 = function(runtimeScene) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects2);
 
 let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDNameObjects2.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDNameObjects2[i].getBehavior("Text").getText() != "" ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDNameObjects2[k] = gdjs.EditorCode.GDNameObjects2[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDNameObjects2.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene);
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects2);
-/* Reuse gdjs.EditorCode.GDNameObjects2 */
-gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImgObjects2);
+{
+gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
+gdjs.copyArray(runtimeScene.getObjects("SnapShot"), gdjs.EditorCode.GDSnapShotObjects1);
+gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImgObjects1);
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "screenshot");
 }
-{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects2.length ;i < len;++i) {
-    gdjs.EditorCode.GDTextToImgObjects2[i].getBehavior("Text").setText((( gdjs.EditorCode.GDInstuctionsObjects2.length === 0 ) ? "" :gdjs.EditorCode.GDInstuctionsObjects2[0].getBehavior("Text").getText()));
+{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").setText((( gdjs.EditorCode.GDInstuctionsObjects1.length === 0 ) ? "" :gdjs.EditorCode.GDInstuctionsObjects1[0].getBehavior("Text").getText()));
 }
 }
-{gdjs.screenshot.takeScreenshot(runtimeScene, gdjs.fileSystem.getDesktopPath(runtimeScene) + gdjs.fileSystem.getPathDelimiter() + (( gdjs.EditorCode.GDNameObjects2.length === 0 ) ? "" :gdjs.EditorCode.GDNameObjects2[0].getBehavior("Text").getText()) + ".Patch.png");
+{for(var i = 0, len = gdjs.EditorCode.GDSnapShotObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDSnapShotObjects1[i].hide(false);
 }
 }
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene));
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
-{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNameObjects1[i].getBehavior("Flash").Flash(0.5, null);
+{for(var i = 0, len = gdjs.EditorCode.GDKnobObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDKnobObjects1[i].setLayer("Screenshot");
 }
 }
-{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNameObjects1[i].setPlaceholder("Error, saving is not supported on the web");
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "bk");
 }
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "");
+}
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "Patchbay");
+}
+{gdjs.evtsExt__RenderToSprite__RenderSceneArea.func(runtimeScene, gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDSnapShotObjects1Objects, 0, 0, 1920, 1080, null);
+}
+{gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.func(runtimeScene, gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDSnapShotObjects1Objects, null);
+}
+{gdjs.evtTools.camera.showLayer(runtimeScene, "bk");
+}
+{gdjs.evtTools.camera.showLayer(runtimeScene, "");
+}
+{gdjs.evtTools.camera.showLayer(runtimeScene, "Patchbay");
 }
 }
 
@@ -258,92 +187,8 @@ gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
 
 };gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 
-{
-
-/* Reuse gdjs.EditorCode.GDPatchObjects1 */
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "screenshot") >= 5;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDPatchObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDPatchObjects1[i].getBehavior("Animation").getAnimationIndex() == 1 ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDPatchObjects1[k] = gdjs.EditorCode.GDPatchObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDPatchObjects1.length = k;
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDNameObjects1 */
-{gdjs.screenshot.takeScreenshot(runtimeScene, gdjs.fileSystem.getDesktopPath(runtimeScene) + gdjs.fileSystem.getPathDelimiter() + (( gdjs.EditorCode.GDNameObjects1.length === 0 ) ? "" :gdjs.EditorCode.GDNameObjects1[0].getBehavior("Text").getText()) + ".Patch.png");
-}
-}
-
-}
-
-
-};gdjs.EditorCode.eventsList2 = function(runtimeScene) {
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "screenshot") >= 2;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDNameObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDNameObjects1[i].getBehavior("Text").getText() != "" ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDNameObjects1[k] = gdjs.EditorCode.GDNameObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDNameObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene);
-}
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects1);
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1);
-gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImgObjects1);
-{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").setText((( gdjs.EditorCode.GDInstuctionsObjects1.length === 0 ) ? "" :gdjs.EditorCode.GDInstuctionsObjects1[0].getBehavior("Text").getText()));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDTextToImgObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDTextToImgObjects1[i].getBehavior("Text").getText() + (".bay"));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].hide(false);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDPatchObjects1[i].hide(false);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDPatchObjects1[i].getBehavior("Animation").setAnimationIndex(1);
-}
-}
-
-{ //Subevents
-gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
-}
-
-}
-
-
 };gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.EditorCode.eventsList3 = function(runtimeScene) {
+gdjs.EditorCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -690,39 +535,6 @@ let isConditionTrue_0 = false;
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Name"), gdjs.EditorCode.GDNameObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LSystem");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDNameObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDNameObjects1[i].getBehavior("Text").getText() == "" ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDNameObjects1[k] = gdjs.EditorCode.GDNameObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDNameObjects1.length = k;
-}
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDNameObjects1 */
-{for(var i = 0, len = gdjs.EditorCode.GDNameObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNameObjects1[i].getBehavior("Flash").Flash(0.5, null);
-}
-}
-}
-
-}
-
-
-{
-
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
@@ -753,7 +565,7 @@ isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.EditorCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
 }
 
 }
@@ -2236,372 +2048,250 @@ runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
-gdjs.EditorCode.GDKnobObjects3.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects1.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects2.length = 0;
-gdjs.EditorCode.GDEdit_9595ToggleObjects3.length = 0;
 gdjs.EditorCode.GDInstuctionsObjects1.length = 0;
 gdjs.EditorCode.GDInstuctionsObjects2.length = 0;
-gdjs.EditorCode.GDInstuctionsObjects3.length = 0;
 gdjs.EditorCode.GDDetail_9595modeObjects1.length = 0;
 gdjs.EditorCode.GDDetail_9595modeObjects2.length = 0;
-gdjs.EditorCode.GDDetail_9595modeObjects3.length = 0;
 gdjs.EditorCode.GDSnapShot_9595textObjects1.length = 0;
 gdjs.EditorCode.GDSnapShot_9595textObjects2.length = 0;
-gdjs.EditorCode.GDSnapShot_9595textObjects3.length = 0;
 gdjs.EditorCode.GDDetail_9595overlayObjects1.length = 0;
 gdjs.EditorCode.GDDetail_9595overlayObjects2.length = 0;
-gdjs.EditorCode.GDDetail_9595overlayObjects3.length = 0;
 gdjs.EditorCode.GDNameObjects1.length = 0;
 gdjs.EditorCode.GDNameObjects2.length = 0;
-gdjs.EditorCode.GDNameObjects3.length = 0;
 gdjs.EditorCode.GDTextToImgObjects1.length = 0;
 gdjs.EditorCode.GDTextToImgObjects2.length = 0;
-gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
-gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
-gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
 gdjs.EditorCode.GDOSCCVObjects1.length = 0;
 gdjs.EditorCode.GDOSCCVObjects2.length = 0;
-gdjs.EditorCode.GDOSCCVObjects3.length = 0;
 gdjs.EditorCode.GDOSCFMObjects1.length = 0;
 gdjs.EditorCode.GDOSCFMObjects2.length = 0;
-gdjs.EditorCode.GDOSCFMObjects3.length = 0;
 gdjs.EditorCode.GDOSCMODObjects1.length = 0;
 gdjs.EditorCode.GDOSCMODObjects2.length = 0;
-gdjs.EditorCode.GDOSCMODObjects3.length = 0;
 gdjs.EditorCode.GDVCFCUTOFFObjects1.length = 0;
 gdjs.EditorCode.GDVCFCUTOFFObjects2.length = 0;
-gdjs.EditorCode.GDVCFCUTOFFObjects3.length = 0;
 gdjs.EditorCode.GDVCSRESObjects1.length = 0;
 gdjs.EditorCode.GDVCSRESObjects2.length = 0;
-gdjs.EditorCode.GDVCSRESObjects3.length = 0;
 gdjs.EditorCode.GDMIX1Objects1.length = 0;
 gdjs.EditorCode.GDMIX1Objects2.length = 0;
-gdjs.EditorCode.GDMIX1Objects3.length = 0;
 gdjs.EditorCode.GDMIX2Objects1.length = 0;
 gdjs.EditorCode.GDMIX2Objects2.length = 0;
-gdjs.EditorCode.GDMIX2Objects3.length = 0;
 gdjs.EditorCode.GDVCMIXObjects1.length = 0;
 gdjs.EditorCode.GDVCMIXObjects2.length = 0;
-gdjs.EditorCode.GDVCMIXObjects3.length = 0;
 gdjs.EditorCode.GDMULTIObjects1.length = 0;
 gdjs.EditorCode.GDMULTIObjects2.length = 0;
-gdjs.EditorCode.GDMULTIObjects3.length = 0;
 gdjs.EditorCode.GDLFORATEObjects1.length = 0;
 gdjs.EditorCode.GDLFORATEObjects2.length = 0;
-gdjs.EditorCode.GDLFORATEObjects3.length = 0;
 gdjs.EditorCode.GDVCACVObjects1.length = 0;
 gdjs.EditorCode.GDVCACVObjects2.length = 0;
-gdjs.EditorCode.GDVCACVObjects3.length = 0;
 gdjs.EditorCode.GDENVGATEObjects1.length = 0;
 gdjs.EditorCode.GDENVGATEObjects2.length = 0;
-gdjs.EditorCode.GDENVGATEObjects3.length = 0;
 gdjs.EditorCode.GDHOLDObjects1.length = 0;
 gdjs.EditorCode.GDHOLDObjects2.length = 0;
-gdjs.EditorCode.GDHOLDObjects3.length = 0;
 gdjs.EditorCode.GDRESETObjects1.length = 0;
 gdjs.EditorCode.GDRESETObjects2.length = 0;
-gdjs.EditorCode.GDRESETObjects3.length = 0;
 gdjs.EditorCode.GDPLAYSTOPObjects1.length = 0;
 gdjs.EditorCode.GDPLAYSTOPObjects2.length = 0;
-gdjs.EditorCode.GDPLAYSTOPObjects3.length = 0;
 gdjs.EditorCode.GDTEMPOObjects1.length = 0;
 gdjs.EditorCode.GDTEMPOObjects2.length = 0;
-gdjs.EditorCode.GDTEMPOObjects3.length = 0;
 gdjs.EditorCode.GDEXTAUXObjects1.length = 0;
 gdjs.EditorCode.GDEXTAUXObjects2.length = 0;
-gdjs.EditorCode.GDEXTAUXObjects3.length = 0;
 gdjs.EditorCode.GDMIXCVObjects1.length = 0;
 gdjs.EditorCode.GDMIXCVObjects2.length = 0;
-gdjs.EditorCode.GDMIXCVObjects3.length = 0;
 gdjs.EditorCode.GDtesttextObjects1.length = 0;
 gdjs.EditorCode.GDtesttextObjects2.length = 0;
-gdjs.EditorCode.GDtesttextObjects3.length = 0;
 gdjs.EditorCode.GDytextObjects1.length = 0;
 gdjs.EditorCode.GDytextObjects2.length = 0;
-gdjs.EditorCode.GDytextObjects3.length = 0;
 gdjs.EditorCode.GDMULTI1OObjects1.length = 0;
 gdjs.EditorCode.GDMULTI1OObjects2.length = 0;
-gdjs.EditorCode.GDMULTI1OObjects3.length = 0;
 gdjs.EditorCode.GDMULTI2OObjects1.length = 0;
 gdjs.EditorCode.GDMULTI2OObjects2.length = 0;
-gdjs.EditorCode.GDMULTI2OObjects3.length = 0;
 gdjs.EditorCode.GDOSCPULSEOObjects1.length = 0;
 gdjs.EditorCode.GDOSCPULSEOObjects2.length = 0;
-gdjs.EditorCode.GDOSCPULSEOObjects3.length = 0;
 gdjs.EditorCode.GDOSCSAWOObjects1.length = 0;
 gdjs.EditorCode.GDOSCSAWOObjects2.length = 0;
-gdjs.EditorCode.GDOSCSAWOObjects3.length = 0;
 gdjs.EditorCode.GDENVOObjects1.length = 0;
 gdjs.EditorCode.GDENVOObjects2.length = 0;
-gdjs.EditorCode.GDENVOObjects3.length = 0;
 gdjs.EditorCode.GDNOISEOObjects1.length = 0;
 gdjs.EditorCode.GDNOISEOObjects2.length = 0;
-gdjs.EditorCode.GDNOISEOObjects3.length = 0;
 gdjs.EditorCode.GDVCALINEOObjects1.length = 0;
 gdjs.EditorCode.GDVCALINEOObjects2.length = 0;
-gdjs.EditorCode.GDVCALINEOObjects3.length = 0;
 gdjs.EditorCode.GDLFOTRIOObjects1.length = 0;
 gdjs.EditorCode.GDLFOTRIOObjects2.length = 0;
-gdjs.EditorCode.GDLFOTRIOObjects3.length = 0;
 gdjs.EditorCode.GDLFOSQUOObjects1.length = 0;
 gdjs.EditorCode.GDLFOSQUOObjects2.length = 0;
-gdjs.EditorCode.GDLFOSQUOObjects3.length = 0;
 gdjs.EditorCode.GDVCMIXOObjects1.length = 0;
 gdjs.EditorCode.GDVCMIXOObjects2.length = 0;
-gdjs.EditorCode.GDVCMIXOObjects3.length = 0;
 gdjs.EditorCode.GDASSIGNOObjects1.length = 0;
 gdjs.EditorCode.GDASSIGNOObjects2.length = 0;
-gdjs.EditorCode.GDASSIGNOObjects3.length = 0;
 gdjs.EditorCode.GDKBCVOObjects1.length = 0;
 gdjs.EditorCode.GDKBCVOObjects2.length = 0;
-gdjs.EditorCode.GDKBCVOObjects3.length = 0;
 gdjs.EditorCode.GDGATEOObjects1.length = 0;
 gdjs.EditorCode.GDGATEOObjects2.length = 0;
-gdjs.EditorCode.GDGATEOObjects3.length = 0;
 gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
-gdjs.EditorCode.GDVCFOObjects3.length = 0;
 gdjs.EditorCode.GDPatchObjects1.length = 0;
 gdjs.EditorCode.GDPatchObjects2.length = 0;
-gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595EditorObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595HomeObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595HomeObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595HomeObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595BaseObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595BaseObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595BaseObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects3.length = 0;
 gdjs.EditorCode.GDAutoPlayObjects1.length = 0;
 gdjs.EditorCode.GDAutoPlayObjects2.length = 0;
-gdjs.EditorCode.GDAutoPlayObjects3.length = 0;
 gdjs.EditorCode.GDLoading_9595alertObjects1.length = 0;
 gdjs.EditorCode.GDLoading_9595alertObjects2.length = 0;
-gdjs.EditorCode.GDLoading_9595alertObjects3.length = 0;
 gdjs.EditorCode.GDTri_9595Blank_9595Objects1.length = 0;
 gdjs.EditorCode.GDTri_9595Blank_9595Objects2.length = 0;
-gdjs.EditorCode.GDTri_9595Blank_9595Objects3.length = 0;
 gdjs.EditorCode.GDSnapShotObjects1.length = 0;
 gdjs.EditorCode.GDSnapShotObjects2.length = 0;
-gdjs.EditorCode.GDSnapShotObjects3.length = 0;
 gdjs.EditorCode.GDBackgroundObjects1.length = 0;
 gdjs.EditorCode.GDBackgroundObjects2.length = 0;
-gdjs.EditorCode.GDBackgroundObjects3.length = 0;
 gdjs.EditorCode.GDfadeObjects1.length = 0;
 gdjs.EditorCode.GDfadeObjects2.length = 0;
-gdjs.EditorCode.GDfadeObjects3.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects2.length = 0;
-gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
-gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
 gdjs.EditorCode.GDShadowObjects1.length = 0;
 gdjs.EditorCode.GDShadowObjects2.length = 0;
-gdjs.EditorCode.GDShadowObjects3.length = 0;
 
-gdjs.EditorCode.eventsList3(runtimeScene);
+gdjs.EditorCode.eventsList2(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
-gdjs.EditorCode.GDKnobObjects3.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects1.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects2.length = 0;
-gdjs.EditorCode.GDEdit_9595ToggleObjects3.length = 0;
 gdjs.EditorCode.GDInstuctionsObjects1.length = 0;
 gdjs.EditorCode.GDInstuctionsObjects2.length = 0;
-gdjs.EditorCode.GDInstuctionsObjects3.length = 0;
 gdjs.EditorCode.GDDetail_9595modeObjects1.length = 0;
 gdjs.EditorCode.GDDetail_9595modeObjects2.length = 0;
-gdjs.EditorCode.GDDetail_9595modeObjects3.length = 0;
 gdjs.EditorCode.GDSnapShot_9595textObjects1.length = 0;
 gdjs.EditorCode.GDSnapShot_9595textObjects2.length = 0;
-gdjs.EditorCode.GDSnapShot_9595textObjects3.length = 0;
 gdjs.EditorCode.GDDetail_9595overlayObjects1.length = 0;
 gdjs.EditorCode.GDDetail_9595overlayObjects2.length = 0;
-gdjs.EditorCode.GDDetail_9595overlayObjects3.length = 0;
 gdjs.EditorCode.GDNameObjects1.length = 0;
 gdjs.EditorCode.GDNameObjects2.length = 0;
-gdjs.EditorCode.GDNameObjects3.length = 0;
 gdjs.EditorCode.GDTextToImgObjects1.length = 0;
 gdjs.EditorCode.GDTextToImgObjects2.length = 0;
-gdjs.EditorCode.GDTextToImgObjects3.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects1.length = 0;
 gdjs.EditorCode.GDsnap_9595shotObjects2.length = 0;
-gdjs.EditorCode.GDsnap_9595shotObjects3.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects1.length = 0;
 gdjs.EditorCode.GDNewShapePainterObjects2.length = 0;
-gdjs.EditorCode.GDNewShapePainterObjects3.length = 0;
 gdjs.EditorCode.GDOSCCVObjects1.length = 0;
 gdjs.EditorCode.GDOSCCVObjects2.length = 0;
-gdjs.EditorCode.GDOSCCVObjects3.length = 0;
 gdjs.EditorCode.GDOSCFMObjects1.length = 0;
 gdjs.EditorCode.GDOSCFMObjects2.length = 0;
-gdjs.EditorCode.GDOSCFMObjects3.length = 0;
 gdjs.EditorCode.GDOSCMODObjects1.length = 0;
 gdjs.EditorCode.GDOSCMODObjects2.length = 0;
-gdjs.EditorCode.GDOSCMODObjects3.length = 0;
 gdjs.EditorCode.GDVCFCUTOFFObjects1.length = 0;
 gdjs.EditorCode.GDVCFCUTOFFObjects2.length = 0;
-gdjs.EditorCode.GDVCFCUTOFFObjects3.length = 0;
 gdjs.EditorCode.GDVCSRESObjects1.length = 0;
 gdjs.EditorCode.GDVCSRESObjects2.length = 0;
-gdjs.EditorCode.GDVCSRESObjects3.length = 0;
 gdjs.EditorCode.GDMIX1Objects1.length = 0;
 gdjs.EditorCode.GDMIX1Objects2.length = 0;
-gdjs.EditorCode.GDMIX1Objects3.length = 0;
 gdjs.EditorCode.GDMIX2Objects1.length = 0;
 gdjs.EditorCode.GDMIX2Objects2.length = 0;
-gdjs.EditorCode.GDMIX2Objects3.length = 0;
 gdjs.EditorCode.GDVCMIXObjects1.length = 0;
 gdjs.EditorCode.GDVCMIXObjects2.length = 0;
-gdjs.EditorCode.GDVCMIXObjects3.length = 0;
 gdjs.EditorCode.GDMULTIObjects1.length = 0;
 gdjs.EditorCode.GDMULTIObjects2.length = 0;
-gdjs.EditorCode.GDMULTIObjects3.length = 0;
 gdjs.EditorCode.GDLFORATEObjects1.length = 0;
 gdjs.EditorCode.GDLFORATEObjects2.length = 0;
-gdjs.EditorCode.GDLFORATEObjects3.length = 0;
 gdjs.EditorCode.GDVCACVObjects1.length = 0;
 gdjs.EditorCode.GDVCACVObjects2.length = 0;
-gdjs.EditorCode.GDVCACVObjects3.length = 0;
 gdjs.EditorCode.GDENVGATEObjects1.length = 0;
 gdjs.EditorCode.GDENVGATEObjects2.length = 0;
-gdjs.EditorCode.GDENVGATEObjects3.length = 0;
 gdjs.EditorCode.GDHOLDObjects1.length = 0;
 gdjs.EditorCode.GDHOLDObjects2.length = 0;
-gdjs.EditorCode.GDHOLDObjects3.length = 0;
 gdjs.EditorCode.GDRESETObjects1.length = 0;
 gdjs.EditorCode.GDRESETObjects2.length = 0;
-gdjs.EditorCode.GDRESETObjects3.length = 0;
 gdjs.EditorCode.GDPLAYSTOPObjects1.length = 0;
 gdjs.EditorCode.GDPLAYSTOPObjects2.length = 0;
-gdjs.EditorCode.GDPLAYSTOPObjects3.length = 0;
 gdjs.EditorCode.GDTEMPOObjects1.length = 0;
 gdjs.EditorCode.GDTEMPOObjects2.length = 0;
-gdjs.EditorCode.GDTEMPOObjects3.length = 0;
 gdjs.EditorCode.GDEXTAUXObjects1.length = 0;
 gdjs.EditorCode.GDEXTAUXObjects2.length = 0;
-gdjs.EditorCode.GDEXTAUXObjects3.length = 0;
 gdjs.EditorCode.GDMIXCVObjects1.length = 0;
 gdjs.EditorCode.GDMIXCVObjects2.length = 0;
-gdjs.EditorCode.GDMIXCVObjects3.length = 0;
 gdjs.EditorCode.GDtesttextObjects1.length = 0;
 gdjs.EditorCode.GDtesttextObjects2.length = 0;
-gdjs.EditorCode.GDtesttextObjects3.length = 0;
 gdjs.EditorCode.GDytextObjects1.length = 0;
 gdjs.EditorCode.GDytextObjects2.length = 0;
-gdjs.EditorCode.GDytextObjects3.length = 0;
 gdjs.EditorCode.GDMULTI1OObjects1.length = 0;
 gdjs.EditorCode.GDMULTI1OObjects2.length = 0;
-gdjs.EditorCode.GDMULTI1OObjects3.length = 0;
 gdjs.EditorCode.GDMULTI2OObjects1.length = 0;
 gdjs.EditorCode.GDMULTI2OObjects2.length = 0;
-gdjs.EditorCode.GDMULTI2OObjects3.length = 0;
 gdjs.EditorCode.GDOSCPULSEOObjects1.length = 0;
 gdjs.EditorCode.GDOSCPULSEOObjects2.length = 0;
-gdjs.EditorCode.GDOSCPULSEOObjects3.length = 0;
 gdjs.EditorCode.GDOSCSAWOObjects1.length = 0;
 gdjs.EditorCode.GDOSCSAWOObjects2.length = 0;
-gdjs.EditorCode.GDOSCSAWOObjects3.length = 0;
 gdjs.EditorCode.GDENVOObjects1.length = 0;
 gdjs.EditorCode.GDENVOObjects2.length = 0;
-gdjs.EditorCode.GDENVOObjects3.length = 0;
 gdjs.EditorCode.GDNOISEOObjects1.length = 0;
 gdjs.EditorCode.GDNOISEOObjects2.length = 0;
-gdjs.EditorCode.GDNOISEOObjects3.length = 0;
 gdjs.EditorCode.GDVCALINEOObjects1.length = 0;
 gdjs.EditorCode.GDVCALINEOObjects2.length = 0;
-gdjs.EditorCode.GDVCALINEOObjects3.length = 0;
 gdjs.EditorCode.GDLFOTRIOObjects1.length = 0;
 gdjs.EditorCode.GDLFOTRIOObjects2.length = 0;
-gdjs.EditorCode.GDLFOTRIOObjects3.length = 0;
 gdjs.EditorCode.GDLFOSQUOObjects1.length = 0;
 gdjs.EditorCode.GDLFOSQUOObjects2.length = 0;
-gdjs.EditorCode.GDLFOSQUOObjects3.length = 0;
 gdjs.EditorCode.GDVCMIXOObjects1.length = 0;
 gdjs.EditorCode.GDVCMIXOObjects2.length = 0;
-gdjs.EditorCode.GDVCMIXOObjects3.length = 0;
 gdjs.EditorCode.GDASSIGNOObjects1.length = 0;
 gdjs.EditorCode.GDASSIGNOObjects2.length = 0;
-gdjs.EditorCode.GDASSIGNOObjects3.length = 0;
 gdjs.EditorCode.GDKBCVOObjects1.length = 0;
 gdjs.EditorCode.GDKBCVOObjects2.length = 0;
-gdjs.EditorCode.GDKBCVOObjects3.length = 0;
 gdjs.EditorCode.GDGATEOObjects1.length = 0;
 gdjs.EditorCode.GDGATEOObjects2.length = 0;
-gdjs.EditorCode.GDGATEOObjects3.length = 0;
 gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
-gdjs.EditorCode.GDVCFOObjects3.length = 0;
 gdjs.EditorCode.GDPatchObjects1.length = 0;
 gdjs.EditorCode.GDPatchObjects2.length = 0;
-gdjs.EditorCode.GDPatchObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595PlayObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595EditorObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595HomeObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595HomeObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595HomeObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Top_9595MenuObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595BaseObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595BaseObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595BaseObjects3.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects2.length = 0;
-gdjs.EditorCode.GDGlobal_9595Top_9595LiteObjects3.length = 0;
 gdjs.EditorCode.GDAutoPlayObjects1.length = 0;
 gdjs.EditorCode.GDAutoPlayObjects2.length = 0;
-gdjs.EditorCode.GDAutoPlayObjects3.length = 0;
 gdjs.EditorCode.GDLoading_9595alertObjects1.length = 0;
 gdjs.EditorCode.GDLoading_9595alertObjects2.length = 0;
-gdjs.EditorCode.GDLoading_9595alertObjects3.length = 0;
 gdjs.EditorCode.GDTri_9595Blank_9595Objects1.length = 0;
 gdjs.EditorCode.GDTri_9595Blank_9595Objects2.length = 0;
-gdjs.EditorCode.GDTri_9595Blank_9595Objects3.length = 0;
 gdjs.EditorCode.GDSnapShotObjects1.length = 0;
 gdjs.EditorCode.GDSnapShotObjects2.length = 0;
-gdjs.EditorCode.GDSnapShotObjects3.length = 0;
 gdjs.EditorCode.GDBackgroundObjects1.length = 0;
 gdjs.EditorCode.GDBackgroundObjects2.length = 0;
-gdjs.EditorCode.GDBackgroundObjects3.length = 0;
 gdjs.EditorCode.GDfadeObjects1.length = 0;
 gdjs.EditorCode.GDfadeObjects2.length = 0;
-gdjs.EditorCode.GDfadeObjects3.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.EditorCode.GDSquareWhiteSliderObjects2.length = 0;
-gdjs.EditorCode.GDSquareWhiteSliderObjects3.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects1.length = 0;
 gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
-gdjs.EditorCode.GDtop_9595titleObjects3.length = 0;
 gdjs.EditorCode.GDShadowObjects1.length = 0;
 gdjs.EditorCode.GDShadowObjects2.length = 0;
-gdjs.EditorCode.GDShadowObjects3.length = 0;
 
 
 return;
