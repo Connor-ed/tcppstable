@@ -9,7 +9,7 @@ gdjs.evtsExt__InternetConnectivity__IsDeviceOnline = {};
 gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1bad078 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x926b40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = typeof navigator !== "undefined" && navigator.onLine;
 
@@ -20,7 +20,7 @@ gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x1bad078(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.userFunc0x926b40(runtimeScene, eventsFunctionContext);
 
 }
 

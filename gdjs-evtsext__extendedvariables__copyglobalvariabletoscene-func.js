@@ -9,7 +9,7 @@ gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene = {};
 gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.userFunc0x1b14e70 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.userFunc0x1c0b428 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const globalVariable = runtimeScene.getGame().getVariables().get(eventsFunctionContext.getArgument("globalVariableName"));
 const sceneVariable = runtimeScene.getVariables().get(eventsFunctionContext.getArgument("sceneVariableName"));
@@ -23,7 +23,7 @@ gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.eventsList0 = functio
 {
 
 
-gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.userFunc0x1b14e70(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__CopyGlobalVariableToScene.userFunc0x1c0b428(runtimeScene, eventsFunctionContext);
 
 }
 

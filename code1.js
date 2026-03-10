@@ -91,6 +91,16 @@ gdjs.EditorCode.GDVCFOObjects1= [];
 gdjs.EditorCode.GDVCFOObjects2= [];
 gdjs.EditorCode.GDPatchObjects1= [];
 gdjs.EditorCode.GDPatchObjects2= [];
+gdjs.EditorCode.GDShare_9595BGObjects1= [];
+gdjs.EditorCode.GDShare_9595BGObjects2= [];
+gdjs.EditorCode.GDShare_9595SubmitObjects1= [];
+gdjs.EditorCode.GDShare_9595SubmitObjects2= [];
+gdjs.EditorCode.GDShare_9595CancelObjects1= [];
+gdjs.EditorCode.GDShare_9595CancelObjects2= [];
+gdjs.EditorCode.GDShare_9595NameObjects1= [];
+gdjs.EditorCode.GDShare_9595NameObjects2= [];
+gdjs.EditorCode.GDShare_9595DescObjects1= [];
+gdjs.EditorCode.GDShare_9595DescObjects2= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects1= [];
 gdjs.EditorCode.GDGlobal_9595PlayObjects2= [];
 gdjs.EditorCode.GDGlobal_9595EditorObjects1= [];
@@ -146,6 +156,7 @@ gdjs.EditorCode.eventsList0 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 {
+gdjs.copyArray(runtimeScene.getObjects("Edit_Toggle"), gdjs.EditorCode.GDEdit_9595ToggleObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Instuctions"), gdjs.EditorCode.GDInstuctionsObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Knob"), gdjs.EditorCode.GDKnobObjects1);
 gdjs.copyArray(runtimeScene.getObjects("SnapShot"), gdjs.EditorCode.GDSnapShotObjects1);
@@ -162,6 +173,10 @@ gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImg
 }
 {for(var i = 0, len = gdjs.EditorCode.GDKnobObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDKnobObjects1[i].setLayer("Screenshot");
+}
+}
+{for(var i = 0, len = gdjs.EditorCode.GDEdit_9595ToggleObjects1.length ;i < len;++i) {
+    gdjs.EditorCode.GDEdit_9595ToggleObjects1[i].setLayer("Screenshot");
 }
 }
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "bk");
@@ -185,10 +200,8 @@ gdjs.copyArray(runtimeScene.getObjects("TextToImg"), gdjs.EditorCode.GDTextToImg
 }
 
 
-};gdjs.EditorCode.eventsList1 = function(runtimeScene) {
-
 };gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.EditorCode.eventsList2 = function(runtimeScene) {
+gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -225,6 +238,8 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1
 {for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDPatchObjects1[i].getBehavior("Animation").setAnimationIndex(3);
 }
+}
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "Share");
 }
 }
 
@@ -547,25 +562,6 @@ if (isConditionTrue_0) {
 
 { //Subevents
 gdjs.EditorCode.eventsList0(runtimeScene);} //End of subevents
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LSystem");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
-}
-if (isConditionTrue_0) {
-
-{ //Subevents
-gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
 }
 
 }
@@ -2136,6 +2132,16 @@ gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
 gdjs.EditorCode.GDPatchObjects1.length = 0;
 gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595BGObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595BGObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595SubmitObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595SubmitObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595CancelObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595CancelObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595NameObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595NameObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595DescObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595DescObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects1.length = 0;
@@ -2169,7 +2175,7 @@ gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
 gdjs.EditorCode.GDShadowObjects1.length = 0;
 gdjs.EditorCode.GDShadowObjects2.length = 0;
 
-gdjs.EditorCode.eventsList2(runtimeScene);
+gdjs.EditorCode.eventsList1(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects1.length = 0;
@@ -2260,6 +2266,16 @@ gdjs.EditorCode.GDVCFOObjects1.length = 0;
 gdjs.EditorCode.GDVCFOObjects2.length = 0;
 gdjs.EditorCode.GDPatchObjects1.length = 0;
 gdjs.EditorCode.GDPatchObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595BGObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595BGObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595SubmitObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595SubmitObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595CancelObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595CancelObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595NameObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595NameObjects2.length = 0;
+gdjs.EditorCode.GDShare_9595DescObjects1.length = 0;
+gdjs.EditorCode.GDShare_9595DescObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects1.length = 0;
 gdjs.EditorCode.GDGlobal_9595PlayObjects2.length = 0;
 gdjs.EditorCode.GDGlobal_9595EditorObjects1.length = 0;

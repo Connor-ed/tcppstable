@@ -10,7 +10,7 @@ gdjs.evtsExt__RenderToSprite__RenderScene.idToCallbackMap = new Map();
 gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x1ba72a8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x9237c0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const source = runtimeScene.getRenderer().getPIXIContainer();
 const height = runtimeScene.getLayer("").getCameraHeight();
@@ -65,7 +65,7 @@ gdjs.evtsExt__RenderToSprite__RenderScene.eventsList0 = function(runtimeScene, e
 gdjs.copyArray(eventsFunctionContext.getObjects("renderTarget"), gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1);
 
 const objects = gdjs.evtsExt__RenderToSprite__RenderScene.GDrenderTargetObjects1;
-gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x1ba72a8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderScene.userFunc0x9237c0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

@@ -427,7 +427,7 @@ gdjs.LoadCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x1939ea0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x4226ea8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const objects = runtimeScene.getObjects("Loaded_Input");
 if (objects.length === 0) return;
@@ -447,27 +447,18 @@ input.onchange = (e) => {
     const reader = new FileReader();
     reader.onload = (event) => {
         const result = event.target.result;
-
-        // Guard against uninitialized renderer
-        const renderer = sprite.getRendererObject();
-        if (!renderer) {
-            console.warn("Renderer not ready, retrying...");
-            setTimeout(() => {
-                const r = sprite.getRendererObject();
-                if (r) {
-                    r.texture = PIXI.Texture.from(result);
-                    sprite.setWidth(w);
-                    sprite.setHeight(h);
-                }
-            }, 100);
-        } else {
-            renderer.texture = PIXI.Texture.from(result);
+        const img = new Image();
+        img.onload = () => {
+            const renderer = sprite.getRendererObject();
+            if (!renderer) return;
+            renderer.texture = PIXI.Texture.from(img);
             sprite.setWidth(w);
             sprite.setHeight(h);
-        }
-
-        runtimeScene.getVariables().get("Uploaded_image").setString(result);
-        console.log("Patch Loaded Successfully");
+            runtimeScene.getVariables().get("Uploaded_image").setString(result);
+            console.log("Patch Loaded Successfully");
+        };
+        img.onerror = () => console.error("Image failed to load");
+        img.src = result;
     };
     reader.readAsDataURL(file);
 };
@@ -479,7 +470,7 @@ gdjs.LoadCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x1939ea0(runtimeScene);
+gdjs.LoadCode.userFunc0x4226ea8(runtimeScene);
 
 }
 
@@ -501,12 +492,17 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41069004);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41359780);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Knob_overlay"), gdjs.LoadCode.GDKnob_9595overlayObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Loaded_Input"), gdjs.LoadCode.GDLoaded_9595InputObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.LoadCode.GDLoading_9595alertObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDLoading_9595alertObjects2[i].hide();
+}
+}
 {for(var i = 0, len = gdjs.LoadCode.GDLoaded_9595InputObjects2.length ;i < len;++i) {
     gdjs.LoadCode.GDLoaded_9595InputObjects2[i].hide(false);
 }
@@ -520,6 +516,10 @@ gdjs.copyArray(runtimeScene.getObjects("Loaded_Input"), gdjs.LoadCode.GDLoaded_9
 }
 }
 {gdjs.evtTools.debuggerTools.log(gdjs.evtTools.variable.getFirstVariableString(runtimeScene.getScene().getVariables().getFromIndex(5)), "info", "1");
+}
+{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDLoading_9595alertObjects2[i].getBehavior("Animation").setAnimationIndex(0);
+}
 }
 
 { //Subevents
@@ -1109,6 +1109,32 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == -(1));
 }
 if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.LoadCode.GDLoading_9595alertObjects2);
+{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDLoading_9595alertObjects2[i].hide(false);
+}
+}
+{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects2.length ;i < len;++i) {
+    gdjs.LoadCode.GDLoading_9595alertObjects2[i].getBehavior("Animation").setAnimationIndex(1);
+}
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == -(1));
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
+}
+if (isConditionTrue_0) {
 
 { //Subevents
 gdjs.LoadCode.eventsList5(runtimeScene);} //End of subevents
@@ -1536,10 +1562,6 @@ gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.LoadCode.GDLoading
 gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.LoadCode.GDPatchObjects1);
 {gdjs.evtTools.window.setWindowTitle(runtimeScene, "The Patch Project");
 }
-{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
-    gdjs.LoadCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(0);
-}
-}
 {gdjs.evtTools.sound.preloadMusic(runtimeScene, "E Keys4.wav");
 }
 {gdjs.evtTools.sound.preloadMusic(runtimeScene, "Ow - Ahh1.wav");
@@ -1556,6 +1578,10 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.LoadCode.GDPatchObjects1);
 }
 {for(var i = 0, len = gdjs.LoadCode.GDPatchObjects1.length ;i < len;++i) {
     gdjs.LoadCode.GDPatchObjects1[i].hide();
+}
+}
+{for(var i = 0, len = gdjs.LoadCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
+    gdjs.LoadCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(0);
 }
 }
 }
@@ -1588,6 +1614,8 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "loading_Timer");
+}
 }
 
 }

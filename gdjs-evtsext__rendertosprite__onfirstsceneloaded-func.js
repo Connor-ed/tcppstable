@@ -9,7 +9,7 @@ gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded = {};
 gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1ba4a00 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x91e9c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 gdjs._renderToSprite = {};
 gdjs._renderToSprite.rt = PIXI.RenderTexture.create({ width: 100, height: 100 });
@@ -21,7 +21,7 @@ gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.eventsList0 = function(runtimeS
 {
 
 
-gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1ba4a00(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x91e9c8(runtimeScene, eventsFunctionContext);
 
 }
 

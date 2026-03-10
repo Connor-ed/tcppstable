@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__sprintf = {};
 gdjs.evtsExt__Translate__sprintf.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__sprintf.userFunc0x1da9120 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__sprintf.userFunc0x94a830 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 let string = eventsFunctionContext.getArgument("string");
 let parameters = eventsFunctionContext.getArgument("parameters");
@@ -31,7 +31,7 @@ gdjs.evtsExt__Translate__sprintf.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Translate__sprintf.userFunc0x1da9120(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__sprintf.userFunc0x94a830(runtimeScene, eventsFunctionContext);
 
 }
 
