@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__IsSinglePlayer = {};
 gdjs.evtsExt__THNK__IsSinglePlayer.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__IsSinglePlayer.userFunc0x1da39c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__IsSinglePlayer.userFunc0x28119e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // If we are neither client nor server, we are playing singleplayer.
 eventsFunctionContext.returnValue = !runtimeScene.thnkServer && !runtimeScene.thnkClient;
@@ -20,7 +20,7 @@ gdjs.evtsExt__THNK__IsSinglePlayer.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__THNK__IsSinglePlayer.userFunc0x1da39c0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__IsSinglePlayer.userFunc0x28119e0(runtimeScene, eventsFunctionContext);
 
 }
 

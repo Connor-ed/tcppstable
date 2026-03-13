@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__DuplicatedPath = {};
 gdjs.evtsExt__CurvedMovement__DuplicatedPath.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__DuplicatedPath.userFunc0x1ed94e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__DuplicatedPath.userFunc0x1d9b448 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const createdPathName = eventsFunctionContext.getArgument("CreatedPathName");
 const sourcePathName = eventsFunctionContext.getArgument("SourcePathName");
@@ -27,7 +27,7 @@ gdjs.evtsExt__CurvedMovement__DuplicatedPath.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__CurvedMovement__DuplicatedPath.userFunc0x1ed94e0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__DuplicatedPath.userFunc0x1d9b448(runtimeScene, eventsFunctionContext);
 
 }
 

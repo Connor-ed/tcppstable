@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__DeletePath = {};
 gdjs.evtsExt__CurvedMovement__DeletePath.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x21cb608 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x22097f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 
@@ -24,7 +24,7 @@ gdjs.evtsExt__CurvedMovement__DeletePath.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x21cb608(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__DeletePath.userFunc0x22097f8(runtimeScene, eventsFunctionContext);
 
 }
 

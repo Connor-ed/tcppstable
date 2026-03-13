@@ -9,7 +9,7 @@ gdjs.evtsExt__PopUp__Prompt = {};
 gdjs.evtsExt__PopUp__Prompt.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__PopUp__Prompt.userFunc0x19f2ea8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__Prompt.userFunc0xece9e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const message = eventsFunctionContext.getArgument("Message");
 const defaultText = eventsFunctionContext.getArgument("DefaultText");
@@ -27,7 +27,7 @@ gdjs.evtsExt__PopUp__Prompt.eventsList0 = function(runtimeScene, eventsFunctionC
 {
 
 
-gdjs.evtsExt__PopUp__Prompt.userFunc0x19f2ea8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PopUp__Prompt.userFunc0xece9e8(runtimeScene, eventsFunctionContext);
 
 }
 

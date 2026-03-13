@@ -9,7 +9,7 @@ gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform = {};
 gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1b2ee20 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1b234c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const electron = runtimeScene.getGame().getRenderer().getElectron();
 const callback = eventsFunctionContext.getArgument("callback");
@@ -59,7 +59,7 @@ gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.eventsList0 = functi
 {
 
 
-gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1b2ee20(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Clipboard__AsynchronouslyReadTextCrossPlaform.userFunc0x1b234c8(runtimeScene, eventsFunctionContext);
 
 }
 

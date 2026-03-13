@@ -207,7 +207,7 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Obj
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Objects = Hashtable.newFrom({"Share_Cancel": gdjs.EditorCode.GDShare_9595CancelObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
-gdjs.EditorCode.userFunc0x48c99d8 = function GDJSInlineCode(runtimeScene) {
+gdjs.EditorCode.userFunc0x2c35738 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const name = runtimeScene.getObjects("Share_Name")[0].getString();
 const desc = runtimeScene.getObjects("Share_Desc")[0].getString();
@@ -293,7 +293,7 @@ gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.EditorCode.userFunc0x48c99d8(runtimeScene);
+gdjs.EditorCode.userFunc0x2c35738(runtimeScene);
 
 }
 
@@ -785,7 +785,11 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41094492);
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41131828);
+}
 }
 }
 }
@@ -797,6 +801,8 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "");
 }
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "Patchbay");
+}
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "screenshot_time");
 }
 
 { //Subevents
@@ -811,7 +817,10 @@ gdjs.EditorCode.eventsList1(runtimeScene);} //End of subevents
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41095484);
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "screenshot_time") >= 0.2;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share"));
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.camera.showLayer(runtimeScene, "bk");
@@ -997,6 +1006,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCCVObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDOSCCVObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDOSCCVObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ytext"), gdjs.EditorCode.GDytextObjects1);
@@ -1032,6 +1045,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCFMObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDOSCFMObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDOSCFMObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDOSCFMObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCFMObjects1[0].getCenterXInScene()), null);
@@ -1065,6 +1082,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCMODObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDOSCMODObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDOSCMODObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1100,6 +1121,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCFCUTOFFObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDVCFCUTOFFObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDVCFCUTOFFObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCFCUTOFFObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFCUTOFFObjects1[0].getCenterXInScene()), null);
@@ -1133,6 +1158,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCSRESObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDVCSRESObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDVCSRESObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1168,6 +1197,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIX1Objects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDMIX1Objects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMIX1Objects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMIX1Objects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIX1Objects1[0].getCenterXInScene()), null);
@@ -1201,6 +1234,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIX2Objects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDMIX2Objects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMIX2Objects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1236,6 +1273,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCMIXObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDVCMIXObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDVCMIXObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCMIXObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXObjects1[0].getCenterXInScene()), null);
@@ -1269,6 +1310,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTIObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDMULTIObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMULTIObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1304,6 +1349,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFORATEObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDLFORATEObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDLFORATEObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDLFORATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFORATEObjects1[0].getCenterXInScene()), null);
@@ -1337,6 +1386,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCACVObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDVCACVObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDVCACVObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1372,6 +1425,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDENVGATEObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDENVGATEObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDENVGATEObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDENVGATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVGATEObjects1[0].getCenterXInScene()), null);
@@ -1405,6 +1462,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDHOLDObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDHOLDObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDHOLDObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1440,6 +1501,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDRESETObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDRESETObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDRESETObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDRESETObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDRESETObjects1[0].getCenterXInScene()), null);
@@ -1473,6 +1538,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDPLAYSTOPObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDPLAYSTOPObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDPLAYSTOPObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1508,6 +1577,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDTEMPOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDTEMPOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDTEMPOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDTEMPOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDTEMPOObjects1[0].getCenterXInScene()), null);
@@ -1541,6 +1614,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDEXTAUXObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDEXTAUXObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDEXTAUXObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
@@ -1576,6 +1653,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIXCVObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDMIXCVObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMIXCVObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMIXCVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIXCVObjects1[0].getCenterXInScene()), null);
@@ -1609,6 +1690,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTI1OObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDMULTI1OObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMULTI1OObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
@@ -1660,6 +1745,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTI2OObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDMULTI2OObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDMULTI2OObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterXInScene()), null);
@@ -1709,6 +1798,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCPULSEOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDOSCPULSEOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDOSCPULSEOObjects1 */
@@ -1760,6 +1853,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCSAWOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDOSCSAWOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDOSCSAWOObjects1 */
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterXInScene()), null);
@@ -1809,6 +1906,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDENVOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDENVOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDENVOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
@@ -1860,6 +1961,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDNOISEOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDNOISEOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDNOISEOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterXInScene()), null);
@@ -1909,6 +2014,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCALINEOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDVCALINEOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDVCALINEOObjects1 */
@@ -1960,6 +2069,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFOTRIOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDLFOTRIOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDLFOTRIOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterXInScene()), null);
@@ -2009,6 +2122,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFOSQUOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDLFOSQUOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDLFOSQUOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
@@ -2060,6 +2177,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCMIXOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDVCMIXOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDVCMIXOObjects1 */
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterXInScene()), null);
@@ -2109,6 +2230,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDASSIGNOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDASSIGNOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDASSIGNOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
@@ -2160,6 +2285,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDKBCVOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDKBCVOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDKBCVOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterXInScene()), null);
@@ -2210,6 +2339,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDGATEOObjects1.length;i<l;++i) {
 }
 gdjs.EditorCode.GDGATEOObjects1.length = k;
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
+if (isConditionTrue_0) {
 /* Reuse gdjs.EditorCode.GDGATEOObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 {gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterXInScene()), null);
@@ -2259,6 +2392,10 @@ for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCFOObjects1.length;i<l;++i) {
     }
 }
 gdjs.EditorCode.GDVCFOObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
 /* Reuse gdjs.EditorCode.GDVCFOObjects1 */

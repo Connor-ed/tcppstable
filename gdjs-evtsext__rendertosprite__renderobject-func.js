@@ -11,7 +11,7 @@ gdjs.evtsExt__RenderToSprite__RenderObject.GDsourceObjects1= [];
 gdjs.evtsExt__RenderToSprite__RenderObject.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0x19f9840 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xed4800 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const source = eventsFunctionContext.getObjects("source")[0].getRendererObject();
 const renderTarget = eventsFunctionContext.getObjects("renderTarget")[0].getRendererObject();
@@ -50,7 +50,7 @@ gdjs.evtsExt__RenderToSprite__RenderObject.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0x19f9840(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xed4800(runtimeScene, eventsFunctionContext);
 
 }
 
