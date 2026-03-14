@@ -207,7 +207,7 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Obj
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Objects = Hashtable.newFrom({"Share_Cancel": gdjs.EditorCode.GDShare_9595CancelObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
-gdjs.EditorCode.userFunc0x2c35738 = function GDJSInlineCode(runtimeScene) {
+gdjs.EditorCode.userFunc0xefb400 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const name = runtimeScene.getObjects("Share_Name")[0].getString();
 const desc = runtimeScene.getObjects("Share_Desc")[0].getString();
@@ -293,7 +293,7 @@ gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.EditorCode.userFunc0x2c35738(runtimeScene);
+gdjs.EditorCode.userFunc0xefb400(runtimeScene);
 
 }
 
@@ -788,7 +788,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41131828);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41170260);
 }
 }
 }

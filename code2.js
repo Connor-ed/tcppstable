@@ -427,7 +427,7 @@ gdjs.LoadCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x2c35738 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x19a2058 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log("Loading alert visible:", runtimeScene.getObjects("Loading_alert")[0].isVisible());
 console.log("Loading alert anim:", runtimeScene.getObjects("Loading_alert")[0].getAnimationName());
@@ -437,12 +437,12 @@ gdjs.LoadCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x2c35738(runtimeScene);
+gdjs.LoadCode.userFunc0x19a2058(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x2b7ea98 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x12b9ec0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const objects = runtimeScene.getObjects("Loaded_Input");
 if (objects.length === 0) return;
@@ -485,7 +485,7 @@ gdjs.LoadCode.eventsList5 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x2b7ea98(runtimeScene);
+gdjs.LoadCode.userFunc0x12b9ec0(runtimeScene);
 
 }
 
@@ -507,7 +507,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41408396);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41446828);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects2);
@@ -1116,7 +1116,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41426540);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41464972);
 }
 }
 if (isConditionTrue_0) {
@@ -1155,7 +1155,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41408004);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41446436);
 }
 }
 }
@@ -1176,7 +1176,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41408868);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41447300);
 }
 }
 if (isConditionTrue_0) {
@@ -1247,41 +1247,6 @@ gdjs.copyArray(runtimeScene.getObjects("Knob_overlay"), gdjs.LoadCode.GDKnob_959
 
 { //Subevents
 gdjs.LoadCode.eventsList8(runtimeScene);} //End of subevents
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber() == 1);
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("KBCVO"), gdjs.LoadCode.GDKBCVOObjects2);
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.LoadCode.GDNewShapePainterObjects2);
-{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].setOutlineColor("117;21;30");
-}
-}
-{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), null), (( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].setFillColor("117;21;30");
-}
-}
-{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.LoadCode.GDNewShapePainterObjects2.length ;i < len;++i) {
-    gdjs.LoadCode.GDNewShapePainterObjects2[i].drawCircle((( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterXInScene()), (( gdjs.LoadCode.GDKBCVOObjects2.length === 0 ) ? 0 :gdjs.LoadCode.GDKBCVOObjects2[0].getCenterYInScene()), 18);
-}
-}
 }
 
 }
@@ -1620,7 +1585,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41432684);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41471116);
 }
 }
 if (isConditionTrue_0) {

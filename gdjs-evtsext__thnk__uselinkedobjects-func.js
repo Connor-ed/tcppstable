@@ -10,7 +10,7 @@ gdjs.evtsExt__THNK__UseLinkedObjects.idToCallbackMap = new Map();
 gdjs.evtsExt__THNK__UseLinkedObjects.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x2135fb8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x2059098 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 THNK.players.pickOwnedObjects(eventsFunctionContext.getObjectsLists("Object"));
 eventsFunctionContext.returnValue = true;
@@ -21,7 +21,7 @@ gdjs.evtsExt__THNK__UseLinkedObjects.eventsList0 = function(runtimeScene, events
 {
 
 
-gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x2135fb8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x2059098(runtimeScene, eventsFunctionContext);
 
 }
 

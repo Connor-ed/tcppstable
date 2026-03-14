@@ -9,7 +9,7 @@ gdjs.evtsExt__PopUp__Confirm = {};
 gdjs.evtsExt__PopUp__Confirm.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__PopUp__Confirm.userFunc0xecf0a8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PopUp__Confirm.userFunc0x19fd5a0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const isConfirmed = confirm(eventsFunctionContext.getArgument("Message"));
 runtimeScene
@@ -24,7 +24,7 @@ gdjs.evtsExt__PopUp__Confirm.eventsList0 = function(runtimeScene, eventsFunction
 {
 
 
-gdjs.evtsExt__PopUp__Confirm.userFunc0xecf0a8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PopUp__Confirm.userFunc0x19fd5a0(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__setRemoteUrl = {};
 gdjs.evtsExt__Translate__setRemoteUrl.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__setRemoteUrl.userFunc0x8e8c10 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xed58f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 let path = eventsFunctionContext.getArgument("baseUrl");
 
@@ -34,7 +34,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__Translate__setRemoteUrl.userFunc0x8e8c10(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xed58f0(runtimeScene, eventsFunctionContext);
 
 }
 
