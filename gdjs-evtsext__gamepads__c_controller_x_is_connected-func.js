@@ -9,7 +9,7 @@ gdjs.evtsExt__Gamepads__C_Controller_X_is_connected = {};
 gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.userFunc0xa67fe0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.userFunc0xc7df40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {Gamepad[]} */
 const gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
@@ -31,7 +31,7 @@ gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.userFunc0xa67fe0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Gamepads__C_Controller_X_is_connected.userFunc0xc7df40(runtimeScene, eventsFunctionContext);
 
 }
 

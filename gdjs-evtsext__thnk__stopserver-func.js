@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__StopServer = {};
 gdjs.evtsExt__THNK__StopServer.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__StopServer.userFunc0x183af50 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StopServer.userFunc0x10feca0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkServer) {
     runtimeScene.thnkServer.adapter.close();
@@ -22,7 +22,7 @@ gdjs.evtsExt__THNK__StopServer.eventsList0 = function(runtimeScene, eventsFuncti
 {
 
 
-gdjs.evtsExt__THNK__StopServer.userFunc0x183af50(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__StopServer.userFunc0x10feca0(runtimeScene, eventsFunctionContext);
 
 }
 

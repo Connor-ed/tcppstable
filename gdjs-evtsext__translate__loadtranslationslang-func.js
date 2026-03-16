@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__loadTranslationsLang = {};
 gdjs.evtsExt__Translate__loadTranslationsLang.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0xf89188 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x10c6b20 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let language = eventsFunctionContext.getArgument('language');
 
@@ -59,7 +59,7 @@ let isConditionTrue_0 = false;
 
 
 const objects = [];
-gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0xf89188(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x10c6b20(runtimeScene, objects, eventsFunctionContext);
 
 }
 

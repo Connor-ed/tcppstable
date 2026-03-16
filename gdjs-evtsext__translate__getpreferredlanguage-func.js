@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__getPreferredLanguage = {};
 gdjs.evtsExt__Translate__getPreferredLanguage.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__getPreferredLanguage.userFunc0xcaa0c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__getPreferredLanguage.userFunc0x1f287f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = navigator.language || "en-US";
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__Translate__getPreferredLanguage.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__Translate__getPreferredLanguage.userFunc0xcaa0c0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__getPreferredLanguage.userFunc0x1f287f8(runtimeScene, eventsFunctionContext);
 
 }
 
