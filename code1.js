@@ -207,17 +207,33 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Obj
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Objects = Hashtable.newFrom({"Share_Cancel": gdjs.EditorCode.GDShare_9595CancelObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
-gdjs.EditorCode.userFunc0xcb5568 = function GDJSInlineCode(runtimeScene) {
+gdjs.EditorCode.userFunc0x1bac520 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const name = runtimeScene.getObjects("Share_Name")[0].getString();
 const desc = runtimeScene.getObjects("Share_Desc")[0].getString();
+
 if (!name || name.trim() === "") {
     console.error("No name entered");
     return;
 }
+
 const SUPABASE_URL = 'https://dyuuloipijvkfejfqoay.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5dXVsb2lwaWp2a2ZlamZxb2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNjg2NjQsImV4cCI6MjA4ODY0NDY2NH0.3LkBaKfBLD8rH83944X0iSV-DVQWEsWITulESvY6xzQ';
+
 const pixiRenderer = runtimeScene.getGame().getRenderer()._pixiRenderer;
+
+// Store original background settings
+const originalBgColor = pixiRenderer.background ? pixiRenderer.background.color : pixiRenderer.backgroundColor;
+const originalBgAlpha = pixiRenderer.background ? pixiRenderer.background.alpha : (pixiRenderer.backgroundAlpha ?? 1);
+
+// Set transparent background before capture
+if (pixiRenderer.background) {
+    pixiRenderer.background.color = 0x000000;
+    pixiRenderer.background.alpha = 0;
+} else {
+    pixiRenderer.backgroundColor = 0x000000;
+    pixiRenderer.backgroundAlpha = 0;
+}
 
 // Hide layers
 runtimeScene.getLayer("Share").show(false);
@@ -225,9 +241,23 @@ runtimeScene.getLayer("bk").show(false);
 runtimeScene.getLayer("Base layer").show(false);
 runtimeScene.getLayer("Patchbay").show(false);
 
-// Wait two frames before capturing
 setTimeout(() => {
-    Promise.resolve(pixiRenderer.extract.base64()).then(base64 => {
+    // Use a rectangle matching the exact canvas size so dimensions are preserved
+    const w = pixiRenderer.width;
+    const h = pixiRenderer.height;
+    const region = new PIXI.Rectangle(0, 0, w, h);
+
+    Promise.resolve(pixiRenderer.extract.base64(pixiRenderer.lastObjectRendered, 'image/png', 1, region)).then(base64 => {
+
+        // Restore background
+        if (pixiRenderer.background) {
+            pixiRenderer.background.color = originalBgColor;
+            pixiRenderer.background.alpha = originalBgAlpha;
+        } else {
+            pixiRenderer.backgroundColor = originalBgColor;
+            pixiRenderer.backgroundAlpha = originalBgAlpha;
+        }
+
         // Restore layers
         runtimeScene.getLayer("Share").show(true);
         runtimeScene.getLayer("bk").show(true);
@@ -238,17 +268,21 @@ setTimeout(() => {
             console.error("Screenshot failed");
             return;
         }
+
         if (!base64.includes(',')) {
             base64 = 'data:image/png;base64,' + base64;
         }
+
         const byteString = atob(base64.split(',')[1]);
         const ab = new ArrayBuffer(byteString.length);
         const ia = new Uint8Array(ab);
         for (let i = 0; i < byteString.length; i++) {
             ia[i] = byteString.charCodeAt(i);
         }
+
         const blob = new Blob([ab], { type: 'image/png' });
         const filename = `patch_${Date.now()}.png`;
+
         return fetch(`${SUPABASE_URL}/storage/v1/object/patches/${filename}`, {
             method: 'POST',
             headers: {
@@ -258,7 +292,9 @@ setTimeout(() => {
             body: blob
         }).then(uploadRes => {
             if (!uploadRes.ok) throw new Error("Image upload failed");
+
             const imageUrl = `${SUPABASE_URL}/storage/v1/object/public/patches/${filename}`;
+
             return fetch(`${SUPABASE_URL}/rest/v1/patches`, {
                 method: 'POST',
                 headers: {
@@ -279,13 +315,24 @@ setTimeout(() => {
             console.log("Patch shared successfully!");
             runtimeScene.getLayer("Share").show(false);
         });
+
     }).catch(err => {
         console.error("Share error:", err);
+
+        if (pixiRenderer.background) {
+            pixiRenderer.background.color = originalBgColor;
+            pixiRenderer.background.alpha = originalBgAlpha;
+        } else {
+            pixiRenderer.backgroundColor = originalBgColor;
+            pixiRenderer.backgroundAlpha = originalBgAlpha;
+        }
+
         runtimeScene.getLayer("Share").show(true);
         runtimeScene.getLayer("bk").show(true);
         runtimeScene.getLayer("Base layer").show(true);
         runtimeScene.getLayer("Patchbay").show(true);
     });
+
 }, 100);
 };
 gdjs.EditorCode.eventsList1 = function(runtimeScene) {
@@ -293,7 +340,7 @@ gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.EditorCode.userFunc0xcb5568(runtimeScene);
+gdjs.EditorCode.userFunc0x1bac520(runtimeScene);
 
 }
 
@@ -788,7 +835,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41171692);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(58983708);
 }
 }
 }
@@ -803,6 +850,8 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "Patchbay");
 }
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "screenshot_time");
+}
+{gdjs.evtTools.camera.showLayer(runtimeScene, "Screenshot");
 }
 
 { //Subevents

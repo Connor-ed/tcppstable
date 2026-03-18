@@ -9,7 +9,7 @@ gdjs.evtsExt__TextToSpeech__Speak = {};
 gdjs.evtsExt__TextToSpeech__Speak.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__TextToSpeech__Speak.userFunc0x1b9b670 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextToSpeech__Speak.userFunc0x1b97dc0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
 
@@ -61,7 +61,7 @@ gdjs.evtsExt__TextToSpeech__Speak.eventsList0 = function(runtimeScene, eventsFun
 {
 
 
-gdjs.evtsExt__TextToSpeech__Speak.userFunc0x1b9b670(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__TextToSpeech__Speak.userFunc0x1b97dc0(runtimeScene, eventsFunctionContext);
 
 }
 

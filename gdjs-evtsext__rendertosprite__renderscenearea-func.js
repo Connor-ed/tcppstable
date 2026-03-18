@@ -10,7 +10,7 @@ gdjs.evtsExt__RenderToSprite__RenderSceneArea.idToCallbackMap = new Map();
 gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x1aa8150 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x8fbbc0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const source = runtimeScene.getRenderer().getPIXIContainer();
 source.x = eventsFunctionContext.getArgument("originPositionX") * -1;
@@ -71,7 +71,7 @@ gdjs.evtsExt__RenderToSprite__RenderSceneArea.eventsList0 = function(runtimeScen
 gdjs.copyArray(eventsFunctionContext.getObjects("renderTarget"), gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1);
 
 const objects = gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1;
-gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x1aa8150(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x8fbbc0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

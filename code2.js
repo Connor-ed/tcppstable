@@ -427,7 +427,7 @@ gdjs.LoadCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0xa1f1d0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x2d7f490 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log("Loading alert visible:", runtimeScene.getObjects("Loading_alert")[0].isVisible());
 console.log("Loading alert anim:", runtimeScene.getObjects("Loading_alert")[0].getAnimationName());
@@ -437,12 +437,12 @@ gdjs.LoadCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0xa1f1d0(runtimeScene);
+gdjs.LoadCode.userFunc0x2d7f490(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0xcd9188 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x2b21328 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const objects = runtimeScene.getObjects("Loaded_Input");
 if (objects.length === 0) return;
@@ -485,7 +485,7 @@ gdjs.LoadCode.eventsList5 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0xcd9188(runtimeScene);
+gdjs.LoadCode.userFunc0x2b21328(runtimeScene);
 
 }
 
@@ -507,7 +507,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41448260);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41487180);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects2);
@@ -1116,7 +1116,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41466404);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41505124);
 }
 }
 if (isConditionTrue_0) {
@@ -1155,7 +1155,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41447868);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41486788);
 }
 }
 }
@@ -1176,7 +1176,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41448732);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41503308);
 }
 }
 if (isConditionTrue_0) {
@@ -1585,7 +1585,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41472548);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41511220);
 }
 }
 if (isConditionTrue_0) {

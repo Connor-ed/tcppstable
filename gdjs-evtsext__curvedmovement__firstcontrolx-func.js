@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__FirstControlX = {};
 gdjs.evtsExt__CurvedMovement__FirstControlX.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__FirstControlX.userFunc0xa0a2c8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__FirstControlX.userFunc0x1eb6a90 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -30,7 +30,7 @@ gdjs.evtsExt__CurvedMovement__FirstControlX.eventsList0 = function(runtimeScene,
 
 
 const objects = [];
-gdjs.evtsExt__CurvedMovement__FirstControlX.userFunc0xa0a2c8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__FirstControlX.userFunc0x1eb6a90(runtimeScene, objects, eventsFunctionContext);
 
 }
 

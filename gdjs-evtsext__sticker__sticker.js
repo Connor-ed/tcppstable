@@ -104,7 +104,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.GDObjectObject
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.GDObjectObjects2= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.userFunc0x1bd4018 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.userFunc0x1ac6230 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const Sticker = gdjs._stickerExtension.Sticker;
 
@@ -141,7 +141,7 @@ let isConditionTrue_0 = false;
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.userFunc0x1bd4018(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onCreatedContext.userFunc0x1ac6230(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -227,7 +227,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.idToCall
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.userFunc0x1bd4870 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.userFunc0x1ac6a48 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const behaviorName = eventsFunctionContext.getBehaviorName("Behavior");
 const object = objects[0];
@@ -242,7 +242,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.eventsLi
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.userFunc0x1bd4870(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPreEventsContext.userFunc0x1ac6a48(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -326,7 +326,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.idToCal
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.userFunc0x1bd4848 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.userFunc0x1ac6a20 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const behaviorName = eventsFunctionContext.getBehaviorName("Behavior");
 const object = objects[0];
@@ -341,7 +341,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.eventsL
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.userFunc0x1bd4848(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.doStepPostEventsContext.userFunc0x1ac6a20(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -426,7 +426,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.GDObjectObjects1= 
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.GDBasisObjectObjects1= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.userFunc0x1bd4838 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.userFunc0x1ac6a10 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const object = objects[0];
 const behaviorName = eventsFunctionContext.getBehaviorName("Behavior");
@@ -445,7 +445,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.eventsList0 = func
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.userFunc0x1bd4838(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.StickContext.userFunc0x1ac6a10(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -533,7 +533,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.idToCallbackMap 
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.userFunc0x1bd4e58 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.userFunc0x1ac7000 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const object = objects[0];
 const behaviorName = eventsFunctionContext.getBehaviorName("Behavior");
@@ -549,7 +549,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.eventsList0 = fu
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.userFunc0x1bd4e58(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.UnstickContext.userFunc0x1ac7000(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -633,7 +633,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.idToCallbackMa
 gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.userFunc0x1bd4e58 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.userFunc0x1ac7000 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const behaviorName = eventsFunctionContext.getBehaviorName("Behavior");
 const object = objects[0];
@@ -649,7 +649,7 @@ gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.eventsList0 = 
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.GDObjectObjects1;
-gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.userFunc0x1bd4e58(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Sticker__Sticker.Sticker.prototype.onDestroyContext.userFunc0x1ac7000(runtimeScene, objects, eventsFunctionContext);
 
 }
 

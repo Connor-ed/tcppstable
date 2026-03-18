@@ -670,7 +670,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595Dow
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(37929012);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41897364);
 }
 }
 if (isConditionTrue_0) {
@@ -697,7 +697,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpO
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(38866900);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(41897700);
 }
 }
 if (isConditionTrue_0) {

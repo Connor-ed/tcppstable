@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__CreatePathFromSvg = {};
 gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x1fad758 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x20afe28 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -26,7 +26,7 @@ gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.eventsList0 = function(runtimeSc
 {
 
 
-gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x1fad758(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__CreatePathFromSvg.userFunc0x20afe28(runtimeScene, eventsFunctionContext);
 
 }
 
