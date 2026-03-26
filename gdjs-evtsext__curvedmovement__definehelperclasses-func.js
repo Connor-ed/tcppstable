@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__DefineHelperClasses = {};
 gdjs.evtsExt__CurvedMovement__DefineHelperClasses.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x1ed17d0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x2271660 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /**
  * @param {number[]} array 
@@ -930,7 +930,7 @@ gdjs.evtsExt__CurvedMovement__DefineHelperClasses.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x1ed17d0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__DefineHelperClasses.userFunc0x2271660(runtimeScene, eventsFunctionContext);
 
 }
 

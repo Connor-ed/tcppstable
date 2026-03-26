@@ -9,7 +9,7 @@ gdjs.evtsExt__SlotSystem__SortSlotsByProperty = {};
 gdjs.evtsExt__SlotSystem__SortSlotsByProperty.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2a39c70 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2ae8f98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const system = runtimeScene.getVariables().get("__SlotSystem");
 const mainSpace = system.getChild(eventsFunctionContext.getArgument("SpaceName"));
@@ -80,7 +80,7 @@ gdjs.evtsExt__SlotSystem__SortSlotsByProperty.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2a39c70(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2ae8f98(runtimeScene, eventsFunctionContext);
 
 }
 

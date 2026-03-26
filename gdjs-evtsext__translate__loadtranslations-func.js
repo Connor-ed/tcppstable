@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__loadTranslations = {};
 gdjs.evtsExt__Translate__loadTranslations.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__loadTranslations.userFunc0x112b290 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Translate__loadTranslations.userFunc0x17f99c0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 function loadLanguageFile(filePath) {
     let xhr = new XMLHttpRequest();
@@ -72,7 +72,7 @@ let isConditionTrue_0 = false;
 
 
 const objects = [];
-gdjs.evtsExt__Translate__loadTranslations.userFunc0x112b290(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Translate__loadTranslations.userFunc0x17f99c0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

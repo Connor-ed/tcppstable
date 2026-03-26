@@ -207,7 +207,7 @@ gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Obj
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595CancelObjects1Objects = Hashtable.newFrom({"Share_Cancel": gdjs.EditorCode.GDShare_9595CancelObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
 gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.EditorCode.GDShare_9595SubmitObjects1});
-gdjs.EditorCode.userFunc0x1bac520 = function GDJSInlineCode(runtimeScene) {
+gdjs.EditorCode.userFunc0x15fe970 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const name = runtimeScene.getObjects("Share_Name")[0].getString();
 const desc = runtimeScene.getObjects("Share_Desc")[0].getString();
@@ -222,11 +222,13 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const pixiRenderer = runtimeScene.getGame().getRenderer()._pixiRenderer;
 
-// Store original background settings
+// Hide canvas overlay immediately
+const pb = globalThis.PatchBay;
+if (pb && pb.canvas) pb.canvas.style.display = "none";
+
 const originalBgColor = pixiRenderer.background ? pixiRenderer.background.color : pixiRenderer.backgroundColor;
 const originalBgAlpha = pixiRenderer.background ? pixiRenderer.background.alpha : (pixiRenderer.backgroundAlpha ?? 1);
 
-// Set transparent background before capture
 if (pixiRenderer.background) {
     pixiRenderer.background.color = 0x000000;
     pixiRenderer.background.alpha = 0;
@@ -235,21 +237,18 @@ if (pixiRenderer.background) {
     pixiRenderer.backgroundAlpha = 0;
 }
 
-// Hide layers
 runtimeScene.getLayer("Share").show(false);
 runtimeScene.getLayer("bk").show(false);
 runtimeScene.getLayer("Base layer").show(false);
 runtimeScene.getLayer("Patchbay").show(false);
 
 setTimeout(() => {
-    // Use a rectangle matching the exact canvas size so dimensions are preserved
     const w = pixiRenderer.width;
     const h = pixiRenderer.height;
     const region = new PIXI.Rectangle(0, 0, w, h);
 
     Promise.resolve(pixiRenderer.extract.base64(pixiRenderer.lastObjectRendered, 'image/png', 1, region)).then(base64 => {
 
-        // Restore background
         if (pixiRenderer.background) {
             pixiRenderer.background.color = originalBgColor;
             pixiRenderer.background.alpha = originalBgAlpha;
@@ -258,11 +257,15 @@ setTimeout(() => {
             pixiRenderer.backgroundAlpha = originalBgAlpha;
         }
 
-        // Restore layers
         runtimeScene.getLayer("Share").show(true);
         runtimeScene.getLayer("bk").show(true);
         runtimeScene.getLayer("Base layer").show(true);
         runtimeScene.getLayer("Patchbay").show(true);
+
+        // Restore canvas overlay after 2 seconds
+        setTimeout(() => {
+            if (pb && pb.canvas) pb.canvas.style.display = "block";
+        }, 2000);
 
         if (!base64 || typeof base64 !== 'string') {
             console.error("Screenshot failed");
@@ -295,6 +298,15 @@ setTimeout(() => {
 
             const imageUrl = `${SUPABASE_URL}/storage/v1/object/public/patches/${filename}`;
 
+            const savedConnections = pb
+                ? pb.connections.map(c => ({
+                    fromName: c.fromName,
+                    toName:   c.toName,
+                    color:    c.color,
+                    droop:    c.droop,
+                }))
+                : [];
+
             return fetch(`${SUPABASE_URL}/rest/v1/patches`, {
                 method: 'POST',
                 headers: {
@@ -307,7 +319,8 @@ setTimeout(() => {
                     name: name.trim(),
                     author: runtimeScene.getObjects("Share_Author")[0].getString().trim() || "Anonymous",
                     patch_desc: desc.trim(),
-                    url: imageUrl
+                    url: imageUrl,
+                    connections: savedConnections
                 })
             });
         }).then(insertRes => {
@@ -331,6 +344,11 @@ setTimeout(() => {
         runtimeScene.getLayer("bk").show(true);
         runtimeScene.getLayer("Base layer").show(true);
         runtimeScene.getLayer("Patchbay").show(true);
+
+        // Restore on error too
+        setTimeout(() => {
+            if (pb && pb.canvas) pb.canvas.style.display = "block";
+        }, 2000);
     });
 
 }, 100);
@@ -340,13 +358,314 @@ gdjs.EditorCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.EditorCode.userFunc0x1bac520(runtimeScene);
+gdjs.EditorCode.userFunc0x15fe970(runtimeScene);
 
 }
 
 
 };gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.EditorCode.GDGlobal_9595Blank_9595KnobObjects1});
+gdjs.EditorCode.userFunc0x10a4e28 = function GDJSInlineCode(runtimeScene) {
+"use strict";
+// PATCHBAY — one-time setup
+if (typeof globalThis.PatchBay !== "undefined") return;
+
+globalThis.PatchBay = {
+  // OUTPUT jacks: name → cable color "R,G,B"
+  outputColors: {
+    MULTI1O:    "208,2,27",
+    MULTI2O:    "245,166,35",
+    OSCPULSEO: "52,62,64",
+    OSCSAWO:   "146,43,62",
+    ENVO:       "244,70,17",
+    NOISEO:     "30,36,96",
+    VCALINEO:   "189,16,224",
+    LFOTRIO:    "61,100,45",
+    LFOSQUO:    "96,110,140",
+    VCMIXO:     "80,227,194",
+    ASSIGNO:    "143,139,102",
+    KBCVO:      "117,21,30",
+    GATEO:      "0,187,45",
+    VCFO:       "222,76,138",
+  },
+
+  // INPUT jack names (Standardized to match your scene objects)
+  inputNames: [
+    "OSCCV","OSCFM","OSCMOD","VCFCUTOFF","VCSRES",
+    "MIX1","MIX2","VCMIX","MULTI","MIXCV",
+    "EXTAUX","TEMPO","PLAYSTOP","RESET","HOLD",
+    "ENVGATE","VCACV","LFORATE","VCMIXINPUT","LFORATEIN",
+  ],
+
+  pending:     null,  
+  connections: [],    
+
+  // Visual tuning
+  DROOP:       150,   
+  HIT_RADIUS:  24,    
+  CABLE_WIDTH: 11,     
+  PLUG_RADIUS: 20,    
+  PLUG_HOLE:   10,     
+
+  canvas: null,
+  ctx:    null,
+};
+
+const gdCanvas = document.querySelector("canvas");
+if (!gdCanvas) return;
+
+const pb = globalThis.PatchBay;
+pb.canvas = document.createElement("canvas");
+pb.canvas.id = "patchbay-overlay";
+pb.canvas.width = gdCanvas.width;
+pb.canvas.height = gdCanvas.height;
+
+function positionOverlay() {
+  const rect = gdCanvas.getBoundingClientRect();
+  pb.canvas.style.cssText = `
+    position: fixed;
+    top: ${rect.top}px;
+    left: ${rect.left}px;
+    width: ${rect.width}px;
+    height: ${rect.height}px;
+    pointer-events: none;
+    z-index: 9999;
+  `;
+}
+
+positionOverlay();
+document.body.appendChild(pb.canvas);
+pb.ctx = pb.canvas.getContext("2d");
+
+window.addEventListener("resize", positionOverlay);
+
+pb.outputNames = Object.keys(pb.outputColors);
+pb.allNames = [...pb.outputNames, ...pb.inputNames];
+};
 gdjs.EditorCode.eventsList2 = function(runtimeScene) {
+
+{
+
+
+gdjs.EditorCode.userFunc0x10a4e28(runtimeScene);
+
+}
+
+
+};gdjs.EditorCode.userFunc0x3e1e388 = function GDJSInlineCode(runtimeScene) {
+"use strict";
+// PATCHBAY — handle left click (connect)
+const pb = globalThis.PatchBay;
+if (!pb) return;
+
+// SAFETY: Check if the Share menu is open. If so, exit.
+if (runtimeScene.getLayer("Share").isVisible()) {
+    pb.pending = null; // Clear any active wire drag
+    return;
+}
+
+const scene = runtimeScene;
+const mx = scene.getGame().getInputManager().getCursorX("", 0);
+const my = scene.getGame().getInputManager().getCursorY("", 0);
+const r = pb.HIT_RADIUS;
+
+let hitName = null;
+let hitType = null;
+
+for (const name of pb.allNames) {
+  const objs = scene.getObjects(name);
+  if (!objs || objs.length === 0) continue;
+  const obj = objs[0];
+  const dx = obj.getCenterXInScene() - mx;
+  const dy = obj.getCenterYInScene() - my;
+  if (Math.sqrt(dx * dx + dy * dy) < r) {
+    hitName = name;
+    hitType = pb.outputNames.includes(name) ? "output" : "input";
+    break;
+  }
+}
+
+if (!hitName) {
+  pb.pending = null;
+  return;
+}
+
+const objs = scene.getObjects(hitName);
+const obj = objs[0];
+const hx = obj.getCenterXInScene();
+const hy = obj.getCenterYInScene();
+
+if (!pb.pending) {
+  pb.pending = {
+    name: hitName,
+    x: hx,
+    y: hy,
+    type: hitType,
+    color: hitType === "output" ? (pb.outputColors[hitName] || "180,180,180") : "180,180,180",
+  };
+  return;
+}
+
+if (pb.pending.type === hitType) {
+  pb.pending = {
+    name: hitName,
+    x: hx,
+    y: hy,
+    type: hitType,
+    color: hitType === "output" ? (pb.outputColors[hitName] || "180,180,180") : "180,180,180",
+  };
+  return;
+}
+
+const fromName = pb.pending.type === "output" ? pb.pending.name : hitName;
+const toName = pb.pending.type === "input" ? pb.pending.name : hitName;
+const fromObj = scene.getObjects(fromName)[0];
+const toObj = scene.getObjects(toName)[0];
+const color = pb.outputColors[fromName] || "180,180,180";
+
+pb.connections = pb.connections.filter(c => c.fromName !== fromName && c.toName !== toName);
+
+pb.connections.push({
+  fromName, toName, color,
+  fromX: fromObj.getCenterXInScene(),
+  fromY: fromObj.getCenterYInScene(),
+  toX: toObj.getCenterXInScene(),
+  toY: toObj.getCenterYInScene(),
+  droop: pb.DROOP + (Math.random() * 80 - 40),
+});
+pb.pending = null;
+};
+gdjs.EditorCode.eventsList3 = function(runtimeScene) {
+
+{
+
+
+gdjs.EditorCode.userFunc0x3e1e388(runtimeScene);
+
+}
+
+
+};gdjs.EditorCode.userFunc0x3dea650 = function GDJSInlineCode(runtimeScene) {
+"use strict";
+// PATCHBAY — handle right click (disconnect)
+const pb = globalThis.PatchBay;
+if (!pb) return;
+
+const scene = runtimeScene;
+const mx    = scene.getGame().getInputManager().getCursorX("", 0);
+const my    = scene.getGame().getInputManager().getCursorY("", 0);
+const r     = pb.HIT_RADIUS;
+
+// Cancel any pending selection first
+pb.pending = null;
+
+// Find and remove any connection touching the right-clicked jack
+for (const name of pb.allNames) {
+  const objs = scene.getObjects(name);
+  if (!objs || objs.length === 0) continue;
+  const obj = objs[0];
+  const dx  = obj.getCenterXInScene() - mx;
+  const dy  = obj.getCenterYInScene() - my;
+  if (Math.sqrt(dx * dx + dy * dy) < r) {
+    const before = pb.connections.length;
+    pb.connections = pb.connections.filter(
+      c => c.fromName !== name && c.toName !== name
+    );
+    console.log(
+      "[PatchBay] disconnected:", name,
+      "(removed", before - pb.connections.length, "wire(s))"
+    );
+    break;
+  }
+}
+};
+gdjs.EditorCode.eventsList4 = function(runtimeScene) {
+
+{
+
+
+gdjs.EditorCode.userFunc0x3dea650(runtimeScene);
+
+}
+
+
+};gdjs.EditorCode.userFunc0x3dea700 = function GDJSInlineCode(runtimeScene) {
+"use strict";
+// PATCHBAY — redraw cables every frame
+const pb = globalThis.PatchBay;
+if (!pb || !pb.ctx) return;
+
+// 1. Get the current visibility of the Patchbay and the Share menu
+const isVisible = runtimeScene.getVariables().get("patchbayVisible").getAsNumber() === 1;
+const isShareOpen = runtimeScene.getLayer("Share").isVisible();
+
+// 2. If the patchbay is toggled off OR the share menu is open, hide the canvas
+if (!isVisible || isShareOpen) {
+  pb.canvas.style.display = "none";
+  return;
+}
+
+// Otherwise, show the canvas and draw
+pb.canvas.style.display = "block";
+
+const ctx = pb.ctx;
+ctx.clearRect(0, 0, pb.canvas.width, pb.canvas.height);
+
+function drawCable(x1, y1, x2, y2, rgb, alpha, droop) {
+  const cpx = (x1 + x2) / 2;
+  const cpy = (y1 + y2) / 2 + (droop !== undefined ? droop : pb.DROOP);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+  ctx.strokeStyle = `rgba(${rgb},${alpha * 0.15})`;
+  ctx.lineWidth = pb.CABLE_WIDTH + 3;
+  ctx.lineCap = "round";
+  ctx.shadowBlur = 4;
+  ctx.shadowColor = `rgba(${rgb},${alpha * 0.2})`;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+  ctx.strokeStyle = `rgba(${rgb},${alpha * 0.75})`;
+  ctx.lineWidth = pb.CABLE_WIDTH;
+  ctx.shadowBlur = 0;
+  ctx.stroke();
+  ctx.restore();
+
+  function plug(px, py) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(px, py, pb.PLUG_RADIUS, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${rgb},${alpha * 0.75})`;
+    ctx.shadowBlur = 4;
+    ctx.shadowColor = `rgba(${rgb},${alpha * 0.4})`;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(px, py, pb.PLUG_HOLE, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(15,15,15,0.9)";
+    ctx.shadowBlur = 0;
+    ctx.fill();
+    ctx.restore();
+  }
+
+  plug(x1, y1);
+  plug(x2, y2);
+}
+
+for (const c of pb.connections) {
+  drawCable(c.fromX, c.fromY, c.toX, c.toY, c.color, 1.0, c.droop);
+}
+
+if (pb.pending) {
+  const scene = runtimeScene;
+  const mx = scene.getGame().getInputManager().getCursorX("", 0);
+  const my = scene.getGame().getInputManager().getCursorY("", 0);
+  drawCable(pb.pending.x, pb.pending.y, mx, my, pb.pending.color, 0.45, pb.DROOP);
+}
+};
+gdjs.EditorCode.eventsList5 = function(runtimeScene) {
 
 {
 
@@ -386,6 +705,16 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1
 }
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "Share");
 }
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
 }
 
 }
@@ -535,6 +864,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595EditorObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "Patchbay");
+}
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Editor");
 }
 }
@@ -554,6 +885,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.EditorCode.mapOfGDgdjs_9546EditorCode_9546GDGlobal_95959595HomeObjects1Objects, runtimeScene, true, false);
 }
 if (isConditionTrue_0) {
+{gdjs.evtTools.camera.hideLayer(runtimeScene, "Patchbay");
+}
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Boot");
 }
 }
@@ -702,6 +1035,11 @@ isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "LSystem");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(39206300);
+}
+}
 }
 if (isConditionTrue_0) {
 
@@ -739,6 +1077,8 @@ gdjs.copyArray(runtimeScene.getObjects("SnapShot"), gdjs.EditorCode.GDSnapShotOb
 {for(var i = 0, len = gdjs.EditorCode.GDSnapShotObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDSnapShotObjects1[i].hide(false);
 }
+}
+{runtimeScene.getScene().getVariables().getFromIndex(6).setNumber(0);
 }
 }
 
@@ -835,7 +1175,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(58983708);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(39217804);
 }
 }
 }
@@ -911,6 +1251,8 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1
 {for(var i = 0, len = gdjs.EditorCode.GDPatchObjects1.length ;i < len;++i) {
     gdjs.EditorCode.GDPatchObjects1[i].hide(false);
 }
+}
+{runtimeScene.getScene().getVariables().getFromIndex(6).setNumber(1);
 }
 }
 
@@ -989,6 +1331,8 @@ gdjs.copyArray(runtimeScene.getObjects("Patch"), gdjs.EditorCode.GDPatchObjects1
     gdjs.EditorCode.GDNewShapePainterObjects1[i].hide();
 }
 }
+{runtimeScene.getScene().getVariables().getFromIndex(6).setNumber(0);
+}
 }
 
 }
@@ -1042,38 +1386,14 @@ gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNew
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCCV"), gdjs.EditorCode.GDOSCCVObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCCVObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDOSCCVObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDOSCCVObjects1[k] = gdjs.EditorCode.GDOSCCVObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDOSCCVObjects1.length = k;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDOSCCVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-gdjs.copyArray(runtimeScene.getObjects("ytext"), gdjs.EditorCode.GDytextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDOSCCVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCCVObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDOSCCVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCCVObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDytextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDytextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null)));
-}
-}
+
+{ //Subevents
+gdjs.EditorCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 }
@@ -1081,37 +1401,18 @@ gdjs.copyArray(runtimeScene.getObjects("ytext"), gdjs.EditorCode.GDytextObjects1
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCFM"), gdjs.EditorCode.GDOSCFMObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCFMObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDOSCFMObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDOSCFMObjects1[k] = gdjs.EditorCode.GDOSCFMObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDOSCFMObjects1.length = k;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
 }
 if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDOSCFMObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDOSCFMObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCFMObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDOSCFMObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCFMObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
+
+{ //Subevents
+gdjs.EditorCode.eventsList3(runtimeScene);} //End of subevents
 }
 
 }
@@ -1119,37 +1420,18 @@ gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextOb
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("OSCMOD"), gdjs.EditorCode.GDOSCMODObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCMODObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDOSCMODObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDOSCMODObjects1[k] = gdjs.EditorCode.GDOSCMODObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDOSCMODObjects1.length = k;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Right");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
 }
 if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDOSCMODObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDOSCMODObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCMODObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDOSCMODObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCMODObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
+
+{ //Subevents
+gdjs.EditorCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
@@ -1157,1326 +1439,8 @@ gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextOb
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("VCFCUTOFF"), gdjs.EditorCode.GDVCFCUTOFFObjects1);
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCFCUTOFFObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCFCUTOFFObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCFCUTOFFObjects1[k] = gdjs.EditorCode.GDVCFCUTOFFObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCFCUTOFFObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDVCFCUTOFFObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCFCUTOFFObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFCUTOFFObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDVCFCUTOFFObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFCUTOFFObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCSRES"), gdjs.EditorCode.GDVCSRESObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCSRESObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCSRESObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCSRESObjects1[k] = gdjs.EditorCode.GDVCSRESObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCSRESObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDVCSRESObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCSRESObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCSRESObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDVCSRESObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCSRESObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIX1"), gdjs.EditorCode.GDMIX1Objects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIX1Objects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMIX1Objects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMIX1Objects1[k] = gdjs.EditorCode.GDMIX1Objects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMIX1Objects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMIX1Objects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMIX1Objects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIX1Objects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDMIX1Objects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIX1Objects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIX2"), gdjs.EditorCode.GDMIX2Objects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIX2Objects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMIX2Objects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMIX2Objects1[k] = gdjs.EditorCode.GDMIX2Objects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMIX2Objects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMIX2Objects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMIX2Objects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIX2Objects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDMIX2Objects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIX2Objects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCMIX"), gdjs.EditorCode.GDVCMIXObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCMIXObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCMIXObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCMIXObjects1[k] = gdjs.EditorCode.GDVCMIXObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCMIXObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDVCMIXObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCMIXObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDVCMIXObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MULTI"), gdjs.EditorCode.GDMULTIObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTIObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMULTIObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMULTIObjects1[k] = gdjs.EditorCode.GDMULTIObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMULTIObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMULTIObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTIObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDMULTIObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTIObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("LFORATE"), gdjs.EditorCode.GDLFORATEObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFORATEObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDLFORATEObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDLFORATEObjects1[k] = gdjs.EditorCode.GDLFORATEObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDLFORATEObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDLFORATEObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDLFORATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFORATEObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDLFORATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFORATEObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCACV"), gdjs.EditorCode.GDVCACVObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCACVObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCACVObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCACVObjects1[k] = gdjs.EditorCode.GDVCACVObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCACVObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDVCACVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDVCACVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCACVObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDVCACVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCACVObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("ENVGATE"), gdjs.EditorCode.GDENVGATEObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDENVGATEObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDENVGATEObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDENVGATEObjects1[k] = gdjs.EditorCode.GDENVGATEObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDENVGATEObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDENVGATEObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDENVGATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVGATEObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDENVGATEObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVGATEObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("HOLD"), gdjs.EditorCode.GDHOLDObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDHOLDObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDHOLDObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDHOLDObjects1[k] = gdjs.EditorCode.GDHOLDObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDHOLDObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDHOLDObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDHOLDObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDHOLDObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDHOLDObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDHOLDObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("RESET"), gdjs.EditorCode.GDRESETObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDRESETObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDRESETObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDRESETObjects1[k] = gdjs.EditorCode.GDRESETObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDRESETObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDRESETObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDRESETObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDRESETObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDRESETObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDRESETObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("PLAYSTOP"), gdjs.EditorCode.GDPLAYSTOPObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDPLAYSTOPObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDPLAYSTOPObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDPLAYSTOPObjects1[k] = gdjs.EditorCode.GDPLAYSTOPObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDPLAYSTOPObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDPLAYSTOPObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDPLAYSTOPObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDPLAYSTOPObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDPLAYSTOPObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDPLAYSTOPObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("TEMPO"), gdjs.EditorCode.GDTEMPOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDTEMPOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDTEMPOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDTEMPOObjects1[k] = gdjs.EditorCode.GDTEMPOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDTEMPOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDTEMPOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDTEMPOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDTEMPOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDTEMPOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDTEMPOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("EXTAUX"), gdjs.EditorCode.GDEXTAUXObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDEXTAUXObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDEXTAUXObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDEXTAUXObjects1[k] = gdjs.EditorCode.GDEXTAUXObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDEXTAUXObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDEXTAUXObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDEXTAUXObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDEXTAUXObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDEXTAUXObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDEXTAUXObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MIXCV"), gdjs.EditorCode.GDMIXCVObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMIXCVObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMIXCVObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMIXCVObjects1[k] = gdjs.EditorCode.GDMIXCVObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMIXCVObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMIXCVObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("testtext"), gdjs.EditorCode.GDtesttextObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), (( gdjs.EditorCode.GDMIXCVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIXCVObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), (( gdjs.EditorCode.GDMIXCVObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMIXCVObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null)));
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDtesttextObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").setText(gdjs.EditorCode.GDtesttextObjects1[i].getBehavior("Text").getText() + (gdjs.evtTools.common.toString(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null))));
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MULTI1O"), gdjs.EditorCode.GDMULTI1OObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTI1OObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMULTI1OObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMULTI1OObjects1[k] = gdjs.EditorCode.GDMULTI1OObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMULTI1OObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMULTI1OObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("208;2;27");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("208;2;27");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDMULTI1OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI1OObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("MULTI2O"), gdjs.EditorCode.GDMULTI2OObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDMULTI2OObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDMULTI2OObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDMULTI2OObjects1[k] = gdjs.EditorCode.GDMULTI2OObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDMULTI2OObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDMULTI2OObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("245;166;35");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("245;166;35");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDMULTI2OObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDMULTI2OObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("OSCPULSEO"), gdjs.EditorCode.GDOSCPULSEOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCPULSEOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDOSCPULSEOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDOSCPULSEOObjects1[k] = gdjs.EditorCode.GDOSCPULSEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDOSCPULSEOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.EditorCode.GDOSCPULSEOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("52;62;64");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("52;62;64");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDOSCPULSEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCPULSEOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("OSCSAWO"), gdjs.EditorCode.GDOSCSAWOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDOSCSAWOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDOSCSAWOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDOSCSAWOObjects1[k] = gdjs.EditorCode.GDOSCSAWOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDOSCSAWOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.EditorCode.GDOSCSAWOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("146;43;62");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("146;43;62");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDOSCSAWOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDOSCSAWOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("ENVO"), gdjs.EditorCode.GDENVOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDENVOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDENVOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDENVOObjects1[k] = gdjs.EditorCode.GDENVOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDENVOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDENVOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("244;70;17");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("244;70;17");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDENVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDENVOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("NOISEO"), gdjs.EditorCode.GDNOISEOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDNOISEOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDNOISEOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDNOISEOObjects1[k] = gdjs.EditorCode.GDNOISEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDNOISEOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDNOISEOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("30;36;96");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("30;36;96");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDNOISEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDNOISEOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCALINEO"), gdjs.EditorCode.GDVCALINEOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCALINEOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCALINEOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCALINEOObjects1[k] = gdjs.EditorCode.GDVCALINEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCALINEOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.EditorCode.GDVCALINEOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("189;16;224");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("189;16;224");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCALINEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCALINEOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("LFOTRIO"), gdjs.EditorCode.GDLFOTRIOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFOTRIOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDLFOTRIOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDLFOTRIOObjects1[k] = gdjs.EditorCode.GDLFOTRIOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDLFOTRIOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDLFOTRIOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("61;100;45");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("61;100;45");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDLFOTRIOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOTRIOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("LFOSQUO"), gdjs.EditorCode.GDLFOSQUOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDLFOSQUOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDLFOSQUOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDLFOSQUOObjects1[k] = gdjs.EditorCode.GDLFOSQUOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDLFOSQUOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDLFOSQUOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("96;110;140");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("96;110;140");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDLFOSQUOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDLFOSQUOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCMIXO"), gdjs.EditorCode.GDVCMIXOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCMIXOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCMIXOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCMIXOObjects1[k] = gdjs.EditorCode.GDVCMIXOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCMIXOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.EditorCode.GDVCMIXOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("80;227;194");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("80;227;194");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCMIXOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCMIXOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("ASSIGNO"), gdjs.EditorCode.GDASSIGNOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDASSIGNOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDASSIGNOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDASSIGNOObjects1[k] = gdjs.EditorCode.GDASSIGNOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDASSIGNOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDASSIGNOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("143;139;102");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("143;139;102");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDASSIGNOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDASSIGNOObjects1[0].getCenterYInScene()), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("KBCVO"), gdjs.EditorCode.GDKBCVOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDKBCVOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDKBCVOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDKBCVOObjects1[k] = gdjs.EditorCode.GDKBCVOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDKBCVOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDKBCVOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("117;21;30");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("117;21;30");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDKBCVOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDKBCVOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("GATEO"), gdjs.EditorCode.GDGATEOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDGATEOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDGATEOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDGATEOObjects1[k] = gdjs.EditorCode.GDGATEOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDGATEOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.EditorCode.GDGATEOObjects1 */
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("0;187;45");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("0;187;45");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDGATEOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDGATEOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("VCFO"), gdjs.EditorCode.GDVCFOObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.EditorCode.GDVCFOObjects1.length;i<l;++i) {
-    if ( gdjs.EditorCode.GDVCFOObjects1[i].getBehavior("ButtonFSM").IsClicked(null) ) {
-        isConditionTrue_0 = true;
-        gdjs.EditorCode.GDVCFOObjects1[k] = gdjs.EditorCode.GDVCFOObjects1[i];
-        ++k;
-    }
-}
-gdjs.EditorCode.GDVCFOObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Patchbay");
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewShapePainter"), gdjs.EditorCode.GDNewShapePainterObjects1);
-/* Reuse gdjs.EditorCode.GDVCFOObjects1 */
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(2).getAsString(), (( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterXInScene()), null);
-}
-{gdjs.evtsExt__ExtendedVariables__ModifySceneVariable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(3).getAsString(), (( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterYInScene()), null);
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineOpacity(150);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setOutlineColor("222;76;138");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawLineV2(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), (( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterYInScene()), 10);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].setFillColor("222;76;138");
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle(gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0).getAsString(), null), gdjs.evtsExt__ExtendedVariables__Variable.func(runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(1).getAsString(), null), 18);
-}
-}
-{for(var i = 0, len = gdjs.EditorCode.GDNewShapePainterObjects1.length ;i < len;++i) {
-    gdjs.EditorCode.GDNewShapePainterObjects1[i].drawCircle((( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterXInScene()), (( gdjs.EditorCode.GDVCFOObjects1.length === 0 ) ? 0 :gdjs.EditorCode.GDVCFOObjects1[0].getCenterYInScene()), 18);
-}
-}
-}
+gdjs.EditorCode.userFunc0x3dea700(runtimeScene);
 
 }
 
@@ -2621,7 +1585,7 @@ gdjs.EditorCode.GDtop_9595titleObjects2.length = 0;
 gdjs.EditorCode.GDShadowObjects1.length = 0;
 gdjs.EditorCode.GDShadowObjects2.length = 0;
 
-gdjs.EditorCode.eventsList2(runtimeScene);
+gdjs.EditorCode.eventsList5(runtimeScene);
 gdjs.EditorCode.GDKnobObjects1.length = 0;
 gdjs.EditorCode.GDKnobObjects2.length = 0;
 gdjs.EditorCode.GDEdit_9595ToggleObjects1.length = 0;

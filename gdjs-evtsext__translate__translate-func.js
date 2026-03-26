@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__translate = {};
 gdjs.evtsExt__Translate__translate.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__translate.userFunc0x1cc11d0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__translate.userFunc0x1cd7000 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 let key = eventsFunctionContext.getArgument("key");
 let parameters = eventsFunctionContext.getArgument("parameters").trim();
@@ -46,7 +46,7 @@ gdjs.evtsExt__Translate__translate.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__Translate__translate.userFunc0x1cc11d0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__translate.userFunc0x1cd7000(runtimeScene, eventsFunctionContext);
 
 }
 

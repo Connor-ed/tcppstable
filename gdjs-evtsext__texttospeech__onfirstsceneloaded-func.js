@@ -9,7 +9,7 @@ gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded = {};
 gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.userFunc0x1b97938 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.userFunc0x104dcf8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // When calling getVoices, browsers return an empty list
 // while gathering the real list of available voices.
@@ -31,7 +31,7 @@ gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.eventsList0 = function(runtimeSce
 {
 
 
-gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.userFunc0x1b97938(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__TextToSpeech__onFirstSceneLoaded.userFunc0x104dcf8(runtimeScene, eventsFunctionContext);
 
 }
 

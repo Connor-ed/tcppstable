@@ -10,7 +10,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.idToCallbackMap = new Map
 gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x2830960 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x106ae20 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 //Create a place to store the images somewhere, because we need to know if the user wants to upload the same image, or a new one.
 if (!gdjs._ExtensionUploadedImages) {
@@ -111,7 +111,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.eventsList0 = function(ru
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1;
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x2830960(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x106ae20(runtimeScene, objects, eventsFunctionContext);
 
 }
 
