@@ -9,7 +9,7 @@ gdjs.evtsExt__UpdateChecker__CreateGlobalReference = {};
 gdjs.evtsExt__UpdateChecker__CreateGlobalReference.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x2174fe0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x1d699f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const reference = eventsFunctionContext.getArgument("reference");
 const source = eventsFunctionContext.getArgument("source");
@@ -24,7 +24,7 @@ gdjs.evtsExt__UpdateChecker__CreateGlobalReference.eventsList0 = function(runtim
 {
 
 
-gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x2174fe0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__UpdateChecker__CreateGlobalReference.userFunc0x1d699f0(runtimeScene, eventsFunctionContext);
 
 }
 

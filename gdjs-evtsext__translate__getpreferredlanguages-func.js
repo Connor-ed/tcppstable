@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__getPreferredLanguages = {};
 gdjs.evtsExt__Translate__getPreferredLanguages.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0xd29e80 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x16a5308 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = navigator.languages ? navigator.languages.join(',') : "en-US";
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__Translate__getPreferredLanguages.eventsList0 = function(runtimeSce
 {
 
 
-gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0xd29e80(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x16a5308(runtimeScene, eventsFunctionContext);
 
 }
 

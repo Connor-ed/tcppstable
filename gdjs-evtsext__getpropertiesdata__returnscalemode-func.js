@@ -9,7 +9,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnScaleMode = {};
 gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.userFunc0xb3a860 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.userFunc0xb005f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.scaleMode;
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.eventsList0 = function(runtimeS
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.userFunc0xb3a860(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__GetPropertiesData__ReturnScaleMode.userFunc0xb005f8(runtimeScene, eventsFunctionContext);
 
 }
 

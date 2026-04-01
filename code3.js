@@ -41,7 +41,7 @@ gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
 
 
-gdjs.Quick_95CheckCode.userFunc0x15fe970 = function GDJSInlineCode(runtimeScene) {
+gdjs.Quick_95CheckCode.userFunc0x1d4e740 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const SB_URL = "https://dyuuloipijvkfejfqoay.supabase.co";
 const SB_KEY = "sb_publishable_YkIqOOig3cqxaLO5uBtfcw_mX_3lwc_";
@@ -86,7 +86,7 @@ gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Quick_95CheckCode.userFunc0x15fe970(runtimeScene);
+gdjs.Quick_95CheckCode.userFunc0x1d4e740(runtimeScene);
 
 }
 
@@ -101,7 +101,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42781356);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(66710028);
 }
 }
 if (isConditionTrue_0) {

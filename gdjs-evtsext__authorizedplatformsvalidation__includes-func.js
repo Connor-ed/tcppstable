@@ -9,7 +9,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__Includes = {};
 gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x199f5d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0xaf51e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const authorizedPlatformsVariableReference = runtimeScene.getGame()
     .getVariables()
@@ -30,7 +30,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0x199f5d8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__AuthorizedPlatformsValidation__Includes.userFunc0xaf51e8(runtimeScene, eventsFunctionContext);
 
 }
 
