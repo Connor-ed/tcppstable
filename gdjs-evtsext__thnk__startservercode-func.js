@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__StartServerCode = {};
 gdjs.evtsExt__THNK__StartServerCode.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__StartServerCode.userFunc0x119ab58 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StartServerCode.userFunc0x1e406f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.thnkServer 
     // The server is active, only run server code if it is time to.
@@ -23,7 +23,7 @@ gdjs.evtsExt__THNK__StartServerCode.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__THNK__StartServerCode.userFunc0x119ab58(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__StartServerCode.userFunc0x1e406f8(runtimeScene, eventsFunctionContext);
 
 }
 

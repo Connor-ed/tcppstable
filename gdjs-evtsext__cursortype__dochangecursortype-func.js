@@ -9,7 +9,7 @@ gdjs.evtsExt__CursorType__DoChangeCursorType = {};
 gdjs.evtsExt__CursorType__DoChangeCursorType.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x119ab58 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1bc06e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const cursorType = eventsFunctionContext.getArgument("CursorType");
 
@@ -21,7 +21,7 @@ gdjs.evtsExt__CursorType__DoChangeCursorType.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x119ab58(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CursorType__DoChangeCursorType.userFunc0x1bc06e8(runtimeScene, eventsFunctionContext);
 
 }
 

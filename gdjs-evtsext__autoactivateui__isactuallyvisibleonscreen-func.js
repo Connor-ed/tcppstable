@@ -1,34 +1,42 @@
 
-if (typeof gdjs.evtsExt__THNK__UseLinkedObjects !== "undefined") {
-  gdjs.evtsExt__THNK__UseLinkedObjects.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen !== "undefined") {
+  gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__THNK__UseLinkedObjects = {};
-gdjs.evtsExt__THNK__UseLinkedObjects.idToCallbackMap = new Map();
-gdjs.evtsExt__THNK__UseLinkedObjects.GDObjectObjects1= [];
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen = {};
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.idToCallbackMap = new Map();
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x1c3e260 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xac7488 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
-THNK.players.pickOwnedObjects(eventsFunctionContext.getObjectsLists("Object"));
-eventsFunctionContext.returnValue = true;
-
+const object = objects[0];
+const pixiObject = object.getRendererObject();
+if (!object) {
+    eventsFunctionContext.returnValue = false;
+} else if (!pixiObject) {
+    eventsFunctionContext.returnValue = false;
+} else {
+    eventsFunctionContext.returnValue = pixiObject.worldVisible;
+}
 };
-gdjs.evtsExt__THNK__UseLinkedObjects.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
+gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1);
 
-gdjs.evtsExt__THNK__UseLinkedObjects.userFunc0x1c3e260(runtimeScene, eventsFunctionContext);
+const objects = gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1;
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xac7488(runtimeScene, objects, eventsFunctionContext);
 
 }
 
 
 };
 
-gdjs.evtsExt__THNK__UseLinkedObjects.func = function(runtimeScene, Object, parentEventsFunctionContext) {
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.func = function(runtimeScene, Object, parentEventsFunctionContext) {
 let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
@@ -39,8 +47,8 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("THNK"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("THNK"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("AutoActivateUI"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("AutoActivateUI"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -85,13 +93,13 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
-gdjs.evtsExt__THNK__UseLinkedObjects.GDObjectObjects1.length = 0;
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1.length = 0;
 
-gdjs.evtsExt__THNK__UseLinkedObjects.eventsList0(runtimeScene, eventsFunctionContext);
-gdjs.evtsExt__THNK__UseLinkedObjects.GDObjectObjects1.length = 0;
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1.length = 0;
 
 
 return !!eventsFunctionContext.returnValue;
 }
 
-gdjs.evtsExt__THNK__UseLinkedObjects.registeredGdjsCallbacks = [];
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.registeredGdjsCallbacks = [];

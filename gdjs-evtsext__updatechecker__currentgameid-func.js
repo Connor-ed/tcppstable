@@ -9,7 +9,7 @@ gdjs.evtsExt__UpdateChecker__CurrentGameID = {};
 gdjs.evtsExt__UpdateChecker__CurrentGameID.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0x10d0150 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0xae9b60 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.projectUuid;
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__UpdateChecker__CurrentGameID.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0x10d0150(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__UpdateChecker__CurrentGameID.userFunc0xae9b60(runtimeScene, eventsFunctionContext);
 
 }
 

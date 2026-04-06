@@ -143,7 +143,7 @@ gdjs.Synth_32SelectorCode.GDShadowObjects3= [];
 gdjs.Synth_32SelectorCode.GDShadowObjects4= [];
 
 
-gdjs.Synth_32SelectorCode.userFunc0x1d4e740 = function GDJSInlineCode(runtimeScene) {
+gdjs.Synth_32SelectorCode.userFunc0x1475498 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -156,7 +156,7 @@ gdjs.Synth_32SelectorCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Synth_32SelectorCode.userFunc0x1d4e740(runtimeScene);
+gdjs.Synth_32SelectorCode.userFunc0x1475498(runtimeScene);
 
 }
 
@@ -691,7 +691,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595Dow
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43815236);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42755796);
 }
 }
 if (isConditionTrue_0) {
@@ -718,7 +718,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpO
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43816492);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42757052);
 }
 }
 if (isConditionTrue_0) {
@@ -1218,7 +1218,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1249,7 +1249,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 50, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1280,7 +1280,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1311,7 +1311,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "conceptbass3.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "conceptbass3.wav", 10, false, 50, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1342,7 +1342,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Electric Pulse2.wav", 10, false, 20, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Electric Pulse2.wav", 10, false, 20, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1373,7 +1373,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1404,7 +1404,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Loading_alert"), gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1);
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Bitsynth.wav", 10, false, 20, 1);
 }
 {for(var i = 0, len = gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1.length ;i < len;++i) {
     gdjs.Synth_32SelectorCode.GDLoading_9595alertObjects1[i].getBehavior("Animation").setAnimationIndex(1);
@@ -1460,7 +1460,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "E Keys4.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "E Keys4.wav", 10, false, 50, 1);
 }
 }
 
@@ -1484,7 +1484,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Simple Pluck -2.wav", 10, false, 50, 1);
 }
 }
 
@@ -1508,7 +1508,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Ow - Ahh2.wav", 10, false, 50, 1);
 }
 }
 
@@ -1532,7 +1532,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Boom Kick.wav", 10, false, 50, 1);
 }
 }
 
@@ -1556,7 +1556,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "conceptbass3.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "conceptbass3.wav", 10, false, 50, 1);
 }
 }
 
@@ -1580,7 +1580,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Electric Pulse2.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Electric Pulse2.wav", 10, false, 50, 1);
 }
 }
 
@@ -1604,7 +1604,7 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "Woah Synth.wav", 10, false, 50, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Woah Synth.wav", 10, false, 50, 1);
 }
 }
 
@@ -1628,8 +1628,6 @@ isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScen
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "", 10, false, 50, 1);
-}
 }
 
 }
