@@ -143,7 +143,7 @@ gdjs.Synth_32SelectorCode.GDShadowObjects3= [];
 gdjs.Synth_32SelectorCode.GDShadowObjects4= [];
 
 
-gdjs.Synth_32SelectorCode.userFunc0x1475498 = function GDJSInlineCode(runtimeScene) {
+gdjs.Synth_32SelectorCode.userFunc0x3a493a0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -156,7 +156,7 @@ gdjs.Synth_32SelectorCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Synth_32SelectorCode.userFunc0x1475498(runtimeScene);
+gdjs.Synth_32SelectorCode.userFunc0x3a493a0(runtimeScene);
 
 }
 
@@ -691,7 +691,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595Dow
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42755796);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42640644);
 }
 }
 if (isConditionTrue_0) {
@@ -718,7 +718,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpO
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42757052);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42641900);
 }
 }
 if (isConditionTrue_0) {

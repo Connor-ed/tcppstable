@@ -9,7 +9,7 @@ gdjs.evtsExt__Gamepads__onScenePostEvents = {};
 gdjs.evtsExt__Gamepads__onScenePostEvents.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Gamepads__onScenePostEvents.userFunc0x8169f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Gamepads__onScenePostEvents.userFunc0x1372578 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 //Each time a player press a button i save the last button pressed for the next frame
 /** @type {Gamepad[]} */
@@ -70,7 +70,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__Gamepads__onScenePostEvents.userFunc0x8169f0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Gamepads__onScenePostEvents.userFunc0x1372578(runtimeScene, eventsFunctionContext);
 
 }
 

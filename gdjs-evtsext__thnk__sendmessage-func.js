@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__SendMessage = {};
 gdjs.evtsExt__THNK__SendMessage.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__SendMessage.userFunc0x20c4220 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__SendMessage.userFunc0x13ad0c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkClient) {
     THNK.client.messages.sendClientMessage(
@@ -31,7 +31,7 @@ gdjs.evtsExt__THNK__SendMessage.eventsList0 = function(runtimeScene, eventsFunct
 {
 
 
-gdjs.evtsExt__THNK__SendMessage.userFunc0x20c4220(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__SendMessage.userFunc0x13ad0c8(runtimeScene, eventsFunctionContext);
 
 }
 

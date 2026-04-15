@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__TargetY = {};
 gdjs.evtsExt__CurvedMovement__TargetY.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__TargetY.userFunc0x1f55478 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__TargetY.userFunc0x109a230 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -30,7 +30,7 @@ gdjs.evtsExt__CurvedMovement__TargetY.eventsList0 = function(runtimeScene, event
 
 
 const objects = [];
-gdjs.evtsExt__CurvedMovement__TargetY.userFunc0x1f55478(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__TargetY.userFunc0x109a230(runtimeScene, objects, eventsFunctionContext);
 
 }
 

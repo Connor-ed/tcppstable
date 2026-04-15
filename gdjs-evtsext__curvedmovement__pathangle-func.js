@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__PathAngle = {};
 gdjs.evtsExt__CurvedMovement__PathAngle.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x207dbf8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x1d4a150 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -26,7 +26,7 @@ gdjs.evtsExt__CurvedMovement__PathAngle.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x207dbf8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__PathAngle.userFunc0x1d4a150(runtimeScene, eventsFunctionContext);
 
 }
 

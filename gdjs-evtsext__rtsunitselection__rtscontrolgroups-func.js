@@ -779,7 +779,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num1");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37997172);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37881356);
 }
 }
 if (isConditionTrue_0) {
@@ -799,7 +799,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num2");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38000700);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37884884);
 }
 }
 if (isConditionTrue_0) {
@@ -819,7 +819,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num3");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38004228);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37888412);
 }
 }
 if (isConditionTrue_0) {
@@ -839,7 +839,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num4");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38007732);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37891916);
 }
 }
 if (isConditionTrue_0) {
@@ -859,7 +859,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num5");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38010748);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37894932);
 }
 }
 if (isConditionTrue_0) {
@@ -879,7 +879,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num6");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38014748);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37898932);
 }
 }
 if (isConditionTrue_0) {
@@ -899,7 +899,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num7");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38018220);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37902404);
 }
 }
 if (isConditionTrue_0) {
@@ -919,7 +919,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num8");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38021692);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37905876);
 }
 }
 if (isConditionTrue_0) {
@@ -939,7 +939,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num9");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38025236);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37909420);
 }
 }
 if (isConditionTrue_0) {
@@ -959,7 +959,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Num0");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(38028708);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(37912892);
 }
 }
 if (isConditionTrue_0) {
