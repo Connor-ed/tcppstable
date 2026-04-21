@@ -107,7 +107,7 @@ gdjs.BootCode.GDShadowObjects1= [];
 gdjs.BootCode.GDShadowObjects2= [];
 
 
-gdjs.BootCode.userFunc0x179e538 = function GDJSInlineCode(runtimeScene) {
+gdjs.BootCode.userFunc0x3f32788 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -120,7 +120,7 @@ gdjs.BootCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.BootCode.userFunc0x179e538(runtimeScene);
+gdjs.BootCode.userFunc0x3f32788(runtimeScene);
 
 }
 

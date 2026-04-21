@@ -9,7 +9,7 @@ gdjs.evtsExt__Clipboard__ReadTextCrossPlaform = {};
 gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.userFunc0x14ee1c0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.userFunc0xb2ab48 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const electron = runtimeScene.getGame().getRenderer().getElectron();
 const callback =
@@ -42,7 +42,7 @@ gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.userFunc0x14ee1c0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.userFunc0xb2ab48(runtimeScene, eventsFunctionContext);
 
 }
 

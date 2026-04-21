@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__OnClientConnect = {};
 gdjs.evtsExt__THNK__OnClientConnect.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__OnClientConnect.userFunc0xd19a40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__OnClientConnect.userFunc0x1a38f90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkServer) eventsFunctionContext.returnValue = THNK.server.events.popConnection(runtimeScene);
 
@@ -36,7 +36,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.evtsExt__THNK__OnClientConnect.userFunc0xd19a40(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__OnClientConnect.userFunc0x1a38f90(runtimeScene, eventsFunctionContext);
 
 }
 

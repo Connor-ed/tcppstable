@@ -9,7 +9,7 @@ gdjs.evtsExt__TextToSpeech__StopSpeaking = {};
 gdjs.evtsExt__TextToSpeech__StopSpeaking.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x28f27d0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x28dfaf8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 window.speechSynthesis.cancel();
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__TextToSpeech__StopSpeaking.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x28f27d0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__TextToSpeech__StopSpeaking.userFunc0x28dfaf8(runtimeScene, eventsFunctionContext);
 
 }
 

@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__loadTranslationsResource = {};
 gdjs.evtsExt__Translate__loadTranslationsResource.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__loadTranslationsResource.userFunc0x2257ba8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Translate__loadTranslationsResource.userFunc0x21c8218 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let jsonFilePath = eventsFunctionContext.getArgument('language_file');
 
@@ -52,7 +52,7 @@ let isConditionTrue_0 = false;
 
 
 const objects = [];
-gdjs.evtsExt__Translate__loadTranslationsResource.userFunc0x2257ba8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Translate__loadTranslationsResource.userFunc0x21c8218(runtimeScene, objects, eventsFunctionContext);
 
 }
 

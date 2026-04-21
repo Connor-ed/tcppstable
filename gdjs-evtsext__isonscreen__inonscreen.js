@@ -73,7 +73,7 @@ gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.idTo
 gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.userFunc0x1747eb8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.userFunc0x1de5890 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 /*
 Get the object layer, convert the position from this layer to the screen coordinates.
@@ -122,7 +122,7 @@ gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.even
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.GDObjectObjects1;
-gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.userFunc0x1747eb8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__IsOnScreen__InOnScreen.InOnScreen.prototype.IsOnScreenContext.userFunc0x1de5890(runtimeScene, objects, eventsFunctionContext);
 
 }
 

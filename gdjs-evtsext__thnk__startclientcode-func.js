@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__StartClientCode = {};
 gdjs.evtsExt__THNK__StartClientCode.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__StartClientCode.userFunc0x13ad0c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__StartClientCode.userFunc0x19bc890 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = !THNK.settings.DEDICATED;
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__THNK__StartClientCode.eventsList0 = function(runtimeScene, eventsF
 {
 
 
-gdjs.evtsExt__THNK__StartClientCode.userFunc0x13ad0c8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__StartClientCode.userFunc0x19bc890(runtimeScene, eventsFunctionContext);
 
 }
 
