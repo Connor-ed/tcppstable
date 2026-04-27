@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.idToCallbackMap = new Map(
 gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0x105df88 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0xca8408 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const object = eventsFunctionContext.getObjects("Object")[0];
 const objectVariables = object.getVariables();
@@ -22,7 +22,7 @@ gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0x105df88(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__DeleteObjectVariable.userFunc0xca8408(runtimeScene, eventsFunctionContext);
 
 }
 

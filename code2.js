@@ -255,7 +255,7 @@ gdjs.LoadCode.GDShadowObjects3= [];
 gdjs.LoadCode.GDShadowObjects4= [];
 
 
-gdjs.LoadCode.userFunc0x3f32788 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x14dfc98 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -269,12 +269,12 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3f32788(runtimeScene);
+gdjs.LoadCode.userFunc0x14dfc98(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x3d343f8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x42f5080 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -288,7 +288,7 @@ gdjs.LoadCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3d343f8(runtimeScene);
+gdjs.LoadCode.userFunc0x42f5080(runtimeScene);
 
 }
 
@@ -465,7 +465,7 @@ gdjs.LoadCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x3d35208 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x3a1cd00 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log("Loading alert visible:", runtimeScene.getObjects("Loading_alert")[0].isVisible());
 console.log("Loading alert anim:", runtimeScene.getObjects("Loading_alert")[0].getAnimationName());
@@ -475,7 +475,7 @@ gdjs.LoadCode.eventsList6 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3d35208(runtimeScene);
+gdjs.LoadCode.userFunc0x3a1cd00(runtimeScene);
 
 }
 
@@ -487,7 +487,7 @@ gdjs.LoadCode.userFunc0x3d35208(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42390596);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42684900);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects2);
@@ -515,7 +515,7 @@ gdjs.copyArray(runtimeScene.getObjects("Loaded_Input"), gdjs.LoadCode.GDLoaded_9
 };gdjs.LoadCode.eventsList8 = function(runtimeScene) {
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.LoadCode.userFunc0x3d35910 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x39eec98 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -549,7 +549,7 @@ gdjs.LoadCode.eventsList9 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3d35910(runtimeScene);
+gdjs.LoadCode.userFunc0x39eec98(runtimeScene);
 
 }
 
@@ -587,7 +587,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42406532);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42700836);
 }
 }
 }
@@ -600,7 +600,7 @@ gdjs.LoadCode.eventsList9(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x3d34b00 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x4e4ed98 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -669,7 +669,7 @@ gdjs.LoadCode.eventsList11 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3d34b00(runtimeScene);
+gdjs.LoadCode.userFunc0x4e4ed98(runtimeScene);
 
 }
 
@@ -689,7 +689,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42411620);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42705924);
 }
 }
 }
@@ -744,7 +744,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.LoadCode.userFunc0x3fa5e88 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x4611848 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -783,7 +783,7 @@ gdjs.LoadCode.eventsList14 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3fa5e88(runtimeScene);
+gdjs.LoadCode.userFunc0x4611848(runtimeScene);
 
 }
 
@@ -821,7 +821,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42420700);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42715004);
 }
 }
 }
@@ -955,7 +955,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42388428);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42682732);
 }
 }
 if (isConditionTrue_0) {
@@ -994,7 +994,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42391100);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42685404);
 }
 }
 }
@@ -1015,7 +1015,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42402140);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42696444);
 }
 }
 if (isConditionTrue_0) {
@@ -1444,7 +1444,7 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Top_Lite"), gdjs.LoadCode.GDGloba
 
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.LoadCode.userFunc0x3faab68 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x422b650 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — one-time setup
 if (typeof globalThis.PatchBay !== "undefined") return;
@@ -1551,12 +1551,12 @@ gdjs.LoadCode.eventsList24 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3faab68(runtimeScene);
+gdjs.LoadCode.userFunc0x422b650(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x3faae68 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x4445380 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle left click (connect)
 const pb = globalThis.PatchBay;
@@ -1650,12 +1650,12 @@ gdjs.LoadCode.eventsList25 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3faae68(runtimeScene);
+gdjs.LoadCode.userFunc0x4445380(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x3fab168 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x5067868 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle right click (disconnect)
 const pb = globalThis.PatchBay;
@@ -1694,12 +1694,12 @@ gdjs.LoadCode.eventsList26 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3fab168(runtimeScene);
+gdjs.LoadCode.userFunc0x5067868(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x3fab268 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x3a27860 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — redraw cables every frame
 const pb = globalThis.PatchBay;
@@ -1785,7 +1785,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42396300);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42690604);
 }
 }
 if (isConditionTrue_0) {
@@ -1867,7 +1867,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42401524);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42695828);
 }
 }
 if (isConditionTrue_0) {
@@ -2114,7 +2114,7 @@ gdjs.LoadCode.eventsList26(runtimeScene);} //End of subevents
 {
 
 
-gdjs.LoadCode.userFunc0x3fab268(runtimeScene);
+gdjs.LoadCode.userFunc0x3a27860(runtimeScene);
 
 }
 

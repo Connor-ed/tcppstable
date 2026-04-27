@@ -9,7 +9,7 @@ gdjs.evtsExt__Language__Language = {};
 gdjs.evtsExt__Language__Language.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Language__Language.userFunc0x102a018 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Language__Language.userFunc0xd606b8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = navigator.language || "";
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__Language__Language.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Language__Language.userFunc0x102a018(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Language__Language.userFunc0xd606b8(runtimeScene, eventsFunctionContext);
 
 }
 
