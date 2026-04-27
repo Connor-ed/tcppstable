@@ -41,7 +41,7 @@ gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
 
 
-gdjs.Quick_95CheckCode.userFunc0x39d9970 = function GDJSInlineCode(runtimeScene) {
+gdjs.Quick_95CheckCode.userFunc0x3bb5b38 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const SB_URL = "https://dyuuloipijvkfejfqoay.supabase.co";
 const SB_KEY = "sb_publishable_YkIqOOig3cqxaLO5uBtfcw_mX_3lwc_";
@@ -86,7 +86,7 @@ gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Quick_95CheckCode.userFunc0x39d9970(runtimeScene);
+gdjs.Quick_95CheckCode.userFunc0x3bb5b38(runtimeScene);
 
 }
 
@@ -101,7 +101,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42686148);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42686388);
 }
 }
 if (isConditionTrue_0) {
@@ -223,7 +223,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 5;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Boot");
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Menu");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, null);

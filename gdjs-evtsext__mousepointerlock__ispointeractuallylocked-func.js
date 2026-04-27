@@ -9,7 +9,7 @@ gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked = {};
 gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1dc35b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1c76128 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const { handler } = gdjs._MousePointerLockExtension;
@@ -22,7 +22,7 @@ gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.eventsList0 = function(r
 {
 
 
-gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1dc35b0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MousePointerLock__isPointerActuallyLocked.userFunc0x1c76128(runtimeScene, eventsFunctionContext);
 
 }
 

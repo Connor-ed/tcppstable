@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__InvertPath = {};
 gdjs.evtsExt__CurvedMovement__InvertPath.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__InvertPath.userFunc0x1f31a60 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__InvertPath.userFunc0x1ee0850 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -25,7 +25,7 @@ gdjs.evtsExt__CurvedMovement__InvertPath.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__CurvedMovement__InvertPath.userFunc0x1f31a60(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__InvertPath.userFunc0x1ee0850(runtimeScene, eventsFunctionContext);
 
 }
 

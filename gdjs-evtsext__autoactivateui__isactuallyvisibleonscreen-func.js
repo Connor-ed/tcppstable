@@ -10,7 +10,7 @@ gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.idToCallbackMap = new Ma
 gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xc253c0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xd125d0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const object = objects[0];
 const pixiObject = object.getRendererObject();
@@ -29,7 +29,7 @@ gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.eventsList0 = function(r
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.GDObjectObjects1;
-gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xc253c0(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__AutoActivateUI__IsActuallyVisibleOnScreen.userFunc0xd125d0(runtimeScene, objects, eventsFunctionContext);
 
 }
 

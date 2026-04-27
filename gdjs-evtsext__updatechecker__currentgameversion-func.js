@@ -9,7 +9,7 @@ gdjs.evtsExt__UpdateChecker__CurrentGameVersion = {};
 gdjs.evtsExt__UpdateChecker__CurrentGameVersion.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameVersion.userFunc0xa2fdb8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__UpdateChecker__CurrentGameVersion.userFunc0xb7ea40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.version;
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__UpdateChecker__CurrentGameVersion.eventsList0 = function(runtimeSc
 {
 
 
-gdjs.evtsExt__UpdateChecker__CurrentGameVersion.userFunc0xa2fdb8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__UpdateChecker__CurrentGameVersion.userFunc0xb7ea40(runtimeScene, eventsFunctionContext);
 
 }
 
