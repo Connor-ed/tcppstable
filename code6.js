@@ -37,9 +37,6 @@ gdjs.Synth_32Selecting_32PageCode.GDSnapShotObjects3= [];
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects1= [];
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects2= [];
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects3= [];
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects1= [];
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects2= [];
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects3= [];
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects1= [];
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects2= [];
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects3= [];
@@ -274,7 +271,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isScrollingDown(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) + (40), "", 0);
+{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) + (0.25), "", 0);
 }
 
 { //Subevents
@@ -291,7 +288,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isScrollingUp(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) - (40), "", 0);
+{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) - (0.25), "", 0);
 }
 
 { //Subevents
@@ -308,7 +305,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Down");
 if (isConditionTrue_0) {
-{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) + (40), "", 0);
+{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) + (0.5), "", 0);
 }
 
 { //Subevents
@@ -325,7 +322,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Up");
 if (isConditionTrue_0) {
-{gdjs.evtTools.camera.setCameraY(runtimeScene, gdjs.evtTools.camera.getCameraY(runtimeScene, "", 0) - (40), "", 0);
+{gdjs.evtTools.camera.setCameraY(runtimeScene, 0, "", 0);
 }
 
 { //Subevents
@@ -376,9 +373,6 @@ gdjs.Synth_32Selecting_32PageCode.GDSnapShotObjects3.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects1.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects2.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects3.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects1.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects2.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects3.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects3.length = 0;
@@ -426,9 +420,6 @@ gdjs.Synth_32Selecting_32PageCode.GDSnapShotObjects3.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects1.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects2.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDBackgroundObjects3.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects1.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects2.length = 0;
-gdjs.Synth_32Selecting_32PageCode.GDfadeObjects3.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Synth_32Selecting_32PageCode.GDSquareWhiteSliderObjects3.length = 0;

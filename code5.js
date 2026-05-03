@@ -129,10 +129,6 @@ gdjs.Synth_32SelectorCode.GDBackgroundObjects1= [];
 gdjs.Synth_32SelectorCode.GDBackgroundObjects2= [];
 gdjs.Synth_32SelectorCode.GDBackgroundObjects3= [];
 gdjs.Synth_32SelectorCode.GDBackgroundObjects4= [];
-gdjs.Synth_32SelectorCode.GDfadeObjects1= [];
-gdjs.Synth_32SelectorCode.GDfadeObjects2= [];
-gdjs.Synth_32SelectorCode.GDfadeObjects3= [];
-gdjs.Synth_32SelectorCode.GDfadeObjects4= [];
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1= [];
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2= [];
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3= [];
@@ -147,7 +143,7 @@ gdjs.Synth_32SelectorCode.GDShadowObjects3= [];
 gdjs.Synth_32SelectorCode.GDShadowObjects4= [];
 
 
-gdjs.Synth_32SelectorCode.userFunc0x3bb5b38 = function GDJSInlineCode(runtimeScene) {
+gdjs.Synth_32SelectorCode.userFunc0x37bf2d8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -160,7 +156,7 @@ gdjs.Synth_32SelectorCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Synth_32SelectorCode.userFunc0x3bb5b38(runtimeScene);
+gdjs.Synth_32SelectorCode.userFunc0x37bf2d8(runtimeScene);
 
 }
 
@@ -712,7 +708,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595Dow
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43013972);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42986324);
 }
 }
 if (isConditionTrue_0) {
@@ -739,7 +735,7 @@ for (var i = 0, k = 0, l = gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpO
 gdjs.Synth_32SelectorCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43015228);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42987580);
 }
 }
 if (isConditionTrue_0) {
@@ -1865,10 +1861,6 @@ gdjs.Synth_32SelectorCode.GDBackgroundObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3.length = 0;
@@ -2011,10 +2003,6 @@ gdjs.Synth_32SelectorCode.GDBackgroundObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects3.length = 0;
 gdjs.Synth_32SelectorCode.GDBackgroundObjects4.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects1.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects2.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects3.length = 0;
-gdjs.Synth_32SelectorCode.GDfadeObjects4.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Synth_32SelectorCode.GDSquareWhiteSliderObjects3.length = 0;

@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__ConnectingToServer = {};
 gdjs.evtsExt__THNK__ConnectingToServer.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1c7b9a0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1f26378 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = THNK.client.getConnectionState() === "connecting";
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__THNK__ConnectingToServer.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1c7b9a0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__ConnectingToServer.userFunc0x1f26378(runtimeScene, eventsFunctionContext);
 
 }
 

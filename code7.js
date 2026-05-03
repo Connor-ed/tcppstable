@@ -67,9 +67,6 @@ gdjs.MenuCode.GDSnapShotObjects3= [];
 gdjs.MenuCode.GDBackgroundObjects1= [];
 gdjs.MenuCode.GDBackgroundObjects2= [];
 gdjs.MenuCode.GDBackgroundObjects3= [];
-gdjs.MenuCode.GDfadeObjects1= [];
-gdjs.MenuCode.GDfadeObjects2= [];
-gdjs.MenuCode.GDfadeObjects3= [];
 gdjs.MenuCode.GDSquareWhiteSliderObjects1= [];
 gdjs.MenuCode.GDSquareWhiteSliderObjects2= [];
 gdjs.MenuCode.GDSquareWhiteSliderObjects3= [];
@@ -81,7 +78,40 @@ gdjs.MenuCode.GDShadowObjects2= [];
 gdjs.MenuCode.GDShadowObjects3= [];
 
 
+gdjs.MenuCode.userFunc0x37bf2d8 = function GDJSInlineCode(runtimeScene) {
+"use strict";
+// 1. Get the reference
+const pb = globalThis.PatchBay;
+
+if (pb) {
+    console.log("[PatchBay] Nuking system for Menu scene...");
+
+    // 2. Physically remove the canvas from the browser window
+    if (pb.canvas && pb.canvas.parentNode) {
+        pb.canvas.parentNode.removeChild(pb.canvas);
+    }
+
+    // 3. Completely wipe the global object
+    // This is the most important part. By setting this to null, 
+    // your Redraw script's "if (!pb || !pb.ctx) return;" line 
+    // will trigger and STOP the loop instantly.
+    globalThis.PatchBay = null;
+
+    console.log("[PatchBay] System fully destroyed ✓");
+}
+
+};
 gdjs.MenuCode.eventsList0 = function(runtimeScene) {
+
+{
+
+
+gdjs.MenuCode.userFunc0x37bf2d8(runtimeScene);
+
+}
+
+
+};gdjs.MenuCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -90,6 +120,24 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43138724);
+}
+}
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.MenuCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
 }
 
 }
@@ -101,7 +149,7 @@ gdjs.MenuCode.mapOfGDgdjs_9546MenuCode_9546GDEdit_95959595BoxObjects2Objects = H
 gdjs.MenuCode.mapOfGDgdjs_9546MenuCode_9546GDAbout_95959595BoxObjects2Objects = Hashtable.newFrom({"About_Box": gdjs.MenuCode.GDAbout_9595BoxObjects2});
 gdjs.MenuCode.mapOfGDgdjs_9546MenuCode_9546GDBack_95959595BoxObjects2Objects = Hashtable.newFrom({"Back_Box": gdjs.MenuCode.GDBack_9595BoxObjects2});
 gdjs.MenuCode.mapOfGDgdjs_9546MenuCode_9546GDBack_95959595BoxObjects1Objects = Hashtable.newFrom({"Back_Box": gdjs.MenuCode.GDBack_9595BoxObjects1});
-gdjs.MenuCode.eventsList1 = function(runtimeScene) {
+gdjs.MenuCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -211,7 +259,7 @@ gdjs.copyArray(runtimeScene.getObjects("Menu_Slide_Back"), gdjs.MenuCode.GDMenu_
 }
 
 
-};gdjs.MenuCode.eventsList2 = function(runtimeScene) {
+};gdjs.MenuCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -228,7 +276,7 @@ for (var i = 0, k = 0, l = gdjs.MenuCode.GDView_9595BoxObjects2.length;i<l;++i) 
 }
 gdjs.MenuCode.GDView_9595BoxObjects2.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Synth Selector", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Pre", false);
 }
 }
 
@@ -305,14 +353,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.MenuCode.eventsList3 = function(runtimeScene) {
-
-{
-
-
-gdjs.MenuCode.eventsList0(runtimeScene);
-}
-
+};gdjs.MenuCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -325,6 +366,13 @@ gdjs.MenuCode.eventsList1(runtimeScene);
 
 
 gdjs.MenuCode.eventsList2(runtimeScene);
+}
+
+
+{
+
+
+gdjs.MenuCode.eventsList3(runtimeScene);
 }
 
 
@@ -409,9 +457,6 @@ gdjs.MenuCode.GDSnapShotObjects3.length = 0;
 gdjs.MenuCode.GDBackgroundObjects1.length = 0;
 gdjs.MenuCode.GDBackgroundObjects2.length = 0;
 gdjs.MenuCode.GDBackgroundObjects3.length = 0;
-gdjs.MenuCode.GDfadeObjects1.length = 0;
-gdjs.MenuCode.GDfadeObjects2.length = 0;
-gdjs.MenuCode.GDfadeObjects3.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects3.length = 0;
@@ -422,7 +467,7 @@ gdjs.MenuCode.GDShadowObjects1.length = 0;
 gdjs.MenuCode.GDShadowObjects2.length = 0;
 gdjs.MenuCode.GDShadowObjects3.length = 0;
 
-gdjs.MenuCode.eventsList3(runtimeScene);
+gdjs.MenuCode.eventsList4(runtimeScene);
 gdjs.MenuCode.GDBackground_9595Cart_9595LayerObjects1.length = 0;
 gdjs.MenuCode.GDBackground_9595Cart_9595LayerObjects2.length = 0;
 gdjs.MenuCode.GDBackground_9595Cart_9595LayerObjects3.length = 0;
@@ -489,9 +534,6 @@ gdjs.MenuCode.GDSnapShotObjects3.length = 0;
 gdjs.MenuCode.GDBackgroundObjects1.length = 0;
 gdjs.MenuCode.GDBackgroundObjects2.length = 0;
 gdjs.MenuCode.GDBackgroundObjects3.length = 0;
-gdjs.MenuCode.GDfadeObjects1.length = 0;
-gdjs.MenuCode.GDfadeObjects2.length = 0;
-gdjs.MenuCode.GDfadeObjects3.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.MenuCode.GDSquareWhiteSliderObjects3.length = 0;

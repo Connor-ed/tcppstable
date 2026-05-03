@@ -9,7 +9,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync = {};
 gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0xd44710 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0xb2dab8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = runtimeScene.getGame().getGameData().properties.verticalSync;
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.eventsList0 = function(runti
 {
 
 
-gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0xd44710(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__GetPropertiesData__ReturnVerticalSync.userFunc0xb2dab8(runtimeScene, eventsFunctionContext);
 
 }
 

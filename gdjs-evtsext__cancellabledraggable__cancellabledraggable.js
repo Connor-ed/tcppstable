@@ -140,7 +140,7 @@ for (var i = 0, k = 0, l = gdjs.evtsExt__CancellableDraggable__CancellableDragga
 gdjs.evtsExt__CancellableDraggable__CancellableDraggable.CancellableDraggable.prototype.doStepPostEventsContext.GDObjectObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(40759124);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(40735836);
 }
 }
 if (isConditionTrue_0) {

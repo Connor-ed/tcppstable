@@ -237,10 +237,6 @@ gdjs.LoadCode.GDBackgroundObjects1= [];
 gdjs.LoadCode.GDBackgroundObjects2= [];
 gdjs.LoadCode.GDBackgroundObjects3= [];
 gdjs.LoadCode.GDBackgroundObjects4= [];
-gdjs.LoadCode.GDfadeObjects1= [];
-gdjs.LoadCode.GDfadeObjects2= [];
-gdjs.LoadCode.GDfadeObjects3= [];
-gdjs.LoadCode.GDfadeObjects4= [];
 gdjs.LoadCode.GDSquareWhiteSliderObjects1= [];
 gdjs.LoadCode.GDSquareWhiteSliderObjects2= [];
 gdjs.LoadCode.GDSquareWhiteSliderObjects3= [];
@@ -255,7 +251,7 @@ gdjs.LoadCode.GDShadowObjects3= [];
 gdjs.LoadCode.GDShadowObjects4= [];
 
 
-gdjs.LoadCode.userFunc0x3bb5b38 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x1777940 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -269,12 +265,12 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3bb5b38(runtimeScene);
+gdjs.LoadCode.userFunc0x1777940(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x3e1c958 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x3908908 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -288,7 +284,7 @@ gdjs.LoadCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3e1c958(runtimeScene);
+gdjs.LoadCode.userFunc0x3908908(runtimeScene);
 
 }
 
@@ -465,7 +461,7 @@ gdjs.LoadCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x3bab2a0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x3e0b9d8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log("Loading alert visible:", runtimeScene.getObjects("Loading_alert")[0].isVisible());
 console.log("Loading alert anim:", runtimeScene.getObjects("Loading_alert")[0].getAnimationName());
@@ -475,7 +471,7 @@ gdjs.LoadCode.eventsList6 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x3bab2a0(runtimeScene);
+gdjs.LoadCode.userFunc0x3e0b9d8(runtimeScene);
 
 }
 
@@ -487,7 +483,7 @@ gdjs.LoadCode.userFunc0x3bab2a0(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42685140);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42659796);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.LoadCode.GDINSTObjects2);
@@ -515,7 +511,7 @@ gdjs.copyArray(runtimeScene.getObjects("Loaded_Input"), gdjs.LoadCode.GDLoaded_9
 };gdjs.LoadCode.eventsList8 = function(runtimeScene) {
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.LoadCode.userFunc0x4098798 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x3880f10 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -549,7 +545,7 @@ gdjs.LoadCode.eventsList9 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x4098798(runtimeScene);
+gdjs.LoadCode.userFunc0x3880f10(runtimeScene);
 
 }
 
@@ -587,7 +583,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42701076);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42674364);
 }
 }
 }
@@ -600,7 +596,7 @@ gdjs.LoadCode.eventsList9(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.LoadCode.userFunc0x4099090 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0xbea640 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -669,7 +665,7 @@ gdjs.LoadCode.eventsList11 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x4099090(runtimeScene);
+gdjs.LoadCode.userFunc0xbea640(runtimeScene);
 
 }
 
@@ -689,7 +685,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42706164);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42679452);
 }
 }
 }
@@ -744,7 +740,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.LoadCode.userFunc0x409a810 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x2e8a950 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -783,7 +779,7 @@ gdjs.LoadCode.eventsList14 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x409a810(runtimeScene);
+gdjs.LoadCode.userFunc0x2e8a950(runtimeScene);
 
 }
 
@@ -821,7 +817,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42715244);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42688532);
 }
 }
 }
@@ -955,7 +951,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42682972);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42655868);
 }
 }
 if (isConditionTrue_0) {
@@ -994,7 +990,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42685644);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42659396);
 }
 }
 }
@@ -1015,7 +1011,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42696684);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42656452);
 }
 }
 if (isConditionTrue_0) {
@@ -1444,10 +1440,10 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Top_Lite"), gdjs.LoadCode.GDGloba
 
 
 };gdjs.LoadCode.mapOfGDgdjs_9546LoadCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.LoadCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.LoadCode.userFunc0x409f7f8 = function GDJSInlineCode(runtimeScene) {
+gdjs.LoadCode.userFunc0x1f06778 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — one-time setup
-if (typeof globalThis.PatchBay !== "undefined") return;
+if (globalThis.PatchBay && globalThis.PatchBay.canvas) return;
 
 globalThis.PatchBay = {
 
@@ -1551,12 +1547,12 @@ gdjs.LoadCode.eventsList24 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x409f7f8(runtimeScene);
+gdjs.LoadCode.userFunc0x1f06778(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x409fad0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x3bcc540 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle left click (connect)
 const pb = globalThis.PatchBay;
@@ -1650,12 +1646,12 @@ gdjs.LoadCode.eventsList25 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x409fad0(runtimeScene);
+gdjs.LoadCode.userFunc0x3bcc540(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x409fdd0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x200eb98 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle right click (disconnect)
 const pb = globalThis.PatchBay;
@@ -1694,12 +1690,12 @@ gdjs.LoadCode.eventsList26 = function(runtimeScene) {
 {
 
 
-gdjs.LoadCode.userFunc0x409fdd0(runtimeScene);
+gdjs.LoadCode.userFunc0x200eb98(runtimeScene);
 
 }
 
 
-};gdjs.LoadCode.userFunc0x409fed0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LoadCode.userFunc0x1b69870 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — redraw cables every frame
 const pb = globalThis.PatchBay;
@@ -1785,7 +1781,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42690844);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42664916);
 }
 }
 if (isConditionTrue_0) {
@@ -1867,7 +1863,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42696068);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42670140);
 }
 }
 if (isConditionTrue_0) {
@@ -2114,7 +2110,7 @@ gdjs.LoadCode.eventsList26(runtimeScene);} //End of subevents
 {
 
 
-gdjs.LoadCode.userFunc0x409fed0(runtimeScene);
+gdjs.LoadCode.userFunc0x1b69870(runtimeScene);
 
 }
 
@@ -2370,10 +2366,6 @@ gdjs.LoadCode.GDBackgroundObjects1.length = 0;
 gdjs.LoadCode.GDBackgroundObjects2.length = 0;
 gdjs.LoadCode.GDBackgroundObjects3.length = 0;
 gdjs.LoadCode.GDBackgroundObjects4.length = 0;
-gdjs.LoadCode.GDfadeObjects1.length = 0;
-gdjs.LoadCode.GDfadeObjects2.length = 0;
-gdjs.LoadCode.GDfadeObjects3.length = 0;
-gdjs.LoadCode.GDfadeObjects4.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects3.length = 0;
@@ -2624,10 +2616,6 @@ gdjs.LoadCode.GDBackgroundObjects1.length = 0;
 gdjs.LoadCode.GDBackgroundObjects2.length = 0;
 gdjs.LoadCode.GDBackgroundObjects3.length = 0;
 gdjs.LoadCode.GDBackgroundObjects4.length = 0;
-gdjs.LoadCode.GDfadeObjects1.length = 0;
-gdjs.LoadCode.GDfadeObjects2.length = 0;
-gdjs.LoadCode.GDfadeObjects3.length = 0;
-gdjs.LoadCode.GDfadeObjects4.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.LoadCode.GDSquareWhiteSliderObjects3.length = 0;

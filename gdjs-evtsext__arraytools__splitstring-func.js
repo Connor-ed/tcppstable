@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__SplitString = {};
 gdjs.evtsExt__ArrayTools__SplitString.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ArrayTools__SplitString.userFunc0x2d2f5e8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__SplitString.userFunc0x2d345f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -29,7 +29,7 @@ gdjs.evtsExt__ArrayTools__SplitString.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__ArrayTools__SplitString.userFunc0x2d2f5e8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__SplitString.userFunc0x2d345f8(runtimeScene, eventsFunctionContext);
 
 }
 

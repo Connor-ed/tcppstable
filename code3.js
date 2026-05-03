@@ -31,8 +31,6 @@ gdjs.Quick_95CheckCode.GDSnapShotObjects1= [];
 gdjs.Quick_95CheckCode.GDSnapShotObjects2= [];
 gdjs.Quick_95CheckCode.GDBackgroundObjects1= [];
 gdjs.Quick_95CheckCode.GDBackgroundObjects2= [];
-gdjs.Quick_95CheckCode.GDfadeObjects1= [];
-gdjs.Quick_95CheckCode.GDfadeObjects2= [];
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1= [];
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2= [];
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1= [];
@@ -41,7 +39,7 @@ gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
 
 
-gdjs.Quick_95CheckCode.userFunc0x3bb5b38 = function GDJSInlineCode(runtimeScene) {
+gdjs.Quick_95CheckCode.userFunc0x37bf2d8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const SB_URL = "https://dyuuloipijvkfejfqoay.supabase.co";
 const SB_KEY = "sb_publishable_YkIqOOig3cqxaLO5uBtfcw_mX_3lwc_";
@@ -86,7 +84,7 @@ gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Quick_95CheckCode.userFunc0x3bb5b38(runtimeScene);
+gdjs.Quick_95CheckCode.userFunc0x37bf2d8(runtimeScene);
 
 }
 
@@ -101,7 +99,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42686388);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42660460);
 }
 }
 if (isConditionTrue_0) {
@@ -378,8 +376,6 @@ gdjs.Quick_95CheckCode.GDSnapShotObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSnapShotObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects2.length = 0;
-gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
-gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;
@@ -418,8 +414,6 @@ gdjs.Quick_95CheckCode.GDSnapShotObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSnapShotObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDBackgroundObjects2.length = 0;
-gdjs.Quick_95CheckCode.GDfadeObjects1.length = 0;
-gdjs.Quick_95CheckCode.GDfadeObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.Quick_95CheckCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.Quick_95CheckCode.GDtop_9595titleObjects1.length = 0;

@@ -97,8 +97,6 @@ gdjs.BootCode.GDSnapShotObjects1= [];
 gdjs.BootCode.GDSnapShotObjects2= [];
 gdjs.BootCode.GDBackgroundObjects1= [];
 gdjs.BootCode.GDBackgroundObjects2= [];
-gdjs.BootCode.GDfadeObjects1= [];
-gdjs.BootCode.GDfadeObjects2= [];
 gdjs.BootCode.GDSquareWhiteSliderObjects1= [];
 gdjs.BootCode.GDSquareWhiteSliderObjects2= [];
 gdjs.BootCode.GDtop_9595titleObjects1= [];
@@ -107,7 +105,7 @@ gdjs.BootCode.GDShadowObjects1= [];
 gdjs.BootCode.GDShadowObjects2= [];
 
 
-gdjs.BootCode.userFunc0x3bb5b38 = function GDJSInlineCode(runtimeScene) {
+gdjs.BootCode.userFunc0x3880f10 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -120,7 +118,7 @@ gdjs.BootCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.BootCode.userFunc0x3bb5b38(runtimeScene);
+gdjs.BootCode.userFunc0x3880f10(runtimeScene);
 
 }
 
@@ -1677,8 +1675,6 @@ gdjs.BootCode.GDSnapShotObjects1.length = 0;
 gdjs.BootCode.GDSnapShotObjects2.length = 0;
 gdjs.BootCode.GDBackgroundObjects1.length = 0;
 gdjs.BootCode.GDBackgroundObjects2.length = 0;
-gdjs.BootCode.GDfadeObjects1.length = 0;
-gdjs.BootCode.GDfadeObjects2.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.BootCode.GDtop_9595titleObjects1.length = 0;
@@ -1783,8 +1779,6 @@ gdjs.BootCode.GDSnapShotObjects1.length = 0;
 gdjs.BootCode.GDSnapShotObjects2.length = 0;
 gdjs.BootCode.GDBackgroundObjects1.length = 0;
 gdjs.BootCode.GDBackgroundObjects2.length = 0;
-gdjs.BootCode.GDfadeObjects1.length = 0;
-gdjs.BootCode.GDfadeObjects2.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects1.length = 0;
 gdjs.BootCode.GDSquareWhiteSliderObjects2.length = 0;
 gdjs.BootCode.GDtop_9595titleObjects1.length = 0;

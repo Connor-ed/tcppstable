@@ -9,7 +9,7 @@ gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter = {};
 gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.userFunc0xb64798 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.userFunc0xd49c00 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const url = new URL(eventsFunctionContext.getArgument("URL"));
 url.searchParams.set(
@@ -24,7 +24,7 @@ gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.eventsList0 = function(run
 {
 
 
-gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.userFunc0xb64798(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__URLTools__ChangeURLQueryStringParameter.userFunc0xd49c00(runtimeScene, eventsFunctionContext);
 
 }
 
