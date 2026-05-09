@@ -11,7 +11,7 @@ gdjs.evtsExt__RenderToSprite__RenderObject.GDsourceObjects1= [];
 gdjs.evtsExt__RenderToSprite__RenderObject.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xabcc88 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xa39810 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const source = eventsFunctionContext.getObjects("source")[0].getRendererObject();
 const renderTarget = eventsFunctionContext.getObjects("renderTarget")[0].getRendererObject();
@@ -50,7 +50,7 @@ gdjs.evtsExt__RenderToSprite__RenderObject.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xabcc88(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderObject.userFunc0xa39810(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -90,7 +90,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

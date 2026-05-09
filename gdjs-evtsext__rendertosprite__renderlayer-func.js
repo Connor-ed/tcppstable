@@ -10,7 +10,7 @@ gdjs.evtsExt__RenderToSprite__RenderLayer.idToCallbackMap = new Map();
 gdjs.evtsExt__RenderToSprite__RenderLayer.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderLayer.userFunc0xa2d060 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderLayer.userFunc0x15e3fd0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const source = runtimeScene.getLayer(eventsFunctionContext.getArgument("layer")).getRenderer().getRendererObject();
 const height = runtimeScene.getLayer("").getCameraHeight();
@@ -65,7 +65,7 @@ gdjs.evtsExt__RenderToSprite__RenderLayer.eventsList0 = function(runtimeScene, e
 gdjs.copyArray(eventsFunctionContext.getObjects("renderTarget"), gdjs.evtsExt__RenderToSprite__RenderLayer.GDrenderTargetObjects1);
 
 const objects = gdjs.evtsExt__RenderToSprite__RenderLayer.GDrenderTargetObjects1;
-gdjs.evtsExt__RenderToSprite__RenderLayer.userFunc0xa2d060(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderLayer.userFunc0x15e3fd0(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -103,7 +103,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__OnMessage = {};
 gdjs.evtsExt__THNK__OnMessage.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__OnMessage.userFunc0x1eff028 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__OnMessage.userFunc0x1dd0180 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (!runtimeScene.thnkClient) eventsFunctionContext.returnValue = THNK.server.events.popMessage(
     eventsFunctionContext.getArgument("message"),
@@ -22,7 +22,7 @@ gdjs.evtsExt__THNK__OnMessage.eventsList0 = function(runtimeScene, eventsFunctio
 {
 
 
-gdjs.evtsExt__THNK__OnMessage.userFunc0x1eff028(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__OnMessage.userFunc0x1dd0180(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -58,7 +58,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

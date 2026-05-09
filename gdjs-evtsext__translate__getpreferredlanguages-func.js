@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__getPreferredLanguages = {};
 gdjs.evtsExt__Translate__getPreferredLanguages.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x1a0b968 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x12b95f8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = navigator.languages ? navigator.languages.join(',') : "en-US";
 };
@@ -18,7 +18,7 @@ gdjs.evtsExt__Translate__getPreferredLanguages.eventsList0 = function(runtimeSce
 {
 
 
-gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x1a0b968(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__getPreferredLanguages.userFunc0x12b95f8(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -54,7 +54,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

@@ -9,7 +9,7 @@ gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded = {};
 gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0xa295b0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1679430 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 gdjs._renderToSprite = {};
 gdjs._renderToSprite.rt = PIXI.RenderTexture.create({ width: 100, height: 100 });
@@ -21,7 +21,7 @@ gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.eventsList0 = function(runtimeS
 {
 
 
-gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0xa295b0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__onFirstSceneLoaded.userFunc0x1679430(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -57,7 +57,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

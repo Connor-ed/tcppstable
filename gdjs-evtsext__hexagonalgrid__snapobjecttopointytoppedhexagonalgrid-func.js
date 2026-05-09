@@ -10,7 +10,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.idToCallbackM
 gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x2c142a0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x2c7da88 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // Insired from: https://www.redblobgames.com/grids/hexagons
 
@@ -83,7 +83,7 @@ gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.eventsList0 =
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.GDObjectObjects1;
-gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x2c142a0(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__HexagonalGrid__SnapObjectToPointyToppedHexagonalGrid.userFunc0x2c7da88(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -121,7 +121,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

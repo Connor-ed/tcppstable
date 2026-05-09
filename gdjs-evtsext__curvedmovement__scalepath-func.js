@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__ScalePath = {};
 gdjs.evtsExt__CurvedMovement__ScalePath.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__ScalePath.userFunc0x1460b40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__ScalePath.userFunc0x1e89388 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -27,7 +27,7 @@ gdjs.evtsExt__CurvedMovement__ScalePath.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__CurvedMovement__ScalePath.userFunc0x1460b40(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__ScalePath.userFunc0x1e89388(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -63,7 +63,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

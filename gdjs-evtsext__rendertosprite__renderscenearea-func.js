@@ -10,7 +10,7 @@ gdjs.evtsExt__RenderToSprite__RenderSceneArea.idToCallbackMap = new Map();
 gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1= [];
 
 
-gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0xa2c4f8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x118d6c8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const source = runtimeScene.getRenderer().getPIXIContainer();
 source.x = eventsFunctionContext.getArgument("originPositionX") * -1;
@@ -71,7 +71,7 @@ gdjs.evtsExt__RenderToSprite__RenderSceneArea.eventsList0 = function(runtimeScen
 gdjs.copyArray(eventsFunctionContext.getObjects("renderTarget"), gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1);
 
 const objects = gdjs.evtsExt__RenderToSprite__RenderSceneArea.GDrenderTargetObjects1;
-gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0xa2c4f8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__RenderToSprite__RenderSceneArea.userFunc0x118d6c8(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -109,7 +109,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

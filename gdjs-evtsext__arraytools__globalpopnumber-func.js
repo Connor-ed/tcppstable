@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__GlobalPopNumber = {};
 gdjs.evtsExt__ArrayTools__GlobalPopNumber.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ArrayTools__GlobalPopNumber.userFunc0x2d7ce20 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__GlobalPopNumber.userFunc0x2de65d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -25,7 +25,7 @@ gdjs.evtsExt__ArrayTools__GlobalPopNumber.eventsList0 = function(runtimeScene, e
 {
 
 
-gdjs.evtsExt__ArrayTools__GlobalPopNumber.userFunc0x2d7ce20(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__GlobalPopNumber.userFunc0x2de65d8(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -61,7 +61,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

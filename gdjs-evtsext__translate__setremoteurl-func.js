@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__setRemoteUrl = {};
 gdjs.evtsExt__Translate__setRemoteUrl.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xc633f0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xa4b038 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 let path = eventsFunctionContext.getArgument("baseUrl");
 
@@ -34,7 +34,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xc633f0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__setRemoteUrl.userFunc0xa4b038(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -70,7 +70,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

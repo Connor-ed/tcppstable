@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__sprintf = {};
 gdjs.evtsExt__Translate__sprintf.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__sprintf.userFunc0x14eeb10 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Translate__sprintf.userFunc0x13390d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 let string = eventsFunctionContext.getArgument("string");
 let parameters = eventsFunctionContext.getArgument("parameters");
@@ -31,7 +31,7 @@ gdjs.evtsExt__Translate__sprintf.eventsList0 = function(runtimeScene, eventsFunc
 {
 
 
-gdjs.evtsExt__Translate__sprintf.userFunc0x14eeb10(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Translate__sprintf.userFunc0x13390d8(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -77,7 +77,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

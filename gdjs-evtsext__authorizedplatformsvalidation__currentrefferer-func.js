@@ -9,7 +9,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer = {};
 gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0xabcb98 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x1051a30 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 // If the document referrer is not empty, return the hostname (the domain name) else, return an empty string.
 eventsFunctionContext.returnValue = document.referrer ? new URL(document.referrer).hostname : "" ;
@@ -20,7 +20,7 @@ gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.eventsList0 = funct
 {
 
 
-gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0xabcb98(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__AuthorizedPlatformsValidation__CurrentRefferer.userFunc0x1051a30(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -56,7 +56,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

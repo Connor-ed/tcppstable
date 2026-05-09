@@ -9,7 +9,7 @@ gdjs.evtsExt__Translate__loadTranslationsLang = {};
 gdjs.evtsExt__Translate__loadTranslationsLang.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x1a0b968 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x133ca48 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let language = eventsFunctionContext.getArgument('language');
 
@@ -59,7 +59,7 @@ let isConditionTrue_0 = false;
 
 
 const objects = [];
-gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x1a0b968(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__Translate__loadTranslationsLang.userFunc0x133ca48(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -95,7 +95,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

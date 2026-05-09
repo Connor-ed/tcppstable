@@ -9,7 +9,7 @@ gdjs.evtsExt__DoubleClick__HasClicked = {};
 gdjs.evtsExt__DoubleClick__HasClicked.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__DoubleClick__HasClicked.userFunc0xc8b2d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__DoubleClick__HasClicked.userFunc0xb04678 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const { clickCounter } = gdjs._DoubleClickExtension;
 
@@ -23,7 +23,7 @@ gdjs.evtsExt__DoubleClick__HasClicked.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__DoubleClick__HasClicked.userFunc0xc8b2d8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__DoubleClick__HasClicked.userFunc0xb04678(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -59,7 +59,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

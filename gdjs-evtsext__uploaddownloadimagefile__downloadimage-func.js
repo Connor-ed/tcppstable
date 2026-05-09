@@ -10,22 +10,18 @@ gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.idToCallbackMap = new Map()
 gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0xd46a80 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1126ac8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
-const renderer = runtimeScene.getGame().getRenderer().getPIXIRenderer();
-const sprite = objects[0].getRendererObject();
-const fileName = "test";
-
-renderer.extract.canvas(sprite).toBlob(function(b){
-		var a = document.createElement('a');
-		document.body.append(a);
-		a.download = fileName;
-		a.href = URL.createObjectURL(b);
-		a.click();
-		a.remove();
-	}, 'image/png');
-
-
+const rendererObject = objects[0].getRendererObject();
+const pixiRenderer = runtimeScene.getGame().getRenderer().getPIXIRenderer();
+const canvas = pixiRenderer.extract.canvas(rendererObject);
+const dataURL = canvas.toDataURL("image/png");
+const a = document.createElement("a");
+a.href = dataURL;
+a.download = "patch.png";
+document.body.appendChild(a);
+a.click();
+setTimeout(function() { a.remove(); }, 100);
 };
 gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
@@ -34,7 +30,7 @@ gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.eventsList0 = function(runt
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1;
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0xd46a80(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1126ac8(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -72,7 +68,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

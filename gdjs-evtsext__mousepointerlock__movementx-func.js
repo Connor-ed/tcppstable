@@ -9,7 +9,7 @@ gdjs.evtsExt__MousePointerLock__MovementX = {};
 gdjs.evtsExt__MousePointerLock__MovementX.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MousePointerLock__MovementX.userFunc0x188ba28 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MousePointerLock__MovementX.userFunc0x209ecb0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 eventsFunctionContext.returnValue = gdjs._MousePointerLockExtension.handler.movementX || 0;
@@ -20,7 +20,7 @@ gdjs.evtsExt__MousePointerLock__MovementX.eventsList0 = function(runtimeScene, e
 {
 
 
-gdjs.evtsExt__MousePointerLock__MovementX.userFunc0x188ba28(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MousePointerLock__MovementX.userFunc0x209ecb0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -56,7 +56,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

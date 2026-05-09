@@ -9,7 +9,7 @@ gdjs.evtsExt__SlotSystem__SortSlotsByProperty = {};
 gdjs.evtsExt__SlotSystem__SortSlotsByProperty.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2b17f48 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2b45bd0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const system = runtimeScene.getVariables().get("__SlotSystem");
 const mainSpace = system.getChild(eventsFunctionContext.getArgument("SpaceName"));
@@ -80,7 +80,7 @@ gdjs.evtsExt__SlotSystem__SortSlotsByProperty.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2b17f48(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SlotSystem__SortSlotsByProperty.userFunc0x2b45bd0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -133,7 +133,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

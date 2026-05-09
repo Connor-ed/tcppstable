@@ -9,7 +9,7 @@ gdjs.evtsExt__CurvedMovement__ElementCount = {};
 gdjs.evtsExt__CurvedMovement__ElementCount.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__CurvedMovement__ElementCount.userFunc0x1b2cb90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__ElementCount.userFunc0x1921780 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const pathName = eventsFunctionContext.getArgument("PathName");
@@ -25,7 +25,7 @@ gdjs.evtsExt__CurvedMovement__ElementCount.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__CurvedMovement__ElementCount.userFunc0x1b2cb90(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__CurvedMovement__ElementCount.userFunc0x1921780(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -61,7 +61,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

@@ -10,99 +10,78 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.idToCallbackMap = new Map
 gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0xd4fd90 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x10bc158 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
-//Create a place to store the images somewhere, because we need to know if the user wants to upload the same image, or a new one.
 if (!gdjs._ExtensionUploadedImages) {
   gdjs._ExtensionUploadedImages = new Map();
 }
 
-//Save the old proportions.
+// Capture everything we need NOW, synchronously, before any async callbacks
+const rendererObject = objects[0].getRendererObject();
 const oldWidth = objects[0].getWidth();
 const oldHeight = objects[0].getHeight();
-
-//Check if want to modify the object size to match the image.
 const modifySize = eventsFunctionContext.getArgument("ModifySize");
+const storeBase = eventsFunctionContext.getArgument("StoreBase");
+const imageWidthVar = eventsFunctionContext.getArgument("ImageWidth");
+const imageHeightVar = eventsFunctionContext.getArgument("ImageHeight");
+// Also hold a direct reference to the gdjs object itself for setWidth/setHeight
+const gdjsObject = objects[0];
 
-//Create a image upload element and simulate a click on it.
-const inputElement = document.createElement('input');
-inputElement.type = "file";
-inputElement.accept = "image/*"
-inputElement.addEventListener("change", handleFiles, false);
-inputElement.click();
-
-//Handle the image upload.
-async function handleFiles() {
-  const files = this.files;
-  
-  if (!files.length) {} else {
-    // Create a FileReader object to read the file as a data URL.
-    const reader = new FileReader();
-    reader.onload = async function(e) {
-      // Get the base64 string from the data URL, and store it in a scene variable if intended.
-      const base64 = e.target.result;
-      if (eventsFunctionContext.getArgument("StoreBase")) {
-        eventsFunctionContext.getArgument("StoreBase").setString(base64)
-      }
-
-      // Create a PIXI texture from the base64 string if one doesn't exist yet.
-      if (!gdjs._ExtensionUploadedImages.has(base64)) {
-        let newTexture = PIXI.Texture.from(base64);
-        // Use a callback function that runs after the image is loaded, to ensure that it is properly stored.
-        newTexture.on("update", function() {
-          gdjs._ExtensionUploadedImages.set(base64,[newTexture,newTexture.width,newTexture.height]);
-          //Change the object image, and optionally its proportions.
-          const savedTexture = gdjs._ExtensionUploadedImages.get(base64);
-          objects[0].getRendererObject().texture.baseTexture = newTexture;
-
-          if (modifySize == true) {
-            objects[0].setWidth(newTexture.orig.width);
-            objects[0].setHeight(newTexture.orig.height);
-          }
-      
-          if (modifySize == false) {
-            objects[0].setWidth(oldWidth);
-            objects[0].setHeight(oldHeight);
-          }
-
-          //Store the proportions in scene variables if intended.
-          if (eventsFunctionContext.getArgument("ImageWidth")) {
-            eventsFunctionContext.getArgument("ImageWidth").setNumber(newTexture.width);
-          }
-
-          if (eventsFunctionContext.getArgument("ImageHeight")) {
-            eventsFunctionContext.getArgument("ImageHeight").setNumber(newTexture.height);
-          }
-        });
-      } else {
-        //Change the object image, and optionally its proportions.
-        const savedTexture = gdjs._ExtensionUploadedImages.get(base64);
-        objects[0].getRendererObject().texture.baseTexture = savedTexture[0];
-    
-        if (modifySize == true) {
-          objects[0].setWidth(savedTexture[1]);
-          objects[0].setHeight(savedTexture[2]);
-        }
-
-        if (modifySize == false) {
-          objects[0].setWidth(oldWidth);
-          objects[0].setHeight(oldHeight);
-        }
-
-        //Store the proportions in scene variables if intended.
-        if (eventsFunctionContext.getArgument("ImageWidth")) {
-          eventsFunctionContext.getArgument("ImageWidth").setNumber(savedTexture[1]);
-        }
-
-        if (eventsFunctionContext.getArgument("ImageHeight")) {
-          eventsFunctionContext.getArgument("ImageHeight").setNumber(savedTexture[2]);
-        }
-      }
+function applyBase64(base64) {
+  if (storeBase) { storeBase.setString(base64); }
+  if (!gdjs._ExtensionUploadedImages.has(base64)) {
+    let newTexture = PIXI.Texture.from(base64);
+    if (newTexture.valid) {
+      gdjs._ExtensionUploadedImages.set(base64, [newTexture, newTexture.width, newTexture.height]);
+      rendererObject.texture = newTexture;
+      if (modifySize) { gdjsObject.setWidth(newTexture.orig.width); gdjsObject.setHeight(newTexture.orig.height); }
+      else { gdjsObject.setWidth(oldWidth); gdjsObject.setHeight(oldHeight); }
+      if (imageWidthVar) imageWidthVar.setNumber(newTexture.width);
+      if (imageHeightVar) imageHeightVar.setNumber(newTexture.height);
+    } else {
+      newTexture.on("update", function() {
+        gdjs._ExtensionUploadedImages.set(base64, [newTexture, newTexture.width, newTexture.height]);
+        rendererObject.texture = newTexture;
+        if (modifySize) { gdjsObject.setWidth(newTexture.orig.width); gdjsObject.setHeight(newTexture.orig.height); }
+        else { gdjsObject.setWidth(oldWidth); gdjsObject.setHeight(oldHeight); }
+        if (imageWidthVar) imageWidthVar.setNumber(newTexture.width);
+        if (imageHeightVar) imageHeightVar.setNumber(newTexture.height);
+      });
     }
-    reader.readAsDataURL(files[0]);
+  } else {
+    const saved = gdjs._ExtensionUploadedImages.get(base64);
+    rendererObject.texture = saved[0];
+    if (modifySize) { gdjsObject.setWidth(saved[1]); gdjsObject.setHeight(saved[2]); }
+    else { gdjsObject.setWidth(oldWidth); gdjsObject.setHeight(oldHeight); }
+    if (imageWidthVar) imageWidthVar.setNumber(saved[1]);
+    if (imageHeightVar) imageHeightVar.setNumber(saved[2]);
   }
-  inputElement.remove();
 }
+
+if (!gdjs._ExtensionFileInput) {
+  const inp = document.createElement("input");
+  inp.type = "file";
+  inp.accept = "image/*";
+  inp.style.cssText = "position:fixed;top:-9999px;left:-9999px;opacity:0;pointer-events:none;";
+  document.body.appendChild(inp);
+  gdjs._ExtensionFileInput = inp;
+}
+
+const input = gdjs._ExtensionFileInput;
+input.value = "";
+if (gdjs._ExtensionFileInputListener) {
+  input.removeEventListener("change", gdjs._ExtensionFileInputListener);
+}
+gdjs._ExtensionFileInputListener = function() {
+  const files = this.files;
+  if (!files || !files.length) return;
+  const reader = new FileReader();
+  reader.onload = function(e) { applyBase64(e.target.result); };
+  reader.onerror = function(e) { console.error("[UploadExt] FileReader error:", e); };
+  reader.readAsDataURL(files[0]);
+};
+input.addEventListener("change", gdjs._ExtensionFileInputListener);
+input.click();
 };
 gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
@@ -111,7 +90,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.eventsList0 = function(ru
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1;
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0xd4fd90(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x10bc158(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -149,7 +128,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

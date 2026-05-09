@@ -10,7 +10,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinY.idToCallbackMap = new Map();
 gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1= [];
 
 
-gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2eafdf0 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2f13b10 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 // If the instances doesn't exist we exit this function, returnValue will be 0
 if (objects.length == 0) return;
@@ -35,7 +35,7 @@ gdjs.evtsExt__ValuesOfMultipleObjects__MinY.eventsList0 = function(runtimeScene,
 gdjs.copyArray(eventsFunctionContext.getObjects("objects"), gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1);
 
 const objects = gdjs.evtsExt__ValuesOfMultipleObjects__MinY.GDobjectsObjects1;
-gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2eafdf0(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ValuesOfMultipleObjects__MinY.userFunc0x2f13b10(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -73,7 +73,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

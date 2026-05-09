@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__GlobalReverse = {};
 gdjs.evtsExt__ArrayTools__GlobalReverse.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ArrayTools__GlobalReverse.userFunc0x2dbed28 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__GlobalReverse.userFunc0x2e1dfc0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -25,7 +25,7 @@ gdjs.evtsExt__ArrayTools__GlobalReverse.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__ArrayTools__GlobalReverse.userFunc0x2dbed28(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__GlobalReverse.userFunc0x2e1dfc0(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -61,7 +61,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

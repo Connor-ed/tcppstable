@@ -10,7 +10,7 @@ gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.idToCallbackMap = new Map()
 gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1= [];
 
 
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0xc9f670 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0xb02b28 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 let returnValue = true;
 if (!objects.length) {
@@ -35,7 +35,7 @@ gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.eventsList0 = function(runt
 gdjs.copyArray(eventsFunctionContext.getObjects("ObjectToCheck"), gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1);
 
 const objects = gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.GDObjectToCheckObjects1;
-gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0xc9f670(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__ExtendedVariables__ObjectVariableExist.userFunc0xb02b28(runtimeScene, objects, eventsFunctionContext);
 
 }
 
@@ -73,7 +73,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }

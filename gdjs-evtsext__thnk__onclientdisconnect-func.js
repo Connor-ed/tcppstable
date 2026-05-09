@@ -9,7 +9,7 @@ gdjs.evtsExt__THNK__OnClientDisconnect = {};
 gdjs.evtsExt__THNK__OnClientDisconnect.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__THNK__OnClientDisconnect.userFunc0x1e6c5a8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__THNK__OnClientDisconnect.userFunc0x1dd0180 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (runtimeScene.thnkServer) eventsFunctionContext.returnValue = THNK.server.events.popDisconnection(runtimeScene);
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__THNK__OnClientDisconnect.eventsList0 = function(runtimeScene, even
 {
 
 
-gdjs.evtsExt__THNK__OnClientDisconnect.userFunc0x1e6c5a8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__THNK__OnClientDisconnect.userFunc0x1dd0180(runtimeScene, eventsFunctionContext);
 
 }
 
@@ -55,7 +55,9 @@ var eventsFunctionContext = {
         runtimeScene.createObject(objectsList.firstKey());
       if (object) {
         objectsList.get(objectsList.firstKey()).push(object);
-        eventsFunctionContext._objectArraysMap[objectName].push(object);
+        if (!(scopeInstanceContainer && scopeInstanceContainer.isObjectRegistered(objectName))) {
+          eventsFunctionContext._objectArraysMap[objectName].push(object);
+        }
       }
       return object;
     }
