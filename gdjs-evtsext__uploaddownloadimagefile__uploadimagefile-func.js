@@ -10,7 +10,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.idToCallbackMap = new Map
 gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x10bc158 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x1149d60 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 if (!gdjs._ExtensionUploadedImages) {
   gdjs._ExtensionUploadedImages = new Map();
@@ -90,7 +90,7 @@ gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.eventsList0 = function(ru
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.GDObjectObjects1;
-gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x10bc158(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__UploadDownloadImageFile__UploadImageFile.userFunc0x1149d60(runtimeScene, objects, eventsFunctionContext);
 
 }
 

@@ -143,7 +143,7 @@ gdjs.PS_95CraveCode.GDShadowObjects3= [];
 gdjs.PS_95CraveCode.GDShadowObjects4= [];
 
 
-gdjs.PS_95CraveCode.userFunc0x3c53480 = function GDJSInlineCode(runtimeScene) {
+gdjs.PS_95CraveCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -156,12 +156,12 @@ gdjs.PS_95CraveCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.PS_95CraveCode.userFunc0x3c53480(runtimeScene);
+gdjs.PS_95CraveCode.userFunc0x1670fd8(runtimeScene);
 
 }
 
 
-};gdjs.PS_95CraveCode.userFunc0x40ad3b8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.PS_95CraveCode.userFunc0x2f09aa8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 gdjs._uploadKeyListenerScene = null;
 };
@@ -170,7 +170,7 @@ gdjs.PS_95CraveCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.PS_95CraveCode.userFunc0x40ad3b8(runtimeScene);
+gdjs.PS_95CraveCode.userFunc0x2f09aa8(runtimeScene);
 
 }
 
@@ -600,7 +600,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43208420);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43210852);
 }
 }
 if (isConditionTrue_0) {
@@ -744,7 +744,7 @@ for (var i = 0, k = 0, l = gdjs.PS_95CraveCode.GDViewing_9595Space_9595DownObjec
 gdjs.PS_95CraveCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43216476);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43218908);
 }
 }
 if (isConditionTrue_0) {
@@ -771,7 +771,7 @@ for (var i = 0, k = 0, l = gdjs.PS_95CraveCode.GDViewing_9595Space_9595UpObjects
 gdjs.PS_95CraveCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43216964);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43219396);
 }
 }
 if (isConditionTrue_0) {

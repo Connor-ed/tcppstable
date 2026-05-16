@@ -135,7 +135,7 @@ gdjs.Crave_95EditCode.GDShadowObjects1= [];
 gdjs.Crave_95EditCode.GDShadowObjects2= [];
 
 
-gdjs.Crave_95EditCode.userFunc0x40ad3b8 = function GDJSInlineCode(runtimeScene) {
+gdjs.Crave_95EditCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 gdjs._uploadKeyListenerScene = null;
 };
@@ -144,7 +144,7 @@ gdjs.Crave_95EditCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40ad3b8(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x1670fd8(runtimeScene);
 
 }
 
@@ -170,7 +170,7 @@ gdjs.Crave_95EditCode.eventsList1 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42681100);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42683060);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Edit_Toggle"), gdjs.Crave_95EditCode.GDEdit_9595ToggleObjects1);
@@ -222,7 +222,7 @@ gdjs.Crave_95EditCode.mapOfGDgdjs_9546Crave_959595EditCode_9546GDShare_95959595C
 gdjs.Crave_95EditCode.mapOfGDgdjs_9546Crave_959595EditCode_9546GDShare_95959595CancelObjects1Objects = Hashtable.newFrom({"Share_Cancel": gdjs.Crave_95EditCode.GDShare_9595CancelObjects1});
 gdjs.Crave_95EditCode.mapOfGDgdjs_9546Crave_959595EditCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.Crave_95EditCode.GDShare_9595SubmitObjects1});
 gdjs.Crave_95EditCode.mapOfGDgdjs_9546Crave_959595EditCode_9546GDShare_95959595SubmitObjects1Objects = Hashtable.newFrom({"Share_Submit": gdjs.Crave_95EditCode.GDShare_9595SubmitObjects1});
-gdjs.Crave_95EditCode.userFunc0x40d79d8 = function GDJSInlineCode(runtimeScene) {
+gdjs.Crave_95EditCode.userFunc0x2f09aa8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const name = runtimeScene.getObjects("Share_Name")[0].getString();
 const desc = runtimeScene.getObjects("Share_Desc")[0].getString();
@@ -373,13 +373,13 @@ gdjs.Crave_95EditCode.eventsList2 = function(runtimeScene) {
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40d79d8(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x2f09aa8(runtimeScene);
 
 }
 
 
 };gdjs.Crave_95EditCode.mapOfGDgdjs_9546Crave_959595EditCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.Crave_95EditCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.Crave_95EditCode.userFunc0x40d9478 = function GDJSInlineCode(runtimeScene) {
+gdjs.Crave_95EditCode.userFunc0x2dae3c8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — one-time setup
 if (globalThis.PatchBay && globalThis.PatchBay.canvas) return;
@@ -461,12 +461,12 @@ gdjs.Crave_95EditCode.eventsList3 = function(runtimeScene) {
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40d9478(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x2dae3c8(runtimeScene);
 
 }
 
 
-};gdjs.Crave_95EditCode.userFunc0x40d97b0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Crave_95EditCode.userFunc0x168bb20 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle left click (connect)
 const pb = globalThis.PatchBay;
@@ -554,12 +554,12 @@ gdjs.Crave_95EditCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40d97b0(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x168bb20(runtimeScene);
 
 }
 
 
-};gdjs.Crave_95EditCode.userFunc0x40d9ac0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Crave_95EditCode.userFunc0x2a49968 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle right click (disconnect)
 const pb = globalThis.PatchBay;
@@ -598,12 +598,12 @@ gdjs.Crave_95EditCode.eventsList5 = function(runtimeScene) {
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40d9ac0(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x2a49968(runtimeScene);
 
 }
 
 
-};gdjs.Crave_95EditCode.userFunc0x40d9be8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Crave_95EditCode.userFunc0x168bcd8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — redraw cables every frame
 const pb = globalThis.PatchBay;
@@ -733,7 +733,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42954852);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42957284);
 }
 }
 if (isConditionTrue_0) {
@@ -1064,7 +1064,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "s");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42961532);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42963964);
 }
 }
 }
@@ -1202,7 +1202,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Share");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42938228);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42940660);
 }
 }
 }
@@ -1467,7 +1467,7 @@ gdjs.Crave_95EditCode.eventsList5(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Crave_95EditCode.userFunc0x40d9be8(runtimeScene);
+gdjs.Crave_95EditCode.userFunc0x168bcd8(runtimeScene);
 
 }
 

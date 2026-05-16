@@ -72,7 +72,7 @@ gdjs.MenuCode.GDShadowObjects2= [];
 gdjs.MenuCode.GDShadowObjects3= [];
 
 
-gdjs.MenuCode.userFunc0x3c53480 = function GDJSInlineCode(runtimeScene) {
+gdjs.MenuCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // 1. Get the reference
 const pb = globalThis.PatchBay;
@@ -95,7 +95,7 @@ if (pb) {
 }
 
 };
-gdjs.MenuCode.userFunc0x3c42b98 = function GDJSInlineCode(runtimeScene) {
+gdjs.MenuCode.userFunc0x2dae3c8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 gdjs._uploadKeyListenerScene = null;
 };
@@ -104,7 +104,7 @@ gdjs.MenuCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.MenuCode.userFunc0x3c53480(runtimeScene);
+gdjs.MenuCode.userFunc0x1670fd8(runtimeScene);
 
 }
 
@@ -112,7 +112,7 @@ gdjs.MenuCode.userFunc0x3c53480(runtimeScene);
 {
 
 
-gdjs.MenuCode.userFunc0x3c42b98(runtimeScene);
+gdjs.MenuCode.userFunc0x2dae3c8(runtimeScene);
 
 }
 
@@ -127,7 +127,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42308628);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42309948);
 }
 }
 if (isConditionTrue_0) {

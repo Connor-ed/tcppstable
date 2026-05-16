@@ -251,7 +251,7 @@ gdjs.MiniBrute_95LoadCode.GDShadowObjects3= [];
 gdjs.MiniBrute_95LoadCode.GDShadowObjects4= [];
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x3c53480 = function GDJSInlineCode(runtimeScene) {
+gdjs.MiniBrute_95LoadCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -265,12 +265,12 @@ gdjs.MiniBrute_95LoadCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x3c53480(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x1670fd8(runtimeScene);
 
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40ad3b8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x2f09aa8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -284,7 +284,7 @@ gdjs.MiniBrute_95LoadCode.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40ad3b8(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x2f09aa8(runtimeScene);
 
 }
 
@@ -463,7 +463,7 @@ gdjs.MiniBrute_95LoadCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40c39a0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x2dae3c8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log("Loading alert visible:", runtimeScene.getObjects("Loading_alert")[0].isVisible());
 console.log("Loading alert anim:", runtimeScene.getObjects("Loading_alert")[0].getAnimationName());
@@ -473,7 +473,7 @@ gdjs.MiniBrute_95LoadCode.eventsList6 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40c39a0(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x2dae3c8(runtimeScene);
 
 }
 
@@ -485,7 +485,7 @@ gdjs.MiniBrute_95LoadCode.userFunc0x40c39a0(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42675444);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42676988);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("INST"), gdjs.MiniBrute_95LoadCode.GDINSTObjects2);
@@ -513,7 +513,7 @@ gdjs.copyArray(runtimeScene.getObjects("Loaded_Input"), gdjs.MiniBrute_95LoadCod
 };gdjs.MiniBrute_95LoadCode.eventsList8 = function(runtimeScene) {
 
 };gdjs.MiniBrute_95LoadCode.mapOfGDgdjs_9546MiniBrute_959595LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.MiniBrute_95LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.MiniBrute_95LoadCode.userFunc0x40c5848 = function GDJSInlineCode(runtimeScene) {
+gdjs.MiniBrute_95LoadCode.userFunc0x168bb20 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -547,7 +547,7 @@ gdjs.MiniBrute_95LoadCode.eventsList9 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40c5848(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x168bb20(runtimeScene);
 
 }
 
@@ -585,7 +585,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42694396);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42696556);
 }
 }
 }
@@ -598,7 +598,7 @@ gdjs.MiniBrute_95LoadCode.eventsList9(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40c61b8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x29b65e0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -667,7 +667,7 @@ gdjs.MiniBrute_95LoadCode.eventsList11 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40c61b8(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x29b65e0(runtimeScene);
 
 }
 
@@ -687,7 +687,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42699484);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42701708);
 }
 }
 }
@@ -742,7 +742,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.MiniBrute_95LoadCode.mapOfGDgdjs_9546MiniBrute_959595LoadCode_9546GDGlobal_95959595PlayObjects3Objects = Hashtable.newFrom({"Global_Play": gdjs.MiniBrute_95LoadCode.GDGlobal_9595PlayObjects3});
-gdjs.MiniBrute_95LoadCode.userFunc0x40c7b68 = function GDJSInlineCode(runtimeScene) {
+gdjs.MiniBrute_95LoadCode.userFunc0x2dae948 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -781,7 +781,7 @@ gdjs.MiniBrute_95LoadCode.eventsList14 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40c7b68(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x2dae948(runtimeScene);
 
 }
 
@@ -819,7 +819,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42708564);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42710788);
 }
 }
 }
@@ -953,7 +953,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42671396);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42673596);
 }
 }
 if (isConditionTrue_0) {
@@ -992,7 +992,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42675044);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42676588);
 }
 }
 }
@@ -1013,7 +1013,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "loading_Timer") >= 2;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42673676);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42692156);
 }
 }
 if (isConditionTrue_0) {
@@ -1442,7 +1442,7 @@ gdjs.copyArray(runtimeScene.getObjects("Global_Top_Lite"), gdjs.MiniBrute_95Load
 
 
 };gdjs.MiniBrute_95LoadCode.mapOfGDgdjs_9546MiniBrute_959595LoadCode_9546GDGlobal_95959595Blank_95959595KnobObjects1Objects = Hashtable.newFrom({"Global_Blank_Knob": gdjs.MiniBrute_95LoadCode.GDGlobal_9595Blank_9595KnobObjects1});
-gdjs.MiniBrute_95LoadCode.userFunc0x40ccf90 = function GDJSInlineCode(runtimeScene) {
+gdjs.MiniBrute_95LoadCode.userFunc0x15f6d40 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — one-time setup
 if (globalThis.PatchBay && globalThis.PatchBay.canvas) return;
@@ -1549,12 +1549,12 @@ gdjs.MiniBrute_95LoadCode.eventsList24 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40ccf90(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x15f6d40(runtimeScene);
 
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40cd2c8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x2a137a0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle left click (connect)
 const pb = globalThis.PatchBay;
@@ -1648,12 +1648,12 @@ gdjs.MiniBrute_95LoadCode.eventsList25 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40cd2c8(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x2a137a0(runtimeScene);
 
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40cd5f0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x18c0f60 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — handle right click (disconnect)
 const pb = globalThis.PatchBay;
@@ -1692,12 +1692,12 @@ gdjs.MiniBrute_95LoadCode.eventsList26 = function(runtimeScene) {
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40cd5f0(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x18c0f60(runtimeScene);
 
 }
 
 
-};gdjs.MiniBrute_95LoadCode.userFunc0x40cd718 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MiniBrute_95LoadCode.userFunc0x18c1168 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // PATCHBAY — redraw cables every frame
 const pb = globalThis.PatchBay;
@@ -1783,7 +1783,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42399452);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42400772);
 }
 }
 if (isConditionTrue_0) {
@@ -1865,7 +1865,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "patchbay"));
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42686660);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42688620);
 }
 }
 if (isConditionTrue_0) {
@@ -2112,7 +2112,7 @@ gdjs.MiniBrute_95LoadCode.eventsList26(runtimeScene);} //End of subevents
 {
 
 
-gdjs.MiniBrute_95LoadCode.userFunc0x40cd718(runtimeScene);
+gdjs.MiniBrute_95LoadCode.userFunc0x18c1168(runtimeScene);
 
 }
 

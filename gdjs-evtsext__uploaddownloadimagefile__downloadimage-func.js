@@ -10,7 +10,7 @@ gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.idToCallbackMap = new Map()
 gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1126ac8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1149d60 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
 const rendererObject = objects[0].getRendererObject();
 const pixiRenderer = runtimeScene.getGame().getRenderer().getPIXIRenderer();
@@ -30,7 +30,7 @@ gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.eventsList0 = function(runt
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1);
 
 const objects = gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.GDObjectObjects1;
-gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1126ac8(runtimeScene, objects, eventsFunctionContext);
+gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.userFunc0x1149d60(runtimeScene, objects, eventsFunctionContext);
 
 }
 
