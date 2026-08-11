@@ -9,7 +9,7 @@ gdjs.evtsExt__ArrayTools__RandomStringInArray = {};
 gdjs.evtsExt__ArrayTools__RandomStringInArray.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__ArrayTools__RandomStringInArray.userFunc0x2d39ca0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ArrayTools__RandomStringInArray.userFunc0x4dcdc88 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {gdjs.Variable} */
 const array = eventsFunctionContext.getArgument("Array");
@@ -25,7 +25,7 @@ gdjs.evtsExt__ArrayTools__RandomStringInArray.eventsList0 = function(runtimeScen
 {
 
 
-gdjs.evtsExt__ArrayTools__RandomStringInArray.userFunc0x2d39ca0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ArrayTools__RandomStringInArray.userFunc0x4dcdc88(runtimeScene, eventsFunctionContext);
 
 }
 

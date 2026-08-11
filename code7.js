@@ -143,7 +143,7 @@ gdjs.PS_95MiniBruteCode.GDShadowObjects3= [];
 gdjs.PS_95MiniBruteCode.GDShadowObjects4= [];
 
 
-gdjs.PS_95MiniBruteCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
+gdjs.PS_95MiniBruteCode.userFunc0x1d48fda8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const pb = globalThis.PatchBay;
 if (!pb) return;
@@ -156,7 +156,7 @@ gdjs.PS_95MiniBruteCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.PS_95MiniBruteCode.userFunc0x1670fd8(runtimeScene);
+gdjs.PS_95MiniBruteCode.userFunc0x1d48fda8(runtimeScene);
 
 }
 
@@ -413,7 +413,7 @@ gdjs.PS_95MiniBruteCode.eventsList9 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 {
-{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(-(1));
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(-1);
 }
 }
 
@@ -710,7 +710,7 @@ for (var i = 0, k = 0, l = gdjs.PS_95MiniBruteCode.GDViewing_9595Space_9595DownO
 gdjs.PS_95MiniBruteCode.GDViewing_9595Space_9595DownObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43358188);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43600532);
 }
 }
 if (isConditionTrue_0) {
@@ -737,7 +737,7 @@ for (var i = 0, k = 0, l = gdjs.PS_95MiniBruteCode.GDViewing_9595Space_9595UpObj
 gdjs.PS_95MiniBruteCode.GDViewing_9595Space_9595UpObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43359444);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(43601428);
 }
 }
 if (isConditionTrue_0) {
@@ -1165,7 +1165,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__DoubleClick__HasSimpleClicked.func(runtimeScene, "Left", null);
 }
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(-(1));
+{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(-1);
 }
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Crave_Load", false);
 }

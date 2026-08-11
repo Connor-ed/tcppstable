@@ -16,7 +16,7 @@ gdjs.evtsExt__SlotSystem__ConvertSlotToGridColumn.eventsList0 = function(runtime
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = -(1);}
+{eventsFunctionContext.returnValue = -1;}
 }
 
 }

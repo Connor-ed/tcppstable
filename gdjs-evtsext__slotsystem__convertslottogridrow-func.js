@@ -16,7 +16,7 @@ gdjs.evtsExt__SlotSystem__ConvertSlotToGridRow.eventsList0 = function(runtimeSce
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = -(1);}
+{eventsFunctionContext.returnValue = -1;}
 }
 
 }

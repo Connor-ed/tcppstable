@@ -30,7 +30,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (0 != -(1));
+{isConditionTrue_0 = (0 != -1);
 }
 if (isConditionTrue_0) {
 {eventsFunctionContext.returnValue = true;}

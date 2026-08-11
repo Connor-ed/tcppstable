@@ -16,7 +16,7 @@ gdjs.evtsExt__CurvedMovement__FlipPathX.eventsList0 = function(runtimeScene, eve
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtsExt__CurvedMovement__ScalePath.func(runtimeScene, "", -(1), 1, eventsFunctionContext);
+{gdjs.evtsExt__CurvedMovement__ScalePath.func(runtimeScene, "", -1, 1, eventsFunctionContext);
 }
 }
 

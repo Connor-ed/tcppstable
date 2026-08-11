@@ -9,7 +9,6 @@ gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch = class 
     super(parentInstanceContainer, objectData, instanceData);
     this._parentInstanceContainer = parentInstanceContainer;
 
-    this._onceTriggers = new gdjs.OnceTriggers();
     this._objectData = {};
     
     this._objectData.IsChecked = objectData.content.IsChecked !== undefined ? objectData.content.IsChecked : true;
@@ -211,7 +210,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onCreatedContext.GDObjectObjects1.length = 0;
@@ -356,7 +355,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.onHotReloadingContext.GDObjectObjects1.length = 0;
@@ -465,7 +464,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPostEventsContext.GDObjectObjects1.length = 0;
@@ -580,7 +579,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsCheckedContext.GDObjectObjects1.length = 0;
@@ -695,7 +694,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenCheckedContext.GDObjectObjects1.length = 0;
@@ -810,7 +809,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenUncheckedContext.GDObjectObjects1.length = 0;
@@ -925,7 +924,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.HasJustBeenToggledContext.GDObjectObjects1.length = 0;
@@ -1056,7 +1055,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
 if (argName === "Value") return Value;
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.SetCheckedContext.GDObjectObjects1.length = 0;
@@ -1165,7 +1164,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ToggleCheckedContext.GDObjectObjects1.length = 0;
@@ -1280,7 +1279,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsIdleContext.GDObjectObjects1.length = 0;
@@ -1395,7 +1394,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsClickedContext.GDObjectObjects1.length = 0;
@@ -1510,7 +1509,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsHoveredContext.GDObjectObjects1.length = 0;
@@ -1625,7 +1624,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsFocusedContext.GDObjectObjects1.length = 0;
@@ -1740,7 +1739,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsPressedContext.GDObjectObjects1.length = 0;
@@ -1916,7 +1915,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.UpdateStateAnimationContext.GDObjectObjects1.length = 0;
@@ -2047,7 +2046,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
 if (argName === "ShouldActivate") return ShouldActivate;
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.ActivateContext.GDObjectObjects1.length = 0;
@@ -2162,7 +2161,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
     return "";
   },
-  getOnceTriggers: function() { return that._onceTriggers; }
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.IsActivatedContext.GDObjectObjects1.length = 0;
@@ -2181,7 +2180,7 @@ return !!eventsFunctionContext.returnValue;
 }
 
 gdjs.evtsExt__SpriteToggleSwitch__SpriteToggleSwitch.SpriteToggleSwitch.prototype.doStepPreEvents = function() {
-  this._onceTriggers.startNewFrame();
+  this._instanceContainer.getOnceTriggers().startNewFrame();
 };
 
 

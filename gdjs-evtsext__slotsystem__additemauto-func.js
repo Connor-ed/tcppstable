@@ -52,7 +52,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 {
-{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(-(1));
+{runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(-1);
 }
 }
 
@@ -66,7 +66,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -(1);
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -1;
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpQty").setNumber(0);
 }
@@ -80,7 +80,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) > -(1);
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) > -1;
 if (isConditionTrue_0) {
 {gdjs.evtsExt__SlotSystem__SetSlotItem.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")), eventsFunctionContext.getArgument("Item"), eventsFunctionContext);
 }
@@ -190,7 +190,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -(1);
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) == -1;
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal").setNumber(gdjs.evtsExt__SlotSystem__FirstEmptySlot.func(runtimeScene, eventsFunctionContext.getArgument("SpaceName"), eventsFunctionContext));
 }
@@ -207,7 +207,7 @@ gdjs.evtsExt__SlotSystem__AddItemAuto.eventsList1(runtimeScene, eventsFunctionCo
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) > -(1);
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("__SlotSystem").getChild("_TmpVal")) > -1;
 if (isConditionTrue_0) {
 
 { //Subevents

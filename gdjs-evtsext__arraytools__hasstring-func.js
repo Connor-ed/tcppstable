@@ -28,7 +28,7 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (gdjs.evtsExt__ArrayTools__IndexOfStr.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), eventsFunctionContext.getArgument("Value"), eventsFunctionContext) != -(1));
+{isConditionTrue_0 = (gdjs.evtsExt__ArrayTools__IndexOfStr.func(runtimeScene, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0), eventsFunctionContext.getArgument("Value"), eventsFunctionContext) != -1);
 }
 if (isConditionTrue_0) {
 {eventsFunctionContext.returnValue = true;}

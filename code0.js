@@ -39,10 +39,10 @@ gdjs.Quick_95CheckCode.GDShadowObjects1= [];
 gdjs.Quick_95CheckCode.GDShadowObjects2= [];
 
 
-gdjs.Quick_95CheckCode.userFunc0x1670fd8 = function GDJSInlineCode(runtimeScene) {
+gdjs.Quick_95CheckCode.userFunc0x1d48fda8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
-const SB_URL = "https://dyuuloipijvkfejfqoay.supabase.co";
-const SB_KEY = "sb_publishable_YkIqOOig3cqxaLO5uBtfcw_mX_3lwc_";
+const SB_URL = "https://api.edgingtondesmet.com";
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzg2MjgyNDA1LCJleHAiOjIxMDE2NDI0MDV9.7qr68KLl8WbBD4TPD-VX5uoqglJ9BLL0oIWmxWndaNE";
 
 function checkStatus() {
     fetch(`${SB_URL}/rest/v1/app_status?id=eq.1&select=status`, {
@@ -84,7 +84,7 @@ gdjs.Quick_95CheckCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Quick_95CheckCode.userFunc0x1670fd8(runtimeScene);
+gdjs.Quick_95CheckCode.userFunc0x1d48fda8(runtimeScene);
 
 }
 
@@ -99,7 +99,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42274332);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(42518508);
 }
 }
 if (isConditionTrue_0) {
@@ -156,13 +156,41 @@ gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNe
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__UpdateChecker__UpdateAvailable.func(runtimeScene, null);
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 5;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, null);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 0);
+{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 1);
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber() == 1);
+}
+}
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Menu", false);
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 5;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, null);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 1);
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -174,72 +202,8 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNewSpriteObjects1);
 {for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
-    gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("updating");
+    gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("down");
 }
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__UpdateChecker__UpdateAvailable.func(runtimeScene, null);
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 30;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 1);
-}
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber() == 1);
-}
-}
-}
-}
-if (isConditionTrue_0) {
-{gdjs.evtsExt__URLTools__Reload.func(runtimeScene, null);
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtsExt__UpdateChecker__UpdateAvailable.func(runtimeScene, null));
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 5;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "Menu");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__InternetConnectivity__IsDeviceOnline.func(runtimeScene, null);
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 1);
-}
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber() == 1);
-}
-}
-}
-}
-}
-}
-if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Menu", false);
 }
 }
 
@@ -265,29 +229,6 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber() == 0);
-}
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() == 1);
-}
-}
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.Quick_95CheckCode.GDNewSpriteObjects1);
-{for(var i = 0, len = gdjs.Quick_95CheckCode.GDNewSpriteObjects1.length ;i < len;++i) {
-    gdjs.Quick_95CheckCode.GDNewSpriteObjects1[i].getBehavior("Animation").setAnimationName("down");
-}
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 30;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -326,16 +267,6 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Menu", false);
 }
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-{
 }
 
 }

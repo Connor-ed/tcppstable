@@ -16,7 +16,7 @@ gdjs.evtsExt__SlotSystem__ConvertGridPositionToSlot.eventsList0 = function(runti
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.returnValue = -(1);}
+{eventsFunctionContext.returnValue = -1;}
 }
 
 }
